@@ -1,0 +1,21 @@
+import ExactLiouvilleComparison.ODETwoBarrierSmooth
+#print axioms ExactLiouvilleComparison.ODE.smoothEvolution_of_compact_support
+#print axioms ExactLiouvilleComparison.ODE.compact_field_localization
+#print axioms ExactLiouvilleComparison.ODE.eqOn_closed_of_hasMFDerivWithinAt
+#print axioms ExactLiouvilleComparison.ODE.EvolutionPatch
+#print axioms ExactLiouvilleComparison.ODE.enlarged_interval
+#print axioms ExactLiouvilleComparison.ODE.evolutionPatch_of_finite_curve
+#print axioms ExactLiouvilleComparison.ODE.EvolutionPatch.domain
+#print axioms ExactLiouvilleComparison.ODE.EvolutionPatch.open_domain
+#print axioms ExactLiouvilleComparison.ODE.EvolutionPatch.agree
+#print axioms ExactLiouvilleComparison.ODE.evolutionDomain
+#print axioms ExactLiouvilleComparison.ODE.localEvolution
+#print axioms ExactLiouvilleComparison.ODE.localEvolution_eq_patch
+#print axioms ExactLiouvilleComparison.ODE.isOpen_evolutionDomain
+#print axioms ExactLiouvilleComparison.ODE.localEvolution_contMDiffAt
+#print axioms ExactLiouvilleComparison.ODE.localEvolution_initial
+#print axioms ExactLiouvilleComparison.ODE.localEvolution_solves
+#print axioms ExactLiouvilleComparison.ODE.strip_subset_evolutionDomain
+#print axioms ExactLiouvilleComparison.ODE.evolution_of_finite_existence_global
+#print axioms ExactLiouvilleComparison.ODE.evolution_of_finite_existence
+#eval IO.println "TWO_BARRIER_SMOOTH_AXIOMAUDIT_COMPLETE"

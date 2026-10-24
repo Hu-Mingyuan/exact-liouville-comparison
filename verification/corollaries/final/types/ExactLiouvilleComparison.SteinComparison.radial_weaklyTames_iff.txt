@@ -1,0 +1,11 @@
+ExactLiouvilleComparison.SteinComparison.radial_weaklyTames_iff : ∀ {d N : Nat} {M : FsFltz.Geometry.SmoothManifold d} (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N)
+  (P : @ExactLiouvilleComparison.SteinReference d N M i) (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M),
+  Iff
+    (@ExactLiouvilleComparison.WeaklyTames d M
+      (@ExactLiouvilleComparison.RadialReference.exactStructure d M
+        (@ExactLiouvilleComparison.SteinRadial.reference d N M i P))
+      (@ExactLiouvilleComparison.RadialReference.compatible d M
+        (@ExactLiouvilleComparison.SteinRadial.reference d N M i P))
+      T)
+    (@ExactLiouvilleComparison.WeaklyTames d M (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+      (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T)

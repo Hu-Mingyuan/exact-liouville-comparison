@@ -1,0 +1,15 @@
+{
+  "ExactLiouvilleComparison/CylindricalCompatibilityStatement.lean": "9e48006f6407c3405ca4a4f438c8f535c806e888b293e9aef5eaf60261151ff9",
+  "docs/cylindrical-compatibility-crosswalk.md": "f4735f7bf4a980b2aabafa5100d393d4d0a6cc52a8ac4623e8bddedd863d0664",
+  "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+  "docs/objective.md": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8",
+  "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+  "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+  "ExactLiouvilleComparison/FiniteTypeComparison.lean": "68910a4ecf2f6a6fe1750abb097bc6e47ef24ce849ee8c16f2f9fb82f0ff36d5",
+  ".lake/packages/fsfltz/FsFltz/Geometry/Smooth.lean": "57b89da972058e0f3e2b963d9c291ca8dfcdc60f3b5c5904c8e3ae6f9e6cecbd",
+  ".lake/packages/fsfltz/FsFltz/Geometry/Liouville.lean": "d51b04337e39b31ab1b1d3b20093ba5956b8ea0b04456e141ef4c827268b335e",
+  ".lake/packages/fsfltz/FsFltz/Geometry/ExteriorDerivative.lean": "498095c7bfa18204b0bb1bfba2943c42e3c257d27a74efe85e85df74077962ad",
+  ".lake/packages/mathlib/Mathlib/Geometry/Manifold/VectorBundle/Riemannian.lean": "044b397c80cc85430415afd4f976195943dd0015170cd0388d445dc09098c979",
+  "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+  "verification/cylindrical-compatibility/statement-build.txt": "869ed797fe312bbdcec1a723650ecd9288d97cf72bff43ebadff49fec8e7fcdf"
+}

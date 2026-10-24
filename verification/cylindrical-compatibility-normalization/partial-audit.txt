@@ -1,0 +1,54 @@
+def ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget.{u_1, u_2, u_3, u_4, u_5} : {EB :
+    Type u_1} →
+  [inst : NormedAddCommGroup EB] →
+    [inst_1 : NormedSpace ℝ EB] →
+      {HB : Type u_2} →
+        [inst_2 : TopologicalSpace HB] →
+          (IB : ModelWithCorners ℝ EB HB) →
+            {B : Type u_3} →
+              [inst_3 : TopologicalSpace B] →
+                [inst_4 : ChartedSpace HB B] →
+                  (F : Type u_4) →
+                    [inst_5 : NormedAddCommGroup F] →
+                      [inst_6 : NormedSpace ℝ F] →
+                        (E : B → Type u_5) →
+                          [inst_7 : (x : B) → NormedAddCommGroup (E x)] →
+                            [inst_8 : (x : B) → NormedSpace ℝ (E x)] →
+                              [inst_9 : TopologicalSpace (Bundle.TotalSpace F E)] →
+                                [inst_10 : FiberBundle F E] →
+                                  [inst_11 : VectorBundle ℝ F E] →
+                                    [IsManifold IB (↑⊤) B] →
+                                      [FiniteDimensional ℝ F] →
+                                        [ContMDiffVectorBundle (↑⊤) F E IB] →
+                                          SymplecticForm IB F E → Bundle.ContMDiffRiemannianMetric IB (↑⊤) F E → Prop :=
+fun {EB} [NormedAddCommGroup EB] [NormedSpace ℝ EB] {HB} [TopologicalSpace HB] IB {B} [TopologicalSpace B]
+    [ChartedSpace HB B] F [NormedAddCommGroup F] [NormedSpace ℝ F] E [(x : B) → NormedAddCommGroup (E x)]
+    [(x : B) → NormedSpace ℝ (E x)] [TopologicalSpace (Bundle.TotalSpace F E)] [FiberBundle F E] [VectorBundle ℝ F E]
+    [IsManifold IB (↑⊤) B] [FiniteDimensional ℝ F] [ContMDiffVectorBundle (↑⊤) F E IB] omega h =>
+  ∃ J,
+    (ContMDiff IB (IB.prod (modelWithCornersSelf ℝ (F →L[ℝ] F))) ↑⊤ fun x => ⟨x, J x⟩) ∧
+      (∀ (x : B), Compatible (omega.form x) (J x)) ∧
+        ∀ (x : B) (J₀ : E x →L[ℝ] E x),
+          Compatible (omega.form x) J₀ → (∀ (v w : E x), ((h.inner x) v) w = ((omega.form x) v) (J₀ w)) → J x = J₀
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.Compatible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_isEmpty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_subsingleton_fibers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_subsingleton_model' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_finrank_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+{"cache": "local", "command": ["lake", "env", "lean", "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/ExactLiouvilleComparison/CylindricalCompatibilityNormalizationChecks.lean"], "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a", "duration_seconds": 12.325, "error": null, "failure": null, "lean_file": "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationChecks.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "14d95259e89d9080a6b24e1a9ae26d41cc5588ecb1feeffa9e70a2199c993864", "status": "passed", "targets": [], "timings": {"build_seconds": 12.324, "engine_seconds": 12.325579869000649, "preparation_seconds": 0.04217819299992698, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.2262626760002604, "total_seconds": 12.594085888000336, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

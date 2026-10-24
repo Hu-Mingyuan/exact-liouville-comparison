@@ -1,0 +1,138 @@
+{
+  "branch": "horizon/changes/0c107de4-e292-4d2b-9749-39cadc372f34",
+  "operation": {
+    "id": "0c107de4-e292-4d2b-9749-39cadc372f34",
+    "created_at": "2026-10-23T23:44:48.081996+00:00",
+    "updated_at": "2026-10-23T23:44:50.201072+00:00",
+    "revision": 3,
+    "project_id": "6e03a624-b2d1-4daa-a9e0-da83d9e8f2e3",
+    "actor_principal_id": "40f8d2bf-c8d3-4c88-8fb7-396c60c35e74",
+    "kind": "forge_change",
+    "idempotency_key": "db5e3d0b-2332-4234-8972-0ff540e00a57",
+    "payload": {
+      "files": [
+        {
+          "sha": null,
+          "path": "ExactLiouvilleComparison/FiniteTypePresentation.lean",
+          "operation": "create",
+          "content_artifact_id": "e4521aef-3e11-4d59-89f9-856c004a0a9b"
+        },
+        {
+          "sha": null,
+          "path": "ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean",
+          "operation": "create",
+          "content_artifact_id": "740062d7-bb2b-47bd-99fe-b718cb450fa6"
+        },
+        {
+          "sha": null,
+          "path": "docs/finite-type-presentation-proof.md",
+          "operation": "create",
+          "content_artifact_id": "431c38c6-ef1c-4c62-85eb-02aba8101040"
+        },
+        {
+          "sha": null,
+          "path": "scripts/verify-finite-type-presentation.py",
+          "operation": "create",
+          "content_artifact_id": "0ee79435-cee4-4549-be7e-d71affae06c6"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/Audit.lean",
+          "operation": "create",
+          "content_artifact_id": "cdab3c32-35b4-4c9a-b793-b79e1f6df1bb"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/statement-review.md",
+          "operation": "create",
+          "content_artifact_id": "edef06eb-18ad-409e-ae96-57f26426d1e4"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/statement-publication.json",
+          "operation": "create",
+          "content_artifact_id": "cd77861c-2496-4da5-b33e-965955bc534a"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/final/receipt.json.gz",
+          "operation": "create",
+          "content_artifact_id": "13155f35-968f-4ca4-93a1-88fa29ca93aa"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/final/axioms.json",
+          "operation": "create",
+          "content_artifact_id": "45092978-e301-40de-a18f-19b6911b084a"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/final/declarations.json",
+          "operation": "create",
+          "content_artifact_id": "a6441fe5-4c8b-48cb-91f5-99f427a76301"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/audit-archive.json",
+          "operation": "create",
+          "content_artifact_id": "7f04267c-9b07-4d1b-a864-bfee6c0a0719"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/audit-evidence.tar.gz.part-00",
+          "operation": "create",
+          "content_artifact_id": "cc96a882-ffac-408e-8d84-d187c60b88ad"
+        },
+        {
+          "sha": null,
+          "path": "verification/finite-type-presentation/audit-evidence.tar.gz.part-01",
+          "operation": "create",
+          "content_artifact_id": "f968984d-34eb-4a8d-a702-013394dfdeb0"
+        }
+      ],
+      "message": "Prove native finite type presentation and consumer",
+      "forge_item_id": null,
+      "origin_run_id": "eec795aa-ad0e-4028-a599-6a62b82938c3",
+      "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+      "base_commit_oid": "d3523f6f68fa8e68424190bdb982331a800467dd"
+    },
+    "schema_version": 1,
+    "status": "completed",
+    "retry_count": 1,
+    "retry_at": null,
+    "lease_owner": null,
+    "lease_epoch": 1,
+    "lease_expires_at": null,
+    "result_ref_id": "fc330fd5-9753-4359-b678-b4e5c4356867",
+    "failure": null
+  },
+  "publication_receipt": {
+    "operation_id": "0c107de4-e292-4d2b-9749-39cadc372f34",
+    "artifact_id": "0f1dea56-e46b-49c8-8bf9-bccfc1ea481d",
+    "publication_id": "3fba0167-a3d8-43e8-892e-4a96388fbd1d",
+    "forge_item_id": null,
+    "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+    "branch": "horizon/changes/0c107de4-e292-4d2b-9749-39cadc372f34",
+    "base_commit_oid": "d3523f6f68fa8e68424190bdb982331a800467dd",
+    "commit_oid": "7fafdc3c53d58d2b4357c6e798d30b2469455781",
+    "verified_at": "2026-10-23T23:44:50.193048+00:00",
+    "verification": "git_tree_delta",
+    "scope": "Exact requested file operations, commit parent, and preservation of unchanged tree entries",
+    "changed_paths": [
+      "ExactLiouvilleComparison/FiniteTypePresentation.lean",
+      "ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean",
+      "docs/finite-type-presentation-proof.md",
+      "scripts/verify-finite-type-presentation.py",
+      "verification/finite-type-presentation/Audit.lean",
+      "verification/finite-type-presentation/statement-review.md",
+      "verification/finite-type-presentation/statement-publication.json",
+      "verification/finite-type-presentation/final/receipt.json.gz",
+      "verification/finite-type-presentation/final/axioms.json",
+      "verification/finite-type-presentation/final/declarations.json",
+      "verification/finite-type-presentation/audit-archive.json",
+      "verification/finite-type-presentation/audit-evidence.tar.gz.part-00",
+      "verification/finite-type-presentation/audit-evidence.tar.gz.part-01"
+    ],
+    "lean_validation_included": false
+  }
+}

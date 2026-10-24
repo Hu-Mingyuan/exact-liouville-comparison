@@ -1,0 +1,25 @@
+ExactLiouvilleComparison.FiniteTypeComparison.reference_inverseNorm : ∀ {d : Nat} {D : FsFltz.Geometry.LiouvilleDomain d} (C : @FsFltz.Geometry.Completion d D)
+  (A :
+    @ExactLiouvilleComparison.CompatibleStructure d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.completionReference d D C))
+  (cyl : @ExactLiouvilleComparison.CylindricalStructure d D C A)
+  (T :
+    @ExactLiouvilleComparison.ExactSymplecticStructure d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C)))
+  (x :
+    @FsFltz.Geometry.SmoothManifold.Point d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))),
+  @Eq.{1} Real
+    (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.RadialReference.exactStructure d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.FiniteTypeRadial.reference d D C A cyl))
+      (@ExactLiouvilleComparison.RadialReference.compatible d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.FiniteTypeRadial.reference d D C A cyl))
+      T x)
+    (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.completionReference d D C) A T x)

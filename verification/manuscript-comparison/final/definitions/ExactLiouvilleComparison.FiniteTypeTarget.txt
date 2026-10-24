@@ -1,0 +1,55 @@
+ExactLiouvilleComparison.FiniteTypeTarget := ∀ (d : Nat) (D : FsFltz.Geometry.LiouvilleDomain d) (C : @FsFltz.Geometry.Completion d D)
+  (A :
+    @ExactLiouvilleComparison.CompatibleStructure d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.completionReference d D C))
+  (a : @ExactLiouvilleComparison.CylindricalStructure d D C A)
+  (T :
+    @ExactLiouvilleComparison.ExactSymplecticStructure d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))),
+  @ExactLiouvilleComparison.WeaklyTames d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.completionReference d D C) A T →
+    (@Exists.{1}
+        (ExactLiouvilleComparison.AdmissibleGrowth
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+        fun
+          (B :
+            ExactLiouvilleComparison.AdmissibleGrowth
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))) =>
+        @Exists.{1} Real fun (C₀ : Real) =>
+          And
+            (@LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C₀)
+            (@Exists.{1} Real fun (t₀ : Real) =>
+              And
+                (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+                  t₀)
+                (∀
+                  (y :
+                    @FsFltz.Geometry.SmoothManifold.Point
+                      (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) d
+                        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                      (@FsFltz.Geometry.CompactDomain.boundary d (@FsFltz.Geometry.LiouvilleDomain.domain d D)))
+                  (t : Real),
+                  @LE.le.{0} Real Real.instLE t₀ t →
+                    @LE.le.{0} Real Real.instLE
+                      (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d
+                        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d
+                          (@FsFltz.Geometry.Completion.ambient d D C))
+                        (@ExactLiouvilleComparison.completionReference d D C) A T
+                        (@FsFltz.Geometry.Completion.endMap d D C
+                          (@Prod.mk.{0, 0}
+                            (@FsFltz.Geometry.SmoothManifold.Point
+                              (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat) d
+                                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+                              (@FsFltz.Geometry.CompactDomain.boundary d (@FsFltz.Geometry.LiouvilleDomain.domain d D)))
+                            Real y t)))
+                      (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) C₀
+                        (@ExactLiouvilleComparison.AdmissibleGrowth.B
+                          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) B
+                          (Real.exp t)))))) →
+      @ExactLiouvilleComparison.ExactComparison d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d
+          (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C)) T)
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.primitive d (@FsFltz.Geometry.Completion.ambient d D C))

@@ -1,0 +1,6 @@
+FsFltz.Geometry.SmoothManifold.exteriorDerivative : {d k : Nat} →
+  (M : FsFltz.Geometry.SmoothManifold d) →
+    (eta : @FsFltz.Geometry.SmoothManifold.Form d M k) →
+      @FsFltz.Geometry.SmoothManifold.Form d M
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) k
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))

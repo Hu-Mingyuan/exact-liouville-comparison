@@ -1,0 +1,7 @@
+✖ [4045/4046] Building ExactLiouvilleComparison
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison
+✔ [4041/4042] Built ExactLiouvilleComparison (29s)
+Build completed successfully (4042 jobs).
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison"], "cwd": "/var/lib/archon-worker/scratch/publication-e994-v1", "duration_seconds": 36.756, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563", "status": "passed", "targets": ["ExactLiouvilleComparison"], "timings": {"build_seconds": 32.333, "engine_seconds": 36.757819124999514, "preparation_seconds": 0.04540413499853457, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.7212005660003342, "total_seconds": 37.52472680600113, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

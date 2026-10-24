@@ -1,0 +1,69 @@
+ExactLiouvilleComparison.SteinComparison.comparisonWitness : ∀ {d N : Nat} {M : FsFltz.Geometry.SmoothManifold d} (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N)
+  (P : @ExactLiouvilleComparison.SteinReference d N M i) (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M)
+  (hw :
+    @ExactLiouvilleComparison.WeaklyTames d M (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+      (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T)
+  (B :
+    ExactLiouvilleComparison.AdmissibleGrowth
+      (Real.exp (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))))
+  {C : Real}
+  (hC : @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+  (K : Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+  (hK : @IsCompact.{0} (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M) K)
+  (hb :
+    ∀ (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+      Not
+          (@Membership.mem.{0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+            (Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+            (@Set.instMembership.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)) K x) →
+        @LE.le.{0} Real Real.instLE
+          (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d M
+            (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+            (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T x)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) C
+            (@ExactLiouvilleComparison.AdmissibleGrowth.B
+              (Real.exp (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))) B
+              (@ExactLiouvilleComparison.steinRadius d N M i x)))),
+  let Q : @ExactLiouvilleComparison.RadialReference d M := @ExactLiouvilleComparison.SteinRadial.reference d N M i P;
+  let G :
+    ExactLiouvilleComparison.AdmissibleGrowth
+      (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) :=
+    ExactLiouvilleComparison.SteinGrowth.extend B;
+  let K' : Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M) :=
+    @ExactLiouvilleComparison.SteinGrowth.enlargedException.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+      (@ExactLiouvilleComparison.steinRadius d N M i) K;
+  have hK' :
+    @IsCompact.{0} (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+      (@ExactLiouvilleComparison.SteinGrowth.enlargedException.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+        (@ExactLiouvilleComparison.steinRadius d N M i) K) :=
+    @ExactLiouvilleComparison.SteinGrowth.enlargedException_compact.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+      (@FsFltz.Geometry.SmoothManifold.topology d M) (@ExactLiouvilleComparison.steinRadius d N M i)
+      (@ExactLiouvilleComparison.SteinRadial.radius_proper d N M i)
+      (@ExactLiouvilleComparison.SteinRadial.radius_lower d N M i) K hK;
+  have hb' :
+    ∀ (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+      Not
+          (@Membership.mem.{0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+            (Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+            (@Set.instMembership.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+            (@ExactLiouvilleComparison.SteinGrowth.enlargedException.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+              (@ExactLiouvilleComparison.steinRadius d N M i) K)
+            x) →
+        @LE.le.{0} Real Real.instLE
+          (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d M
+            (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+            (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T x)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) C
+            (@ExactLiouvilleComparison.AdmissibleGrowth.B
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+              (ExactLiouvilleComparison.SteinGrowth.extend B) (@ExactLiouvilleComparison.steinRadius d N M i x))) :=
+    @ExactLiouvilleComparison.SteinGrowth.estimate_outside_enlarged d M
+      (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+      (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T (@ExactLiouvilleComparison.steinRadius d N M i)
+      B C K hb;
+  @ExactLiouvilleComparison.ExactComparisonAlgebra.Witness d M
+    (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M T)
+    (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M
+      (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P))
+    (@ExactLiouvilleComparison.MainComparison.comparisonMap d M Q G T hw C hC K' hK' hb')
+    (@ExactLiouvilleComparison.MainComparison.comparisonGauge d M Q G T hw C hC K' hK' hb')

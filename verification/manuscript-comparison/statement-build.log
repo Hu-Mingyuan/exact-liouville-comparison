@@ -1,0 +1,58 @@
+⚠ [3744/3824] Replayed ExactLiouvilleComparison.LargeCoefficientNorm
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✖ [3806/3824] Building ExactLiouvilleComparison.FiniteTypeComparisonStatement
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison.FiniteTypeComparisonStatement
+⚠ [3744/3824] Replayed ExactLiouvilleComparison.LargeCoefficientNorm
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3823/3824] Built ExactLiouvilleComparison.FiniteTypeComparisonStatement (2.8s)
+✔ [3824/3824] Built ExactLiouvilleComparison.ManuscriptComparisonStatement (2.3s)
+Build completed successfully (3824 jobs).
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.ManuscriptComparisonStatement"], "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a", "duration_seconds": 9.529, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "17851a211ad691d4d8a8dc11fe2b55b8f5b95af70415768ed861cae7e77ab738", "status": "passed", "targets": ["ExactLiouvilleComparison.ManuscriptComparisonStatement"], "timings": {"build_seconds": 7.402, "engine_seconds": 9.52956944899961, "preparation_seconds": 0.7428747080002722, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.15887352800018562, "total_seconds": 10.431372386000476, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

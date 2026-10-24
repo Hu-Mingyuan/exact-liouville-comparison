@@ -1,0 +1,301 @@
+{
+  "scope": "Smooth positive-definite real matrix square root; not bundle normalization",
+  "mission_id": "226d751b-2331-4986-a5b5-fbbc2f95df01",
+  "integration_owner": "1f45f2d4-0edc-4d6b-8646-2c1212915b09",
+  "source_sha256": {
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrt.lean": "8e8aa4a0f2c6e4384d1390cb099df0994c41366a754884abcfd30719b23a24d0",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtStatement.lean": "08336671690a328ddd69215f3e9417e5a609f445a37a1b5cf755dbba981eee0c",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtSylvester.lean": "4686019828e4507f4951302bae0d6202fb203c1ad90dd9ed27e15fd28fca5583",
+    "scripts/verify-normalization-sqrt.py": "c46753241c24e70d75686480ece2f0b6242c49568ced4ea12276edb5bb642f22",
+    "docs/normalization-sqrt-crosswalk.md": "dbf445394cbe3e586a93f2704af10d4cd4bdb1f00ff7c90056666407f82cc215",
+    "docs/normalization-sqrt-proof.md": "f18ff296e8f00797a55d2e0a43e962cebb66ef224be50e3b801771c28c8a3aa2",
+    "verification/normalization-sqrt/statement-review.md": "d9e993938dfcdaf36ae28b88fdefbb8c661301a71d8db256a9593137b99f8713",
+    "verification/normalization-sqrt/declarations.json": "2c4089da35da0370cddad3ed37ece4b0eac54231952db1b736b2792d57840e87",
+    "verification/normalization-sqrt/AxiomAudit.lean": "e8d65a704d708a4b3d098b4ea6f3852f793aedeabbc6badc907d9a13d566aec9",
+    "verification/normalization-sqrt/Consumer.lean": "5d7c7b47c5c34aa18a7710a6708e3119a414a77e92210898fd787e0864ffd8bc",
+    "verification/normalization-sqrt/DeclarationTypes.lean": "2aa10f03da72f2c997409766ff5e9f5c67f7880e351aff53a8e43284aa904d53"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.CylindricalCompatibilityNormalizationSqrt"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.CylindricalCompatibilityNormalizationSqrt"
+        ],
+        "cwd": "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact",
+        "duration_seconds": 4.638,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cbe0b17fa0b7186b9c65cc3f521b854e2e05a29ccc45fbd88efbe20b262965f1",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.CylindricalCompatibilityNormalizationSqrt"
+        ],
+        "timings": {
+          "build_seconds": 0.0,
+          "engine_seconds": 4.638071335000859,
+          "preparation_seconds": 0.07396794900159875,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.37128765499983274,
+          "total_seconds": 5.083454947000064,
+          "wait_seconds": 0.001
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/normalization-sqrt/DeclarationTypes.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact/verification/normalization-sqrt/DeclarationTypes.lean"
+        ],
+        "cwd": "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact",
+        "duration_seconds": 16.546,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/normalization-sqrt/DeclarationTypes.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cbe0b17fa0b7186b9c65cc3f521b854e2e05a29ccc45fbd88efbe20b262965f1",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 16.541,
+          "engine_seconds": 16.545757067000523,
+          "preparation_seconds": 0.03940922500078159,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.2103744910000387,
+          "total_seconds": 16.795607928001118,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/normalization-sqrt/AxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact/verification/normalization-sqrt/AxiomAudit.lean"
+        ],
+        "cwd": "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact",
+        "duration_seconds": 4.777,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/normalization-sqrt/AxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cbe0b17fa0b7186b9c65cc3f521b854e2e05a29ccc45fbd88efbe20b262965f1",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 4.055,
+          "engine_seconds": 4.7775265559994295,
+          "preparation_seconds": 0.07018133000019589,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.18806688899894652,
+          "total_seconds": 5.035855042999174,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "declarations": {
+        "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_sqrt_posDef": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_sqrt_comp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_inverse_sqrt_comp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.contDiff_sqrt_comp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.contDiff_inverse_sqrt_comp": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.relative_sqrt_contract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sqrt_composition_contract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.inverse_sqrt_composition_contract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.SylvesterContract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.SqrtCompositionContract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.InverseSqrtCompositionContract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sylvester": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sylvester_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sylvester_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.sylvester_contract": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.NormalizationSqrt.hasFDerivAt_sq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/normalization-sqrt/Consumer.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact/verification/normalization-sqrt/Consumer.lean"
+        ],
+        "cwd": "/var/lib/archon-worker/scratch/0ec2ae8c-4e58-47c1-90fd-188cbb4c2421/normalization-sqrt-exact",
+        "duration_seconds": 3.759,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/normalization-sqrt/Consumer.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cbe0b17fa0b7186b9c65cc3f521b854e2e05a29ccc45fbd88efbe20b262965f1",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 3.758,
+          "engine_seconds": 3.7590151370004605,
+          "preparation_seconds": 0.0520595689995389,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.23826481600008265,
+          "total_seconds": 4.049416383999414,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    }
+  ],
+  "declaration_count": 19,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "published_commit_oid": "cbcb67442012a4e670755eaca9ad0dfc20656484",
+  "materialization_evidence": "verification/normalization-sqrt/publication.json"
+}

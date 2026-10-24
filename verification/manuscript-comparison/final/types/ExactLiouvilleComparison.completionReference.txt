@@ -1,0 +1,5 @@
+ExactLiouvilleComparison.completionReference : {d : Nat} →
+  {D : FsFltz.Geometry.LiouvilleDomain d} →
+    (C : @FsFltz.Geometry.Completion d D) →
+      @ExactLiouvilleComparison.ExactSymplecticStructure d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))

@@ -1,0 +1,10 @@
+ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference : {d : Nat} →
+  {D : FsFltz.Geometry.LiouvilleDomain d} →
+    {C : @FsFltz.Geometry.Completion d D} →
+      {A :
+          @ExactLiouvilleComparison.CompatibleStructure d
+            (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+            (@ExactLiouvilleComparison.completionReference d D C)} →
+        (Q : @ExactLiouvilleComparison.FiniteTypeRadial.Radius d D C A) →
+          @ExactLiouvilleComparison.RadialReference d
+            (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))

@@ -1,0 +1,5 @@
+FsFltz.Geometry.SmoothManifold.pullback : {d e k : Nat} →
+  (M : FsFltz.Geometry.SmoothManifold d) →
+    (N : FsFltz.Geometry.SmoothManifold e) →
+      (f : @FsFltz.Geometry.SmoothManifold.Point d M → @FsFltz.Geometry.SmoothManifold.Point e N) →
+        (eta : @FsFltz.Geometry.SmoothManifold.Form e N k) → @FsFltz.Geometry.SmoothManifold.Form d M k

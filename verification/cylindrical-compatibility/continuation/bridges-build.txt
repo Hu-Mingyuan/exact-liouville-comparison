@@ -1,0 +1,11 @@
+✖ [3526/3631] Building ExactLiouvilleComparison.CylindricalCompatibilityFormBridge
+error: target is out-of-date and needs to be rebuilt
+✖ [3630/3631] Building ExactLiouvilleComparison.CylindricalCompatibilityProductSmooth
+error: target is out-of-date and needs to be rebuilt
+✖ [3631/3631] Building ExactLiouvilleComparison.CylindricalCompatibilityTransportSmooth
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison.CylindricalCompatibilityFormBridge
+- ExactLiouvilleComparison.CylindricalCompatibilityProductSmooth
+- ExactLiouvilleComparison.CylindricalCompatibilityTransportSmooth
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.CylindricalCompatibilityFormBridge", "ExactLiouvilleComparison.CylindricalCompatibilityTransportSmooth", "ExactLiouvilleComparison.CylindricalCompatibilityProductSmooth"], "cwd": "/var/lib/archon-worker/workspaces/assignments/57837227-ce81-4390-a06d-88075fd4d5e7", "duration_seconds": 3.617, "error": "build resource queue deadline reached; publish pending verification and retry later", "failure": null, "lean_file": null, "mode": "lake", "ok": false, "probe": false, "repeated_deferred": true, "returncode": 75, "snapshot_verified": false, "source_key": null, "status": "deferred", "targets": ["ExactLiouvilleComparison.CylindricalCompatibilityFormBridge", "ExactLiouvilleComparison.CylindricalCompatibilityTransportSmooth", "ExactLiouvilleComparison.CylindricalCompatibilityProductSmooth"], "timings": {"build_seconds": 0.0, "engine_seconds": 3.6173739739988378, "preparation_seconds": 0.0666782169992075, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.3183069299993804, "total_seconds": 4.002415705999738, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

@@ -1,0 +1,4 @@
+FsFltz.Geometry.SmoothManifold.Nondegenerate : {d : Nat} →
+  (M : FsFltz.Geometry.SmoothManifold d) →
+    (eta : @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) →
+      (x : @FsFltz.Geometry.SmoothManifold.Point d M) → Prop

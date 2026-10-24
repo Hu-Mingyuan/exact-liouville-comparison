@@ -1,0 +1,510 @@
+{
+  "ExactLiouvilleComparison.ThirdPath.Construction": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction._sizeOf_1": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction._sizeOf_inst": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.casesOn": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.core_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.ctorIdx": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.equation": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.evolution": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.exterior_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.field": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.global_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.inverse_isotopy": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.joint": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.lower_exhaustion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.mk": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.mk._flat_ctor": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.mk.inj": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.mk.injEq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.mk.noConfusion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.mk.sizeOf_spec": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.noConfusion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.noConfusionType": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.norm_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.proper_exhaustion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.ratio_le_one": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.rec": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.recOn": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.smooth_exhaustion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.smooth_primitive": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.symplectic": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Construction.unique_field": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.Target": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.coefficient": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.construction": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.construction._proof_1": [
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.construction._proof_2": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.construction._proof_3": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.construction._proof_4": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.construction._proof_5": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.differential_eq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.energy_lower": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.evolution": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.evolution_exists": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.evolution_inverse_isotopy": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion.eq_1": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_bddBelow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_core_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_derivative": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_exterior_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_global_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_lower": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_proper": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.exhaustion_smooth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field._proof_1": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field._proof_2": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field.congr_simp": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_equation": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_equation_form": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_intervalSmooth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_joint": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_norm_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_norm_le_one": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.field_unique": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.flow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.flow_compose": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.flow_initial": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.flow_inverse": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.flow_isotopy": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.flow_unique": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.form": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.form._proof_1": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.form._proof_2": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.form._proof_3": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.form_apply": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.form_family": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.full_interval_solution": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.inverseEndpoint": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.inverseEndpoint_direction": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.inverseEndpoint_eq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.inverseEndpoint_isotopy": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.isotopy_symm": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.nondegenerate": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive._proof_1": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive._proof_2": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive._proof_3": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive.eq_1": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive_family": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive_one": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive_parameter_derivative": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive_smooth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.primitive_zero": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.ratio_le_one": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.symplectic": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.thirdPathFlow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.trajectory": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.trajectory_agrees": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.trajectory_chart_solves": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.trajectory_smooth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ExactLiouvilleComparison.ThirdPath.trajectory_solves": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

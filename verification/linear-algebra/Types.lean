@@ -1,0 +1,23 @@
+import ExactLiouvilleComparison.LinearAlgebraChecks
+
+set_option pp.fullNames true
+set_option pp.universes true
+set_option pp.explicit false
+set_option pp.proofs true
+set_option pp.deepTerms true
+set_option format.width 120
+
+#check @ExactLiouvilleComparison.norm_le_of_weak_positive_equation
+#check @ExactLiouvilleComparison.weak_taming_linear_nondegenerate
+#check @ExactLiouvilleComparison.weak_taming_linear_contraction
+#check @ExactLiouvilleComparison.CompatibleStructure.metricInnerProductSpace
+#check @ExactLiouvilleComparison.CompatibleStructure.metric_inner_eq
+#check @ExactLiouvilleComparison.CompatibleStructure.weak_taming_nondegenerate
+#check @ExactLiouvilleComparison.CompatibleStructure.weak_taming_contraction
+#check @ExactLiouvilleComparison.CompatibleStructure.inverseContraction_norm_le
+#check @ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive
+#check @ExactLiouvilleComparison.LinearAlgebraChecks.radial_metric_norm
+#check @ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector
+#check @ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector_apply
+#check @ExactLiouvilleComparison.LinearAlgebraChecks.first_path_linear_estimate
+#check @ExactLiouvilleComparison.LinearAlgebraChecks.zero_parameter

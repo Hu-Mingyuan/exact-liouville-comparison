@@ -1,0 +1,511 @@
+{
+  "scope": "First-path pointwise construction, estimates and proper exhaustion only. No joint smoothness of X, compact-core uniform derivative bounds, ODE completeness, MainTarget or phase acceptance.",
+  "base": {
+    "semantic_commit": "46fccea69cb9524882bbeda83b0ac2067d22a149",
+    "semantic_review_artifact": "8930b2e3-ab88-498e-8a6f-d3f732fa8f95",
+    "repository_id": "fe83a2bb-5147-4bfd-b750-19b11c583d74",
+    "unchanged_sha256": {
+      "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+      "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+      "ExactLiouvilleComparison.lean": "969541ba18a27f912c1210658dd71f9ea6cbd4ab6b0fe7e8218b6bfa7f368144",
+      "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+      "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+      "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "docs/objective.md": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8",
+      "docs/definition-comparison.md": "1a9591add277079f3b8d294b20336502ccca73157a5137f5e9876af6a511b399",
+      "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+      "ExactLiouvilleComparison/SmallCoefficient.lean": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+      "ExactLiouvilleComparison/SmallCoefficientK.lean": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769",
+      "ExactLiouvilleComparison/InterfaceChecks.lean": "32bd5a0e234a94674f49f786772f8b623fa61f48ce65f3d13a85308689941c06"
+    },
+    "source_base": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "scalar_source": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "mission": "cee35d12-3ac0-4e15-994a-33699fb31996",
+    "scalar_import_paths": [
+      "ExactLiouvilleComparison/SmallCoefficient.lean",
+      "ExactLiouvilleComparison/SmallCoefficientAsymptotic.lean",
+      "ExactLiouvilleComparison/SmallCoefficientK.lean",
+      "scripts/verify-small-coefficient.py",
+      "verification/SmallCoefficientAxiomAudit.lean",
+      "verification/SmallCoefficientConsumer.lean",
+      "verification/SmallCoefficientCrosswalk.md",
+      "verification/small-coefficient-axioms.log",
+      "verification/small-coefficient-base.json",
+      "verification/small-coefficient-build.log",
+      "verification/small-coefficient-consumer.log",
+      "verification/small-coefficient-receipt.json",
+      "verification/small-coefficient-review.json"
+    ],
+    "method": "Add exact scalar delivery files to radial/linear publication base, then only dedicated FirstPath modules and verification. Accepted semantics unchanged."
+  },
+  "source_sha256": {
+    "ExactLiouvilleComparison/FirstPathChecks.lean": "7fee13337880e005bee80260cc8301abdffaf665c9f1d7fbd213d0156058e6cb",
+    "ExactLiouvilleComparison/FirstPathCoefficient.lean": "591014599d70f6bf68c20c7a231b53f04f19f146a6bf0ccec6220412e5b36aac",
+    "ExactLiouvilleComparison/FirstPathEstimate.lean": "4a3d334c1f741ad53b94d4395a751916e0520407eddeafc69c65f6c51bfa084a",
+    "ExactLiouvilleComparison/FirstPathExhaustion.lean": "c32921488a6d0a34b513e4279b9eeb4d035fa3884d35a5a682f91f1809fc2daf",
+    "ExactLiouvilleComparison/FirstPathVector.lean": "c9fd5bbc2e6d288b5659892011e436e162e7f90b9ce700932ff6d21c29048b63",
+    "verification/FirstPathConsumer.lean": "be307d16c9008894bd36c5aafcb624e21d0227d9d011c51fbd25068249c36ace",
+    "verification/FirstPathAxiomAudit.lean": "ef2a30a96b7de3285a9ea76c52b8ef19c19662e8bfe0b1e1283f6509f9d7eeaf",
+    "verification/FirstPathTypes.lean": "55fff2e0a5f56ac7ac3961275bd0c3fdc093177a8448bc344f5029ef971fb8ee",
+    "verification/FirstPathCrosswalk.md": "3d499826fc7e324a0beb998960f547cb7b46b1cbab5fcc313aaa2ad8c86c2f00",
+    "verification/first-path-base.json": "5ce58fc17b132854c37e7ca75f7364101f37e19b6e39aedec333157cf062c411",
+    "scripts/verify-first-path.py": "0b6b8812f06c7d648fa1b67a5146145c4bc873e5384519a233e852cccb9c9cc4",
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "ExactLiouvilleComparison/LinearAlgebra.lean": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1",
+    "ExactLiouvilleComparison/LinearAlgebraChecks.lean": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f",
+    "ExactLiouvilleComparison/RadialCoefficient.lean": "a639d4dbd9c8b16186466e2a9d3c3f4ac729736b7e08134a16c7df002aeb082a",
+    "ExactLiouvilleComparison/RadialMetric.lean": "4393795ecc7cd8302c33fdc442303afc828cc94b6ac4265286ab4cc769694dc4",
+    "ExactLiouvilleComparison/RadialMetricBundle.lean": "2beabd7169489fcaac0dd7f6c12eec0b063d35afa1bc70c5dc6ca7a68b501578",
+    "ExactLiouvilleComparison/RadialMetricChecks.lean": "346acdc5bc188cb9d97e75f4ca6caf9538e90c25b8a522a4f66570ab1b45b25e",
+    "ExactLiouvilleComparison/RadialMetricConstruction.lean": "7658f90a5a138b823a57411db25794e3979793aef38c3e37ac25b21005be886b",
+    "ExactLiouvilleComparison/RadialMetricDual.lean": "73f7c250c522a9c4f0138681031a887faf6829481b5eec9b728a6c6084575ead",
+    "ExactLiouvilleComparison/RadialMetricLinear.lean": "4230f3af5f5ac9eeaf4796de421bc3c91ef089ea3585ff146d38450ae9079a3f",
+    "ExactLiouvilleComparison/RadialMetricNorm.lean": "8b7910efc1b16f67e118604b87e9ca740d647cfdcb3eb1a22f006f936de677e8",
+    "docs/radial-metric.md": "fea00e85d9fb7c638614a4f2651af2222bb25505c196154e4d867b77e789d3ee",
+    "ExactLiouvilleComparison/SmallCoefficient.lean": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+    "ExactLiouvilleComparison/SmallCoefficientK.lean": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769",
+    "ExactLiouvilleComparison/SmallCoefficientAsymptotic.lean": "3a0ce24020ac34baffa2caffae906cc675081ae752ae9bdc87988b1d571f339b",
+    "scripts/verify-small-coefficient.py": "20130cbab91e21047b800ce8103ab0cb0c6a129937fa4887f85d1da931484231",
+    "verification/SmallCoefficientAxiomAudit.lean": "5e4f59d6a9d531a2706dcc3eef903af1ebd493147c2934d97834179ed2a28436",
+    "verification/SmallCoefficientConsumer.lean": "a8609d6085ce60d879729e14e5a54d0723afed89c59c9775a19e5dbd9edc0dbd",
+    "verification/SmallCoefficientCrosswalk.md": "85d651fd4707efd69d2a98aef7719525e542ce2b994245dd9ae39301040df008",
+    "verification/small-coefficient-axioms.log": "04c50a4e19932b997bcf29e98fe6315f5094f32403b063811c9662153d83e928",
+    "verification/small-coefficient-base.json": "49c9fa4dcc1df06a6bc27c111b5064d6a58000b74a3dfa98750b81a6bfe2f670",
+    "verification/small-coefficient-build.log": "17f054d7b4c6aafb17e026cec3dbe47851b1d6b2fcaad8a94370112ecca07304",
+    "verification/small-coefficient-consumer.log": "4ac6aea8eeffdc2db71df298f3b1a1cb495aae74efc20c5a4ba8a581a163cb39",
+    "verification/small-coefficient-receipt.json": "9e63b1028c64328f0ec31074b019dab3ec1eac688a23f34c032b3d8fdaa8bce5",
+    "verification/small-coefficient-review.json": "530bd8580b19714cfae8ebaeffad7db8a909a47cb9a1ceaf075faed865162250",
+    "verification/first-path-inputs.json": "83f2527dd7b8272cb5bc90a09763c70643c02a426c7ae031ae006fd75b67915b",
+    "verification/first-path-declarations.json": "724d24e0bcfff57df16f066c69afbd5ab91bf33b774a6def35454b4f44801839"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.FirstPathChecks"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.FirstPathChecks"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 2.128,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "e9285b0e422aada0479757cfcf856ae853490a61484479973b43ee36558a8a18",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.FirstPathChecks"
+        ],
+        "timings": {
+          "build_seconds": 0.0,
+          "engine_seconds": 2.1280070619995968,
+          "preparation_seconds": 0.041518795999763825,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.16481419100000494,
+          "total_seconds": 2.334414371999628,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/FirstPathConsumer.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/FirstPathConsumer.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 2.766,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/FirstPathConsumer.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "e9285b0e422aada0479757cfcf856ae853490a61484479973b43ee36558a8a18",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.765,
+          "engine_seconds": 2.766077948000202,
+          "preparation_seconds": 0.03865304299961281,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.15215826100029517,
+          "total_seconds": 2.9569396059996507,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_types": [
+        "ExactLiouvilleComparison.FirstPathChecks.coefficient_core",
+        "ExactLiouvilleComparison.FirstPathChecks.unique_native_solution",
+        "ExactLiouvilleComparison.FirstPathChecks.zero_parameter",
+        "ExactLiouvilleComparison.FirstPathChecks.growth_consumer",
+        "ExactLiouvilleComparison.FirstPathConsumer.norm_is_metric",
+        "ExactLiouvilleComparison.FirstPathConsumer.explicit_metrics",
+        "ExactLiouvilleComparison.FirstPathConsumer.tail_both"
+      ],
+      "declarations": {
+        "ExactLiouvilleComparison.FirstPathConsumer.norm_is_metric": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPathConsumer.explicit_metrics": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPathConsumer.tail_both": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/FirstPathTypes.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/FirstPathTypes.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 2.632,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/FirstPathTypes.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "e9285b0e422aada0479757cfcf856ae853490a61484479973b43ee36558a8a18",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.631,
+          "engine_seconds": 2.632595203999699,
+          "preparation_seconds": 0.03812280200054374,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.1521979859990097,
+          "total_seconds": 2.8229643570002736,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_types": [
+        "ExactLiouvilleComparison.FirstPathChecks.coefficient_core",
+        "ExactLiouvilleComparison.FirstPathChecks.unique_native_solution",
+        "ExactLiouvilleComparison.FirstPathChecks.zero_parameter",
+        "ExactLiouvilleComparison.FirstPathChecks.growth_consumer",
+        "ExactLiouvilleComparison.FirstPath.coefficient",
+        "ExactLiouvilleComparison.FirstPath.coefficient_rhoPrime",
+        "ExactLiouvilleComparison.FirstPath.coefficient_radial",
+        "ExactLiouvilleComparison.FirstPath.metric_bounds",
+        "ExactLiouvilleComparison.FirstPath.tail_ratio",
+        "ExactLiouvilleComparison.FirstPath.tail_factor",
+        "ExactLiouvilleComparison.FirstPath.radial_pair_bound",
+        "ExactLiouvilleComparison.FirstPath.firstestimate",
+        "ExactLiouvilleComparison.FirstPath.firstproper",
+        "ExactLiouvilleComparison.FirstPath.exterior_estimate",
+        "ExactLiouvilleComparison.FirstPath.exhaustion",
+        "ExactLiouvilleComparison.FirstPath.exhaustion_smooth",
+        "ExactLiouvilleComparison.FirstPath.exhaustion_nonneg",
+        "ExactLiouvilleComparison.FirstPath.exhaustion_bddBelow",
+        "ExactLiouvilleComparison.FirstPath.exhaustion_derivative",
+        "ExactLiouvilleComparison.FirstPath.exhaustion_proper",
+        "ExactLiouvilleComparison.FirstPath.form",
+        "ExactLiouvilleComparison.FirstPath.nondegenerate",
+        "ExactLiouvilleComparison.FirstPath.W",
+        "ExactLiouvilleComparison.FirstPath.X",
+        "ExactLiouvilleComparison.FirstPath.W_equation",
+        "ExactLiouvilleComparison.FirstPath.X_equation",
+        "ExactLiouvilleComparison.FirstPath.solution_unique",
+        "ExactLiouvilleComparison.FirstPath.X_unique",
+        "ExactLiouvilleComparison.FirstPath.W_unique",
+        "ExactLiouvilleComparison.FirstPath.X_zero",
+        "ExactLiouvilleComparison.FirstPath.covector_norm",
+        "ExactLiouvilleComparison.FirstPath.W_bound",
+        "ExactLiouvilleComparison.FirstPath.tangentNorm",
+        "ExactLiouvilleComparison.FirstPath.X_h_bound",
+        "ExactLiouvilleComparison.FirstPath.norm_sq_metric",
+        "ExactLiouvilleComparison.FirstPath.X_g_bound"
+      ],
+      "declarations": {}
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/FirstPathAxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/FirstPathAxiomAudit.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 2.642,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/FirstPathAxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "e9285b0e422aada0479757cfcf856ae853490a61484479973b43ee36558a8a18",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.641,
+          "engine_seconds": 2.642176429999381,
+          "preparation_seconds": 0.038758173000132956,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.1604633980005019,
+          "total_seconds": 2.841450865999832,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_types": [],
+      "declarations": {
+        "ExactLiouvilleComparison.FirstPathChecks.coefficient_core": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPathChecks.unique_native_solution": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPathChecks.zero_parameter": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPathChecks.growth_consumer": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.coefficient": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.coefficient_rhoPrime": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.coefficient_radial": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.metric_bounds": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.tail_ratio": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.tail_factor": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.radial_pair_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.firstestimate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.firstproper": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exterior_estimate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exhaustion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exhaustion_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exhaustion_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exhaustion_bddBelow": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exhaustion_derivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.exhaustion_proper": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.form": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.nondegenerate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.W": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.X": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.W_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.X_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.solution_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.X_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.W_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.X_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.covector_norm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.W_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.tangentNorm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.X_h_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.norm_sq_metric": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.FirstPath.X_g_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ]
+}

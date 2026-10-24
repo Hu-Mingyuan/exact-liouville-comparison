@@ -1,0 +1,122 @@
+{
+  "ExactLiouvilleComparison/LinearAlgebra.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1",
+    "blob_oid": "be4e3a37d120627d70c38a0ef0597e2a5785b146"
+  },
+  "ExactLiouvilleComparison/LinearAlgebraChecks.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f",
+    "blob_oid": "3e6262dc4056bbb91b1c3aa60a4bce74c43e47ca"
+  },
+  "ExactLiouvilleComparison/RadialCoefficient.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "a639d4dbd9c8b16186466e2a9d3c3f4ac729736b7e08134a16c7df002aeb082a",
+    "blob_oid": "610acaf6625cc546e36d8b5c80944ff37ac691d2"
+  },
+  "ExactLiouvilleComparison/RadialMetric.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "4393795ecc7cd8302c33fdc442303afc828cc94b6ac4265286ab4cc769694dc4",
+    "blob_oid": "dc7219acac12eb2983f8cab5b3975af10445be36"
+  },
+  "ExactLiouvilleComparison/RadialMetricBundle.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "2beabd7169489fcaac0dd7f6c12eec0b063d35afa1bc70c5dc6ca7a68b501578",
+    "blob_oid": "9e72a9417956ff249a9eeaea6645a2cfc547a82f"
+  },
+  "ExactLiouvilleComparison/RadialMetricChecks.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "346acdc5bc188cb9d97e75f4ca6caf9538e90c25b8a522a4f66570ab1b45b25e",
+    "blob_oid": "ec4d46d9cbbfccf6c9c038bb9d18be5b0f12eacd"
+  },
+  "ExactLiouvilleComparison/RadialMetricConstruction.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "7658f90a5a138b823a57411db25794e3979793aef38c3e37ac25b21005be886b",
+    "blob_oid": "423a7e6b870e0187bc6f0b51a0b014a07b663ff8"
+  },
+  "ExactLiouvilleComparison/RadialMetricDual.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "73f7c250c522a9c4f0138681031a887faf6829481b5eec9b728a6c6084575ead",
+    "blob_oid": "fbaf0c76516be4c0973fbcda4fbd62d3a7f50b83"
+  },
+  "ExactLiouvilleComparison/RadialMetricLinear.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "4230f3af5f5ac9eeaf4796de421bc3c91ef089ea3585ff146d38450ae9079a3f",
+    "blob_oid": "003c3f37409f0eca6452b0699041a65d03b0c8be"
+  },
+  "ExactLiouvilleComparison/RadialMetricNorm.lean": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "8b7910efc1b16f67e118604b87e9ca740d647cfdcb3eb1a22f006f936de677e8",
+    "blob_oid": "d8fbb351fa5338a59df40f75abcf19a73a9aa0db"
+  },
+  "docs/radial-metric.md": {
+    "commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+    "sha256": "fea00e85d9fb7c638614a4f2651af2222bb25505c196154e4d867b77e789d3ee",
+    "blob_oid": "679c05b6f87b836897cffbbac0f93f6923b229a2"
+  },
+  "ExactLiouvilleComparison/SmallCoefficient.lean": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+    "blob_oid": "bd212a9a925a0703258ffff6d2458ee0744e99c5"
+  },
+  "ExactLiouvilleComparison/SmallCoefficientK.lean": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769",
+    "blob_oid": "35a06a64eacdf8faca7e16b66e7aa904e7efa3c7"
+  },
+  "ExactLiouvilleComparison/SmallCoefficientAsymptotic.lean": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "3a0ce24020ac34baffa2caffae906cc675081ae752ae9bdc87988b1d571f339b",
+    "blob_oid": "5e14d5017ce29b965b0f115ae38e0c99e7d15809"
+  },
+  "scripts/verify-small-coefficient.py": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "20130cbab91e21047b800ce8103ab0cb0c6a129937fa4887f85d1da931484231",
+    "blob_oid": "7c749f7a4588c2752a0de6d0193374ff9be224e7"
+  },
+  "verification/SmallCoefficientAxiomAudit.lean": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "5e4f59d6a9d531a2706dcc3eef903af1ebd493147c2934d97834179ed2a28436",
+    "blob_oid": "5181774715feb90d486290af5a581522fa519fab"
+  },
+  "verification/SmallCoefficientConsumer.lean": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "a8609d6085ce60d879729e14e5a54d0723afed89c59c9775a19e5dbd9edc0dbd",
+    "blob_oid": "5e86c5fac29be774a518d3b1203424cf955a731a"
+  },
+  "verification/SmallCoefficientCrosswalk.md": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "85d651fd4707efd69d2a98aef7719525e542ce2b994245dd9ae39301040df008",
+    "blob_oid": "6b45c7c4fd3611af385c587b809c9a04ade6a189"
+  },
+  "verification/small-coefficient-axioms.log": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "04c50a4e19932b997bcf29e98fe6315f5094f32403b063811c9662153d83e928",
+    "blob_oid": "974fafb51366bbe7bc187c7d27591da995093ded"
+  },
+  "verification/small-coefficient-base.json": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "49c9fa4dcc1df06a6bc27c111b5064d6a58000b74a3dfa98750b81a6bfe2f670",
+    "blob_oid": "8d5dd3a4558729fc4ee2d42aaa08110d929a61b5"
+  },
+  "verification/small-coefficient-build.log": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "17f054d7b4c6aafb17e026cec3dbe47851b1d6b2fcaad8a94370112ecca07304",
+    "blob_oid": "dc20e08fa5884f3866c33528dc81cdce81d1b321"
+  },
+  "verification/small-coefficient-consumer.log": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "4ac6aea8eeffdc2db71df298f3b1a1cb495aae74efc20c5a4ba8a581a163cb39",
+    "blob_oid": "6cda580b3f7582c293892dfd768578069d4454e3"
+  },
+  "verification/small-coefficient-receipt.json": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "9e63b1028c64328f0ec31074b019dab3ec1eac688a23f34c032b3d8fdaa8bce5",
+    "blob_oid": "e80737cfb2259d5f462905b684bf73cb9c536455"
+  },
+  "verification/small-coefficient-review.json": {
+    "commit": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "sha256": "530bd8580b19714cfae8ebaeffad7db8a909a47cb9a1ceaf075faed865162250",
+    "blob_oid": "0ecdc0e95c24a0d6c6ce146a0cba650a643eaf71"
+  }
+}

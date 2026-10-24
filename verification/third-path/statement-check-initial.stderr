@@ -1,0 +1,135 @@
+✖ [2799/2942] Building FsFltz.Geometry.LiouvilleFlowPrimitive
+error: target is out-of-date and needs to be rebuilt
+✖ [2809/2942] Building FsFltz.Toric
+error: target is out-of-date and needs to be rebuilt
+✖ [2835/2942] Building FsFltz.Geometry.BoundaryNondegeneracy
+error: target is out-of-date and needs to be rebuilt
+✖ [2838/2942] Building FsFltz.Geometry.Family
+error: target is out-of-date and needs to be rebuilt
+✖ [3046/3163] Building ExactLiouvilleComparison.LinearAlgebra
+error: target is out-of-date and needs to be rebuilt
+✖ [3119/3216] Building ExactLiouvilleComparison.SmallCoefficient
+error: target is out-of-date and needs to be rebuilt
+✖ [3576/3632] Building FsFltz.Geometry.VectorFieldBridge
+error: target is out-of-date and needs to be rebuilt
+✖ [3579/3632] Building ExactLiouvilleComparison.LargeCoefficientNorm
+error: target is out-of-date and needs to be rebuilt
+✖ [3615/3632] Building FsFltz.CoordinateGeometry
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- FsFltz.Geometry.LiouvilleFlowPrimitive
+- FsFltz.Toric
+- FsFltz.Geometry.BoundaryNondegeneracy
+- FsFltz.Geometry.Family
+- ExactLiouvilleComparison.LinearAlgebra
+- ExactLiouvilleComparison.SmallCoefficient
+- FsFltz.Geometry.VectorFieldBridge
+- ExactLiouvilleComparison.LargeCoefficientNorm
+- FsFltz.CoordinateGeometry
+✔ [3573/3632] Built FsFltz.Toric (18s)
+✔ [3574/3632] Built FsFltz.Geometry.Family (18s)
+✔ [3575/3632] Built FsFltz.Geometry.VectorFieldBridge (17s)
+✔ [3576/3632] Built ExactLiouvilleComparison.SmallCoefficient (18s)
+✔ [3577/3632] Built ExactLiouvilleComparison.LinearAlgebra (18s)
+✔ [3578/3632] Built FsFltz.CoordinateGeometry (17s)
+✔ [3579/3632] Built FsFltz.Geometry.BoundaryNondegeneracy (20s)
+⚠ [3580/3632] Built ExactLiouvilleComparison.LargeCoefficientNorm (21s)
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3581/3632] Built FsFltz.Geometry.LiouvilleFlowPrimitive (22s)
+✔ [3582/3632] Built ExactLiouvilleComparison.LargeCoefficientSeries (7.4s)
+✔ [3583/3632] Built ExactLiouvilleComparison.RadialMetricLinear (7.3s)
+✔ [3584/3632] Built FsFltz.Analytic (7.6s)
+✔ [3585/3632] Built ExactLiouvilleComparison.LinearAlgebraChecks (7.4s)
+✔ [3586/3632] Built ExactLiouvilleComparison.SmallCoefficientK (7.8s)
+✔ [3587/3632] Built FsFltz.Geometry.Deformation (8.0s)
+✔ [3588/3632] Built FsFltz.Geometry.BoundaryContactDistribution (6.9s)
+✔ [3589/3632] Built FsFltz.Geometry.FormScalarDerivative (6.0s)
+✔ [3590/3632] Built ExactLiouvilleComparison.SmallCoefficientAsymptotic (3.7s)
+✔ [3591/3632] Built ExactLiouvilleComparison.RadialCoefficient (3.8s)
+✔ [3592/3632] Built ExactLiouvilleComparison.LargeCoefficient (3.7s)
+✔ [3593/3632] Built FsFltz.Differential (4.1s)
+✔ [3594/3632] Built FsFltz.AnalyticGeometry (5.3s)
+✔ [3595/3632] Built FsFltz.SmoothTorus (3.6s)
+✔ [3596/3632] Built FsFltz.QuotientGeometry (4.3s)
+✔ [3597/3632] Built FsFltz.Geometry.ToricForms (2.6s)
+✔ [3598/3632] Built FsFltz.Geometry.SmoothForms (3.9s)
+✔ [3599/3632] Built FsFltz.Geometry.QuotientFormBridge (4.0s)
+✔ [3600/3632] Built FsFltz.Geometry.ToricSmoothForms (2.8s)
+✔ [3601/3632] Built FsFltz.Geometry.IntrinsicShrinkingPairScaling (3.6s)
+✔ [3602/3632] Built ExactLiouvilleComparison.RadialMetric (4.1s)
+✔ [3603/3632] Built ExactLiouvilleComparison.RadialMetricDual (3.2s)
+✔ [3604/3632] Built FsFltz.Geometry.SymplecticBridge (4.8s)
+✔ [3605/3632] Built ExactLiouvilleComparison.RadialMetricBundle (7.4s)
+✔ [3606/3632] Built FsFltz.Geometry.SmoothLiouville (5.6s)
+✔ [3607/3632] Built FsFltz.Geometry.FamilyLiouville (5.9s)
+✔ [3608/3632] Built ExactLiouvilleComparison.RadialMetricConstruction (11s)
+✔ [3609/3632] Built FsFltz.Geometry.FamilyLiouvilleNeighborhood (5.9s)
+✔ [3610/3632] Built ExactLiouvilleComparison.RadialMetricNorm (2.6s)
+✔ [3611/3632] Built ExactLiouvilleComparison.RadialInterpolationCoefficient (2.5s)
+✔ [3612/3632] Built ExactLiouvilleComparison.RadialMetricChecks (2.7s)
+✔ [3613/3632] Built ExactLiouvilleComparison.FirstPathCoefficient (2.5s)
+✔ [3614/3632] Built ExactLiouvilleComparison.RadialInterpolationGeometry (3.1s)
+✔ [3615/3632] Built ExactLiouvilleComparison.FirstPathExhaustion (2.7s)
+✔ [3616/3632] Built ExactLiouvilleComparison.RadialInterpolationEstimates (3.4s)
+✔ [3617/3632] Built ExactLiouvilleComparison.FirstPathVector (3.0s)
+✔ [3618/3632] Built ExactLiouvilleComparison.FirstPathEstimate (2.8s)
+✔ [3619/3632] Built ExactLiouvilleComparison.RadialInterpolationChecks (2.9s)
+✔ [3620/3632] Built ExactLiouvilleComparison.FirstPathChecks (2.3s)
+✔ [3621/3632] Built ExactLiouvilleComparison.MoserRegularityStatement (2.7s)
+✔ [3622/3632] Built ExactLiouvilleComparison.MoserRegularityInverse (5.4s)
+✔ [3623/3632] Built ExactLiouvilleComparison.MoserRegularityFields (3.7s)
+✔ [3624/3632] Built ExactLiouvilleComparison.MoserRegularityCompact (3.3s)
+✔ [3625/3632] Built ExactLiouvilleComparison.MoserRegularityGlobal (3.6s)
+✔ [3626/3632] Built ExactLiouvilleComparison.FirstPathFlowStatement (3.1s)
+✔ [3627/3632] Built ExactLiouvilleComparison.RadialInterpolationFlowStatement (2.5s)
+✔ [3628/3632] Built ExactLiouvilleComparison.ODEIntervalRegularity (3.2s)
+✔ [3629/3632] Built ExactLiouvilleComparison.ODETwoBarrierStatement (2.6s)
+✔ [3630/3632] Built ExactLiouvilleComparison.RadialInterpolationFlowInputs (2.9s)
+✔ [3631/3632] Built ExactLiouvilleComparison.RadialInterpolationFlowCoefficients (2.9s)
+✖ [3632/3632] Building ExactLiouvilleComparison.ThirdPathStatement (2.8s)
+trace: .> LEAN_PATH=/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/Cli/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/batteries/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/Qq/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/aesop/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/proofwidgets/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/importGraph/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/plausible/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/mathlib/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/packages/fsfltz/.lake/build/lib/lean:/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/build/lib/lean /opt/lean/lean-4.34.1-linux/bin/lean /var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/ExactLiouvilleComparison/ThirdPathStatement.lean -o /var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/build/lib/lean/ExactLiouvilleComparison/ThirdPathStatement.olean -i /var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/build/lib/lean/ExactLiouvilleComparison/ThirdPathStatement.ilean -c /var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/build/ir/ExactLiouvilleComparison/ThirdPathStatement.c --setup /var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/.lake/build/ir/ExactLiouvilleComparison/ThirdPathStatement.setup.json --json
+error: ExactLiouvilleComparison/ThirdPathStatement.lean:36:31: Function expected at
+  oneCovector
+but this term has type
+  ?m.63
+
+Note: Expected a function because this term is being applied to the argument
+  T.primitive
+
+Hint: The identifier `oneCovector` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: ExactLiouvilleComparison/ThirdPathStatement.lean:39:29: Function expected at
+  oneCovector
+but this term has type
+  ?m.93
+
+Note: Expected a function because this term is being applied to the argument
+  T.primitive
+
+Hint: The identifier `oneCovector` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+error: ExactLiouvilleComparison/ThirdPathStatement.lean:58:43: Unknown identifier `Construction`
+Some required targets logged failures:
+- ExactLiouvilleComparison.ThirdPathStatement
+error: build failed

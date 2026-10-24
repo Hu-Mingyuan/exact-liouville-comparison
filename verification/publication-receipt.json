@@ -1,0 +1,29 @@
+{
+  "operation_id": "87de7f44-c494-4d7f-99bd-850dbef43157",
+  "artifact_id": "d3bb19a6-97ff-4024-9cb3-03921d354eea",
+  "publication_id": "018eadf8-81ed-4318-9858-2872dfd85013",
+  "forge_item_id": null,
+  "repository_id": "fe83a2bb-5147-4bfd-b750-19b11c583d74",
+  "branch": "horizon/changes/87de7f44-c494-4d7f-99bd-850dbef43157",
+  "base_commit_oid": "f5122d67c8a6692f57036ee2c40b1d29fe499f1c",
+  "commit_oid": "fc62cb8cd481691b773d92dd2ef47a6eca6434c3",
+  "verified_at": "2026-10-23T14:01:51.982073+00:00",
+  "verification": "git_tree_delta",
+  "scope": "Exact requested file operations, commit parent, and preservation of unchanged tree entries",
+  "changed_paths": [
+    "ExactLiouvilleComparison.lean",
+    "README.md",
+    "ExactLiouvilleComparison/Geometry.lean",
+    "ExactLiouvilleComparison/Statement.lean",
+    "ExactLiouvilleComparison/InterfaceChecks.lean",
+    "docs/definition-comparison.md",
+    "docs/effort-estimate.md",
+    "scripts/verify-statement.py",
+    "verification/AxiomAudit.lean",
+    "verification/statement-receipt.json",
+    "verification/build.log",
+    "verification/axioms.log",
+    "verification/cluster-access.json"
+  ],
+  "lean_validation_included": false
+}

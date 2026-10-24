@@ -1,0 +1,21 @@
+import ExactLiouvilleComparison.ODETwoBarrierSmooth
+#check ExactLiouvilleComparison.ODE.smoothEvolution_of_compact_support
+#check ExactLiouvilleComparison.ODE.compact_field_localization
+#check ExactLiouvilleComparison.ODE.eqOn_closed_of_hasMFDerivWithinAt
+#check ExactLiouvilleComparison.ODE.EvolutionPatch
+#check ExactLiouvilleComparison.ODE.enlarged_interval
+#check ExactLiouvilleComparison.ODE.evolutionPatch_of_finite_curve
+#check ExactLiouvilleComparison.ODE.EvolutionPatch.domain
+#check ExactLiouvilleComparison.ODE.EvolutionPatch.open_domain
+#check ExactLiouvilleComparison.ODE.EvolutionPatch.agree
+#check ExactLiouvilleComparison.ODE.evolutionDomain
+#check ExactLiouvilleComparison.ODE.localEvolution
+#check ExactLiouvilleComparison.ODE.localEvolution_eq_patch
+#check ExactLiouvilleComparison.ODE.isOpen_evolutionDomain
+#check ExactLiouvilleComparison.ODE.localEvolution_contMDiffAt
+#check ExactLiouvilleComparison.ODE.localEvolution_initial
+#check ExactLiouvilleComparison.ODE.localEvolution_solves
+#check ExactLiouvilleComparison.ODE.strip_subset_evolutionDomain
+#check ExactLiouvilleComparison.ODE.evolution_of_finite_existence_global
+#check ExactLiouvilleComparison.ODE.evolution_of_finite_existence
+#eval IO.println "TWO_BARRIER_SMOOTH_TYPES_COMPLETE"

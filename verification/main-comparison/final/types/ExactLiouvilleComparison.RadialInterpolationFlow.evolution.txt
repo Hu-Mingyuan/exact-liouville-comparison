@@ -1,0 +1,31 @@
+ExactLiouvilleComparison.RadialInterpolationFlow.evolution : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P)) →
+        (horder :
+            ∀ (r : Real),
+              @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real)
+                  (@Set.Ici.{0} Real Real.instPreorder
+                    (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+                  r →
+                @LE.le.{0} Real Real.instLE
+                  (@ExactLiouvilleComparison.RadialCoefficient.rho
+                    (@ExactLiouvilleComparison.RadialReference.rstar d M P) q₀ r)
+                  (@ExactLiouvilleComparison.RadialCoefficient.rho
+                    (@ExactLiouvilleComparison.RadialReference.rstar d M P) q₁ r)) →
+          (htend :
+              @Filter.Tendsto.{0, 0} Real Real
+                (fun (r : Real) =>
+                  @HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) r
+                    (@ExactLiouvilleComparison.RadialCoefficient.rho
+                      (@ExactLiouvilleComparison.RadialReference.rstar d M P) q₀ r))
+                (@Filter.atTop.{0} Real Real.instPreorder) (@Filter.atTop.{0} Real Real.instPreorder)) →
+            (σ :
+                @FsFltz.Geometry.SmoothManifold.Form d M
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+              (hσ :
+                  @FsFltz.Geometry.SmoothManifold.IsSmoothForm d
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) M σ) →
+                (hw : @ExactLiouvilleComparison.RadialInterpolation.WeakDifferential d M P σ) →
+                  @ExactLiouvilleComparison.FirstPathFlow.Evolution d M
+                    (@ExactLiouvilleComparison.MoserRegularity.interpolationField d M P q₀ q₁ σ hσ hw)

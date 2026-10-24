@@ -1,0 +1,44 @@
+import ExactLiouvilleComparison.RadialInterpolationChecks
+set_option pp.fullNames true
+set_option pp.universes true
+set_option pp.explicit false
+set_option pp.proofs true
+set_option pp.deepTerms true
+set_option format.width 120
+
+#check @ExactLiouvilleComparison.RadialInterpolation.rho
+#check @ExactLiouvilleComparison.RadialInterpolation.delta
+#check @ExactLiouvilleComparison.RadialInterpolation.rho_hasDerivWithinAt
+#check @ExactLiouvilleComparison.RadialInterpolation.rho_derivWithin
+#check @ExactLiouvilleComparison.RadialInterpolation.convex_pos
+#check @ExactLiouvilleComparison.RadialInterpolation.coefficient
+#check @ExactLiouvilleComparison.RadialInterpolation.coefficient_prime
+#check @ExactLiouvilleComparison.RadialInterpolation.Q
+#check @ExactLiouvilleComparison.RadialInterpolation.Q_radial_derivative
+#check @ExactLiouvilleComparison.RadialInterpolation.rho_parameter_derivative
+#check @ExactLiouvilleComparison.RadialInterpolation.Q_parameter_derivative
+#check @ExactLiouvilleComparison.RadialInterpolation.Q_lower
+#check @ExactLiouvilleComparison.RadialInterpolation.uniform_exhaustion
+#check @ExactLiouvilleComparison.RadialInterpolation.Q_curve_derivative
+#check @ExactLiouvilleComparison.RadialInterpolation.exteriorDerivative_add
+#check @ExactLiouvilleComparison.RadialInterpolation.primitive
+#check @ExactLiouvilleComparison.RadialInterpolation.primitive_parameter_derivative
+#check @ExactLiouvilleComparison.RadialInterpolation.WeakDifferential
+#check @ExactLiouvilleComparison.RadialInterpolation.differential_apply
+#check @ExactLiouvilleComparison.RadialInterpolation.nondegenerate
+#check @ExactLiouvilleComparison.RadialInterpolation.exactStructure
+#check @ExactLiouvilleComparison.RadialInterpolation.vector
+#check @ExactLiouvilleComparison.RadialInterpolation.vector_equation
+#check @ExactLiouvilleComparison.RadialInterpolation.vector_unique
+#check @ExactLiouvilleComparison.RadialInterpolation.vector_eq_zero
+#check @ExactLiouvilleComparison.RadialInterpolation.energy
+#check @ExactLiouvilleComparison.RadialInterpolation.differential_sq_le
+#check @ExactLiouvilleComparison.RadialInterpolation.radial
+#check @ExactLiouvilleComparison.RadialInterpolation.Q_directional
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.constructed
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.core_derivative
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.weak_zero
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.sigma_zero
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.equal_coefficients
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.critical_point
+#check @ExactLiouvilleComparison.RadialInterpolationChecks.scalar_barrier

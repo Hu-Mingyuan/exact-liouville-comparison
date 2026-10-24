@@ -1,0 +1,1 @@
+FsFltz.Geometry.CompactDomain : (d : Nat) → Type 1

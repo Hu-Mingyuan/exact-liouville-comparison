@@ -1,0 +1,8 @@
+✖ [2832/2833] Building ExactLiouvilleComparison.RadialMetricNorm
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison.RadialMetricNorm
+✔ [2832/2833] Built ExactLiouvilleComparison.RadialMetricNorm (2.8s)
+✔ [2833/2833] Built ExactLiouvilleComparison.RadialMetricChecks (3.9s)
+Build completed successfully (2833 jobs).
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.RadialMetricChecks"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial", "duration_seconds": 13.268, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "cda594dcc8d2d0e58eba1d5cdbd682f68ae8923c00adcdbddd64aed15bba2c76", "status": "passed", "targets": ["ExactLiouvilleComparison.RadialMetricChecks"], "timings": {"build_seconds": 9.869, "engine_seconds": 13.267669757000476, "preparation_seconds": 0.04506006700012222, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.17000268400079221, "total_seconds": 13.482789355000023, "wait_seconds": 0.001}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

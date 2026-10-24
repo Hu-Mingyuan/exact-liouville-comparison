@@ -1,0 +1,69 @@
+import ExactLiouvilleComparison.RadialMetricChecks
+set_option pp.fullNames true
+set_option pp.universes true
+set_option pp.explicit false
+set_option pp.proofs true
+set_option pp.deepTerms true
+set_option format.width 120
+
+#check @ExactLiouvilleComparison.RadialCoefficient
+#check @ExactLiouvilleComparison.RadialCoefficient.rhoPrime
+#check @ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_deriv
+#check @ExactLiouvilleComparison.RadialCoefficient.hasDerivWithinAt
+#check @ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_zero
+#check @ExactLiouvilleComparison.RadialCoefficient.smooth_comp
+#check @ExactLiouvilleComparison.RadialCoefficient.scalarDerivative_comp
+#check @ExactLiouvilleComparison.RadialCoefficient.smooth_prime_comp
+#check @ExactLiouvilleComparison.RadialCoefficient.primitive
+#check @ExactLiouvilleComparison.RadialCoefficient.smooth_primitive
+#check @ExactLiouvilleComparison.RadialCoefficient.exteriorDerivative_apply
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_core
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_exterior
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_eq
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_symm
+#check @ExactLiouvilleComparison.RadialCoefficient.radialA
+#check @ExactLiouvilleComparison.RadialCoefficient.radialD
+#check @ExactLiouvilleComparison.RadialCoefficient.radialA_nonneg
+#check @ExactLiouvilleComparison.RadialCoefficient.radialD_pos
+#check @ExactLiouvilleComparison.RadialCoefficient.radial_tensor_le
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_le_of_nonpos
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_ge_of_nonneg
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_lower_of_nonpos
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_pos
+#check @ExactLiouvilleComparison.RadialCoefficient.exactStructure
+#check @ExactLiouvilleComparison.RadialMetricBundle.SmoothCovector
+#check @ExactLiouvilleComparison.RadialMetricBundle.smooth_differential
+#check @ExactLiouvilleComparison.RadialMetricBundle.smoothCovector_iff
+#check @ExactLiouvilleComparison.RadialMetricBundle.smooth_comp
+#check @ExactLiouvilleComparison.RadialMetricBundle.smooth_tensor
+#check @ExactLiouvilleComparison.RadialMetricChecks.metric_eq
+#check @ExactLiouvilleComparison.RadialMetricChecks.first_path_linear_estimate
+#check @ExactLiouvilleComparison.RadialMetricChecks.decreasing_metric_bounds
+#check @ExactLiouvilleComparison.RadialMetricChecks.decreasing_first_path
+#check @ExactLiouvilleComparison.RadialCoefficient.metricBilin
+#check @ExactLiouvilleComparison.RadialCoefficient.metricBilin_apply
+#check @ExactLiouvilleComparison.RadialCoefficient.smooth_metricBilin
+#check @ExactLiouvilleComparison.RadialCoefficient.metricValue_uniform_lower
+#check @ExactLiouvilleComparison.RadialCoefficient.metricBilin_bounded
+#check @ExactLiouvilleComparison.RadialCoefficient.metric
+#check @ExactLiouvilleComparison.RadialCoefficient.invariant
+#check @ExactLiouvilleComparison.RadialCoefficient.compatible
+#check @ExactLiouvilleComparison.RadialReference.betaCovector
+#check @ExactLiouvilleComparison.RadialReference.radialGradient
+#check @ExactLiouvilleComparison.RadialReference.radialGradient_inner
+#check @ExactLiouvilleComparison.RadialReference.radialGradient_norm
+#check @ExactLiouvilleComparison.RadialReference.dR_gradient
+#check @ExactLiouvilleComparison.RadialReference.dR_J_gradient
+#check @ExactLiouvilleComparison.RadialReference.beta_dualNorm
+#check @ExactLiouvilleComparison.RadialCoefficient.beta_dualNorm_sq
+#check @ExactLiouvilleComparison.two_plane_inner_sq_le
+#check @ExactLiouvilleComparison.CompatibleStructure.inner_J_J
+#check @ExactLiouvilleComparison.CompatibleStructure.metricJ
+#check @ExactLiouvilleComparison.CompatibleStructure.inner_J_left
+#check @ExactLiouvilleComparison.CompatibleStructure.inner_J_self
+#check @ExactLiouvilleComparison.CompatibleStructure.covector_two_plane_le
+#check @ExactLiouvilleComparison.RadialCoefficient.metric_gradient_pair
+#check @ExactLiouvilleComparison.RadialCoefficient.radial_dualNorm_sq
+#check @ExactLiouvilleComparison.RadialCoefficient.dual_identities
+#print ExactLiouvilleComparison.RadialCoefficient

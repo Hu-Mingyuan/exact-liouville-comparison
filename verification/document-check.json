@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-10-24T02:34:59.645214+00:00",
+  "accepted_lean_commit": "e994427720c4af8d3915d86609c6fe0538f7c031",
+  "pdf_pages": {
+    "target-theorem": 7,
+    "proof-blueprint": 14
+  },
+  "build": "Tectonic, no errors or layout warnings",
+  "visual_check": "All 21 pages rendered with Poppler and visually inspected; edited pages re-rendered and inspected. No clipping, missing glyphs, overlap, or unresolved references observed.",
+  "scope_check": [
+    "Original explicit g norms, weak nonstrict taming, full growth integral and compact exceptions retained",
+    "General comparison completeness distinguished from complete specialization",
+    "Cylindrical Extends formula checked against CylindricalCompatibilityStatement and extension_of_prescribed_kernel, for every t >= 0 including seam",
+    "Existence and prescribed contact data have separate quantifiers; no positive-rank or nonempty-boundary hypothesis",
+    "Normalization, exact recovery and relative positive metric construction checked against accepted source and review",
+    "Native integration retains same quotient and chooses J before target form; native-source adapter has its accepted positive-dimensional convention"
+  ],
+  "sha256": {
+    "target-theorem.pdf": "44d45f9c802bdff353b57a5e3de71362388dfedaba017aa47440de6d6fe4fa8f",
+    "proof-blueprint.pdf": "7b90060242a0b0c180cf18a257eaadf213317e65a496a7f155d4f31fbf974963",
+    "docs/tex/target-theorem.tex": "ba0cfbe7acffcc4b799cfd64f665025983c6d836625857cc9cdd067cf5a1bd69",
+    "docs/tex/proof-blueprint.tex": "1653e365f3c1bada120b8947febaa5cdde065b4ee3cd57e62223ea77b8c7dbea",
+    "docs/tex/preamble.tex": "2785a5527756a9213c05785e672ef5a73c31c9816879c4061df51e7590fef66b"
+  }
+}

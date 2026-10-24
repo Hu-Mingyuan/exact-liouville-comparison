@@ -1,0 +1,531 @@
+{
+  "scope": "Proved radial metric compatibility, dual norm identities, inequalities and constructed first-path consumer; no scalar construction or flow.",
+  "accepted_base_commit": "46fccea69cb9524882bbeda83b0ac2067d22a149",
+  "accepted_statement_review_artifact": "8930b2e3-ab88-498e-8a6f-d3f732fa8f95",
+  "linear_parent_commit": "fb94841b094b171df6744146e39d9cc2204fe002",
+  "statement_receipt_companion": "dcd522c772885851078216fedcff18e00c3b1b7d",
+  "source_sha256": {
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+    "ExactLiouvilleComparison/LinearAlgebra.lean": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1",
+    "ExactLiouvilleComparison/LinearAlgebraChecks.lean": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f",
+    "ExactLiouvilleComparison/RadialCoefficient.lean": "a639d4dbd9c8b16186466e2a9d3c3f4ac729736b7e08134a16c7df002aeb082a",
+    "ExactLiouvilleComparison/RadialMetric.lean": "4393795ecc7cd8302c33fdc442303afc828cc94b6ac4265286ab4cc769694dc4",
+    "ExactLiouvilleComparison/RadialMetricBundle.lean": "2beabd7169489fcaac0dd7f6c12eec0b063d35afa1bc70c5dc6ca7a68b501578",
+    "ExactLiouvilleComparison/RadialMetricChecks.lean": "346acdc5bc188cb9d97e75f4ca6caf9538e90c25b8a522a4f66570ab1b45b25e",
+    "ExactLiouvilleComparison/RadialMetricConstruction.lean": "7658f90a5a138b823a57411db25794e3979793aef38c3e37ac25b21005be886b",
+    "ExactLiouvilleComparison/RadialMetricDual.lean": "73f7c250c522a9c4f0138681031a887faf6829481b5eec9b728a6c6084575ead",
+    "ExactLiouvilleComparison/RadialMetricLinear.lean": "4230f3af5f5ac9eeaf4796de421bc3c91ef089ea3585ff146d38450ae9079a3f",
+    "ExactLiouvilleComparison/RadialMetricNorm.lean": "8b7910efc1b16f67e118604b87e9ca740d647cfdcb3eb1a22f006f936de677e8",
+    "verification/radial-metric/AxiomAudit.lean": "0a517dd059d88dd543b9d45b05caf1f95e9908dec9c33c1ec646699eb827020b",
+    "verification/radial-metric/Types.lean": "53c2c3d50b22c0c3fefc54d5ff1fc880f816cb8e50e6e0a693602a10b8ce9c6a",
+    "verification/radial-metric/declarations.json": "0e9b0f3b6a4f7184eeac95ae654a8beaca22be7927144590e1877636adf8b8c2",
+    "scripts/verify-radial-metric.py": "2d5a5eec96841853bf467c1379f5322c9a70951c59d26aba4ff42447ceda0bef",
+    "docs/radial-metric.md": "fea00e85d9fb7c638614a4f2651af2222bb25505c196154e4d867b77e789d3ee",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.RadialMetricChecks"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.RadialMetricChecks"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial",
+        "duration_seconds": 13.268,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cda594dcc8d2d0e58eba1d5cdbd682f68ae8923c00adcdbddd64aed15bba2c76",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.RadialMetricChecks"
+        ],
+        "timings": {
+          "build_seconds": 9.869,
+          "engine_seconds": 13.267669757000476,
+          "preparation_seconds": 0.04506006700012222,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.17000268400079221,
+          "total_seconds": 13.482789355000023,
+          "wait_seconds": 0.001
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/radial-metric/AxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial/verification/radial-metric/AxiomAudit.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial",
+        "duration_seconds": 2.934,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/radial-metric/AxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cda594dcc8d2d0e58eba1d5cdbd682f68ae8923c00adcdbddd64aed15bba2c76",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.932,
+          "engine_seconds": 2.9338025039996865,
+          "preparation_seconds": 0.052170420000038575,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.17270643499978178,
+          "total_seconds": 3.158739219000381,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "transitive_axioms": {
+        "ExactLiouvilleComparison.RadialCoefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.rhoPrime": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_deriv": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.hasDerivWithinAt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.smooth_comp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.scalarDerivative_comp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.smooth_prime_comp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.primitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.smooth_primitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.exteriorDerivative_apply": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_core": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_exterior": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_symm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.radialA": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.radialD": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.radialA_nonneg": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.radialD_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.radial_tensor_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_le_of_nonpos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_ge_of_nonneg": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_lower_of_nonpos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.exactStructure": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricBundle.SmoothCovector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricBundle.smooth_differential": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricBundle.smoothCovector_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricBundle.smooth_comp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricBundle.smooth_tensor": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricChecks.metric_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricChecks.first_path_linear_estimate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricChecks.decreasing_metric_bounds": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialMetricChecks.decreasing_first_path": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricBilin": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricBilin_apply": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.smooth_metricBilin": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricValue_uniform_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metricBilin_bounded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metric": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.invariant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.compatible": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.betaCovector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.radialGradient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.radialGradient_inner": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.radialGradient_norm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.dR_gradient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.dR_J_gradient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialReference.beta_dualNorm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.beta_dualNorm_sq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.two_plane_inner_sq_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.inner_J_J": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.metricJ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.inner_J_left": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.inner_J_self": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.covector_two_plane_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.metric_gradient_pair": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.radial_dualNorm_sq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialCoefficient.dual_identities": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/radial-metric/Types.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial/verification/radial-metric/Types.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial",
+        "duration_seconds": 2.895,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/radial-metric/Types.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "cda594dcc8d2d0e58eba1d5cdbd682f68ae8923c00adcdbddd64aed15bba2c76",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.894,
+          "engine_seconds": 2.895512985000096,
+          "preparation_seconds": 0.04176504599945474,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.19240289600020333,
+          "total_seconds": 3.129754319999847,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    }
+  ],
+  "declarations": [
+    "ExactLiouvilleComparison.RadialCoefficient",
+    "ExactLiouvilleComparison.RadialCoefficient.rhoPrime",
+    "ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_deriv",
+    "ExactLiouvilleComparison.RadialCoefficient.hasDerivWithinAt",
+    "ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_zero",
+    "ExactLiouvilleComparison.RadialCoefficient.smooth_comp",
+    "ExactLiouvilleComparison.RadialCoefficient.scalarDerivative_comp",
+    "ExactLiouvilleComparison.RadialCoefficient.smooth_prime_comp",
+    "ExactLiouvilleComparison.RadialCoefficient.primitive",
+    "ExactLiouvilleComparison.RadialCoefficient.smooth_primitive",
+    "ExactLiouvilleComparison.RadialCoefficient.exteriorDerivative_apply",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_core",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_exterior",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_eq",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_symm",
+    "ExactLiouvilleComparison.RadialCoefficient.radialA",
+    "ExactLiouvilleComparison.RadialCoefficient.radialD",
+    "ExactLiouvilleComparison.RadialCoefficient.radialA_nonneg",
+    "ExactLiouvilleComparison.RadialCoefficient.radialD_pos",
+    "ExactLiouvilleComparison.RadialCoefficient.radial_tensor_le",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_le_of_nonpos",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_ge_of_nonneg",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_lower_of_nonpos",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_pos",
+    "ExactLiouvilleComparison.RadialCoefficient.exactStructure",
+    "ExactLiouvilleComparison.RadialMetricBundle.SmoothCovector",
+    "ExactLiouvilleComparison.RadialMetricBundle.smooth_differential",
+    "ExactLiouvilleComparison.RadialMetricBundle.smoothCovector_iff",
+    "ExactLiouvilleComparison.RadialMetricBundle.smooth_comp",
+    "ExactLiouvilleComparison.RadialMetricBundle.smooth_tensor",
+    "ExactLiouvilleComparison.RadialMetricChecks.metric_eq",
+    "ExactLiouvilleComparison.RadialMetricChecks.first_path_linear_estimate",
+    "ExactLiouvilleComparison.RadialMetricChecks.decreasing_metric_bounds",
+    "ExactLiouvilleComparison.RadialMetricChecks.decreasing_first_path",
+    "ExactLiouvilleComparison.RadialCoefficient.metricBilin",
+    "ExactLiouvilleComparison.RadialCoefficient.metricBilin_apply",
+    "ExactLiouvilleComparison.RadialCoefficient.smooth_metricBilin",
+    "ExactLiouvilleComparison.RadialCoefficient.metricValue_uniform_lower",
+    "ExactLiouvilleComparison.RadialCoefficient.metricBilin_bounded",
+    "ExactLiouvilleComparison.RadialCoefficient.metric",
+    "ExactLiouvilleComparison.RadialCoefficient.invariant",
+    "ExactLiouvilleComparison.RadialCoefficient.compatible",
+    "ExactLiouvilleComparison.RadialReference.betaCovector",
+    "ExactLiouvilleComparison.RadialReference.radialGradient",
+    "ExactLiouvilleComparison.RadialReference.radialGradient_inner",
+    "ExactLiouvilleComparison.RadialReference.radialGradient_norm",
+    "ExactLiouvilleComparison.RadialReference.dR_gradient",
+    "ExactLiouvilleComparison.RadialReference.dR_J_gradient",
+    "ExactLiouvilleComparison.RadialReference.beta_dualNorm",
+    "ExactLiouvilleComparison.RadialCoefficient.beta_dualNorm_sq",
+    "ExactLiouvilleComparison.two_plane_inner_sq_le",
+    "ExactLiouvilleComparison.CompatibleStructure.inner_J_J",
+    "ExactLiouvilleComparison.CompatibleStructure.metricJ",
+    "ExactLiouvilleComparison.CompatibleStructure.inner_J_left",
+    "ExactLiouvilleComparison.CompatibleStructure.inner_J_self",
+    "ExactLiouvilleComparison.CompatibleStructure.covector_two_plane_le",
+    "ExactLiouvilleComparison.RadialCoefficient.metric_gradient_pair",
+    "ExactLiouvilleComparison.RadialCoefficient.radial_dualNorm_sq",
+    "ExactLiouvilleComparison.RadialCoefficient.dual_identities"
+  ]
+}

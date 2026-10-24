@@ -1,0 +1,52 @@
+theorem ExactLiouvilleComparison.LargeCoefficientChecks.arbitrary_primitive : ∀ {d : ℕ} (M : SmoothManifold d)
+  (P : RadialReference M) (lam : M.Form 1),
+  M.IsSmoothForm lam →
+    ∃ rho,
+      ContDiff ℝ ∞ rho ∧
+        Monotone rho ∧
+          (∀ r ∈ Icc 1 P.rstar, rho r = rho 1) ∧
+            (∀ (r : ℝ), 0 ≤ deriv rho r) ∧
+              (∀ (r : ℝ), 1 ≤ rho r) ∧
+                (∀ (r : ℝ), 1 ≤ r → 0 < rho r + r * deriv rho r) ∧
+                  ∀ (x : M.Point), 1 + P.compatible.dualNorm x (LargeCoefficient.oneCovector lam x) ≤ rho (P.R x) :=
+fun {d} M P lam hlam =>
+  And.casesOn (LargeCoefficient.coefficient_properties P lam hlam) fun hs right =>
+    And.casesOn right fun hm right =>
+      And.casesOn right fun hc right =>
+        And.casesOn right fun hd right =>
+          And.casesOn right fun h1 right =>
+            And.casesOn right fun hp hdom =>
+              Exists.intro (LargeCoefficient.A P lam)
+                ⟨hs,
+                  ⟨hm,
+                    ⟨fun r hr =>
+                      Eq.mpr (id (congrArg (fun _a => _a = LargeCoefficient.A P lam 1) (hc r hr)))
+                        (Eq.mpr
+                          (id
+                            (congrArg (fun _a => LargeCoefficient.levels P lam 0 = _a)
+                              (LargeCoefficient.A_core P lam (LT.lt.le P.one_lt_rstar))))
+                          (Eq.refl (LargeCoefficient.levels P lam 0))),
+                      ⟨hd, ⟨h1, ⟨hp, hdom⟩⟩⟩⟩⟩⟩
+theorem ExactLiouvilleComparison.LargeCoefficientChecks.interpolation_endpoints : ∀ {d : ℕ} (M : SmoothManifold d)
+  (P : RadialReference M) (T : ExactSymplecticStructure M) (G : AdmissibleGrowth 1),
+  ∀ r ∈ Ici 1,
+    SmallCoefficient.k G P.rstar r ≤ LargeCoefficient.A P T.primitive r ∧
+      0 < LargeCoefficient.A P T.primitive r + r * deriv (LargeCoefficient.A P T.primitive) r :=
+fun {d} M P T G r hr =>
+  ⟨LargeCoefficient.k_le_A P T.primitive T.smooth_primitive G hr,
+    LargeCoefficient.A_radial_pos P T.primitive T.smooth_primitive hr⟩
+theorem ExactLiouvilleComparison.LargeCoefficientChecks.empty_manifold_levels : ∀ {d : ℕ} (M : SmoothManifold d)
+  [IsEmpty M.Point] (P : RadialReference M) (lam : M.Form 1) (n : ℕ), LargeCoefficient.levels P lam n = 1 :=
+fun {d} M [IsEmpty M.Point] P lam n =>
+  LargeCoefficient.levels_empty P lam n (eq_empty_of_isEmpty (LargeCoefficient.sublevel P n))
+'ExactLiouvilleComparison.LargeCoefficientChecks.arbitrary_primitive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.LargeCoefficientChecks.interpolation_endpoints' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.LargeCoefficientChecks.empty_manifold_levels' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+LARGE_COEFFICIENT_CONSUMER_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/LargeCoefficientConsumer.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334", "duration_seconds": 3.041, "error": null, "failure": null, "lean_file": "verification/LargeCoefficientConsumer.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "13ad9e6782d475b70704bef1285dd825cc14de539f18c77f0d16dd4b42374c89", "status": "passed", "targets": [], "timings": {"build_seconds": 3.039, "engine_seconds": 3.0408555579997483, "preparation_seconds": 0.03683511899998848, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.23226216900002328, "total_seconds": 3.3100235510000857, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

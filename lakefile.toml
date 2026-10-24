@@ -1,0 +1,11 @@
+name = "exactLiouvilleComparison"
+version = "0.1.0"
+defaultTargets = ["ExactLiouvilleComparison"]
+
+[[require]]
+name = "fsfltz"
+git = "https://github.com/bohanfang/fs-fltz-minimal.git"
+rev = "1a3d387cfacc746e25aad31e5b27b1803103e7cb"
+
+[[lean_lib]]
+name = "ExactLiouvilleComparison"

@@ -1,0 +1,105 @@
+'ExactLiouvilleComparison.RadialCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.rhoPrime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.hasDerivWithinAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.rhoPrime_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.smooth_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.scalarDerivative_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.smooth_prime_comp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.smooth_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.exteriorDerivative_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_exterior' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.radialA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.radialD' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.radialA_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.radialD_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.radial_tensor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_le_of_nonpos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_ge_of_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_lower_of_nonpos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.exactStructure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialMetricBundle.SmoothCovector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialMetricBundle.smooth_differential' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialMetricBundle.smoothCovector_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialMetricBundle.smooth_comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialMetricBundle.smooth_tensor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialMetricChecks.metric_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialMetricChecks.first_path_linear_estimate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialMetricChecks.decreasing_metric_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialMetricChecks.decreasing_first_path' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricBilin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricBilin_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.smooth_metricBilin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricValue_uniform_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metricBilin_bounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.compatible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialReference.betaCovector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialReference.radialGradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialReference.radialGradient_inner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialReference.radialGradient_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialReference.dR_gradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialReference.dR_J_gradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialReference.beta_dualNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.beta_dualNorm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.two_plane_inner_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.inner_J_J' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.metricJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.inner_J_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.inner_J_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.covector_two_plane_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.metric_gradient_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.radial_dualNorm_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialCoefficient.dual_identities' depends on axioms: [propext, Classical.choice, Quot.sound]
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial/verification/radial-metric/AxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/3b86275a-4de3-496f-b466-e36be4a30d47/radial", "duration_seconds": 2.934, "error": null, "failure": null, "lean_file": "verification/radial-metric/AxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "cda594dcc8d2d0e58eba1d5cdbd682f68ae8923c00adcdbddd64aed15bba2c76", "status": "passed", "targets": [], "timings": {"build_seconds": 2.932, "engine_seconds": 2.9338025039996865, "preparation_seconds": 0.052170420000038575, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.17270643499978178, "total_seconds": 3.158739219000381, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

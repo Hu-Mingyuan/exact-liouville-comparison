@@ -1,0 +1,1434 @@
+ExactLiouvilleComparison.CompatibleStructure.covector := fun {d : Nat} {M : FsFltz.Geometry.SmoothManifold d}
+    {reference : @ExactLiouvilleComparison.ExactSymplecticStructure d M}
+    (A : @ExactLiouvilleComparison.CompatibleStructure d M reference) (x : @FsFltz.Geometry.SmoothManifold.Point d M)
+    (l :
+      @ContinuousLinearMap.{0, 0, 0, 0} Real Real Real.semiring Real.semiring
+        (@RingHom.id.{0} Real (@Semiring.toNonAssocSemiring.{0} Real Real.semiring))
+        (@FsFltz.Geometry.SmoothManifold.Tangent d M x)
+        (@instTopologicalSpaceTangentSpace.{0, 0, 0, 0} Real
+          (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+          (@PiLp.normedAddCommGroup.{0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+            Real.normedAddCommGroup)
+          (@PiLp.normedSpace.{0, 0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+            (@NontriviallyNormedField.toNormedField.{0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+            (fun (i : Fin d) =>
+              @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+            fun (i : Fin d) =>
+            @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+              (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+          (FsFltz.Geometry.Model d)
+          (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+            (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                    Real.normedAddCommGroup)))))
+          (@modelWithCornersSelf.{0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+            (@PiLp.normedAddCommGroup.{0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+              Real.normedAddCommGroup)
+            (@PiLp.normedSpace.{0, 0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (fun (i : Fin d) =>
+                @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              fun (i : Fin d) =>
+              @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+          (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+          (@FsFltz.Geometry.SmoothManifold.charts d M) x)
+        (@AddCommGroup.toAddCommMonoid.{0} (@FsFltz.Geometry.SmoothManifold.Tangent d M x)
+          (@instAddCommGroupTangentSpace.{0, 0, 0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+            (@PiLp.normedAddCommGroup.{0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+              Real.normedAddCommGroup)
+            (@PiLp.normedSpace.{0, 0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (fun (i : Fin d) =>
+                @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              fun (i : Fin d) =>
+              @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+            (FsFltz.Geometry.Model d)
+            (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+              (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                  (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                    (@PiLp.normedAddCommGroup.{0, 0}
+                      (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                        (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                          (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                            (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                          PiLp.innerProductSpace._proof_1))
+                      (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                      Real.normedAddCommGroup)))))
+            (@modelWithCornersSelf.{0, 0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                Real.normedAddCommGroup)
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun (i : Fin d) =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun (i : Fin d) =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+            (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+            (@FsFltz.Geometry.SmoothManifold.charts d M) x))
+        Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        Real.instAddCommMonoid
+        (@instModuleTangentSpace.{0, 0, 0, 0} Real
+          (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+          (@PiLp.normedAddCommGroup.{0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+            Real.normedAddCommGroup)
+          (@PiLp.normedSpace.{0, 0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+            (@NontriviallyNormedField.toNormedField.{0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+            (fun (i : Fin d) =>
+              @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+            fun (i : Fin d) =>
+            @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+              (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+          (FsFltz.Geometry.Model d)
+          (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+            (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                    Real.normedAddCommGroup)))))
+          (@modelWithCornersSelf.{0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+            (@PiLp.normedAddCommGroup.{0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+              Real.normedAddCommGroup)
+            (@PiLp.normedSpace.{0, 0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (fun (i : Fin d) =>
+                @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              fun (i : Fin d) =>
+              @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+          (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+          (@FsFltz.Geometry.SmoothManifold.charts d M) x)
+        (@Semiring.toModule.{0} Real Real.semiring)) =>
+  @DFunLike.coe.{1, 1, 1}
+    (@LinearEquiv.{0, 0, 0, 0} Real Real
+      (@CommSemiring.toSemiring.{0} Real
+        (@Semifield.toCommSemiring.{0} Real
+          (@Field.toSemifield.{0} Real
+            (@NormedField.toField.{0} Real
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+      (@CommSemiring.toSemiring.{0} Real
+        (@Semifield.toCommSemiring.{0} Real
+          (@Field.toSemifield.{0} Real
+            (@NormedField.toField.{0} Real
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+      (@RingHom.id.{0} Real
+        (@Semiring.toNonAssocSemiring.{0} Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+      (@RingHom.id.{0} Real
+        (@Semiring.toNonAssocSemiring.{0} Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+      ExactLiouvilleComparison.CompatibleStructure.covector._proof_1
+      ExactLiouvilleComparison.CompatibleStructure.covector._proof_1
+      (@LinearMap.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring))
+      (@ContinuousLinearMap.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@UniformSpace.toTopologicalSpace.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@PseudoMetricSpace.toUniformSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                  x)))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring))
+      (@LinearMap.addCommMonoid.{0, 0, 0, 0} Real Real
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring)
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)))))))))
+      (@ContinuousLinearMap.addCommMonoid.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@UniformSpace.toTopologicalSpace.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@PseudoMetricSpace.toUniformSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                  x)))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_2)
+      (@LinearMap.module.{0, 0, 0, 0, 0} Real Real Real
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring)
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_3)
+      (@ContinuousLinearMap.module.{0, 0, 0, 0, 0} Real Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@UniformSpace.toTopologicalSpace.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@PseudoMetricSpace.toUniformSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                  x)))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x) Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup) (@Semiring.toModule.{0} Real Real.semiring)
+        (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_3
+        ExactLiouvilleComparison.CompatibleStructure.covector._proof_4
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        ExactLiouvilleComparison.CompatibleStructure.covector._proof_2))
+    (@LinearMap.{0, 0, 0, 0} Real Real
+      (@CommSemiring.toSemiring.{0} Real
+        (@Semifield.toCommSemiring.{0} Real
+          (@Field.toSemifield.{0} Real
+            (@NormedField.toField.{0} Real
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+      (@CommSemiring.toSemiring.{0} Real
+        (@Semifield.toCommSemiring.{0} Real
+          (@Field.toSemifield.{0} Real
+            (@NormedField.toField.{0} Real
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+      (@RingHom.id.{0} Real
+        (@Semiring.toNonAssocSemiring.{0} Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+      (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+      (@AddCommGroup.toAddCommMonoid.{0} (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+      (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+      (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+      (@Semiring.toModule.{0} Real Real.semiring))
+    (fun
+        (x_1 :
+          @LinearMap.{0, 0, 0, 0} Real Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+            (@RingHom.id.{0} Real
+              (@Semiring.toNonAssocSemiring.{0} Real
+                (@CommSemiring.toSemiring.{0} Real
+                  (@Semifield.toCommSemiring.{0} Real
+                    (@Field.toSemifield.{0} Real
+                      (@NormedField.toField.{0} Real
+                        (@NontriviallyNormedField.toNormedField.{0} Real
+                          (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+            (@AddCommGroup.toAddCommMonoid.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+            (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+            (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+            (@Semiring.toModule.{0} Real Real.semiring)) =>
+      @ContinuousLinearMap.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@UniformSpace.toTopologicalSpace.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@PseudoMetricSpace.toUniformSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                  x)))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring))
+    (@EquivLike.toFunLike.{1, 1, 1}
+      (@LinearEquiv.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        ExactLiouvilleComparison.CompatibleStructure.covector._proof_1
+        ExactLiouvilleComparison.CompatibleStructure.covector._proof_1
+        (@LinearMap.{0, 0, 0, 0} Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring))
+        (@ContinuousLinearMap.{0, 0, 0, 0} Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@UniformSpace.toTopologicalSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@PseudoMetricSpace.toUniformSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                  (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                  (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                    x)))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          Real
+          (@UniformSpace.toTopologicalSpace.{0} Real
+            (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring))
+        (@LinearMap.addCommMonoid.{0, 0, 0, 0} Real Real
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring)
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)))))))))
+        (@ContinuousLinearMap.addCommMonoid.{0, 0, 0, 0} Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@UniformSpace.toTopologicalSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@PseudoMetricSpace.toUniformSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                  (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                  (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                    x)))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          Real
+          (@UniformSpace.toTopologicalSpace.{0} Real
+            (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_2)
+        (@LinearMap.module.{0, 0, 0, 0, 0} Real Real Real
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring)
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_3)
+        (@ContinuousLinearMap.module.{0, 0, 0, 0, 0} Real Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@UniformSpace.toTopologicalSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@PseudoMetricSpace.toUniformSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                  (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                  (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                    x)))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x) Real
+          (@UniformSpace.toTopologicalSpace.{0} Real
+            (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup) (@Semiring.toModule.{0} Real Real.semiring)
+          (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_3
+          ExactLiouvilleComparison.CompatibleStructure.covector._proof_4
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          ExactLiouvilleComparison.CompatibleStructure.covector._proof_2))
+      (@LinearMap.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring))
+      (@ContinuousLinearMap.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@UniformSpace.toTopologicalSpace.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@PseudoMetricSpace.toUniformSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                  x)))))
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring))
+      (@DFinsupp.instEquivLikeLinearEquiv.{0, 0, 0, 0} Real Real
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@CommSemiring.toSemiring.{0} Real
+          (@Semifield.toCommSemiring.{0} Real
+            (@Field.toSemifield.{0} Real
+              (@NormedField.toField.{0} Real
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        (@RingHom.id.{0} Real
+          (@Semiring.toNonAssocSemiring.{0} Real
+            (@CommSemiring.toSemiring.{0} Real
+              (@Semifield.toCommSemiring.{0} Real
+                (@Field.toSemifield.{0} Real
+                  (@NormedField.toField.{0} Real
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+        ExactLiouvilleComparison.CompatibleStructure.covector._proof_1
+        ExactLiouvilleComparison.CompatibleStructure.covector._proof_1
+        (@LinearMap.{0, 0, 0, 0} Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring))
+        (@ContinuousLinearMap.{0, 0, 0, 0} Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@UniformSpace.toTopologicalSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@PseudoMetricSpace.toUniformSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                  (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                  (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                    x)))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          Real
+          (@UniformSpace.toTopologicalSpace.{0} Real
+            (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring))
+        (@LinearMap.addCommMonoid.{0, 0, 0, 0} Real Real
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring)
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)))))))))
+        (@ContinuousLinearMap.addCommMonoid.{0, 0, 0, 0} Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@UniformSpace.toTopologicalSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@PseudoMetricSpace.toUniformSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                  (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                  (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                    x)))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          Real
+          (@UniformSpace.toTopologicalSpace.{0} Real
+            (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_2)
+        (@LinearMap.module.{0, 0, 0, 0, 0} Real Real Real
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup)
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+          (@Semiring.toModule.{0} Real Real.semiring)
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_3)
+        (@ContinuousLinearMap.module.{0, 0, 0, 0, 0} Real Real Real
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@CommSemiring.toSemiring.{0} Real
+            (@Semifield.toCommSemiring.{0} Real
+              (@Field.toSemifield.{0} Real
+                (@NormedField.toField.{0} Real
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@UniformSpace.toTopologicalSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@PseudoMetricSpace.toUniformSpace.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+                (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+                  (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+                  (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A
+                    x)))))
+          (@AddCommGroup.toAddCommMonoid.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+          (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x) Real
+          (@UniformSpace.toTopologicalSpace.{0} Real
+            (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          (@AddCommGroup.toAddCommMonoid.{0} Real Real.instAddCommGroup) (@Semiring.toModule.{0} Real Real.semiring)
+          (@Semiring.toModule.{0} Real Real.semiring) ExactLiouvilleComparison.CompatibleStructure.covector._proof_3
+          ExactLiouvilleComparison.CompatibleStructure.covector._proof_4
+          (@RingHom.id.{0} Real
+            (@Semiring.toNonAssocSemiring.{0} Real
+              (@CommSemiring.toSemiring.{0} Real
+                (@Semifield.toCommSemiring.{0} Real
+                  (@Field.toSemifield.{0} Real
+                    (@NormedField.toField.{0} Real
+                      (@NontriviallyNormedField.toNormedField.{0} Real
+                        (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))))))))
+          ExactLiouvilleComparison.CompatibleStructure.covector._proof_2)))
+    (@LinearMap.toContinuousLinearMap.{0, 0, 0} Real
+      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+      (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+      (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x)
+      (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+      (@UniformSpace.toTopologicalSpace.{0}
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+        (@PseudoMetricSpace.toUniformSpace.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@SeminormedAddCommGroup.toPseudoMetricSpace.{0}
+            (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+            (@NormedAddCommGroup.toSeminormedAddCommGroup.{0}
+              (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+              (@ExactLiouvilleComparison.CompatibleStructure.instNormedAddCommGroupMetricTangent d M reference A x)))))
+      (@ExactLiouvilleComparison.CompatibleStructure.covector._proof_5 d M reference A x)
+      (@ExactLiouvilleComparison.CompatibleStructure.covector._proof_6 d M reference A x) Real Real.instAddCommGroup
+      (@Semiring.toModule.{0} Real Real.semiring)
+      (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+      instIsTopologicalAddGroupReal ExactLiouvilleComparison.CompatibleStructure.covector._proof_7
+      Real.instCompleteSpace (@ExactLiouvilleComparison.CompatibleStructure.covector._proof_8 d M reference A x)
+      (@ExactLiouvilleComparison.CompatibleStructure.instFiniteDimensionalRealMetricTangent d M reference A x))
+    (have this :
+      @LinearMap.{0, 0, 0, 0} Real Real Real.semiring Real.semiring
+        (@RingHom.id.{0} Real (@Semiring.toNonAssocSemiring.{0} Real Real.semiring))
+        (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x) Real
+        (@AddCommGroup.toAddCommMonoid.{0}
+          (@ExactLiouvilleComparison.CompatibleStructure.MetricTangent d M reference A x)
+          (@ExactLiouvilleComparison.CompatibleStructure.instAddCommGroupMetricTangent d M reference A x))
+        Real.instAddCommMonoid
+        (@ExactLiouvilleComparison.CompatibleStructure.instModuleRealMetricTangent d M reference A x)
+        (@Semiring.toModule.{0} Real Real.semiring) :=
+      @ContinuousLinearMap.toLinearMap.{0, 0, 0, 0} Real Real Real.semiring Real.semiring
+        (@RingHom.id.{0} Real (@Semiring.toNonAssocSemiring.{0} Real Real.semiring))
+        (@FsFltz.Geometry.SmoothManifold.Tangent d M x)
+        (@instTopologicalSpaceTangentSpace.{0, 0, 0, 0} Real
+          (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+          (@PiLp.normedAddCommGroup.{0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+            Real.normedAddCommGroup)
+          (@PiLp.normedSpace.{0, 0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+            (@NontriviallyNormedField.toNormedField.{0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+            (fun (i : Fin d) =>
+              @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+            fun (i : Fin d) =>
+            @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+              (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+          (FsFltz.Geometry.Model d)
+          (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+            (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                    Real.normedAddCommGroup)))))
+          (@modelWithCornersSelf.{0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+            (@PiLp.normedAddCommGroup.{0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+              Real.normedAddCommGroup)
+            (@PiLp.normedSpace.{0, 0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (fun (i : Fin d) =>
+                @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              fun (i : Fin d) =>
+              @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+          (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+          (@FsFltz.Geometry.SmoothManifold.charts d M) x)
+        (@AddCommGroup.toAddCommMonoid.{0} (@FsFltz.Geometry.SmoothManifold.Tangent d M x)
+          (@instAddCommGroupTangentSpace.{0, 0, 0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+            (@PiLp.normedAddCommGroup.{0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+              Real.normedAddCommGroup)
+            (@PiLp.normedSpace.{0, 0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (fun (i : Fin d) =>
+                @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              fun (i : Fin d) =>
+              @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+            (FsFltz.Geometry.Model d)
+            (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+              (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                  (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                    (@PiLp.normedAddCommGroup.{0, 0}
+                      (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                        (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                          (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                            (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                          PiLp.innerProductSpace._proof_1))
+                      (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                      Real.normedAddCommGroup)))))
+            (@modelWithCornersSelf.{0, 0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                Real.normedAddCommGroup)
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun (i : Fin d) =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun (i : Fin d) =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+            (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+            (@FsFltz.Geometry.SmoothManifold.charts d M) x))
+        Real
+        (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+        Real.instAddCommMonoid
+        (@instModuleTangentSpace.{0, 0, 0, 0} Real
+          (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+          (@PiLp.normedAddCommGroup.{0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+            Real.normedAddCommGroup)
+          (@PiLp.normedSpace.{0, 0, 0}
+            (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+              (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                  (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                PiLp.innerProductSpace._proof_1))
+            Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+            (@NontriviallyNormedField.toNormedField.{0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+            (fun (i : Fin d) =>
+              @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+            fun (i : Fin d) =>
+            @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+              (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                  (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                    (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+          (FsFltz.Geometry.Model d)
+          (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+            (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+              (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+                    Real.normedAddCommGroup)))))
+          (@modelWithCornersSelf.{0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+            (@PiLp.normedAddCommGroup.{0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d) fun (i : Fin d) =>
+              Real.normedAddCommGroup)
+            (@PiLp.normedSpace.{0, 0, 0}
+              (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                  (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                    (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                  PiLp.innerProductSpace._proof_1))
+              Real (Fin d) (fun (x : Fin d) => Real) fact_one_le_two_ennreal (Fin.fintype d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (fun (i : Fin d) =>
+                @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+              fun (i : Fin d) =>
+              @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                  (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                    (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                      (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+          (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+          (@FsFltz.Geometry.SmoothManifold.charts d M) x)
+        (@Semiring.toModule.{0} Real Real.semiring) l;
+    this)

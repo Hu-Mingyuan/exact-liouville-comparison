@@ -1,0 +1,131 @@
+{
+  "commit_oid": "cbcb67442012a4e670755eaca9ad0dfc20656484",
+  "base_commit_oid": "f8b5b6bcb56a18c0094d15fed4619ff100327e30",
+  "method": "Clean local base checkout plus exact-commit API readback of every published delta path; verified publication preserves unchanged tree entries",
+  "publication_receipt": {
+    "operation_id": "df43a5f5-40df-42c1-9d69-80256b7fbbdf",
+    "artifact_id": "39c29bf6-cbde-4c74-8f24-63c1e13fe46a",
+    "publication_id": "9d7f14d3-c045-4e34-9795-57b87b7aec5f",
+    "forge_item_id": null,
+    "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+    "branch": "horizon/changes/df43a5f5-40df-42c1-9d69-80256b7fbbdf",
+    "base_commit_oid": "f8b5b6bcb56a18c0094d15fed4619ff100327e30",
+    "commit_oid": "cbcb67442012a4e670755eaca9ad0dfc20656484",
+    "verified_at": "2026-10-24T00:19:10.761063+00:00",
+    "verification": "git_tree_delta",
+    "scope": "Exact requested file operations, commit parent, and preservation of unchanged tree entries",
+    "changed_paths": [
+      "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrt.lean",
+      "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtStatement.lean",
+      "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtSylvester.lean",
+      "docs/normalization-sqrt-crosswalk.md",
+      "docs/normalization-sqrt-proof.md",
+      "scripts/verify-normalization-sqrt.py",
+      "verification/normalization-sqrt/AxiomAudit.lean",
+      "verification/normalization-sqrt/Consumer.lean",
+      "verification/normalization-sqrt/DeclarationTypes.lean",
+      "verification/normalization-sqrt/axioms.log",
+      "verification/normalization-sqrt/build.log",
+      "verification/normalization-sqrt/consumer.log",
+      "verification/normalization-sqrt/declarations.json",
+      "verification/normalization-sqrt/elaborated-types.txt",
+      "verification/normalization-sqrt/receipt.json",
+      "verification/normalization-sqrt/statement-build.log",
+      "verification/normalization-sqrt/statement-review.md",
+      "verification/normalization-sqrt/types.log"
+    ],
+    "lean_validation_included": false
+  },
+  "readback": [
+    {
+      "path": "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrt.lean",
+      "blob_oid": "99ccc6bc88b593663b7ab0c88ccfbeb09eaeb2d2",
+      "sha256": "8e8aa4a0f2c6e4384d1390cb099df0994c41366a754884abcfd30719b23a24d0"
+    },
+    {
+      "path": "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtStatement.lean",
+      "blob_oid": "fc89830a0e261225a7d0671129f0245f34daf269",
+      "sha256": "08336671690a328ddd69215f3e9417e5a609f445a37a1b5cf755dbba981eee0c"
+    },
+    {
+      "path": "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtSylvester.lean",
+      "blob_oid": "d023ba2868adfaeb5b4fc2b247e0fcf60928f7d3",
+      "sha256": "4686019828e4507f4951302bae0d6202fb203c1ad90dd9ed27e15fd28fca5583"
+    },
+    {
+      "path": "docs/normalization-sqrt-crosswalk.md",
+      "blob_oid": "5a659178af36f3a5656e53d1c8b13440ef1475ee",
+      "sha256": "dbf445394cbe3e586a93f2704af10d4cd4bdb1f00ff7c90056666407f82cc215"
+    },
+    {
+      "path": "docs/normalization-sqrt-proof.md",
+      "blob_oid": "223d4d750c837619db8578a96cebcfcb57d4bac9",
+      "sha256": "f18ff296e8f00797a55d2e0a43e962cebb66ef224be50e3b801771c28c8a3aa2"
+    },
+    {
+      "path": "scripts/verify-normalization-sqrt.py",
+      "blob_oid": "417debe429270585925377fb4d012ef7e15cd4df",
+      "sha256": "c46753241c24e70d75686480ece2f0b6242c49568ced4ea12276edb5bb642f22"
+    },
+    {
+      "path": "verification/normalization-sqrt/AxiomAudit.lean",
+      "blob_oid": "a199a00e40fbcfd09f8fae70a52a9d1919bc9aa9",
+      "sha256": "e8d65a704d708a4b3d098b4ea6f3852f793aedeabbc6badc907d9a13d566aec9"
+    },
+    {
+      "path": "verification/normalization-sqrt/Consumer.lean",
+      "blob_oid": "9a7a82027471fce0a64a40a3ce72c42623744e7b",
+      "sha256": "5d7c7b47c5c34aa18a7710a6708e3119a414a77e92210898fd787e0864ffd8bc"
+    },
+    {
+      "path": "verification/normalization-sqrt/DeclarationTypes.lean",
+      "blob_oid": "f5aa467a0cafd461a52ec9f003be699d73d14393",
+      "sha256": "2aa10f03da72f2c997409766ff5e9f5c67f7880e351aff53a8e43284aa904d53"
+    },
+    {
+      "path": "verification/normalization-sqrt/axioms.log",
+      "blob_oid": "e79bf1478ff2dd3516ec631aa189393440bb80d0",
+      "sha256": "362afe2bba43ef4ea99aea6de8b20e04de0f5db32ec417f9260d3545e52b2a0d"
+    },
+    {
+      "path": "verification/normalization-sqrt/build.log",
+      "blob_oid": "5bc11906ec1caac918fdf0f8d6bdb8ce27cbb0a1",
+      "sha256": "d44868faf576bb1449a3fa28aba67e98ba573f0d1242c1f5c42d26f92fb90e58"
+    },
+    {
+      "path": "verification/normalization-sqrt/consumer.log",
+      "blob_oid": "8f69ab192bb9920f6b9867024f743dcda4e75fdc",
+      "sha256": "3c978a1f117b6b1d5464cb0eef5b2669ffb6df208d1ccf6b3469ef0a241c3647"
+    },
+    {
+      "path": "verification/normalization-sqrt/declarations.json",
+      "blob_oid": "4d2138ad821247f77f37fc2a7ff6ca8ac418a375",
+      "sha256": "2c4089da35da0370cddad3ed37ece4b0eac54231952db1b736b2792d57840e87"
+    },
+    {
+      "path": "verification/normalization-sqrt/elaborated-types.txt",
+      "blob_oid": "593eb592baf824d50ca4863ca3de7f00cc68f5c2",
+      "sha256": "0a2d9c57d4e8f043d2eebe8bcd9512b07f4eb473de2b8db55b498f4b856e0c98"
+    },
+    {
+      "path": "verification/normalization-sqrt/receipt.json",
+      "blob_oid": "d29641b96482bfb7f5fa4456ed0fc6cbf068bd27",
+      "sha256": "205f9bb97a3b4e10a8ee9889a32d0b701e645d02230beaf2741135b213c42dd3"
+    },
+    {
+      "path": "verification/normalization-sqrt/statement-build.log",
+      "blob_oid": "f57707bc67c0ca017dd6717d44bc5304623cd03c",
+      "sha256": "6c2eb0d14d4a22f36c7dc6253696ede77c58ef2091500b5addf385810b08a02b"
+    },
+    {
+      "path": "verification/normalization-sqrt/statement-review.md",
+      "blob_oid": "5918945369e4eca51884967575431d5263da2374",
+      "sha256": "d9e993938dfcdaf36ae28b88fdefbb8c661301a71d8db256a9593137b99f8713"
+    },
+    {
+      "path": "verification/normalization-sqrt/types.log",
+      "blob_oid": "30e299d00ef7578963ebcc13b6cba5749172fd88",
+      "sha256": "9c5ae72db117175f6b7b9d10171049404f4c6966dfb6c680f88c66a78a16029d"
+    }
+  ]
+}

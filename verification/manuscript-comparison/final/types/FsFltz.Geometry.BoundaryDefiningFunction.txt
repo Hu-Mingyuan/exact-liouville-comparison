@@ -1,0 +1,3 @@
+FsFltz.Geometry.BoundaryDefiningFunction : {d : Nat} →
+  (M : FsFltz.Geometry.SmoothManifold d) →
+    (s : Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)) → (x : @FsFltz.Geometry.SmoothManifold.Point d M) → Type

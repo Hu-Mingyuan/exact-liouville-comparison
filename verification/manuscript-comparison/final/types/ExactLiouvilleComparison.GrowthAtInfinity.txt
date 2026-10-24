@@ -1,0 +1,6 @@
+ExactLiouvilleComparison.GrowthAtInfinity : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {S : @ExactLiouvilleComparison.ExactSymplecticStructure d M} →
+      (A : @ExactLiouvilleComparison.CompatibleStructure d M S) →
+        (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M) →
+          (R : @FsFltz.Geometry.SmoothManifold.Point d M → Real) → (lower : Real) → Prop

@@ -1,0 +1,43 @@
+'ExactLiouvilleComparison.RadialInterpolationFlow.Target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.field_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_smooth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_time_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_time_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_sublevel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.of_twoBarrier' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.oneCoefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.largeCoefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.largeCoefficient_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.second_applicable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.fourth_applicable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.second_rho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.fourth_rho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.equal_evolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.critical_field_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RADIAL_FLOW_INPUTAXIOMAUDIT_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/radial-interpolation-flow/InputAxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 4.397, "error": null, "failure": null, "lean_file": "verification/radial-interpolation-flow/InputAxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "e388a55ca1420d4044e23feac0e098ed557680e28ea0907336b1e8bac82096f1", "status": "passed", "targets": [], "timings": {"build_seconds": 4.395, "engine_seconds": 4.397162342000229, "preparation_seconds": 0.04029255400018883, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.1859592149994569, "total_seconds": 4.623507715999949, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

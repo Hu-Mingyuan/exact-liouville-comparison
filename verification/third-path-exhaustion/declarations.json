@@ -1,0 +1,42 @@
+[
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_smooth"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_lower"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_bddBelow"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_proper"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_derivative"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_exterior_bound"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_core_bound"
+  },
+  {
+    "file": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.ThirdPath.exhaustion_global_bound"
+  }
+]

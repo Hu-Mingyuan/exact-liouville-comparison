@@ -1,0 +1,108 @@
+'ExactLiouvilleComparison.RadialInterpolationFlow.Target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.field_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_smooth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_time_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_time_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.barrier_sublevel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.of_twoBarrier' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.oneCoefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.largeCoefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.largeCoefficient_prime' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.second_applicable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.fourth_applicable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.second_rho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.fourth_rho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.equal_evolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.critical_field_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_forward_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_reverse_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_forward_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_reverse_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_spatial_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_compact_confinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_finiteIntervalExistence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.smoothEvolution_of_compact_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.compact_field_localization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.eqOn_closed_of_hasMFDerivWithinAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.enlarged_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.evolutionPatch_of_finite_curve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch.domain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch.open_domain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch.agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.evolutionDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_eq_patch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.isOpen_evolutionDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_contMDiffAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_solves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.strip_subset_evolutionDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.evolution_of_finite_existence_global' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.evolution_of_finite_existence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrierEvolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.radialInterpolationFlow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.evolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.native_ode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.sigma_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.unit_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.second_path' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.fourth_path' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.fixes_of_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.equal_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.critical_fixed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.RadialInterpolationFlow.endpoint_inverse_isotopy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RADIAL_FLOW_FINAL_AXIOMAUDIT_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/radial-interpolation-flow-final/AxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 3.627, "error": null, "failure": null, "lean_file": "verification/radial-interpolation-flow-final/AxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "c46007d487c80bade6ffb1569b99ebcc0ad0fb29e0890e41309ea064e93c15b8", "status": "passed", "targets": [], "timings": {"build_seconds": 3.625, "engine_seconds": 3.6270251870009815, "preparation_seconds": 0.040496929999790154, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.214146090000213, "total_seconds": 3.881733615000485, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

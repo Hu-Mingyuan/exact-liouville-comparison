@@ -1,0 +1,1011 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={Exact symplectic comparison: mathematical proof blueprint}}
+\title{Exact symplectic comparison under weak taming\\[5pt]
+\large A mathematical proof blueprint}
+\author{Exact Liouville comparison project}
+\date{24 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give the four-path Moser proof of the radial exact comparison
+theorem. The argument constructs a small radial coefficient from the
+inverse-form growth bound and a large coefficient dominating an
+otherwise unrestricted primitive. A scalar exhaustion controls the
+first and third flows; two different barriers control the forward
+and reverse directions of the interpolation flows. We then prove the
+exact pullback identity with its smooth integral gauge and record
+the composition order explicitly. We also construct a smooth
+cylindrical compatible structure and extend arbitrary prescribed
+compatible contact data, preserving the entire closed end. The final sections derive the
+finite-type Liouville, properly embedded Stein, and common-reference
+applications. All estimates use the stated reference metric.
+\end{abstract}
+
+\section{The theorem and the architecture of its proof}
+Let $X$ be a Hausdorff second-countable smooth real manifold without
+boundary, of one fixed arbitrary dimension $d\ge0$.
+Fix a smooth one-form $\beta$ with
+$\Omega=\dd\beta$ symplectic and an $\Omega$-compatible smooth almost
+complex structure $J$. Put $g=\Omega(\,\cdot\,,J\,\cdot\,)$.
+Assume that $R:X\to[1,\infty)$ is smooth and proper, $c>0$, $r_*>1$,
+and, on $\{R>r_*\}$,
+\begin{equation}\label{eq:radial}
+ \beta=-c\,\dd R\circ J,\qquad
+ a=c|\dd R|_{g^*}^2\le R.
+\end{equation}
+The compact core $\{R\le r_*\}$ is exempt from these radial identities.
+
+Let $\lambda$ be smooth, with $\omega=\dd\lambda$ symplectic and
+\[
+ \omega(v,Jv)\ge0\qquad(v\in TX).
+\]
+Assume that for some smooth $B:[1,\infty)\to(0,\infty)$ and $C>0$,
+\begin{equation}\label{eq:growth}
+ B(r)\ge r,\qquad
+ \int_1^\infty\frac{r}{B(r)^2}\,\dd r=+\infty,\qquad
+ \|\omega^{-1}\|_g\le C B(R)
+\end{equation}
+outside a compact set, with the first two conditions holding on
+the whole half-line. The inverse norm is the operator norm of
+$(v\mapsto\omega(v,\cdot))^{-1}$ from the $g$-dual to the $g$-tangent
+space.
+
+\begin{theorem}\label{thm:main}
+There exist a diffeomorphism $F:X\to X$, smoothly isotopic to
+the identity, and a globally smooth $h:X\to\R$ such that
+\[
+ F^*\lambda=\beta+\dd h,\qquad F^*\omega=\Omega.
+\]
+\end{theorem}
+No bound on the primitive $\lambda$ is assumed. Neither completeness
+of $g$ nor completeness of either Liouville field is used.
+
+We construct positive radial functions $k$ and $A$, constant on
+$[1,r_*]$, and compare the five primitives
+\begin{equation}\label{eq:chain}
+ \lambda\ \longrightarrow\ \lambda+k(R)\beta\
+ \longrightarrow\ \lambda+A(R)\beta\
+ \longrightarrow\ A(R)\beta\ \longrightarrow\ \beta .
+\end{equation}
+The actual forward paths used to construct the maps are
+\begin{align}
+ \mu^{(1)}_t&=\lambda+t\,k(R)\beta, &
+ \mu^{(2)}_t&=\lambda+\bigl((1-t)k(R)+tA(R)\bigr)\beta,\nonumber\\
+ \mu^{(3)}_t&=A(R)\beta+t\lambda, &
+ \mu^{(4)}_t&=\bigl(1+t(A(R)-1)\bigr)\beta .
+ \label{eq:fourpaths}
+\end{align}
+The third and fourth arrows in \eqref{eq:chain} use the inverses
+of the corresponding forward endpoint maps. We retain this
+orientation throughout the exactness calculation.
+
+\section{Two pointwise geometric estimates}
+\subsection{Weak taming and the resolvent contraction}
+\begin{lemma}\label{lem:linear}
+Let $\eta$ be a $J$-compatible symplectic form on a finite-dimensional
+real vector space, and put $h=\eta(\,\cdot\,,J\,\cdot\,)$.
+If a nondegenerate alternating form $\omega$ satisfies
+$\omega(v,Jv)\ge0$, then $\omega+t\eta$ is nondegenerate for every
+$t\ge0$. Moreover,
+\[
+ \iota_X(\omega+t\eta)=\iota_W\omega
+ \quad\Longrightarrow\quad |X|_h\le |W|_h .
+\]
+\end{lemma}
+\begin{proof}
+Define $C$ by $\omega(v,w)=h(Cv,w)$ and put $T=-JC$.
+Compatibility gives $\eta(v,w)=h(Jv,w)$, $J^*=-J$, and
+\[
+ h(Tv,v)=h(Cv,Jv)=\omega(v,Jv)\ge0.
+\]
+Consequently
+\[
+ |(T+t\id)v|_h^2
+ =|Tv|_h^2+2t\,h(Tv,v)+t^2|v|_h^2
+ \ge |Tv|_h^2+t^2|v|_h^2 .
+\]
+For $t>0$, this proves injectivity of $T+t\id$ and hence
+invertibility by finite dimensionality. At $t=0$, invertibility
+follows from nondegeneracy of $\omega$.
+Since $C+tJ=J(T+t\id)$, this proves the first assertion.
+
+The displayed inequality also gives
+$\|T(T+t\id)^{-1}\|_h\le1$.
+The operators $T$ and $(T+t\id)^{-1}$ commute, because $T$
+commutes with $T+t\id$. The contraction equation is
+$(T+t\id)X=TW$, and therefore
+\[
+ |X|_h=|(T+t\id)^{-1}TW|_h\le|W|_h.
+\]
+The argument uses no strictly positive lower bound for
+$\omega(v,Jv)$.
+\end{proof}
+
+\subsection{The metric of a radial primitive}
+Let $\rho:[1,\infty)\to(0,\infty)$ be smooth and constant on
+$[1,r_*]$. Write
+\[
+ \eta_\rho=\dd(\rho(R)\beta),\qquad
+ h_\rho(v,w)=\eta_\rho(v,Jw).
+\]
+On the core, $h_\rho=\rho(R)g$, because the coefficient derivative
+vanishes there. Outside the core, the product rule and
+\eqref{eq:radial} give
+\begin{equation}\label{eq:metric}
+ h_\rho(v,w)=\rho g(v,w)
+ +c\rho'\bigl(\dd R(v)\dd R(w)+\dd R(Jv)\dd R(Jw)\bigr),
+\end{equation}
+where coefficients on $X$ are evaluated at $R$.
+
+\begin{lemma}\label{lem:metric}
+If $\rho(r)+r\rho'(r)>0$ for all $r\ge1$, then $\eta_\rho$
+is $J$-compatible. On the exterior, put $D_\rho=\rho+\rho'a$.
+Then
+\begin{equation}\label{eq:dual}
+ D_\rho>0,\qquad
+ |\dd R|_{h_\rho^*}^2=\frac{a}{cD_\rho},\qquad
+ |\beta|_{g^*}^2=ca.
+\end{equation}
+If $\rho'\le0$, then
+$(\rho+R\rho')g\le h_\rho\le\rho g$.
+If $\rho'\ge0$, then $h_\rho\ge\rho g$.
+These metric inequalities hold on the whole manifold.
+\end{lemma}
+\begin{proof}
+The right side of \eqref{eq:metric} is symmetric and invariant under
+simultaneous application of $J$. At a point with $\dd R\ne0$, decompose
+the tangent space into the $g$-orthogonal plane spanned by
+$\nabla_g R,J\nabla_g R$ and its orthogonal complement.
+The eigenvalues of $h_\rho$ relative to $g$ are $D_\rho$ on
+that plane and $\rho$ on the complement.
+If $\rho'\le0$, then $a\le R$ gives
+$D_\rho\ge\rho+R\rho'>0$; if $\rho'\ge0$, then $D_\rho\ge\rho>0$.
+At $\dd R=0$ the added tensor vanishes and $h_\rho=\rho g$.
+These statements prove positivity and the metric inequalities.
+The exterior derivative $\eta_\rho$ is closed, so positivity and
+$J$-invariance prove compatibility and symplecticity.
+
+The covector $\dd R$ is supported on the distinguished plane;
+its squared dual norm is thus divided by $D_\rho$.
+Since $|\dd R|_{g^*}^2=a/c$, this gives the first norm identity.
+The second follows from $\beta=-c\,\dd R\circ J$ and the
+$g$-orthogonality of $J$. Both identities hold at $\dd R=0$
+as well. On the core, $\rho'=0$, which proves the remaining
+global metric claims without using the exterior radial identities
+there.
+\end{proof}
+
+\section{Constructing the two radial coefficients}
+\subsection{A small coefficient adapted to the inverse-form bound}
+Fix a smooth nondecreasing step function $\vartheta:\R\to[0,1]$
+which is zero on $(-\infty,0]$ and one on $[1,\infty)$.
+For example, with $q(t)=e^{-1/t}$ for $t>0$ and $q(t)=0$
+otherwise, take $\vartheta(t)=q(t)/(q(t)+q(1-t))$.
+Define
+\[
+ S(r)=1+\int_1^r\frac{u}{B(u)^2}\,\dd u,\qquad
+ \chi(r)=\vartheta(r-r_*).
+\]
+Then $S\ge1$, $S'=r/B(r)^2>0$, $S(r)\to\infty$, and
+$S(r)\le1+\log r$, using $B(r)\ge r$.
+Set
+\begin{equation}\label{eq:k}
+ k(r)=\exp\left(\int_1^r
+   \chi(s)\left(\frac{S'(s)}{2S(s)}-\frac1s\right)\dd s\right),
+ \qquad m(r)=k(r)+rk'(r).
+\end{equation}
+Since $rS'(r)/(2S(r))\le1/2$, direct differentiation gives
+\begin{align}
+ &0<k\le1,\qquad k=1\text{ on }[1,r_*],\qquad k'\le0,\nonumber\\
+ &m=k\left(1-\chi+\frac{\chi r^2}{2B(r)^2S(r)}\right)>0 .
+ \label{eq:kproperties}
+\end{align}
+Strict positivity of the last expression holds both when $\chi<1$
+and when $\chi=1$.
+
+For $r\ge r_*+1$, the integrand in \eqref{eq:k} is
+the derivative of $\frac12\log S-\log r$.
+Thus there is $b_0>0$ such that
+\begin{equation}\label{eq:ktail}
+ k(r)=b_0\frac{\sqrt{S(r)}}r,\qquad
+ m(r)=\frac{b_0r}{2B(r)^2\sqrt{S(r)}} .
+\end{equation}
+In particular $rk(r)\to\infty$.
+Lemma~\ref{lem:metric} now supplies a compatible symplectic form
+$\eta=\dd(k(R)\beta)$ and metric $h=\eta(\,\cdot\,,J\,\cdot\,)$
+satisfying
+\begin{equation}\label{eq:smallmetric}
+ m(R)g\le h\le k(R)g.
+\end{equation}
+This construction works for the given arbitrary admissible $B$.
+
+\subsection{A large coefficient with no upper growth restriction}
+The continuity of the $g$-dual norm of $\lambda$ and properness of
+$R$ give finite nondecreasing numbers
+\[
+ M_n=1+\sup_{\{R\le r_*+n+1\}}|\lambda|_{g^*}
+ \qquad(n=0,1,2,\ldots).
+\]
+For an empty sublevel set, the displayed supremum is defined as
+zero. Define
+\begin{equation}\label{eq:A}
+ A(r)=M_0+\sum_{j=1}^\infty
+   (M_j-M_{j-1})\,\vartheta(r-r_*-j+1).
+\end{equation}
+On every bounded interval, all sufficiently large-index summands
+vanish. The sum is therefore locally finite and smooth.
+Every coefficient is nonnegative, so $A'\ge0$;
+also $A=M_0$ on $[1,r_*]$.
+
+If $r\in[r_*+n,r_*+n+1]$, each summand with $1\le j\le n$
+has reached its full value, hence $A(r)\ge M_n$.
+The sublevel defining $M_n$ contains every point with this value
+of $R$. For $R\le r_*$, $M_0$ already controls the primitive.
+Consequently
+\begin{equation}\label{eq:Aproperties}
+ A\ge1\ge k,\qquad A+rA'>0,\qquad
+ A(R(x))\ge1+|\lambda_x|_{g^*}.
+\end{equation}
+There is no upper bound on the growth of $A$.
+The interpolation argument below is designed to allow this freedom.
+
+\section{Global time-dependent flows from proper barriers}
+For a smooth path of primitives $\mu_t$ whose differentials are
+symplectic, the Moser field is uniquely defined by
+\begin{equation}\label{eq:moser}
+ \iota_{X_t}\dd\mu_t=-\dot\mu_t .
+\end{equation}
+In local frames it is the inverse of a smooth invertible matrix
+applied to a smooth covector. Hence it is jointly smooth on the
+open nondegeneracy locus. When nondegeneracy holds on $[0,1]\times X$,
+this locus supplies a neighborhood of the whole closed strip;
+no uniform extra time interval on the noncompact manifold is
+required.
+
+\begin{lemma}[Compact confinement and continuation]\label{lem:continuation}
+Let $X_t$ be such a smooth time-dependent field. If every solution
+through a fixed initial time and point remains in a fixed compact
+subset of $X$ as its time varies over its interval of existence
+inside $[0,1]$, then that solution exists on the whole interval,
+in both directions from the initial time.
+If the confinement hypothesis holds for every initial datum,
+the solution maps $E_{s,t}$ are smooth diffeomorphisms and satisfy
+\[
+ E_{s,s}=\id,\qquad
+ E_{s,t}\circ E_{r,s}=E_{r,t},\qquad
+ E_{s,t}^{-1}=E_{t,s}.
+\]
+They depend jointly smoothly on $s,t,x$ up to the endpoints.
+\end{lemma}
+\begin{proof}
+Local existence, uniqueness, and smooth dependence follow in charts
+from the smooth Euclidean ODE theorem. Around the compact spacetime
+set $[0,1]\times K$ containing a confined curve, finitely many
+local existence neighborhoods give a common positive lifetime
+for nearby initial data.
+If a maximal solution had a finite endpoint within the prescribed
+time interval, restarting it sufficiently close to that endpoint
+would extend it past the endpoint. Uniqueness identifies the new
+solution with the old one on their overlap, a contradiction.
+The argument is identical in reverse time.
+
+Uniqueness gives the evolution identities and inverse maps.
+Along any fixed finite trajectory, finitely many local flow maps
+compose to give smooth dependence on both times and the initial
+point. Equivalently, use the local flow of the spacetime field
+$\partial_t+X_t$ on its open domain.
+These local descriptions agree by uniqueness and give the asserted
+smooth evolution, including one-sided endpoint derivatives and
+local smooth extensions around the closed time square.
+\end{proof}
+
+\begin{corollary}[One proper scalar]\label{cor:scalar}
+If a smooth proper function $P:X\to\R$ is bounded below and
+$|X_tP|\le D$ on $[0,1]\times X$, then the conclusions of
+Lemma~\ref{lem:continuation} hold.
+An estimate valid outside one fixed compact set is sufficient.
+\end{corollary}
+\begin{proof}
+Along a trajectory starting at $(s,x)$,
+$|P(\gamma(t))-P(x)|\le D|t-s|$.
+Its image lies in the compact inverse image of a bounded closed
+interval. If the estimate is initially exterior, continuity of
+$(t,x)\mapsto X_tP(x)$ on the product of the compact time interval
+and the exceptional compact set gives one enlarged global bound.
+\end{proof}
+This uses properness, not metric completeness. In particular, a
+bound on the norm of a field is used below only after conversion
+to a bound on the derivative of a proper scalar.
+
+\section{The interpolation lemma and its reverse-time barrier}
+Let $\sigma$ be a smooth one-form with
+$\dd\sigma(v,Jv)\ge0$; its differential may be degenerate.
+Let $\rho_0,\rho_1$ be positive smooth functions, constant on
+$[1,r_*]$, with
+\begin{equation}\label{eq:bridgehyp}
+ \rho_i+r\rho_i'>0,\qquad
+ \rho_1\ge\rho_0,\qquad r\rho_0(r)\longrightarrow\infty.
+\end{equation}
+Put $\delta=\rho_1-\rho_0\ge0$ and
+$\rho_t=(1-t)\rho_0+t\rho_1$.
+
+\begin{lemma}[Radial interpolation]\label{lem:bridge}
+The path $\mu_t=\sigma+\rho_t(R)\beta$ has symplectic differential.
+Its Moser evolution exists for all pairs of times in $[0,1]$,
+with the smoothness, inverse, and evolution properties of
+Lemma~\ref{lem:continuation}.
+\end{lemma}
+\begin{proof}
+The coefficient inequalities persist under convex combinations.
+Define the compatible metric
+\[
+ h_t=\dd(\rho_t(R)\beta)(\,\cdot\,,J\,\cdot\,).
+\]
+Lemma~\ref{lem:metric} and weak taming give
+\[
+ \dd\mu_t(v,Jv)=\dd\sigma(v,Jv)+|v|_{h_t}^2>0\quad(v\ne0),
+\]
+which proves nondegeneracy. Closedness is automatic.
+The Moser equation is $\iota_{X_t}\dd\mu_t=-\delta(R)\beta$.
+
+On the exterior, evaluate it on $JX_t$:
+\begin{equation}\label{eq:bridgeenergy}
+ |X_t|_{h_t}^2+\dd\sigma(X_t,JX_t)
+   =-c\delta\,X_tR .
+\end{equation}
+If $\delta=0$, nondegeneracy implies $X_t=0$ at the point.
+Otherwise \eqref{eq:bridgeenergy} gives $Y:=-X_tR\ge0$.
+Using \eqref{eq:dual}, with $D_t=\rho_t+\rho_t'a$, yields
+\[
+ Y^2\le|\dd R|_{h_t^*}^2|X_t|_{h_t}^2
+ \le\frac{a}{cD_t}\,c\delta Y .
+\]
+For $Y>0$ divide by $Y$; for $Y=0$ the result is immediate.
+Thus
+\begin{equation}\label{eq:radialdrift}
+ 0\le-X_tR\le\frac{\delta a}{D_t}
+ \quad\text{on }\{R>r_*\}.
+\end{equation}
+
+Define the moving scalar $Q(t,x)=R(x)\rho_t(R(x))$.
+Its total derivative along the field satisfies, on the exterior,
+\begin{align}
+ (\partial_t+X_t)Q
+ &=\delta R+(\rho_t+R\rho_t')X_tR\nonumber\\
+ &\ge\delta\left(R-\frac{a(\rho_t+R\rho_t')}{D_t}\right)
+ =\frac{\delta\rho_t(R-a)}{D_t}\ge0 .
+ \label{eq:movingbarrier}
+\end{align}
+The sign of $\rho_t+R\rho_t'$ is positive, so using the lower
+bound for $X_tR$ in this calculation is legitimate.
+
+Compactness of the core and the time interval supplies constants
+$C_0,C_1\ge0$ such that, globally,
+\[
+ X_tR\le C_0,\qquad (\partial_t+X_t)Q\ge-C_1 .
+\]
+For a trajectory with $\gamma(s)=x$ and $t\ge s$,
+$R(\gamma(t))\le R(x)+C_0(t-s)$.
+For $t\le s$, integrate the other inequality to obtain
+\[
+ Q(t,\gamma(t))\le Q(s,x)+C_1(s-t).
+\]
+But $Q(t,y)\ge R(y)\rho_0(R(y))$, and the latter expression
+tends to infinity with $R(y)$ by \eqref{eq:bridgehyp}.
+This also bounds $R(\gamma(t))$, now in reverse time.
+Both portions of the trajectory lie in a single compact
+$R$-sublevel, so Lemma~\ref{lem:continuation} applies.
+\end{proof}
+
+\begin{remark}[Why the two barriers matter]
+The argument does not assert a bound on $|X_tR|$ independent of
+$R$. The forward bound controls $R$, while the reverse bound controls
+$Q$. Arbitrarily fast growth of the upper coefficient $\rho_1$
+does not spoil the lower estimate
+$Q(t,x)\ge R(x)\rho_0(R(x))$.
+If one constructs trajectories using compactly supported cutoffs,
+these estimates remain available: for $0\le\zeta\le1$,
+\[
+ (\partial_t+\zeta X_t)Q
+ =\zeta(\partial_t+X_t)Q+(1-\zeta)\partial_tQ,
+\]
+and $\partial_tQ=\delta(R)R\ge0$. Thus the cutoff does not
+destroy the reverse-time inequality.
+\end{remark}
+
+\section{The first path: the integral growth hypothesis}
+Consider $\mu_t=\lambda+t\,k(R)\beta$.
+Lemma~\ref{lem:linear}, applied to $\eta=\dd(k(R)\beta)$,
+proves that $\dd\mu_t=\omega+t\eta$ is symplectic.
+Define $W$ by $\iota_W\omega=-k(R)\beta$.
+The actual Moser field satisfies
+\[
+ \iota_{X_t}(\omega+t\eta)=\iota_W\omega,\qquad |X_t|_h\le|W|_h .
+\]
+On the region where the inverse-form bound holds,
+\[
+ |W|_g\le C B(R)k(R)|\beta|_{g^*}.
+\]
+The metric comparison \eqref{eq:smallmetric} then gives
+\[
+ |X_t|_g\le\sqrt{\frac{k(R)}{m(R)}}\,|W|_g .
+\]
+On the radial exterior,
+$|\dd R|_{g^*}|\beta|_{g^*}=a\le R$ by \eqref{eq:dual}.
+For $R\ge r_*+1$, outside the original exceptional compact set,
+\begin{align}
+ |X_tR|
+ &\le C B(R)k(R)R\sqrt{\frac{k(R)}{m(R)}}\nonumber\\
+ &=\sqrt2\,Cb_0\,\frac{B(R)^2S(R)}R .
+ \label{eq:firstdrift}
+\end{align}
+Here the tail formulas \eqref{eq:ktail} were used exactly.
+
+Now set $P=\log S(R)$. Since $S\ge1$ and $S(r)\to\infty$,
+this is a smooth proper function bounded below by zero.
+For example, a bounded upper value of $\log S(R)$ bounds $R$,
+and closed sublevels are compact by properness of $R$.
+Using $S'=r/B(r)^2$ in \eqref{eq:firstdrift} gives
+\[
+ |X_tP|\le\sqrt2\,Cb_0 .
+\]
+The region excluded from this estimate is contained in the union
+of the original compact exception and the compact set
+$\{R\le r_*+1\}$. Smoothness supplies a bound there too.
+Corollary~\ref{cor:scalar} therefore constructs the full
+two-time smooth evolution of the first path.
+
+This is the only stage whose completeness estimate uses the
+inverse-form growth bound. Its right-hand side is $-k(R)\beta$,
+so no size bound on $\lambda$ enters the argument.
+
+\section{The other three paths}
+\subsection{The second path}
+Apply Lemma~\ref{lem:bridge} with
+\[
+ \sigma=\lambda,\qquad \rho_0=k,\qquad \rho_1=A.
+\]
+Weak taming gives the hypothesis on $\dd\sigma$.
+Equations \eqref{eq:kproperties}, \eqref{eq:ktail}, and
+\eqref{eq:Aproperties} give all coefficient hypotheses, including
+$rk(r)\to\infty$. This constructs the smooth evolution for
+$\mu^{(2)}$ in \eqref{eq:fourpaths}. Its reverse-time barrier is
+bounded below by $Rk(R)$ independently of how quickly $A$ grows.
+
+\subsection{The third path}
+Use the forward path $\mu_s=A(R)\beta+s\lambda$.
+Since $A'\ge0$, Lemma~\ref{lem:metric} gives
+\[
+ \dd\mu_s(v,Jv)
+ =\dd(A(R)\beta)(v,Jv)+s\omega(v,Jv)
+ \ge A(R)|v|_g^2 .
+\]
+Thus every differential is symplectic, including at $s=0$.
+The Moser equation is $\iota_{X_s}\dd\mu_s=-\lambda$.
+At $JX_s$ it implies
+\[
+ A(R)|X_s|_g^2
+ \le-\lambda(JX_s)
+ \le|\lambda|_{g^*}|X_s|_g .
+\]
+If $X_s=0$, the following bound is immediate; otherwise divide by
+its positive norm. Equation \eqref{eq:Aproperties} yields
+\begin{equation}\label{eq:thirdbound}
+ |X_s|_g\le\frac{|\lambda|_{g^*}}{A(R)}\le1 .
+\end{equation}
+
+Use the proper smooth scalar $P=\sqrt R$, rather than a
+metric completeness assertion. On the radial exterior,
+\[
+ |X_sP|
+ \le\frac{|\dd R|_{g^*}}{2\sqrt R}|X_s|_g
+ \le\frac1{2\sqrt c}.
+\]
+The derivative is bounded on the core by joint continuity and
+compactness. Corollary~\ref{cor:scalar} constructs the full
+evolution in both directions.
+The forward endpoint goes from the primitive $A(R)\beta$
+to $A(R)\beta+\lambda$ in the Moser pullback sense.
+Its inverse supplies the third arrow of \eqref{eq:chain}.
+
+\subsection{The fourth path}
+Apply Lemma~\ref{lem:bridge} with
+$\sigma=0$, $\rho_0=1$, and $\rho_1=A$.
+The lower divergence condition is simply $r\to\infty$.
+It constructs the evolution for
+$\mu^{(4)}_t=(1+t(A(R)-1))\beta$, from $\beta$ to $A(R)\beta$.
+The inverse endpoint supplies the fourth arrow.
+
+For each of the four paths let $G_{j,t}=E^{(j)}_{0,t}$,
+and write $G_j=G_{j,1}$. Every $G_{j,t}$ and its inverse depend
+smoothly on $(t,x)$, with $G_{j,0}=\id$. All four endpoint maps
+are therefore smoothly isotopic to the identity, as are their
+inverses.
+
+\section{The exact pullback identity and its smooth gauge}
+We prove the identity for any of the smooth Moser paths above.
+Write $\mu_t$, $X_t$, and $G_t$ for its primitive, field, and
+identity-start evolution.
+
+\begin{lemma}[Time-dependent pullback formula]\label{lem:cartan}
+For $0\le t\le1$,
+\[
+ \frac{\dd}{\dd t}G_t^*\mu_t
+ =G_t^*(\dot\mu_t+\iota_{X_t}\dd\mu_t)
+   +\dd\bigl(\mu_t(X_t)\circ G_t\bigr).
+\]
+Derivatives at the two endpoints are interpreted within $[0,1]$.
+\end{lemma}
+\begin{proof}
+Fix $x$ and $v\in T_xX$. In local coordinates along the
+trajectory, put $y=G_t(x)$ and $w=\dd G_t(x)v$.
+Differentiating $\mu_t(y)(w)$ gives three terms:
+\[
+ \dot\mu_t(y)(w)
+ +(D\mu_t(y)[X_t(y)])(w)
+ +\mu_t(y)\bigl(DX_t(y)[w]\bigr).
+\]
+The equation for the differentiated trajectory,
+$\partial_t w=DX_t(y)[w]$, follows by differentiating
+$\partial_tG_t=X_t\circ G_t$ in the initial point and commuting
+mixed derivatives of the smooth local expression for $G$.
+For a one-form in coordinates,
+\[
+ \dd\mu_t(X_t,w)
+ =(D\mu_t[X_t])(w)-(D\mu_t[w])(X_t).
+\]
+Meanwhile the derivative in direction $v$ of
+$\mu_t(X_t)\circ G_t$ is
+$(D\mu_t[w])(X_t)+\mu_t(DX_t[w])$.
+Combining these formulas proves the identity.
+Each expression is intrinsic, so the local computations agree
+on chart overlaps. Smoothness up to the endpoints supplies the
+corresponding one-sided identities there.
+\end{proof}
+
+Substituting the actual Moser equation \eqref{eq:moser} cancels
+the first two terms:
+\begin{equation}\label{eq:derivativeexact}
+ \frac{\dd}{\dd t}G_t^*\mu_t
+ =\dd\bigl(\mu_t(X_t)\circ G_t\bigr).
+\end{equation}
+
+\begin{lemma}[Smooth parameter integration]\label{lem:integral}
+If $f:[0,1]\times X\to\R$ is jointly smooth up to the endpoints,
+then $H(x)=\int_0^1 f(t,x)\,\dd t$ is smooth, and
+\[
+ \dd H_x(v)=\int_0^1\dd_x f(t,x)(v)\,\dd t .
+\]
+\end{lemma}
+\begin{proof}
+Work in a coordinate chart about a fixed point $x_0$.
+Smoothness up to the endpoints gives local smooth extensions.
+Compactness of $[0,1]\times\{x_0\}$ permits finitely many such
+neighborhoods and then a smaller spatial neighborhood on which
+the relevant derivatives are defined throughout the time interval.
+Choose its closure inside a relatively compact coordinate
+neighborhood. Each fixed finite-order spatial derivative is
+continuous and hence bounded on the resulting compact product.
+
+For the first derivative, apply the fundamental theorem of calculus
+to the spatial difference quotient. Continuity of the derivative
+on that compact product gives uniform convergence as the increment
+tends to zero, allowing integration in $t$ to pass to the limit.
+This gives the displayed derivative formula.
+Repeating the same argument for every finite order proves
+$C^\infty$ regularity. Coordinate changes obey the usual chain
+rule, so the local smooth functions and their differentials
+give the stated global result.
+\end{proof}
+Only local bounds near each spatial point are needed.
+There is no global bound on derivatives of $f$ over the noncompact
+manifold and no assumption of a uniform extra time strip.
+Assigning arbitrary values to $f$ outside $[0,1]$ when writing
+the integral does not assert smoothness of that arbitrary extension.
+
+\begin{proposition}[Exactness of one endpoint]\label{prop:exactness}
+Define the actual scalar function
+\[
+ H(x)=\int_0^1\mu_t(X_t)(G_t(x))\,\dd t .
+\]
+Then $H$ is smooth and
+\begin{equation}\label{eq:exactendpoint}
+ G_1^*\mu_1=\mu_0+\dd H,\qquad
+ G_1^*\dd\mu_1=\dd\mu_0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The integrand is jointly smooth by smoothness of the form,
+the vector field, and the evolution. Lemma~\ref{lem:integral}
+proves smoothness of $H$ and the derivative-interchange formula.
+For fixed $x,v$, integrate \eqref{eq:derivativeexact} from zero
+to one and use $G_0=\id$. The fundamental theorem of calculus
+then gives the primitive equality evaluated on $v$.
+Taking exterior derivatives, using naturality of $\dd$ under
+pullback and $\dd^2H=0$, gives the two-form equality.
+\end{proof}
+Thus the gauge is constructed by the displayed integral; its
+existence or smoothness is not an additional premise.
+
+\section{Composition, inversion, and the final isotopy}
+For clarity, write the five primitives in \eqref{eq:chain} as
+\[
+ \nu_0=\lambda,\quad \nu_1=\lambda+k(R)\beta,\quad
+ \nu_2=\lambda+A(R)\beta,\quad
+ \nu_3=A(R)\beta,\quad \nu_4=\beta .
+\]
+Applying Proposition~\ref{prop:exactness} to the four forward paths
+gives smooth $H_1,H_2,H_3,H_4$ with
+\begin{equation}\label{eq:fouridentities}
+\begin{aligned}
+ G_1^*\nu_1&=\nu_0+\dd H_1,&
+ G_2^*\nu_2&=\nu_1+\dd H_2,\\
+ G_3^*\nu_2&=\nu_3+\dd H_3,&
+ G_4^*\nu_3&=\nu_4+\dd H_4 .
+\end{aligned}
+\end{equation}
+
+\begin{lemma}[Algebra of exact comparisons]\label{lem:algebra}
+If $F^*\alpha=\beta+\dd h$ and $G^*\beta=\gamma+\dd k$, then
+\[
+ (F\circ G)^*\alpha=\gamma+\dd(k+h\circ G).
+\]
+If $F^*\alpha=\beta+\dd h$, then
+\[
+ (F^{-1})^*\beta=\alpha+\dd(-h\circ F^{-1}).
+\]
+\end{lemma}
+\begin{proof}
+The first identity follows by pulling the first equality back by
+$G$, substituting the second equality, and using
+$G^*\dd h=\dd(h\circ G)$.
+For the second, pull the supplied identity back by $F^{-1}$
+and rearrange. These calculations also fix the signs of the
+gauges under inversion.
+\end{proof}
+
+Set
+\[
+ P_2=G_2\circ G_1,\qquad
+ P_3=G_3^{-1}\circ P_2,\qquad
+ \Psi=G_4^{-1}\circ P_3.
+\]
+Successive applications of Lemma~\ref{lem:algebra} to
+\eqref{eq:fouridentities} yield
+\[
+ \Psi^*\beta=\lambda+\dd f,\qquad
+ f=H_1+H_2\circ G_1-H_3\circ P_3-H_4\circ\Psi .
+\]
+Therefore the witnesses for Theorem~\ref{thm:main} are
+\begin{equation}\label{eq:final}
+ F=\Psi^{-1}=G_1^{-1}\circ G_2^{-1}\circ G_3\circ G_4,
+ \qquad h=-f\circ F.
+\end{equation}
+They satisfy $F^*\lambda=\beta+\dd h$, and exterior differentiation
+gives $F^*\omega=\Omega$.
+
+An explicit identity isotopy is available without choosing
+junctions between separate time intervals:
+\[
+ F_t=G_{1,t}^{-1}\circ G_{2,t}^{-1}\circ G_{3,t}\circ G_{4,t}.
+\]
+Every factor and its inverse is jointly smooth.
+The inverse family is the reverse-order composition of the inverse
+factors and is jointly smooth as well.
+Since every $G_{j,0}=\id$, this family starts at the identity and
+ends at the $F$ in \eqref{eq:final}.
+This proves the required smooth isotopy and completes the theorem.
+
+\section{Cylindrical compatible structures}
+We prove the cylindrical assertion in the companion statement. Fix its
+Liouville domain, completion, boundary $Y$, and form $\alpha$.
+The boundary restriction of the symplectic form is $\dd\alpha$.
+Outward transversality of the Liouville field makes $\alpha$ contact:
+the restriction of $\dd\alpha$ to $\xi=\ker\alpha$ is nondegenerate.
+The normalized Reeb field is the unique solution of
+$\alpha(R_\alpha)=1$ and $\iota_{R_\alpha}\dd\alpha=0$.
+In local frames this is an invertible linear system with smooth
+coefficients, so its solutions form a smooth field. The constant-rank
+kernel $\xi$ is an actual smooth vector subbundle of $TY$.
+
+\subsection{Smooth symplectic normalization}
+Let $\Omega$ be a smooth nondegenerate alternating form on a real
+vector bundle and let $h$ be a smooth positive metric. Define $A$ by
+\[
+ h(Au,v)=\Omega(u,v).
+\]
+Then $A$ is invertible and $h$-skew-adjoint. The operator
+$S=-A^2=A^*A$ is positive and self-adjoint. Put
+\[
+ P=S^{1/2},\qquad J=AP^{-1}.
+\]
+The positive square root commutes with $A$, hence $J^2=-\id$.
+Furthermore,
+\[
+ \Omega(u,Jv)=h(Au,AP^{-1}v)=h(Pu,v),
+\]
+which is symmetric and strictly positive for $u=v\ne0$.
+Since $J$ is $h$-orthogonal and commutes with $A$, it preserves
+$\Omega$ as well.
+
+These constructions are smooth in the base point. To see the only
+nonpolynomial step, in local smooth orthonormal frames the derivative
+of the square map at a positive matrix $P$ is
+$H\mapsto PH+HP$. In an eigenbasis it multiplies the $(i,j)$ entry
+by $p_i+p_j>0$, so it is invertible. The implicit function theorem
+gives local smooth positive square roots; uniqueness makes them agree
+on overlaps. Inversion is smooth on invertible matrices. This also
+gives the intrinsic construction independently of the chosen frames.
+
+There is an exact recovery property. If $J_0$ is already compatible
+and $h(u,v)=\Omega(u,J_0v)$, then
+$h(J_0u,v)=\Omega(u,v)$, so $A=J_0$, $P=\id$, and the construction
+returns $J_0$. This equality, not just a homotopy class, will preserve
+the prescribed end.
+
+Applied to $\xi$ with $\Omega=\dd\alpha|_\xi$, the construction
+produces at least one smooth compatible $j_\xi$: choose a smooth
+positive metric by gluing local chart metrics with a partition of
+unity, then normalize. Smoothness of the native restriction and
+inclusion identifies this bundle construction with the literal
+contact distribution. Empty bases and zero-rank fibers cause no
+exception to the construction.
+
+\subsection{The prescribed operator on a neighborhood of the end}
+Now fix any prescribed smooth compatible $j_\xi$. Split a product
+tangent vector as
+\[
+ (v,s)=bR_\alpha+\eta+s\partial_t,\qquad
+ b=\alpha(v),\quad\eta\in\xi,
+\]
+and set
+\[
+ J_{\rm end}(v,s)=(j_\xi\eta+sR_\alpha,-b).
+\]
+Its square is minus the identity. On product coordinates the actual
+ambient form pulls back to
+\[
+ E^*\dd\beta=e^t(\dd t\wedge\alpha+\dd\alpha).
+\]
+The Reeb annihilation identity and compatibility of $j_\xi$ give
+\[
+ E^*\dd\beta\bigl((v,s),J_{\rm end}(v,s)\bigr)
+ =e^t\bigl(s^2+b^2+\dd\alpha(\eta,j_\xi\eta)\bigr)>0
+\]
+for nonzero $(v,s)$. The same decomposition proves preservation of
+the two-form and symmetry of the induced pairing.
+
+Use the completion's flow and end immersion to transport this operator
+to its open escaping basin. Uniqueness of the flow and outward
+transversality give the native basin coordinates; the differential
+and its inverse identify the actual tangent bundles. Thus the
+transported operator and
+$h_{\rm end}=\dd\beta(\,\cdot\,,J_{\rm end}\,\cdot\,)$ are smooth
+on an open neighborhood of the entire closed end
+$K=E(Y\times[0,\infty))$. In particular, this neighborhood extends
+past the seam; a formula defined only for $t>0$ would not suffice.
+The completion geometry proves that $K$ is closed and lies in that
+open basin.
+
+\subsection{Relative extension and recovery on the whole closed end}
+We use the following relative metric fact: if $K$ is closed, $U$ is
+open with $K\subset U$, and a smooth positive metric $q$ is given
+on $U$, then a global smooth positive metric $h$ exists with $h=q$
+on every point of $K$. Here $K$ need not be compact.
+
+For completeness, use the convex set of positive symmetric forms in
+each tangent fiber, additionally requiring equality to $q$ over $K$.
+Near a point of $K$, the prescribed $q$ supplies a local section.
+Near a point outside $K$, choose a chart neighborhood disjoint from
+$K$ and use a positive chart metric. A locally finite smooth
+partition of unity glues these sections. Positivity is preserved by
+convex combinations, and every contributing section equals $q$ at
+points of $K$. This proves the required equality also at the boundary
+of $K$. Finite-dimensional native fiber topology gives the bounded
+unit-ball property required to register the result as a Riemannian
+metric.
+
+Apply this fact to $h_{\rm end}$ and normalize the resulting global
+$h$ against $\Omega=\dd\beta$. Smooth normalization gives a global
+compatible $J$, and the recovery property gives exactly $J_{\rm end}$
+on all of $K$. Define the output metric by
+$g=\dd\beta(\,\cdot\,,J\,\cdot\,)$; it is smooth and positive by
+the preceding calculation. The auxiliary $h$ is not identified with
+$g$ away from $K$.
+
+This proves arbitrary prescribed extension, including $t=0$.
+Supplying the contact structure constructed above proves unconditional
+cylindrical existence. The same construction works on the quotient
+supplied by the native finite-type adapter: use its domain, completed
+primitive, and end map throughout. Its source identifications remain
+unchanged. The comparison application then chooses this $J$ before
+quantifying the weakly tamed target form and retains the original
+growth hypothesis.
+
+\section{The finite-type Liouville application}
+Use the supplied domain and smooth completion realization from
+Section~4 of the companion \emph{Definitions, hypotheses, and target
+theorems}: the compact-piece inclusion $j$, complete reference flow
+$\varphi_t$, and actual end immersion $E$ are part of the data.
+In particular, $E(y,t)=\varphi_t(j(b(y)))$, $E^*\beta=e^t\alpha$,
+and the embedded nonnegative end together with $j(W)$ covers $X$,
+with positive times disjoint from $j(W)$. Write $r=e^t$ on this end.
+Then $\beta=r\alpha$ and $\partial_t=r\partial_r$.
+The preceding construction lets us choose a compatible cylindrical $J$ with
+$J(r\partial_r)=R_\alpha$ and an $r$-independent compatible
+structure on $\ker\alpha$.
+
+On the end, decompose a tangent vector as
+$v=a\,r\partial_r+bR_\alpha+\xi$ with $\xi\in\ker\alpha$.
+Then
+$Jv=aR_\alpha-b\,r\partial_r+J\xi$, and hence
+$-\dd r(Jv)=br=\beta(v)$.
+Moreover,
+\[
+ \dd\beta=\dd r\wedge\alpha+r\,\dd\alpha,\qquad
+ g(r\partial_r,r\partial_r)=r .
+\]
+The radial line is orthogonal to the Reeb and contact directions.
+It follows that $\nabla_g r=r\partial_r$, so
+\[
+ \beta=-\dd r\circ J,\qquad |\dd r|_{g^*}^2=r .
+\]
+
+Choose a smooth cutoff $\chi$ on $[1,\infty)$ equal to zero
+near $1$ and one for $r\ge2$, with values in $[0,1]$.
+Define $R=1+\chi(r)(r-1)$ on the end and $R=1$ on the compact
+piece. It glues smoothly, is at least one, equals $r$ for $r\ge2$,
+and is at most two on the remaining compact region.
+It is proper because $Y$ and $W$ are compact and $R=r$ far out.
+Thus the radial hypotheses hold with $c=1$ and $r_*=2$.
+
+If $\omega=\dd\lambda$ weakly tames this $J$ and obeys the
+inverse-form estimate $CB(r)$ for sufficiently large $r$,
+it obeys the main theorem's estimate $CB(R)$ outside a compact
+set. Theorem~\ref{thm:main} gives the required exact comparison.
+The reference completion already carries its prescribed complete
+all-real-time Liouville flow; on the end its field is
+$r\partial_r$, whose logarithmic-radius coordinate has unit speed.
+No completeness of the other primitive
+is used in this application.
+
+\section{The properly embedded Stein application}
+Let $X$ be a smooth real manifold, let $J$ be a smooth almost complex
+structure, and let $\iota:X\hookrightarrow\C^N$ be a smooth proper
+topological embedding with injective differential and
+$\dd\iota\circ J=I\circ\dd\iota$.
+These are the explicit input data of the companion statement; no
+separate complex atlas or integrability premise is used in the proof.
+Write the ambient coordinates as $z_\nu=x_\nu+iy_\nu$ and define
+\[
+ \beta_{\mathrm{E}}=\frac12\sum_{\nu=1}^N
+   (x_\nu\,\dd y_\nu-y_\nu\,\dd x_\nu),\qquad
+ \Omega_{\mathrm{E}}=\dd\beta_{\mathrm{E}}
+   =\sum_{\nu=1}^N\dd x_\nu\wedge\dd y_\nu .
+\]
+If $I$ is the standard complex structure, then
+$\beta_{\mathrm{E}}=-\frac14\dd\|z\|^2\circ I$ and
+$\Omega_{\mathrm{E}}(u,Iv)=\ip{u}{v}_{\R}$.
+
+Put $R=e+\|\iota\|^2$.
+The assumed differential identity gives
+\begin{equation}\label{eq:steinpullback}
+ \beta:=-\frac14\dd R\circ J=\iota^*\beta_{\mathrm{E}},
+ \qquad \Omega=\dd\beta=\iota^*\Omega_{\mathrm{E}}.
+\end{equation}
+Consequently
+\[
+ \Omega(v,Jw)=
+ \Omega_{\mathrm{E}}(\dd\iota(v),I\,\dd\iota(w))
+ =\ip{\dd\iota(v)}{\dd\iota(w)}_{\R}.
+\]
+Because $\iota$ is an immersion, this is positive definite.
+It is smooth in $x$, so it is exactly the smooth induced
+Euclidean metric $g$. The identity also proves nondegeneracy
+of $\Omega$; closedness follows from \eqref{eq:steinpullback}.
+Compatibility with $J$ follows from the corresponding ambient
+identities. Thus the reference is determined from the embedding.
+
+Properness of $\iota$ implies properness of $R$: a bounded
+$R$-sublevel is the inverse image of a closed Euclidean ball,
+and hence compact.
+For every tangent vector,
+\[
+ |\dd R(v)|=2|\ip{\iota(x)}{\dd\iota(v)}_{\R}|
+ \le2\|\iota(x)\|\,|v|_g .
+\]
+Taking the $g$-dual norm gives
+\[
+ |\dd R|_{g^*}^2\le4\|\iota(x)\|^2=4(R-e).
+\]
+Therefore the radial identity holds everywhere with $c=1/4$,
+and $c|\dd R|_{g^*}^2\le R-e<R$.
+Any fixed $r_*>1$ may be used for the main theorem's exterior
+formulation.
+
+It remains to align the lower endpoint of the growth function.
+Suppose $B$ is admissible on $[e,\infty)$.
+Choose a smooth step $\zeta$ equal to zero for $r\le e+1$
+and one for $r\ge e+2$.
+Define
+\[
+ \widetilde B(r)=
+ \begin{cases}
+ r,&1\le r\le e+1,\\
+ r+\zeta(r)(B(r)-r),&r>e+1.
+ \end{cases}
+\]
+Smoothness of the step at its constant region makes this smooth
+across the join. It is positive and at least $r$, and equals
+$B$ for $r\ge e+2$.
+Changing the integrand on a bounded interval preserves divergence
+of $\int r/\widetilde B(r)^2\,\dd r$.
+Enlarging the exceptional compact set by $\{R\le e+2\}$
+preserves the inverse-form bound.
+Theorem~\ref{thm:main} now applies with $\widetilde B$.
+
+This proves the Stein-reference corollary without a finite-type
+hypothesis. The geometric verification concerns the given
+embedding and its induced reference; it does not require choosing
+a new Stein manifold or proving an embedding existence theorem.
+
+\section{The common-reference consequence}
+Suppose $\lambda_1$ and $\lambda_2$ both satisfy the main theorem
+for one fixed radial reference. Apply the theorem separately,
+retaining their independent growth witnesses, to obtain
+\[
+ F_i^*\lambda_i=\beta+\dd h_i\qquad(i=1,2).
+\]
+Pull the first equality back by $F_2^{-1}$ and use the inverse
+of the second equality. The result is
+\[
+ (F_1\circ F_2^{-1})^*\lambda_1
+ =\lambda_2+
+   \dd\bigl((h_1-h_2)\circ F_2^{-1}\bigr).
+\]
+Taking exterior derivatives gives the symplectic equality.
+Composing the identity isotopy of $F_1$ with the inverse isotopy
+of $F_2$ gives the required smooth isotopy of the same comparison
+map. Thus both primitives are compared with the same reference,
+while their constants, functions $B_i$, and compact exceptions
+remain independent.
+
+\section{Where the hypotheses enter}
+\begin{tabularx}{\textwidth}{@{}p{0.30\textwidth}X@{}}
+\toprule
+Hypothesis & Role in the proof\\
+\midrule
+Compatibility and explicit $g$ &
+Give the radial metric formula, dual norms, and the orthogonality
+of $J$ used in all estimates.\\
+Weak, nonstrict taming &
+Gives the resolvent contraction for the first path and positivity
+after adding a compatible radial form for the other paths.\\
+Properness of $R$ &
+Bounds the primitive on each compact sublevel and converts
+scalar trajectory bounds into compact confinement.\\
+Radial identities only on the exterior &
+Give the exterior estimates; compactness supplies the missing
+bounds on the unrestricted core.\\
+Inverse-form bound and divergent integral &
+Construct $k$ and the proper first-path scalar $\log S(R)$.\\
+No primitive growth bound &
+The coefficient $A$ is constructed to dominate the actual
+primitive, with no upper growth restriction.\\
+Both time directions &
+Produce actual inverse endpoint maps; reverse interpolation
+uses the moving barrier $Q$ rather than a forward estimate alone.\\
+Joint smoothness &
+Gives smooth diffeomorphisms, the Cartan calculation, the
+integral gauge, and the final identity isotopy.\\
+\bottomrule
+\end{tabularx}
+
+\medskip
+All four flows are finite-parameter Moser evolutions.
+The general theorem does not turn their existence into a
+claim that the autonomous Liouville fields of the prescribed
+primitives are complete. Its conclusion is precisely the exact
+primitive identity, its exterior-derivative consequence, and
+the smooth identity isotopy stated at the beginning.
+\end{document}

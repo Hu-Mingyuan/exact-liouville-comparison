@@ -1,0 +1,29 @@
+{
+  "commit": "7fafdc3c53d58d2b4357c6e798d30b2469455781",
+  "files": [
+    {
+      "path": "ExactLiouvilleComparison/FiniteTypePresentationStatement.lean",
+      "blob_oid": "8951760ec015efb55f33ff3964c941d8db05b8c2",
+      "sha256": "1c0a143611518562a99d2de11002165cc19905ca25e10cb873aaf7b7691cbc0d",
+      "bytes": 8146
+    },
+    {
+      "path": "ExactLiouvilleComparison/FiniteTypePresentation.lean",
+      "blob_oid": "f23198f38205e5f304df687107cfefbac6abcdec",
+      "sha256": "a9269d25d698f9265bedebb8bb97c9605b486cd169f766302424682252c8ad01",
+      "bytes": 4838
+    },
+    {
+      "path": "ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean",
+      "blob_oid": "8febc38f391d3beceb8e1b4cebdc55fc5771ea3f",
+      "sha256": "2b6f4931ba44b7e15e1c5c0abee8d6b2b4bf9da244e2e7e60190255ebf44b9f7",
+      "bytes": 5942
+    },
+    {
+      "path": "verification/finite-type-presentation/final/receipt.json.gz",
+      "blob_oid": "5964681a718b5ecdef54919f2e573f246d1c3d81",
+      "sha256": "a0ede8a51688f646e1cdfd4866ad82383d0c69a89423b8dc1d660d092265911e",
+      "bytes": 426217
+    }
+  ]
+}

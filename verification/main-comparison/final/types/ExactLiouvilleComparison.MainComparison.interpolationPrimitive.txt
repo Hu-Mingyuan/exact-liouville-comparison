@@ -1,0 +1,7 @@
+ExactLiouvilleComparison.MainComparison.interpolationPrimitive : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P)) →
+        (σ : @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+          (t : Real) →
+            @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))

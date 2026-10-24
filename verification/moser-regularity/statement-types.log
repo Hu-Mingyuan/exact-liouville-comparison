@@ -1,0 +1,1051 @@
+def ExactLiouvilleComparison.MoserRegularity.NativeJoint : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (@Set.Elem.{0} Real FsFltz.Geometry.Parameter →
+        (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x) →
+      Prop :=
+fun {d} {M} Z =>
+  ∃ E,
+    And
+      (∀ (t : @Set.Elem.{0} Real FsFltz.Geometry.Parameter),
+        @Eq.{1} ((x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x)
+          (E
+            (@Subtype.val.{1} Real
+              (fun x =>
+                @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real) FsFltz.Geometry.Parameter x)
+              t))
+          (Z t))
+      (∀ (p : Prod.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M)),
+        @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real) FsFltz.Geometry.parameterInterval
+            (@Prod.fst.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M) p) →
+          @ContMDiffAt.{0, 0, 0, 0, 0, 0, 0} Real
+            (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+            (Prod.{0, 0} Real (FsFltz.Geometry.Model d))
+            (@Prod.normedAddCommGroup.{0, 0} Real (FsFltz.Geometry.Model d) Real.normedAddCommGroup
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup))
+            (@Prod.normedSpace.{0, 0, 0} Real Real (FsFltz.Geometry.Model d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup))
+              (@InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup)
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun i =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun i =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+            (ModelProd.{0, 0} Real (FsFltz.Geometry.Model d))
+            (@instTopologicalSpaceModelProd.{0, 0} Real
+              (@UniformSpace.toTopologicalSpace.{0} Real
+                (@PseudoMetricSpace.toUniformSpace.{0} Real
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} Real
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup))))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup))))))
+            (@ModelWithCorners.prod.{0, 0, 0, 0, 0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) Real
+              Real.normedAddCommGroup
+              (@InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup)
+                (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+              Real
+              (@UniformSpace.toTopologicalSpace.{0} Real
+                (@PseudoMetricSpace.toUniformSpace.{0} Real
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} Real
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup))))
+              (@modelWithCornersSelf.{0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) Real
+                Real.normedAddCommGroup
+                (@InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup)
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+              (FsFltz.Geometry.Model d)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun i =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun i =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (@modelWithCornersSelf.{0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))))
+            (Prod.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M))
+            (@instTopologicalSpaceProd.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M)
+              (@UniformSpace.toTopologicalSpace.{0} Real
+                (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+              (@FsFltz.Geometry.SmoothManifold.topology d M))
+            (@prodChartedSpace.{0, 0, 0, 0} Real
+              (@UniformSpace.toTopologicalSpace.{0} Real
+                (@PseudoMetricSpace.toUniformSpace.{0} Real
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} Real
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup))))
+              Real
+              (@UniformSpace.toTopologicalSpace.{0} Real
+                (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+              (@chartedSpaceSelf.{0} Real
+                (@UniformSpace.toTopologicalSpace.{0} Real
+                  (@PseudoMetricSpace.toUniformSpace.{0} Real
+                    (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} Real
+                      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Real Real.normedAddCommGroup)))))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+              (@FsFltz.Geometry.SmoothManifold.charts d M))
+            (Prod.{0, 0} (FsFltz.Geometry.Model d) (FsFltz.Geometry.Model d))
+            (@Prod.normedAddCommGroup.{0, 0} (FsFltz.Geometry.Model d) (FsFltz.Geometry.Model d)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup))
+            (@Prod.normedSpace.{0, 0, 0} Real (FsFltz.Geometry.Model d) (FsFltz.Geometry.Model d)
+              (@NontriviallyNormedField.toNormedField.{0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup))
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup))
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun i =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun i =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun i =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun i =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+            (ModelProd.{0, 0} (FsFltz.Geometry.Model d) (FsFltz.Geometry.Model d))
+            (@instTopologicalSpaceModelProd.{0, 0} (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup))))))
+            (@ModelWithCorners.tangent.{0, 0, 0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun i =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun i =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (@modelWithCornersSelf.{0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))))
+            (@Bundle.TotalSpace.{0, 0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M) (FsFltz.Geometry.Model d)
+              (@TangentSpace.{0, 0, 0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+                (FsFltz.Geometry.Model d)
+                (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                  (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                    (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                        (@PiLp.normedAddCommGroup.{0, 0}
+                          (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                            (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                              (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                                (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                              PiLp.innerProductSpace._proof_1))
+                          (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                          Real.normedAddCommGroup)))))
+                (@modelWithCornersSelf.{0, 0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                  (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                  (@PiLp.normedSpace.{0, 0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                    (fun i =>
+                      @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    fun i =>
+                    @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                      (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                      (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+                (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+                (@FsFltz.Geometry.SmoothManifold.charts d M)))
+            (@instTopologicalSpaceTangentBundle.{0, 0, 0, 0} Real
+              (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField) (FsFltz.Geometry.Model d)
+              (@PiLp.normedAddCommGroup.{0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+              (@PiLp.normedSpace.{0, 0, 0}
+                (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                    (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                      (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                    PiLp.innerProductSpace._proof_1))
+                Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                (@NontriviallyNormedField.toNormedField.{0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                (fun i =>
+                  @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                fun i =>
+                @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                    (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                      (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                        (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (@modelWithCornersSelf.{0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+              (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+              (@FsFltz.Geometry.SmoothManifold.charts d M) ⋯)
+            (@FiberBundle.chartedSpace.{0, 0, 0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+              (FsFltz.Geometry.Model d)
+              (@TangentSpace.{0, 0, 0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+                (FsFltz.Geometry.Model d)
+                (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                  (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                    (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                        (@PiLp.normedAddCommGroup.{0, 0}
+                          (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                            (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                              (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                                (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                              PiLp.innerProductSpace._proof_1))
+                          (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                          Real.normedAddCommGroup)))))
+                (@modelWithCornersSelf.{0, 0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                  (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                  (@PiLp.normedSpace.{0, 0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                    (fun i =>
+                      @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    fun i =>
+                    @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                      (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                      (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+                (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+                (@FsFltz.Geometry.SmoothManifold.charts d M))
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (@instTopologicalSpaceTangentBundle.{0, 0, 0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+                (FsFltz.Geometry.Model d)
+                (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                  (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                    (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                        (@PiLp.normedAddCommGroup.{0, 0}
+                          (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                            (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                              (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                                (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                              PiLp.innerProductSpace._proof_1))
+                          (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                          Real.normedAddCommGroup)))))
+                (@modelWithCornersSelf.{0, 0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                  (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                  (@PiLp.normedSpace.{0, 0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                    (fun i =>
+                      @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    fun i =>
+                    @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                      (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                      (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+                (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+                (@FsFltz.Geometry.SmoothManifold.charts d M) ⋯)
+              (@instTopologicalSpaceTangentSpace.{0, 0, 0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) Real.normedField
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+                (FsFltz.Geometry.Model d)
+                (@PiLp.topologicalSpace.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fun i =>
+                  @UniformSpace.toTopologicalSpace.{0} Real
+                    (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+                (@modelWithCornersSelf.{0, 0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                  (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                  (@PiLp.normedSpace.{0, 0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                    (fun i =>
+                      @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    fun i =>
+                    @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                      (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                      (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+                (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+                (@FsFltz.Geometry.SmoothManifold.charts d M))
+              (FsFltz.Geometry.Model d)
+              (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                  (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                      (@PiLp.normedAddCommGroup.{0, 0}
+                        (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                          (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                            (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                              (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                            PiLp.innerProductSpace._proof_1))
+                        (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                        Real.normedAddCommGroup)))))
+              (@FsFltz.Geometry.SmoothManifold.topology d M) (@FsFltz.Geometry.SmoothManifold.charts d M)
+              (@TangentSpace.fiberBundle.{0, 0, 0, 0} Real
+                (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                (FsFltz.Geometry.Model d)
+                (@PiLp.normedAddCommGroup.{0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                (@PiLp.normedSpace.{0, 0, 0}
+                  (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                    (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                      (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                        (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                      PiLp.innerProductSpace._proof_1))
+                  Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                  (@NontriviallyNormedField.toNormedField.{0} Real
+                    (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                  (fun i =>
+                    @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                  fun i =>
+                  @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                    (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                      (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                        (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                          (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike))
+                (FsFltz.Geometry.Model d)
+                (@UniformSpace.toTopologicalSpace.{0} (FsFltz.Geometry.Model d)
+                  (@PseudoMetricSpace.toUniformSpace.{0} (FsFltz.Geometry.Model d)
+                    (@SeminormedAddCommGroup.toPseudoMetricSpace.{0} (FsFltz.Geometry.Model d)
+                      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} (FsFltz.Geometry.Model d)
+                        (@PiLp.normedAddCommGroup.{0, 0}
+                          (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                            (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                              (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                                (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                              PiLp.innerProductSpace._proof_1))
+                          (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i =>
+                          Real.normedAddCommGroup)))))
+                (@modelWithCornersSelf.{0, 0} Real
+                  (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField)
+                  (FsFltz.Geometry.Model d)
+                  (@PiLp.normedAddCommGroup.{0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d) fun i => Real.normedAddCommGroup)
+                  (@PiLp.normedSpace.{0, 0, 0}
+                    (@OfNat.ofNat.{0} ENNReal (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} ENNReal (nat_lit 2)
+                        (@AddMonoidWithOne.toNatCast.{0} ENNReal
+                          (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal ENNReal.instAddCommMonoidWithOne))
+                        PiLp.innerProductSpace._proof_1))
+                    Real (Fin d) (fun x => Real) fact_one_le_two_ennreal (Fin.fintype d)
+                    (@NontriviallyNormedField.toNormedField.{0} Real
+                      (@DenselyNormedField.toNontriviallyNormedField.{0} Real Real.denselyNormedField))
+                    (fun i =>
+                      @NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                    fun i =>
+                    @InnerProductSpace.toNormedSpace.{0, 0} Real Real Real.instRCLike
+                      (@NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real
+                        (@NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real
+                          (@SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real
+                            (@NormedCommRing.toSeminormedCommRing.{0} Real Real.normedCommRing))))
+                      (@RCLike.toInnerProductSpaceReal.{0} Real Real.instRCLike)))
+                (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M)
+                (@FsFltz.Geometry.SmoothManifold.charts d M) ⋯))
+            (@WithTop.some.{0} ENat (@Top.top.{0} ENat instTopENat))
+            (fun q =>
+              ⟨@Prod.snd.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M) q,
+                E (@Prod.fst.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M) q)
+                  (@Prod.snd.{0, 0} Real (@FsFltz.Geometry.SmoothManifold.Point d M) q)⟩)
+            p)
+def ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} → Prop :=
+fun {d} {M} =>
+  ∀
+    (omega :
+      Real → @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (α : Real → @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))),
+    @FsFltz.Geometry.SmoothManifold.IsSmoothFormFamily d (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) M
+        omega →
+      @FsFltz.Geometry.SmoothManifold.IsSmoothFormFamily d (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+          M α →
+        (∀ (t : Real),
+            @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real) FsFltz.Geometry.parameterInterval
+                t →
+              ∀ (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+                @FsFltz.Geometry.SmoothManifold.Nondegenerate d M (omega t) x) →
+          ∃ Z,
+            And (@ExactLiouvilleComparison.MoserRegularity.NativeJoint d M Z)
+              (∀ (t : @Set.Elem.{0} Real FsFltz.Geometry.Parameter) (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+                And
+                  (∀ (w : @FsFltz.Geometry.SmoothManifold.Tangent d M x),
+                    @Eq.{1} Real
+                      (@FsFltz.Geometry.SmoothManifold.evalTwo d M
+                        (omega
+                          (@Subtype.val.{1} Real
+                            (fun x =>
+                              @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real)
+                                FsFltz.Geometry.Parameter x)
+                            t))
+                        x (Z t x) w)
+                      (@FsFltz.Geometry.SmoothManifold.evalOne d M
+                        (α
+                          (@Subtype.val.{1} Real
+                            (fun x =>
+                              @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real)
+                                FsFltz.Geometry.Parameter x)
+                            t))
+                        x w))
+                  (∀ (v : @FsFltz.Geometry.SmoothManifold.Tangent d M x),
+                    (∀ (w : @FsFltz.Geometry.SmoothManifold.Tangent d M x),
+                        @Eq.{1} Real
+                          (@FsFltz.Geometry.SmoothManifold.evalTwo d M
+                            (omega
+                              (@Subtype.val.{1} Real
+                                (fun x =>
+                                  @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real)
+                                    FsFltz.Geometry.Parameter x)
+                                t))
+                            x v w)
+                          (@FsFltz.Geometry.SmoothManifold.evalOne d M
+                            (α
+                              (@Subtype.val.{1} Real
+                                (fun x =>
+                                  @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real)
+                                    FsFltz.Geometry.Parameter x)
+                                t))
+                            x w)) →
+                      @Eq.{1} (@FsFltz.Geometry.SmoothManifold.Tangent d M x) v (Z t x)))
+def ExactLiouvilleComparison.MoserRegularity.FirstTarget : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      ExactLiouvilleComparison.AdmissibleGrowth
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+        (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M) →
+          @ExactLiouvilleComparison.WeaklyTames d M (@ExactLiouvilleComparison.RadialReference.exactStructure d M P)
+              (@ExactLiouvilleComparison.RadialReference.compatible d M P) T →
+            Prop :=
+fun {d} {M} P G T hw =>
+  And
+    (@ExactLiouvilleComparison.MoserRegularity.NativeJoint d M
+      (@ExactLiouvilleComparison.MoserRegularity.firstField d M P G T hw))
+    (∀ (K : Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)),
+      @IsCompact.{0} (@FsFltz.Geometry.SmoothManifold.Point d M) (@FsFltz.Geometry.SmoothManifold.topology d M) K →
+        ∃ C,
+          And
+            (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+            (∀ (t : @Set.Elem.{0} Real FsFltz.Geometry.Parameter) (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+              @Membership.mem.{0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+                  (Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+                  (@Set.instMembership.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)) K x →
+                @LE.le.{0} Real Real.instLE
+                  (@abs.{0} Real Real.lattice Real.instAddGroup
+                    (@FsFltz.Geometry.SmoothManifold.scalarDerivative d M
+                      (@ExactLiouvilleComparison.FirstPath.exhaustion d M P G) x
+                      (@ExactLiouvilleComparison.MoserRegularity.firstField d M P G T hw t x)))
+                  C))
+def ExactLiouvilleComparison.MoserRegularity.InterpolationTarget : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+        ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+          (σ : @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+            @FsFltz.Geometry.SmoothManifold.IsSmoothForm d (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                M σ →
+              @ExactLiouvilleComparison.RadialInterpolation.WeakDifferential d M P σ → Prop :=
+fun {d} {M} P q₀ q₁ σ hσ hw =>
+  And
+    (@ExactLiouvilleComparison.MoserRegularity.NativeJoint d M
+      (@ExactLiouvilleComparison.MoserRegularity.interpolationField d M P q₀ q₁ σ hσ hw))
+    (∃ C₀ C₁,
+      And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C₀)
+        (And
+          (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C₁)
+          (∀ (t : @Set.Elem.{0} Real FsFltz.Geometry.Parameter) (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+            @LE.le.{0} Real Real.instLE (@ExactLiouvilleComparison.RadialReference.R d M P x)
+                (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+              And
+                (@LE.le.{0} Real Real.instLE
+                  (@FsFltz.Geometry.SmoothManifold.scalarDerivative d M
+                    (@ExactLiouvilleComparison.RadialReference.R d M P) x
+                    (@ExactLiouvilleComparison.MoserRegularity.interpolationField d M P q₀ q₁ σ hσ hw t x))
+                  C₀)
+                (@LE.le.{0} Real Real.instLE (@Neg.neg.{0} Real Real.instNeg C₁)
+                  (@ExactLiouvilleComparison.MoserRegularity.barrierRate d M P q₀ q₁
+                    (@ExactLiouvilleComparison.MoserRegularity.interpolationField d M P q₀ q₁ σ hσ hw) t x)))))
+def ExactLiouvilleComparison.MoserRegularity.firstField : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      ExactLiouvilleComparison.AdmissibleGrowth
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+        (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M) →
+          @ExactLiouvilleComparison.WeaklyTames d M (@ExactLiouvilleComparison.RadialReference.exactStructure d M P)
+              (@ExactLiouvilleComparison.RadialReference.compatible d M P) T →
+            @Set.Elem.{0} Real FsFltz.Geometry.Parameter →
+              (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x :=
+fun {d} {M} P G T hw t x =>
+  @ExactLiouvilleComparison.FirstPath.X d M P G T hw x
+    (@Subtype.val.{1} Real
+      (fun x => @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real) FsFltz.Geometry.Parameter x)
+      t)
+    ⋯
+def ExactLiouvilleComparison.MoserRegularity.interpolationField : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+        ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+          (σ : @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+            @FsFltz.Geometry.SmoothManifold.IsSmoothForm d (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                M σ →
+              @ExactLiouvilleComparison.RadialInterpolation.WeakDifferential d M P σ →
+                @Set.Elem.{0} Real FsFltz.Geometry.Parameter →
+                  (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x :=
+fun {d} {M} P q₀ q₁ σ hσ hw t x =>
+  @ExactLiouvilleComparison.RadialInterpolation.vector d M P
+    (@ExactLiouvilleComparison.RadialInterpolation.coefficient d M P q₀ q₁
+      (@Subtype.val.{1} Real
+        (fun x => @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real) FsFltz.Geometry.Parameter x)
+        t)
+      ⋯)
+    σ hσ hw (@ExactLiouvilleComparison.RadialInterpolation.delta d M P q₀ q₁) x
+def ExactLiouvilleComparison.MoserRegularity.barrierRate : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : @ExactLiouvilleComparison.RadialReference d M) →
+      ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+        ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P) →
+          (@Set.Elem.{0} Real FsFltz.Geometry.Parameter →
+              (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x) →
+            @Set.Elem.{0} Real FsFltz.Geometry.Parameter → @FsFltz.Geometry.SmoothManifold.Point d M → Real :=
+fun {d} {M} P q₀ q₁ Z t x =>
+  @HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+    (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+      (@ExactLiouvilleComparison.RadialInterpolation.delta d M P q₀ q₁
+        (@ExactLiouvilleComparison.RadialReference.R d M P x))
+      (@ExactLiouvilleComparison.RadialReference.R d M P x))
+    (@FsFltz.Geometry.SmoothManifold.scalarDerivative d M
+      (fun y =>
+        @ExactLiouvilleComparison.RadialInterpolation.Q d M P q₀ q₁
+          (@Subtype.val.{1} Real
+            (fun x =>
+              @Membership.mem.{0, 0} Real (Set.{0} Real) (@Set.instMembership.{0} Real) FsFltz.Geometry.Parameter x)
+            t)
+          (@ExactLiouvilleComparison.RadialReference.R d M P y))
+      x (Z t x))
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/moser-regularity/StatementTypes.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 3.329, "error": null, "failure": null, "lean_file": "verification/moser-regularity/StatementTypes.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "9b78a6003531db776e48cce81e7c1853490bc898b5fad93d4f5981c1a283188c", "status": "passed", "targets": [], "timings": {"build_seconds": 3.327, "engine_seconds": 3.3287190880000708, "preparation_seconds": 0.043375687000661856, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.1627145759994164, "total_seconds": 3.5348805009998614, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

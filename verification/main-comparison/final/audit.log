@@ -1,0 +1,167 @@
+'ExactLiouvilleComparison.AdmissibleGrowth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.CompatibleStructure' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.CompatibleStructure.dualNorm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.CompatibleStructure.inverseNorm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.ExactComparison' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.ExactComparisonAlgebra.Witness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.ExactComparisonAlgebra.Witness.comp' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.ExactComparisonAlgebra.Witness.symm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.FirstPathExactness.exactComparison' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.FirstPathExactness.firstPathExactness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.FirstPathFlow.Evolution' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.GrowthAtInfinity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.RemainingPathsTarget' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.Target' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.comparisonGauge' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.comparisonMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.comparisonWitness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.endpointWitness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.exactComparison' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthEvolution' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthEvolution._proof_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthEvolution._proof_2' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthEvolution._proof_3' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthEvolution._proof_4' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthPrimitive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourthPrimitive.eq_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourth_eq_interpolation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourth_exactness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourth_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.fourth_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolationPrimitive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolationPrimitive._proof_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolationPrimitive.eq_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolation_affine' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolation_equation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolation_exactness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.interpolation_family' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.mainTarget' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psi' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psi._proof_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psi._proof_2' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psi._proof_3' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psi.eq_1' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psiGauge' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psiGauge.eq_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.psiWitness' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.remainingPaths' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondEvolution' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondEvolution._proof_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondEvolution._proof_2' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondEvolution._proof_3' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondPrimitive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondPrimitive._proof_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.secondPrimitive.eq_1' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.second_eq_interpolation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.second_exactness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.second_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.second_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.third_equation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainComparison.third_exactness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.MainTarget' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MoserExactness.Endpoint' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MoserExactness.Equation' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MoserExactness.gauge' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.MoserExactness.moserExactness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.RadialInterpolationFlow.evolution' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'ExactLiouvilleComparison.RadialReference' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.SmoothlyIsotopicToIdentity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.ThirdPath.evolution' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.ThirdPath.thirdPathFlow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ExactLiouvilleComparison.WeaklyTames' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+MAIN_COMPARISON_AUDIT_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/var/lib/archon-worker/workspaces/assignments/89176935-a647-4427-bcb9-5fb06647618f/verification/main-comparison/Audit.lean"], "cwd": "/var/lib/archon-worker/workspaces/assignments/89176935-a647-4427-bcb9-5fb06647618f", "duration_seconds": 6.899, "error": null, "failure": null, "lean_file": "verification/main-comparison/Audit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "3475c9e3509bf5a6c54e6f4f4301772871c2d26c7454b1e3d7e6d381e07dc59a", "status": "passed", "targets": [], "timings": {"build_seconds": 6.897, "engine_seconds": 6.898703615000159, "preparation_seconds": 0.04034454700013157, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.1777593139995588, "total_seconds": 7.1168650340005115, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

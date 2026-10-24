@@ -1,0 +1,40 @@
+import ExactLiouvilleComparison.FirstPathChecks
+set_option pp.universes true
+set_option pp.fullNames true
+#check ExactLiouvilleComparison.FirstPathChecks.coefficient_core
+#check ExactLiouvilleComparison.FirstPathChecks.unique_native_solution
+#check ExactLiouvilleComparison.FirstPathChecks.zero_parameter
+#check ExactLiouvilleComparison.FirstPathChecks.growth_consumer
+#check ExactLiouvilleComparison.FirstPath.coefficient
+#check ExactLiouvilleComparison.FirstPath.coefficient_rhoPrime
+#check ExactLiouvilleComparison.FirstPath.coefficient_radial
+#check ExactLiouvilleComparison.FirstPath.metric_bounds
+#check ExactLiouvilleComparison.FirstPath.tail_ratio
+#check ExactLiouvilleComparison.FirstPath.tail_factor
+#check ExactLiouvilleComparison.FirstPath.radial_pair_bound
+#check ExactLiouvilleComparison.FirstPath.firstestimate
+#check ExactLiouvilleComparison.FirstPath.firstproper
+#check ExactLiouvilleComparison.FirstPath.exterior_estimate
+#check ExactLiouvilleComparison.FirstPath.exhaustion
+#check ExactLiouvilleComparison.FirstPath.exhaustion_smooth
+#check ExactLiouvilleComparison.FirstPath.exhaustion_nonneg
+#check ExactLiouvilleComparison.FirstPath.exhaustion_bddBelow
+#check ExactLiouvilleComparison.FirstPath.exhaustion_derivative
+#check ExactLiouvilleComparison.FirstPath.exhaustion_proper
+#check ExactLiouvilleComparison.FirstPath.form
+#check ExactLiouvilleComparison.FirstPath.nondegenerate
+#check ExactLiouvilleComparison.FirstPath.W
+#check ExactLiouvilleComparison.FirstPath.X
+#check ExactLiouvilleComparison.FirstPath.W_equation
+#check ExactLiouvilleComparison.FirstPath.X_equation
+#check ExactLiouvilleComparison.FirstPath.solution_unique
+#check ExactLiouvilleComparison.FirstPath.X_unique
+#check ExactLiouvilleComparison.FirstPath.W_unique
+#check ExactLiouvilleComparison.FirstPath.X_zero
+#check ExactLiouvilleComparison.FirstPath.covector_norm
+#check ExactLiouvilleComparison.FirstPath.W_bound
+#check ExactLiouvilleComparison.FirstPath.tangentNorm
+#check ExactLiouvilleComparison.FirstPath.X_h_bound
+#check ExactLiouvilleComparison.FirstPath.norm_sq_metric
+#check ExactLiouvilleComparison.FirstPath.X_g_bound
+#eval IO.println "FIRST_PATH_TYPES_COMPLETE"

@@ -1,0 +1,17 @@
+ExactLiouvilleComparison.SteinGrowth.steinRadius_growth : ∀ {d N : Nat} {M : FsFltz.Geometry.SmoothManifold d} (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N)
+  (P : @ExactLiouvilleComparison.SteinReference d N M i) (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M)
+  (hR :
+    @IsProperMap.{0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M) Real (@FsFltz.Geometry.SmoothManifold.topology d M)
+      (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+      (@ExactLiouvilleComparison.steinRadius d N M i))
+  (hlower :
+    ∀ (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+      @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+        (@ExactLiouvilleComparison.steinRadius d N M i x))
+  (h :
+    @ExactLiouvilleComparison.GrowthAtInfinity d M (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+      (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T (@ExactLiouvilleComparison.steinRadius d N M i)
+      (Real.exp (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))),
+  @ExactLiouvilleComparison.GrowthAtInfinity d M (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+    (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T (@ExactLiouvilleComparison.steinRadius d N M i)
+    (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))

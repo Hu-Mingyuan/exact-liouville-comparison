@@ -1,0 +1,319 @@
+@ExactLiouvilleComparison.RadialInterpolation.rho : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar →
+        ExactLiouvilleComparison.RadialCoefficient P.rstar → ℝ → ℝ → ℝ
+@ExactLiouvilleComparison.RadialInterpolation.delta : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar → ExactLiouvilleComparison.RadialCoefficient P.rstar → ℝ → ℝ
+@ExactLiouvilleComparison.RadialInterpolation.rho_hasDerivWithinAt : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ)
+  {r : ℝ},
+  LE.le.{0} 1 r →
+    HasDerivWithinAt.{0, 0} (ExactLiouvilleComparison.RadialInterpolation.rho q₀ q₁ u)
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 u) (q₀.rhoPrime r))
+        (HMul.hMul.{0, 0, 0} u (q₁.rhoPrime r)))
+      (Set.Ici.{0} 1) r
+@ExactLiouvilleComparison.RadialInterpolation.rho_derivWithin : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ)
+  {r : ℝ},
+  LE.le.{0} 1 r →
+    Eq.{1} (derivWithin.{0, 0} (ExactLiouvilleComparison.RadialInterpolation.rho q₀ q₁ u) (Set.Ici.{0} 1) r)
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 u) (q₀.rhoPrime r))
+        (HMul.hMul.{0, 0, 0} u (q₁.rhoPrime r)))
+@ExactLiouvilleComparison.RadialInterpolation.convex_pos : ∀ {a b u : ℝ},
+  LT.lt.{0} 0 a →
+    LT.lt.{0} 0 b →
+      Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u →
+        LT.lt.{0} 0 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 u) a) (HMul.hMul.{0, 0, 0} u b))
+@ExactLiouvilleComparison.RadialInterpolation.coefficient : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar →
+        ExactLiouvilleComparison.RadialCoefficient P.rstar →
+          (u : ℝ) → Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u → ExactLiouvilleComparison.RadialCoefficient P.rstar
+@ExactLiouvilleComparison.RadialInterpolation.coefficient_prime : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ)
+  (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u) {r : ℝ},
+  LE.le.{0} 1 r →
+    Eq.{1} ((ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu).rhoPrime r)
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 u) (q₀.rhoPrime r))
+        (HMul.hMul.{0, 0, 0} u (q₁.rhoPrime r)))
+@ExactLiouvilleComparison.RadialInterpolation.Q : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar →
+        ExactLiouvilleComparison.RadialCoefficient P.rstar → ℝ → ℝ → ℝ
+@ExactLiouvilleComparison.RadialInterpolation.Q_radial_derivative : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ)
+  {r : ℝ},
+  LE.le.{0} 1 r →
+    HasDerivWithinAt.{0, 0} (ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ u)
+      (HAdd.hAdd.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.rho q₀ q₁ u r)
+        (HMul.hMul.{0, 0, 0} r
+          (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 u) (q₀.rhoPrime r))
+            (HMul.hMul.{0, 0, 0} u (q₁.rhoPrime r)))))
+      (Set.Ici.{0} 1) r
+@ExactLiouvilleComparison.RadialInterpolation.rho_parameter_derivative : ∀ {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u r : ℝ),
+  HasDerivAt.{0, 0} (fun v => ExactLiouvilleComparison.RadialInterpolation.rho q₀ q₁ v r)
+    (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ r) u
+@ExactLiouvilleComparison.RadialInterpolation.Q_parameter_derivative : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (u r : ℝ),
+  HasDerivAt.{0, 0} (fun v => ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ v r)
+    (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ r) r) u
+@ExactLiouvilleComparison.RadialInterpolation.Q_lower : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar),
+  (∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) →
+    ∀ {u r : ℝ},
+      Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u →
+        LE.le.{0} 1 r →
+          LE.le.{0} (HMul.hMul.{0, 0, 0} r (q₀.rho r)) (ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ u r)
+@ExactLiouvilleComparison.RadialInterpolation.uniform_exhaustion : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar),
+  (∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) →
+    Filter.Tendsto.{0, 0} (fun r => HMul.hMul.{0, 0, 0} r (q₀.rho r)) Filter.atTop.{0} Filter.atTop.{0} →
+      ∀ (L : ℝ),
+        ∃ T,
+          LE.le.{0} 1 T ∧
+            ∀ (u : ℝ),
+              Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u →
+                ∀ (r : ℝ), LE.le.{0} T r → LE.le.{0} L (ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ u r)
+@ExactLiouvilleComparison.RadialInterpolation.Q_curve_derivative : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (f : ℝ → ℝ) {u v : ℝ},
+  HasDerivAt.{0, 0} f v u →
+    LT.lt.{0} 1 (f u) →
+      HasDerivAt.{0, 0} (fun t => ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ t (f t))
+        (HAdd.hAdd.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (f u)) (f u))
+          (HMul.hMul.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.rho q₀ q₁ u (f u))
+              (HMul.hMul.{0, 0, 0} (f u)
+                (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 u) (q₀.rhoPrime (f u)))
+                  (HMul.hMul.{0, 0, 0} u (q₁.rhoPrime (f u))))))
+            v))
+        u
+@ExactLiouvilleComparison.RadialInterpolation.exteriorDerivative_add : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {α β : M.Form 1},
+  M.IsSmoothForm α →
+    M.IsSmoothForm β →
+      Eq.{1} (M.exteriorDerivative (HAdd.hAdd.{0, 0, 0} α β))
+        (HAdd.hAdd.{0, 0, 0} (M.exteriorDerivative α) (M.exteriorDerivative β))
+@ExactLiouvilleComparison.RadialInterpolation.primitive : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar → M.Form 1 → M.Form 1
+@ExactLiouvilleComparison.RadialInterpolation.primitive_parameter_derivative : ∀ {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (σ : M.Form 1) (u : ℝ) (x : M.Point) (v : M.Tangent x),
+  HasDerivAt.{0, 0}
+    (fun t =>
+      FsFltz.Geometry.SmoothManifold.evalOne
+        (HAdd.hAdd.{0, 0, 0} σ
+          (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P
+            (ExactLiouvilleComparison.RadialInterpolation.rho q₀ q₁ t)))
+        x v)
+    (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x))
+      (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))
+    u
+@ExactLiouvilleComparison.RadialInterpolation.WeakDifferential : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} → {P : ExactLiouvilleComparison.RadialReference M} → M.Form 1 → Prop
+@ExactLiouvilleComparison.RadialInterpolation.differential_apply : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1),
+  M.IsSmoothForm σ →
+    ∀ (x : M.Point) (v w : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.RadialInterpolation.primitive q σ)) x v w)
+        (HAdd.hAdd.{0, 0, 0} (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative σ) x v w)
+          (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative q.primitive) x v w))
+@ExactLiouvilleComparison.RadialInterpolation.nondegenerate : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1),
+  M.IsSmoothForm σ →
+    ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ →
+      ∀ (x : M.Point),
+        M.Nondegenerate (M.exteriorDerivative (ExactLiouvilleComparison.RadialInterpolation.primitive q σ)) x
+@ExactLiouvilleComparison.RadialInterpolation.exactStructure : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar →
+        (σ : M.Form 1) →
+          M.IsSmoothForm σ →
+            ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ →
+              ExactLiouvilleComparison.ExactSymplecticStructure M
+@ExactLiouvilleComparison.RadialInterpolation.vector : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      ExactLiouvilleComparison.RadialCoefficient P.rstar →
+        (σ : M.Form 1) →
+          M.IsSmoothForm σ →
+            ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ → (ℝ → ℝ) → (x : M.Point) → M.Tangent x
+@ExactLiouvilleComparison.RadialInterpolation.vector_equation : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (δ : ℝ → ℝ) (x : M.Point) (v : M.Tangent x),
+  Eq.{1}
+    (FsFltz.Geometry.SmoothManifold.evalTwo
+      (M.exteriorDerivative (ExactLiouvilleComparison.RadialInterpolation.primitive q σ)) x
+      (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x) v)
+    (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (δ (P.R x)))
+      (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))
+@ExactLiouvilleComparison.RadialInterpolation.vector_unique : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (δ : ℝ → ℝ) (x : M.Point) (v : M.Tangent x),
+  (∀ (w : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.RadialInterpolation.primitive q σ)) x v w)
+        (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (δ (P.R x)))
+          (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x w))) →
+    Eq.{1} v (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x)
+@ExactLiouvilleComparison.RadialInterpolation.vector_eq_zero : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (δ : ℝ → ℝ) (x : M.Point),
+  Eq.{1} (δ (P.R x)) 0 → Eq.{1} (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x) 0
+@ExactLiouvilleComparison.RadialInterpolation.energy : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (δ : ℝ → ℝ) (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    have X := ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x;
+    Eq.{1}
+      (HAdd.hAdd.{0, 0, 0} (HPow.hPow.{0, 0, 0} (Norm.norm.{0} X) 2)
+        (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative σ) x X ((P.compatible.J x) X)))
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (Neg.neg.{0} P.c) (δ (P.R x))) (M.scalarDerivative P.R x X))
+@ExactLiouvilleComparison.RadialInterpolation.differential_sq_le : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    ∀ (v : q.compatible.MetricTangent x),
+      LE.le.{0} (HPow.hPow.{0, 0, 0} (M.scalarDerivative P.R x v) 2)
+        (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} (q.radialA x) (HMul.hMul.{0, 0, 0} P.c (q.radialD x)))
+          (HPow.hPow.{0, 0, 0} (Norm.norm.{0} v) 2))
+@ExactLiouvilleComparison.RadialInterpolation.radial : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (δ : ℝ → ℝ) (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    LE.le.{0} 0 (δ (P.R x)) →
+      LE.le.{0} 0
+          (Neg.neg.{0} (M.scalarDerivative P.R x (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x))) ∧
+        LE.le.{0}
+          (Neg.neg.{0} (M.scalarDerivative P.R x (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x)))
+          (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} (δ (P.R x)) (q.radialA x)) (q.radialD x))
+@ExactLiouvilleComparison.RadialInterpolation.Q_directional : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar),
+  (∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) →
+    ∀ (u : ℝ) (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u) (σ : M.Form 1) (hσ : M.IsSmoothForm σ)
+      (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        have q := ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu;
+        have δ := ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x);
+        have XR :=
+          M.scalarDerivative P.R x
+            (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw
+              (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁) x);
+        LE.le.{0}
+            (HDiv.hDiv.{0, 0, 0}
+              (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} δ (q.rho (P.R x))) (HSub.hSub.{0, 0, 0} (P.R x) (q.radialA x)))
+              (q.radialD x))
+            (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} δ (P.R x))
+              (HMul.hMul.{0, 0, 0}
+                (HAdd.hAdd.{0, 0, 0} (q.rho (P.R x)) (HMul.hMul.{0, 0, 0} (P.R x) (q.rhoPrime (P.R x)))) XR)) ∧
+          LE.le.{0} 0
+            (HDiv.hDiv.{0, 0, 0}
+              (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} δ (q.rho (P.R x))) (HSub.hSub.{0, 0, 0} (P.R x) (q.radialA x)))
+              (q.radialD x))
+@ExactLiouvilleComparison.RadialInterpolationChecks.constructed : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ)
+  (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u) (σ : M.Form 1),
+  M.IsSmoothForm σ →
+    ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ →
+      ∀ (x : M.Point),
+        have q := ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu;
+        M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.RadialInterpolation.primitive q σ))
+            Set.univ.{0} ∧
+          ExistsUnique.{1} fun X =>
+            ∀ (v : M.Tangent x),
+              Eq.{1}
+                (FsFltz.Geometry.SmoothManifold.evalTwo
+                  (M.exteriorDerivative (ExactLiouvilleComparison.RadialInterpolation.primitive q σ)) x X v)
+                (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x)))
+                  (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))
+@ExactLiouvilleComparison.RadialInterpolationChecks.core_derivative : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ)
+  (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u) (r : ℝ),
+  Membership.mem.{0, 0} (Set.Icc.{0} 1 P.rstar) r →
+    Eq.{1} ((ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu).rhoPrime r) 0
+@ExactLiouvilleComparison.RadialInterpolationChecks.weak_zero : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M}, ExactLiouvilleComparison.RadialInterpolation.WeakDifferential 0
+@ExactLiouvilleComparison.RadialInterpolationChecks.sigma_zero : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar),
+  (∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) →
+    ∀ (u : ℝ) (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        have q := ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu;
+        have X :=
+          ExactLiouvilleComparison.RadialInterpolation.vector q 0 (FsFltz.Geometry.SmoothManifold.isSmoothForm_zero M)
+            ExactLiouvilleComparison.RadialInterpolationChecks.weak_zero
+            (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁) x;
+        Eq.{1} (HPow.hPow.{0, 0, 0} (Norm.norm.{0} X) 2)
+            (HMul.hMul.{0, 0, 0}
+              (HMul.hMul.{0, 0, 0} (Neg.neg.{0} P.c) (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x)))
+              (M.scalarDerivative P.R x X)) ∧
+          LE.le.{0} 0 (Neg.neg.{0} (M.scalarDerivative P.R x X)) ∧
+            LE.le.{0} (Neg.neg.{0} (M.scalarDerivative P.R x X))
+              (HDiv.hDiv.{0, 0, 0}
+                (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x)) (q.radialA x))
+                (q.radialD x))
+@ExactLiouvilleComparison.RadialInterpolationChecks.equal_coefficients : ∀ {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  (q : ExactLiouvilleComparison.RadialCoefficient P.rstar) (u : ℝ) (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (x : M.Point),
+  Eq.{1}
+    (ExactLiouvilleComparison.RadialInterpolation.vector
+      (ExactLiouvilleComparison.RadialInterpolation.coefficient q q u hu) σ hσ hw
+      (ExactLiouvilleComparison.RadialInterpolation.delta q q) x)
+    0
+@ExactLiouvilleComparison.RadialInterpolationChecks.critical_point : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (δ : ℝ → ℝ) (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    Eq.{1} (mfderiv% P.R x) 0 → Eq.{1} (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw δ x) 0
+@ExactLiouvilleComparison.RadialInterpolationChecks.scalar_barrier : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {P : ExactLiouvilleComparison.RadialReference M} (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar),
+  (∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) →
+    ∀ (u : ℝ) (hu : Membership.mem.{0, 0} (Set.Icc.{0} 0 1) u) (σ : M.Form 1) (hσ : M.IsSmoothForm σ)
+      (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        ∀ (f : ℝ → ℝ),
+          Eq.{1} (f u) (P.R x) →
+            HasDerivAt.{0, 0} f
+                (M.scalarDerivative P.R x
+                  (ExactLiouvilleComparison.RadialInterpolation.vector
+                    (ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu) σ hσ hw
+                    (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁) x))
+                u →
+              have q := ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ u hu;
+              have XR :=
+                M.scalarDerivative P.R x
+                  (ExactLiouvilleComparison.RadialInterpolation.vector q σ hσ hw
+                    (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁) x);
+              have B :=
+                HAdd.hAdd.{0, 0, 0}
+                  (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x)) (P.R x))
+                  (HMul.hMul.{0, 0, 0}
+                    (HAdd.hAdd.{0, 0, 0} (q.rho (P.R x)) (HMul.hMul.{0, 0, 0} (P.R x) (q.rhoPrime (P.R x)))) XR);
+              HasDerivAt.{0, 0} (fun t => ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ t (f t)) B u ∧
+                LE.le.{0} 0 B
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation/verification/radial-interpolation/Types.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation", "duration_seconds": 2.692, "error": null, "failure": null, "lean_file": "verification/radial-interpolation/Types.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "06c0fe175b37531b2f6ea41550995e5b367db530be5a7f969a6f959237dec2d7", "status": "passed", "targets": [], "timings": {"build_seconds": 2.69, "engine_seconds": 2.6919763259993488, "preparation_seconds": 0.041189077999661095, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.18556586500017147, "total_seconds": 2.9188024020004377, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

@@ -1,0 +1,46 @@
+{
+  "commit": "63bef621295ce179f1836ff77d66532d1e2d4ebb",
+  "repository": "31e09b7d-6080-4383-8e4e-92b14780690a",
+  "files": [
+    {
+      "path": "ExactLiouvilleComparison/FiniteTypeComparisonStatement.lean",
+      "sha256": "27a6e4b9757f15bc68e86ad9fa701b10ecd9d2169c762d4dfe1bde64637c9513",
+      "blob_oid": "04ead25763e8721edd5619aa0adf3d22e8ab82fc"
+    },
+    {
+      "path": "ExactLiouvilleComparison/FiniteTypeComparison.lean",
+      "sha256": "68910a4ecf2f6a6fe1750abb097bc6e47ef24ce849ee8c16f2f9fb82f0ff36d5",
+      "blob_oid": "999da9de688033d09f1ac4d280ba9a845291fea4"
+    },
+    {
+      "path": "ExactLiouvilleComparison/ManuscriptComparisonStatement.lean",
+      "sha256": "cb0d42d1b903b5d0a05192dbcf09548866631216d9c4db718fc8f3ae0aa4a473",
+      "blob_oid": "58cd1a977af2082a18d3708fffb2b4395d2c7d0f"
+    },
+    {
+      "path": "ExactLiouvilleComparison/ManuscriptComparison.lean",
+      "sha256": "8cdce5ebc889aa5a796ac158817677f24bc63d824857353940d84574e2eee060",
+      "blob_oid": "0b2919e52b87b59f4d12b79d73698ca9c6c55d52"
+    },
+    {
+      "path": "ExactLiouvilleComparison/ManuscriptComparisonConsumers.lean",
+      "sha256": "ed5ccd76a5adfcc865f90043db87ac49184a593bff2e3f7dc635ac0cd60f0cec",
+      "blob_oid": "b7d38bf8989c1a5507343b08df4ce68114336c88"
+    },
+    {
+      "path": "ExactLiouvilleComparison/Statement.lean",
+      "sha256": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+      "blob_oid": "9abacf12fb1540d7d6ac2a83bdbfd2df089c3e16"
+    },
+    {
+      "path": "ExactLiouvilleComparison/Geometry.lean",
+      "sha256": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+      "blob_oid": "dc780dad2324196fb98aec2b49f1e8260f538158"
+    },
+    {
+      "path": "verification/manuscript-comparison/final/receipt.json",
+      "sha256": "95a49b0bfbf0e0cbe398ba49c976c8d63bbcc5d34eeb724a034e485876414d11",
+      "blob_oid": "51df40bb04f31c326345cb5806baeac0c4c9be89"
+    }
+  ]
+}

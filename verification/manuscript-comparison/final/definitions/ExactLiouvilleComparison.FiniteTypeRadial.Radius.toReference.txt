@@ -1,0 +1,21 @@
+ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference := fun {d : Nat} {D : FsFltz.Geometry.LiouvilleDomain d} {C : @FsFltz.Geometry.Completion d D}
+    {A :
+      @ExactLiouvilleComparison.CompatibleStructure d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.completionReference d D C)}
+    (Q : @ExactLiouvilleComparison.FiniteTypeRadial.Radius d D C A) =>
+  @ExactLiouvilleComparison.RadialReference.mk d
+    (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+    (@ExactLiouvilleComparison.completionReference d D C) A
+    (@ExactLiouvilleComparison.FiniteTypeRadial.Radius.R d D C A Q)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.Radius.smooth d D C A Q)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.Radius.proper d D C A Q)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.Radius.lower d D C A Q)
+    (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+    ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference._proof_1
+    (@OfNat.ofNat.{0} Real (nat_lit 2)
+      (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+        ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference._proof_2))
+    ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference._proof_3
+    (@ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference._proof_4 d D C A Q)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.Radius.toReference._proof_5 d D C A Q)

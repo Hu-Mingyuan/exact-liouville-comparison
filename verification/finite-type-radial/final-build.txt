@@ -1,0 +1,8 @@
+✖ [3719/3721] Building ExactLiouvilleComparison.FiniteTypeRadial
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison.FiniteTypeRadial
+✔ [3720/3721] Built ExactLiouvilleComparison.FiniteTypeRadial (3.3s)
+✔ [3721/3721] Built ExactLiouvilleComparison.FiniteTypeRadialConsumers (3.1s)
+Build completed successfully (3721 jobs).
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.FiniteTypeRadialConsumers"], "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a", "duration_seconds": 12.071, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "67617b8b6dadf88867ea5dde583c25bbaa52d86cf690b36503b64991e06586c8", "status": "passed", "targets": ["ExactLiouvilleComparison.FiniteTypeRadialConsumers"], "timings": {"build_seconds": 8.923, "engine_seconds": 12.071189956000126, "preparation_seconds": 0.08438877400021738, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.20212418699884438, "total_seconds": 12.357768677999957, "wait_seconds": 0.001}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

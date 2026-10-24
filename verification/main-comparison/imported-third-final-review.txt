@@ -1,0 +1,76 @@
+# Independent final review: bounded third path
+
+Reviewer: `/root/third_final_review`, native helper to mission `4cc7ff50-61b6-4e8c-adc1-29bb17a21549`.
+Reviewed on 2026-10-23. This is mathematical-fidelity and Lean-proof-quality review of the seven modules below, including the relevant reused proof inputs. No builds were launched and no project source, API, dependency, or manuscript was changed by this reviewer. The only reviewer-written artifact is this report outside the fingerprinted tree.
+
+## Verdict
+
+**PASS for the bounded third-path construction and its unconditional consumers at the exact source hashes below.** No mathematical mismatch, extra trajectory/completeness assumption, admission, missing construction, or blocking proof-quality defect was found. This verdict covers actual `ThirdPath.thirdPathFlow`, rather than merely the proposition `Target`. The reviewed sources and inspected verification artifacts are bound to private recovery commit `c1773eba6457e4e3331cee126a6da07fc62333ac` by direct Git-object byte/hash comparisons.
+
+This is not acceptance of Cartan exactness, any pullback comparison, the final four-path composition, the main manuscript theorem, its corollaries, final packaging, or GitHub publication.
+
+## Exact source identity
+
+All SHA-256 values were computed directly from the reviewed files:
+
+| File in `ExactLiouvilleComparison/` | SHA-256 |
+|---|---|
+| `ThirdPathStatement.lean` | `5cfd8cc26dadec7cf72da708c25d275b27d366ccf907a1e0d0d2c8977f2437ab` |
+| `ThirdPathField.lean` | `2cb10e87bedb69168cf2ec9c1ebd4808b156827032ca97e4f9e5c323b84bc988` |
+| `ThirdPathEstimates.lean` | `c0c58372c97f6327b3b9ccfe6bb4c59cccfd787e31aa67083164a4acecb54f2f` |
+| `ThirdPathEndpoints.lean` | `1a1fb2872ad1fa46371fb2e83f782c349bf0bba03d8a0227160d02bcfd739512` |
+| `ThirdPathExhaustion.lean` | `528c8e24bd328043b17603a47392174962fae242462f4b959306cb044c156fc3` |
+| `ThirdPathFlow.lean` | `33b3574e5805832587874c33c67b3d025e6f5f6d2cc4c380f7d3092b6f2c6a08` |
+| `ThirdPathFlowConsumers.lean` | `9551992ea2cb386d44859ca7d88b14c0b6be71176c5685610b60dead69603d09` |
+
+The unchanged authoritative TeX hashes to `8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576`, matching `docs/sources.json`. Relevant passages are the radial setup and metric conventions (lines 42–64), the coefficient formulas (lines 251–267), and “The third path” (lines 319–336).
+
+The independently reviewed statement/crosswalk gate is retained in `verification/third-path/statement-review.md`. I read that receipt, including its explicit distinction between the original review message and the recovered report. The statement hash above and crosswalk hash `14737140da60ac599e25a199c7d46d3ca20b904d8a6eed4f604c1b15a0b78099` still match that gate. The reported chronology that the gate preceded substantive work is retained provenance, not independently reconstructed execution history.
+
+## Statement and implicit hypothesis audit
+
+Expanding `Target` and its output structure gives: for every finite dimension and native `SmoothManifold d`, every `RadialReference P`, and every `ExactSymplecticStructure T` with nonnegative `WeaklyTames P.compatible T`, construct the field, smoothness, symplectic path, equation and uniqueness, quantitative metric estimates, proper scalar control, full two-time evolution, and inverse-endpoint isotopy. `construction` fills all fields; `thirdPathFlow` supplies its inhabitant. The evolution and regularity certificates are outputs.
+
+I inspected the actual FsFltz `Smooth.lean` and `Family.lean` definitions. The manifold has native charts, Hausdorff/second-countability data and smooth structure, with no global chart or affine-space restriction. Tangents are `TangentSpace`; forms are continuous alternating maps on those fibers; chart transports use actual `mfderiv`; exterior derivative uses Mathlib `extDeriv`; maps are native `Diffeomorph`. `Parameter` is exactly `[0,1]`. The printed endpoint types carry only `{d}`, `{M}`, `P`, `T`, and weak taming, followed by their advertised time/point arguments. No hidden global flow, complete metric, primitive Liouville flow, properness of an extra function, or assumed exact comparison appears.
+
+The reference structure literally assumes the manuscript's smooth proper `R >= 1`, `c > 0`, `rstar > 1`, exterior radial identity and exterior dual-norm inequality. The core is unrestricted by the radial identities. `T` is exact symplectic and weak taming is nonstrict. No bound on the primitive's growth is added. Omitting `B` and inverse-form growth is valid for this intermediate path, which never uses them. No new object is called a Liouville manifold; the inspected pinned complete-flow definition retains its native `Flow R` and ODE for every real time with positive contraction. The auxiliary all-real field below is a constructed device, not an assertion that the original third-path field satisfies the original formula for all real times.
+
+## Coverage of proof groups
+
+1. **Literal coefficient, primitive, and inverse field (`Statement`, `Field`).** `coefficient` unfolds to the existing `largeCoefficient`, whose `rho` is exactly `LargeCoefficient.A P T.primitive`. I inspected `levels`, `series`, `A_formula`, the empty-sublevel convention, dominance, and the derivative bridge from ordinary derivative to the closed ray. The locally finite sum has manuscript index `j=n+1`. `primitive` is literally `A(R) beta + s lambda`, and `differential_eq` uses exterior-derivative linearity. `energy_lower` uses the radial metric formula and `s >= 0` times weak taming. The reused metric formula handles the core through vanishing coefficient derivative, rather than extending the radial identity into it. Positivity of `A` yields nondegeneracy, and exactness gives closedness/symplecticity. `field` is the actual inverse positive contraction applied to `-lambda`; its defining equation and uniqueness are proved from the finite-dimensional injective contraction map.
+
+2. **Metric bridge and estimates (`Estimates`).** `CompatibleStructure.metric_eq` identifies the supplied smooth Riemannian metric with `d beta(v,Jw)`. `MetricTangent` uses that metric's norm. `covector` changes only the normed-space presentation and preserves evaluation, with continuity supplied by finite dimensionality. `oneCovector` evaluates to the original primitive. The constructed `metricJ` is an isometry proved from compatibility. Thus evaluation on `JX`, the operator norm bound, and cancellation for nonzero norm yield precisely `|X|_g <= |lambda|_(g*)/A`. The zero-vector case is explicit. Literal `A_dominates` proves the ratio bound and hence `|X|_g <= 1`.
+
+3. **Inverse regularity (`Field` and reused `MoserRegularityInverse`).** The generic solver is a total chart contraction inverse, but its equation is used only where nondegeneracy has been proved. Its chart formula transports the actual tangent equation, and the inverse is smooth on the open invertible locus. `nativeJoint_of_equation` and `intervalSmooth_of_equation` identify this solver with the specified field by nondegenerate uniqueness. The latter retains open coefficient neighborhoods. `native_open_of_interval_family` then builds a genuine open spacetime neighborhood from these charts. No fixed larger negative-time strip, off-interval symplecticity, or regularity assumption on the desired field is inserted.
+
+4. **Proper scalar and compact core (`Exhaustion`).** Smoothness of `sqrt(R)` follows from `R >= 1`; its square is exactly `R`, proving properness through the proper-composition lemma. It is bounded below by one. The actual scalar derivative is computed by the manifold chain rule. On the exterior, the metric-dual inequality `c |dR|² <= R` and `|X|_g <= 1` prove the stated constant `1/(2 sqrt(c))`. The core is the compact preimage of `[1,rstar]`; native joint continuity on compact `Parameter × core` yields a single uniform absolute bound, including the empty-core case. Taking the maximum gives the global bound. No completeness of the reference metric is used.
+
+5. **Actual evolution (`Flow` and reused ODE chain).** `evolution_exists` explicitly obtains the open extension, proves agreement with the constructed field, transfers the proved scalar bound to it, and applies `FirstPathFlow.evolution_of_scalar_bound`. I read that theorem and followed its proof through `ODEGlobalField`, `ODEContinuation`, `ODEScalarConfinement`, `ODEGlobalExistence`, and `ODESmoothEvolution`. The input field is extended by a smooth cutoff and its scalar rate is capped off the closed strip. Finite-interval existence uses compact proper sublevels, a compactly supported trial field, an actual FsFltz global solution of that field, and the scalar displacement estimate proving the cutoff is one along the full desired trajectory. Rescaling and native suspension produce all-real solutions for the auxiliary bounded field. Native uniqueness proves composition and inverses; smooth dependence from pinned FsFltz constructs both smooth maps of each `Diffeomorph`. I inspected the actual FsFltz compact-support existence, suspension uniqueness, and joint-smoothness theorem statements/proofs at the invoked interfaces. No preexisting solution family is assumed by the third-path theorem.
+
+6. **Closed endpoints, consumers, and direction (`Endpoints`, `FlowConsumers`).** `Evolution.solves` is the native within-ODE on the full closed interval, from every start. The chart ODE is obtained by the chart chain rule. I read `ODEClosedUniqueness`: a solution on a nontrivial closed interval is joined to constructed auxiliary trajectories at both endpoints with matching within derivatives, then native uniqueness is applied; the singleton case uses the initial identity. Thus `unique` has no time-order restriction. Consumers expose the full solution, native/chart equations, smooth extension, composition, inverse, and isotopy without new assumptions. `primitive_zero`, `primitive_one`, and the parameter derivative match the literal path. `isotopy_symm` swaps the smooth forward/inverse families. `inverseEndpoint` is exactly `map 1 0`, proved equal to `(map 0 1).symm`, with its required smooth identity isotopy. `inverseEndpoint_direction` correctly stops at primitive identities and geometric evolution direction; it does not claim a pullback identity prematurely.
+
+## Trust and verification evidence inspected
+
+I inspected `scripts/verify-third-path.py`, the generated inventory/axiom Lean drivers, their output logs, elaborated types, `declarations.json`, `environment-declarations.json`, `axiom-audit.json`, and `receipt.json`. The axiom driver actually uses `Lean.collectAxioms`, rather than a textual token scan. The source inventory has 56 declarations; all are included in the 102 environment declarations, including generated constructors, recursors, projections, equation lemmas and proof helpers. The audit key set equals the environment inventory exactly. Its union is precisely `propext`, `Classical.choice`, `Quot.sound`; in particular `thirdPathFlow`, `construction`, `evolution_exists`, and the actual endpoint consumers have no prohibited transitive axioms.
+
+All three managed commands report return code zero, `snapshot_verified: true`, and common source key `971b47dea02a4c9d8dec222f198d5c2b5c2234972ea31489698c8b6a071ccaa3`:
+
+- `horizon-lean-check ExactLiouvilleComparison.ThirdPathFlowConsumers`
+- `horizon-lean-check --lean verification/third-path/FinalInventory.lean`
+- `horizon-lean-check --lean verification/third-path/FinalAxioms.lean`
+
+The publishable outputs are `final-build.txt`, `final-inventory.txt`, `final-axioms.txt`, and `final-elaborated-types.txt`. I inspected the fresh rerun after the output suffix was corrected to avoid the repository’s `*.log` ignore rule; the axiom and elaborated-type contents are unchanged. The named-module build reports cached/up-to-date dependency jobs; the inventory and transitive-axiom drivers were freshly run in the recorded serial check. I recomputed every file hash in `receipt.json`: no mismatch. The package Git heads independently match FsFltz `1a3d387cfacc746e25aad31e5b27b1803103e7cb` and Mathlib `d13f23b723b8a846827a245b89c10fc7d3f11612`; their tracked diffs are empty. `lean-toolchain` is `leanprover/lean4:v4.34.1`. This is a checked named consumer module and its import closure, not a newly run default-root release build or verification of every manuscript endpoint. I did not rerun Lean or independently recheck every internal proof in pinned Mathlib/FsFltz.
+
+Receipt SHA-256: `33aa1217f677ba77c7c1e3b12258ccc1db3790b63fb66afc03abafd46145a7ff`.
+Axiom JSON SHA-256: `a8ef1cf733e10fdf8d1821e064e194a794e9413bafcf02d9dadc1cbe99351ea5`.
+Elaborated-type text SHA-256: `96c5cba806c90ca3dbc84429145806a4ceedcfec47f53f892a70b45b48856f32`.
+
+Proof architecture is appropriately bounded: the new files reuse the existing inverse, compact-continuity, and continuation machinery and supply its actual premises. Ordinary algebraic automation discharges finite scalar inequalities; the shared transparency setting changes elaboration rather than the trusted axiom policy. No speculative rewrite or extra test suite is needed for acceptance of these frozen modules.
+
+## Recovery binding
+
+Exact private recovery commit: `c1773eba6457e4e3331cee126a6da07fc62333ac`. I independently read `git show COMMIT:path` for all 115 receipt source paths and compared their SHA-256 values to the inspected receipt: zero mismatches. I also directly compared the committed bytes of the receipt, axiom audit, environment inventory, elaborated-type text, all three final raw `.txt` check logs, and `docs/third-path-proof-guide.md` to the reviewed workspace copies: all equal. The proof guide agrees with the scoped construction and exclusions above.
+
+The parent supplies publication record `014c546b-a118-4c3b-8e75-6a5af5d11848`, artifact `727925e1-7a52-4051-85a7-a07b2bc3310c`, created at 21:38:19 and verified at 21:38:21 UTC. I did not query those API records; the commit-object/source binding itself was independently checked as described. Parent-reported exhaustion provenance is private child commit `b70e12a07f3d0cf62606afa31f72581e38fb2e48`; its separate child commit was not independently audited here, since the integrated exhaustion bytes and proofs are directly covered.
+
+No unresolved blocker remains for this bounded review. Release/default-root verification, Cartan exactness and final comparison acceptance remain outside its scope. The report itself is a subsequent review artifact, not claimed to be present in the already verified recovery commit.

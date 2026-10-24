@@ -1,0 +1,448 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={Exact symplectic comparison: definitions and target theorems}}
+\title{Exact symplectic comparison under weak taming\\[5pt]
+\large Definitions, hypotheses, and target theorems}
+\author{Exact Liouville comparison project}
+\date{24 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We specify an exact comparison theorem for two symplectic primitives on
+the same smooth manifold. A radial reference fixes the almost complex
+structure and every norm in the hypotheses. The other symplectic form
+need only weakly tame that structure and satisfy an integral growth
+condition on its inverse. The conclusion includes an actual
+diffeomorphism, a smooth isotopy to the identity, and a globally smooth
+primitive correction. We also state the finite-type, properly embedded
+Stein, and common-reference consequences, with their input data and
+quantifier order explicit. A separate construction theorem supplies a
+global cylindrical compatible structure and extends arbitrary prescribed
+compatible contact data, including the end seam. The companion proof
+blueprint supplies the mathematical arguments.
+\end{abstract}
+
+\section{Underlying geometry and conventions}
+Throughout, $X$ is a finite-dimensional, Hausdorff, second-countable,
+smooth real manifold without boundary. Smooth means $C^\infty$.
+One fixed real dimension $d\ge0$ is used throughout $X$, with $d$
+arbitrary. A nondegenerate two-form forces $d$ to be even when $X$
+is nonempty.
+The zero-dimensional case is allowed.
+
+A symplectic form is a smooth, closed, pointwise nondegenerate real
+two-form. An \emph{exact symplectic structure with specified primitive}
+is a smooth real one-form $\lambda$ for which $\omega=\dd\lambda$
+is symplectic. The primitive is part of the data: different primitives
+of the same two-form are not identified.
+
+Our contraction convention is
+\[
+ (\iota_v\omega)(w)=\omega(v,w).
+\]
+Thus the Liouville field of a primitive $\lambda$ is the unique smooth
+field $Z_\lambda$ satisfying $\iota_{Z_\lambda}\dd\lambda=\lambda$.
+In this document, a \emph{Liouville manifold} has this field complete
+for every real time, in both directions. Exact symplectic structures
+without this completeness requirement are named as such.
+
+\begin{definition}[Compatibility and the reference metric]
+Let $\Omega$ be symplectic. A smooth almost complex structure $J$
+is $\Omega$-compatible if
+\[
+ J^2=-\id,\qquad \Omega(Jv,Jw)=\Omega(v,w),\qquad
+ \Omega(v,Jv)>0\quad(v\ne0).
+\]
+It determines the Riemannian metric
+\[
+ g(v,w)=\Omega(v,Jw).
+\]
+\end{definition}
+Integrability of $J$ is not required. Neither the definition of
+compatibility nor the main theorem assumes completeness of $g$.
+
+\subsection{The tangent, dual, and inverse-form norms}
+All norms in the comparison criterion are induced by this particular
+$g$. At $x\in X$, write
+\[
+ |v|_g^2=g_x(v,v),\qquad
+ |\xi|_{\dual}=\sup_{|v|_g\le1}|\xi(v)|.
+\]
+For any symplectic form $\omega$, contraction gives an isomorphism
+\[
+ \omega_x^\flat:T_xX\longrightarrow T_x^*X,\qquad
+ v\longmapsto\omega_x(v,\cdot).
+\]
+The notation $\|\omega^{-1}\|_g$ means exactly
+\begin{equation}\label{eq:inversenorm}
+ \|\omega_x^{-1}\|_g
+ =\|(\omega_x^\flat)^{-1}\|_{\dual\to g}
+ =\sup_{|\xi|_{\dual}\le1}|(\omega_x^\flat)^{-1}\xi|_g .
+\end{equation}
+In particular, this is not a coordinate-matrix norm chosen independently
+of the reference metric. The operator-norm definition also applies in
+dimension zero.
+
+\section{The radial reference and admissible growth}
+\begin{definition}[Radial reference]\label{def:reference}
+A radial reference is a tuple
+\[
+ \sref=(X,\beta,J,g,R,c,r_*),
+\]
+where $\beta$ is a smooth real one-form, $\Omega=\dd\beta$ is
+symplectic, $J$ is $\Omega$-compatible, and
+$g=\Omega(\,\cdot\,,J\,\cdot\,)$.
+The function $R:X\to[1,\infty)$ is smooth and proper, and the constants
+satisfy $c>0$ and $r_*>1$. On the open set $\{R>r_*\}$ one requires
+\begin{equation}\label{eq:radial}
+ \beta=-c\,\dd R\circ J,\qquad
+ a:=c|\dd R|_{\dual}^2\le R.
+\end{equation}
+\end{definition}
+Here proper means that inverse images of compact sets are compact.
+In particular, $\{R\le b\}$ is compact for every finite $b$.
+The two identities in \eqref{eq:radial} are imposed only outside
+the compact core $\{R\le r_*\}$. No radial identity is imposed on
+that core.
+
+\begin{definition}[Admissible growth function]\label{def:growth}
+For a lower endpoint $\ell\ge1$, a smooth function
+$B:[\ell,\infty)\to(0,\infty)$ is admissible if, for every $r\ge\ell$,
+\begin{equation}\label{eq:admissible}
+ B(r)\ge r,\qquad
+ \lim_{b\to\infty}\int_\ell^b\frac{r}{B(r)^2}\,\dd r=+\infty .
+\end{equation}
+\end{definition}
+Smoothness here means smoothness within the closed half-line, including
+its endpoint; values of a representative outside that half-line are
+irrelevant. The applications below use $\ell=1$ and $\ell=e$.
+The integral condition means divergence to positive infinity of the
+ordinary finite-interval integrals; it is not merely a statement
+that an unspecified improper integral fails to exist.
+
+\begin{definition}[Weak taming]\label{def:weak}
+A symplectic form $\omega$ weakly tames $J$ if
+\[
+ \omega_x(v,J_xv)\ge0
+ \quad\text{for every }x\in X\text{ and }v\in T_xX.
+\]
+\end{definition}
+Nondegeneracy of $\omega$ is a separate assumption. The displayed
+inequality is deliberately nonstrict, including for nonzero vectors.
+
+For example, $B(r)=r$ is admissible, as is
+$B(r)=r\sqrt{1+\log r}$ on $[1,\infty)$.
+The latter example allows a larger inverse-form bound than linear
+growth. The theorem below applies to every admissible $B$, not just
+to these examples.
+
+\section{The exact comparison theorem}
+\begin{definition}[Exact comparison with identity isotopy]\label{def:comparison}
+An exact comparison from $\lambda$ to $\beta$ consists of a
+diffeomorphism $F:X\to X$, a smooth function $h:X\to\R$, and a smooth
+isotopy $(F_t)_{0\le t\le1}$ such that
+\[
+ F_0=\id,\qquad F_1=F,\qquad
+ F^*\lambda=\beta+\dd h,\qquad F^*\dd\lambda=\dd\beta .
+\]
+Every $F_t$ is a diffeomorphism. Both $(t,x)\mapsto F_t(x)$
+and $(t,x)\mapsto F_t^{-1}(x)$ are jointly smooth within
+$[0,1]\times X$, including the endpoints. Equivalently, one may
+index the diffeomorphisms by all real $t$, with the smoothness and
+endpoint requirements imposed only on this closed interval.
+\end{definition}
+The isotopy is through diffeomorphisms; the statement does not impose
+preservation of a fixed symplectic form at every intermediate time.
+Neither $h$ nor the isotopy is required to have compact support.
+
+\begin{theorem}[Radial exact comparison]\label{thm:main}
+Fix any radial reference $\sref$ as in Definition~\ref{def:reference}.
+Let $\lambda$ be any smooth real one-form on $X$ for which
+$\omega=\dd\lambda$ is symplectic and weakly tames $J$.
+Suppose that there exist an admissible function
+$B:[1,\infty)\to(0,\infty)$, a constant $C>0$, and a compact
+subset $K\subset X$ such that
+\begin{equation}\label{eq:bound}
+ \|\omega_x^{-1}\|_g\le C B(R(x))
+ \qquad (x\in X\setminus K).
+\end{equation}
+Then an exact comparison from $\lambda$ to $\beta$ exists:
+there are $F$, $h$, and $(F_t)$ as in Definition~\ref{def:comparison},
+with
+\[
+ \boxed{\ F^*\lambda=\beta+\dd h,\qquad F^*\omega=\Omega.\ }
+\]
+\end{theorem}
+
+\subsection{Quantifier order}
+The assertion is uniform over all dimensions, all manifolds as above,
+and all radial references:
+\[
+\begin{gathered}
+ \forall\,\sref\quad\forall\,\lambda,\quad
+ \left[
+ \begin{array}{c}
+ \dd\lambda\text{ symplectic and weakly taming},\\
+ \exists\,B,C,K\text{ satisfying \eqref{eq:admissible}--\eqref{eq:bound}}
+ \end{array}\right]\\
+ \Longrightarrow
+ \exists\,F,h,(F_t)\text{ with the stated properties}.
+\end{gathered}
+\]
+The witnesses may depend on the reference, the primitive, and the
+growth data. The compact set $K$ may differ from the radial core.
+Only the estimate \eqref{eq:bound} has this compact-set exception;
+positivity and domination of $B$ hold on its entire half-line.
+
+There is no assumption on the growth of $|\lambda|_{\dual}$,
+$|\lambda-\beta|_{\dual}$, or their derivatives. There is no
+assumed Moser flow or isotopy. Completeness of the metric and of
+either primitive's Liouville field is not an input.
+The second boxed equality follows from the first by taking exterior
+derivatives, but is included to specify the symplectic comparison
+explicitly.
+
+\begin{corollary}[Complete Liouville specialization]\label{cor:complete}
+If, in addition to the hypotheses of Theorem~\ref{thm:main}, both
+specified primitives have complete Liouville fields, the same
+conclusion is an exact comparison between those Liouville manifolds.
+\end{corollary}
+The correction $\dd h$ remains part of the conclusion. The theorem
+does not assert $F^*\lambda=\beta$, or conjugacy of the two specified
+Liouville fields. Completeness belongs to the supplied primitives;
+it is not inferred from a change of primitive by an exact one-form.
+
+\section{A finite-type Liouville reference}
+A Liouville domain is given in a boundaryless smooth extension $X_0$
+of dimension $d$. Its compact carrier $W\subset X_0$ is locally a
+regular sublevel set $\{\rho\le0\}$ at every boundary point. A smooth
+$(d-1)$-manifold $Y$ is identified with $\partial W$ by a smooth
+embedding $b:Y\to X_0$; if $d=0$, $Y$ is empty. A smooth one-form
+$\beta_0$ and smooth vector field $Z_0$ are defined on $X_0$.
+On $W$, $\dd\beta_0$ is symplectic and
+$\iota_{Z_0}\dd\beta_0=\beta_0$; at the boundary,
+$\dd\rho(Z_0)>0$. Put $\alpha=b^*\beta_0$.
+
+Fix a smooth completion realization of this domain. Its data are a
+complete Liouville manifold $(X,\beta)$ with flow $\varphi_t$,
+a smooth embedding $j:X_0\to X$, and a smooth immersion
+$E:Y\times\R\to X$, satisfying
+\[
+ j^*\beta=\beta_0,\quad \dd j(Z_0)=Z_\beta\circ j
+ \quad\hbox{on }W,
+\]
+\[
+ E(y,t)=\varphi_t(j(b(y))),\qquad E^*\beta=e^t\alpha
+ \quad(t\in\R).
+\]
+The restriction of $E$ to $Y\times[0,\infty)$ is a topological
+embedding, and
+\[
+ X=j(W)\cup E(Y\times[0,\infty)),\qquad
+ E(Y\times(0,\infty))\cap j(W)=\varnothing .
+\]
+Thus the completion, its compact-piece inclusion, and its end
+parametrization are supplied data. In the end coordinate $r=e^t$,
+these data give the customary notation
+$X=\widehat W=W\cup_Y(Y\times[1,\infty))$ and $\beta=r\alpha$,
+with $W$ identified with $j(W)$.
+
+Let $R_\alpha$ denote the Reeb field, characterized by
+$\alpha(R_\alpha)=1$ and $\iota_{R_\alpha}\dd\alpha=0$.
+Fix a $\dd\beta$-compatible smooth $J$ which is cylindrical on the end:
+\[
+ J(r\partial_r)=R_\alpha,\qquad J(\ker\alpha)=\ker\alpha,
+\]
+and whose restriction to $\ker\alpha$ is independent of $r$.
+More explicitly, extend that restriction to $J_Y:TY\to TY$ by
+$J_Y R_\alpha=0$. The required end identity is, for $t\ge0$,
+\[
+ J\,\dd E_{(y,t)}(v,s)
+ =\dd E_{(y,t)}\bigl(J_Yv+sR_\alpha,-\alpha(v)\bigr),
+ \qquad \alpha(J_Yv)=0.
+\]
+Set $g=\dd\beta(\,\cdot\,,J\,\cdot\,)$.
+
+\begin{corollary}[Finite-type reference]\label{cor:finite}
+For every such reference and $J$, let $\lambda$ be any smooth real
+one-form for which $\omega=\dd\lambda$ is symplectic and weakly
+tames $J$. If there are an admissible $B:[1,\infty)\to(0,\infty)$,
+$C>0$, and $r_0\ge1$ such that
+\[
+ \|\omega^{-1}_{(y,r)}\|_g\le C B(r)
+ \qquad(y\in Y,\ r\ge r_0),
+\]
+then there exist a diffeomorphism $F$ smoothly isotopic to the identity
+and a smooth $h$ satisfying
+\[
+ F^*\lambda=\beta+\dd h,\qquad F^*\omega=\dd\beta.
+\]
+\end{corollary}
+The bound is equivalently quantified over $t\ge t_0\ge0$ at
+$E(y,t)$, with right-hand side $C B(e^t)$ and $r_0=e^{t_0}$.
+The new primitive $\lambda$ is not required to be complete or of
+finite type. The reference is the specified completion with its
+specified end primitive. The radial exhaustion used in applying the
+main theorem is constructed from this end; it is not an extra input
+to the corollary.
+
+\subsection{Constructing and prescribing the cylindrical structure}
+The preceding corollary takes a cylindrical $J$ as input. The following
+additional theorem constructs such an input on the specified completion;
+it does not add an existence obligation to the general radial theorem.
+
+Write $\xi=\ker\alpha\subset TY$. A prescribed compatible structure on
+$\xi$ is a smooth bundle endomorphism $j_\xi$ with
+\[
+ j_\xi^2=-\id,\qquad
+ \dd\alpha(j_\xi v,j_\xi w)=\dd\alpha(v,w),\qquad
+ \dd\alpha(v,j_\xi v)>0\quad(0\ne v\in\xi).
+\]
+These statements use the actual restricted exterior derivative and the
+native smooth kernel bundle. They require no integrability.
+Put $\pi_\xi(v)=v-\alpha(v)R_\alpha$.
+
+\begin{theorem}[Cylindrical existence and prescribed extension]
+\label{thm:cylindrical}
+For every Liouville domain and completion realization specified above,
+there exists a smooth $\dd\beta$-compatible cylindrical structure $J$
+on all of $X$. More precisely, for every prescribed smooth compatible
+$j_\xi$, there exists such a $J$ satisfying, for every $y\in Y$, $t\ge0$,
+$v\in T_yY$, and $s\in\R$,
+\begin{equation}\label{eq:prescribed-end}
+ J_{E(y,t)}\bigl(\dd E_{(y,t)}(v,s)\bigr)
+ =\dd E_{(y,t)}\bigl(j_\xi\pi_\xi(v)+sR_\alpha,
+                         -\alpha(v)\bigr).
+\end{equation}
+In particular, equality holds at $t=0$, the seam $r=1$, as well as on
+the entire positive end. The output obeys $J^2=-\id$ and determines
+the smooth positive-definite metric
+\[
+ g(v,w)=\dd\beta(v,Jw).
+\]
+The existence of at least one smooth compatible $j_\xi$ is also proved;
+it is not an assumption of the first existence assertion.
+\end{theorem}
+
+The two assertions have different quantifiers: existence chooses some
+contact data, whereas prescribed extension must retain every allowed
+input $j_\xi$ exactly. No positive-rank or nonempty-boundary hypothesis
+is added. The permitted zero-dimensional and empty cases remain included.
+
+\begin{corollary}[A constructed finite-type reference]
+For every specified domain and completion, one can choose $J$ and its
+metric $g$ before choosing the comparison primitive $\lambda$, so that
+every $\lambda$ satisfying the weak taming and eventual growth
+hypotheses of Corollary~\ref{cor:finite} has the stated exact comparison.
+The same assertion applies to a $J$ extending prescribed $j_\xi$.
+\end{corollary}
+The target hypotheses remain relative to this chosen $J$ and its
+explicit metric. Constructing $J$ does not assert that every symplectic
+form weakly tames it. The separate native finite-type presentation
+adapter constructs the completion from its own source data; the
+integrated comparison uses that same quotient, primitive, and end map
+throughout, rather than identifying independently chosen completions.
+
+\clearpage
+\section{A properly embedded Stein reference}
+Let $X$ be a smooth real manifold as above, and let $J:TX\to TX$
+be a smooth bundle endomorphism with $J^2=-\id$. Suppose we are given
+a smooth proper topological embedding
+\[
+ \iota:X\hookrightarrow\C^N.
+\]
+Require its actual differential to be injective at every point and
+to satisfy the Cauchy--Riemann identity
+\[
+ \dd\iota_x(J_xv)=I\,\dd\iota_x(v),\qquad Iu=iu.
+\]
+These are the precise input data used here. They include the usual
+case of a proper holomorphic embedding of a complex manifold; an
+independent complex atlas or integrability certificate is not an
+additional hypothesis. The embedding is part of the data.
+Define, using its actual
+differential and the standard Euclidean norm,
+\begin{equation}\label{eq:stein}
+ R=e+\|\iota\|^2,\qquad
+ \beta=-\frac14\,\dd R\circ J,\qquad \Omega=\dd\beta .
+\end{equation}
+
+\begin{proposition}[The reference determined by the embedding]\label{prop:stein}
+These formulas determine a smooth exact symplectic structure
+compatible with the given $J$. Its metric is exactly the induced
+Euclidean metric:
+\[
+ g_x(v,w)=\Omega_x(v,Jw)
+   =\ip{\dd\iota_x(v)}{\dd\iota_x(w)}_{\R}.
+\]
+The function $R$ is smooth and proper, $R\ge e$, and
+\[
+ |\dd R|_{\dual}^2\le4(R-e),\qquad
+ \frac14|\dd R|_{\dual}^2\le R-e<R.
+\]
+\end{proposition}
+The real inner product here is the real part of the Hermitian
+Euclidean product. Proposition~\ref{prop:stein} verifies the
+reference formulas from the embedding; a symplectic form or induced
+smooth metric with these identities is not supplied as an additional
+hypothesis.
+
+\begin{corollary}[Stein reference]\label{cor:stein}
+For every embedding and almost complex structure specified above,
+form the determined
+reference \eqref{eq:stein}. For every smooth real one-form $\lambda$
+such that $\omega=\dd\lambda$ is symplectic and weakly tames $J$,
+assume that there exist $C>0$, a compact $K\subset X$, and an
+admissible $B:[e,\infty)\to(0,\infty)$ such that
+\[
+ \|\omega_x^{-1}\|_g\le C B(R(x))\qquad(x\notin K).
+\]
+Then there are a diffeomorphism $F$ smoothly isotopic to the identity
+and a smooth $h$ such that
+\[
+ F^*\lambda=\beta+\dd h,\qquad F^*\omega=\Omega.
+\]
+\end{corollary}
+No finite-type hypothesis on the Stein manifold is imposed.
+The growth condition is measured in the metric of the chosen
+embedding. The reference is determined before the universally
+quantified comparison primitive $\lambda$ is chosen.
+
+\clearpage
+\section{Comparison through one common reference}
+\begin{corollary}[Common radial reference]\label{cor:common}
+Fix a single radial reference $\sref$.
+Let $\lambda_1,\lambda_2$ each satisfy the assumptions of
+Theorem~\ref{thm:main} relative to that reference.
+Their growth functions $B_i$, constants $C_i$, and compact
+exceptional sets $K_i$ may be different.
+Then there are a diffeomorphism $\Phi:X\to X$, smoothly isotopic
+to the identity, and a smooth function $q:X\to\R$ such that
+\[
+ \Phi^*\lambda_1=\lambda_2+\dd q,\qquad
+ \Phi^*\dd\lambda_1=\dd\lambda_2.
+\]
+\end{corollary}
+If $F_i^*\lambda_i=\beta+\dd h_i$ are the two comparisons, the
+required witnesses are explicitly
+\[
+ \Phi=F_1\circ F_2^{-1},\qquad
+ q=(h_1-h_2)\circ F_2^{-1}.
+\]
+Thus the common reference fixes the geometric standard against
+which the two independent growth conditions are tested.
+
+\section{Scope of the conclusion}
+The statements concern exact symplectic identifications of the
+whole open manifolds, together with smooth identity isotopies.
+They do not impose compact support, preservation of the primitives
+without an exact correction, or a controlled finite-type
+deformation of all intermediate primitives.
+The term Liouville is used with all-real-time completeness, whereas
+the general comparison theorem applies without that assumption.
+
+The companion \emph{Proof blueprint} constructs four Moser evolutions,
+proves existence in both parameter directions, derives the exact
+primitive correction, constructs the cylindrical extension, and verifies
+the two geometric reference applications above. The comparison and the isotopy are conclusions
+of that argument, not fields assumed in the input data.
+\end{document}

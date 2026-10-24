@@ -1,0 +1,117 @@
+[
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonStatement.lean",
+    "kind": "abbrev",
+    "name": "ExactLiouvilleComparison.CorollaryComparison.PackagedTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonStatement.lean",
+    "kind": "abbrev",
+    "name": "ExactLiouvilleComparison.CorollaryComparison.SourceTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonStatement.lean",
+    "kind": "abbrev",
+    "name": "ExactLiouvilleComparison.CorollaryComparison.CommonTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.CorollaryComparison.ConstructedSteinTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.CorollaryComparison.ExplicitCommonTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.radial_inner_eq"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.radial_dualNorm_eq"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.radial_inverseNorm_eq"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.radial_weaklyTames_iff"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.growth"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.packagedSteinTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.constructedSteinTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.steinTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/SteinComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.SteinComparison.comparisonWitness"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CommonReferenceComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CommonReferenceComparison.commonReferenceTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CommonReferenceComparison.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CommonReferenceComparison.explicitCommonTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.packaged"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.source"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.common"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.referenceIdentities"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.steinNativeConclusion"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.commonNativeConclusion"
+  },
+  {
+    "file": "ExactLiouvilleComparison/CorollaryComparisonConsumers.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.CorollaryComparisonConsumers.separateGrowthWitnesses"
+  }
+]

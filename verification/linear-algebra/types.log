@@ -1,0 +1,158 @@
+@ExactLiouvilleComparison.norm_le_of_weak_positive_equation.{u_1} : ∀ {E : Type u_1} [inst : NormedAddCommGroup.{u_1} E]
+  [inst_1 : InnerProductSpace.{0, u_1} ℝ E]
+  (B : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) E (Module.Dual.{0, u_1} ℝ E)),
+  (∀ (v : E), LE.le.{0} 0 ((B v) v)) →
+    ∀ {t : ℝ},
+      LT.lt.{0} 0 t →
+        ∀ {X W : E},
+          (∀ (v : E),
+              Eq.{1} (HAdd.hAdd.{0, 0, 0} ((B X) v) (HMul.hMul.{0, 0, 0} t (Inner.inner.{0, u_1} ℝ X v))) ((B W) v)) →
+            LE.le.{0} (Norm.norm.{u_1} X) (Norm.norm.{u_1} W)
+@ExactLiouvilleComparison.weak_taming_linear_nondegenerate.{u_1} : ∀ {E : Type u_1} [inst : NormedAddCommGroup.{u_1} E]
+  [inst_1 : InnerProductSpace.{0, u_1} ℝ E]
+  (omega eta : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) E (Module.Dual.{0, u_1} ℝ E))
+  (J : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) E E),
+  (∀ (v w : E), Eq.{1} (Inner.inner.{0, u_1} ℝ v w) ((eta v) (J w))) →
+    (∀ (v : E), (∀ (w : E), Eq.{1} ((omega v) w) 0) → Eq.{u_1 + 1} v 0) →
+      (∀ (v : E), LE.le.{0} 0 ((omega v) (J v))) →
+        ∀ {t : ℝ},
+          LE.le.{0} 0 t →
+            ∀ (v : E),
+              (∀ (w : E), Eq.{1} (((HAdd.hAdd.{u_1, u_1, u_1} omega (HSMul.hSMul.{0, u_1, u_1} t eta)) v) w) 0) →
+                Eq.{u_1 + 1} v 0
+@ExactLiouvilleComparison.weak_taming_linear_contraction.{u_1} : ∀ {E : Type u_1} [inst : NormedAddCommGroup.{u_1} E]
+  [inst_1 : InnerProductSpace.{0, u_1} ℝ E]
+  (omega eta : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) E (Module.Dual.{0, u_1} ℝ E))
+  (J : LinearMap.{0, 0, u_1, u_1} (RingHom.id.{0} ℝ) E E),
+  (∀ (v w : E), Eq.{1} (Inner.inner.{0, u_1} ℝ v w) ((eta v) (J w))) →
+    (∀ (v : E), (∀ (w : E), Eq.{1} ((omega v) w) 0) → Eq.{u_1 + 1} v 0) →
+      (∀ (v : E), LE.le.{0} 0 ((omega v) (J v))) →
+        ∀ {t : ℝ},
+          LE.le.{0} 0 t →
+            ∀ (X W : E),
+              (∀ (v : E),
+                  Eq.{1} (((HAdd.hAdd.{u_1, u_1, u_1} omega (HSMul.hSMul.{0, u_1, u_1} t eta)) X) v) ((omega W) v)) →
+                LE.le.{0} (Norm.norm.{u_1} X) (Norm.norm.{u_1} W)
+@ExactLiouvilleComparison.CompatibleStructure.metricInnerProductSpace : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {reference : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+      (A : ExactLiouvilleComparison.CompatibleStructure reference) →
+        (x : M.Point) → InnerProductSpace.{0, 0} ℝ (A.MetricTangent x)
+@ExactLiouvilleComparison.CompatibleStructure.metric_inner_eq : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {reference : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (A : ExactLiouvilleComparison.CompatibleStructure reference) (x : M.Point) (v w : A.MetricTangent x),
+  Eq.{1} (Inner.inner.{0, 0} ℝ v w)
+    (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative reference.primitive) x v ((A.J x) w))
+@ExactLiouvilleComparison.CompatibleStructure.weak_taming_nondegenerate : ∀ {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} {reference : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (A : ExactLiouvilleComparison.CompatibleStructure reference) (omega : M.Form 2) (x : M.Point),
+  M.Nondegenerate omega x →
+    (∀ (v : M.Tangent x), LE.le.{0} 0 (FsFltz.Geometry.SmoothManifold.evalTwo omega x v ((A.J x) v))) →
+      ∀ {t : ℝ},
+        LE.le.{0} 0 t →
+          M.Nondegenerate
+            (HAdd.hAdd.{0, 0, 0} omega (HSMul.hSMul.{0, 0, 0} t (M.exteriorDerivative reference.primitive))) x
+@ExactLiouvilleComparison.CompatibleStructure.weak_taming_contraction : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {reference : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (A : ExactLiouvilleComparison.CompatibleStructure reference) (omega : M.Form 2) (x : M.Point),
+  M.Nondegenerate omega x →
+    (∀ (v : M.Tangent x), LE.le.{0} 0 (FsFltz.Geometry.SmoothManifold.evalTwo omega x v ((A.J x) v))) →
+      ∀ {t : ℝ},
+        LE.le.{0} 0 t →
+          ∀ (X W : A.MetricTangent x),
+            (∀ (v : M.Tangent x),
+                Eq.{1}
+                  (FsFltz.Geometry.SmoothManifold.evalTwo
+                    (HAdd.hAdd.{0, 0, 0} omega (HSMul.hSMul.{0, 0, 0} t (M.exteriorDerivative reference.primitive))) x X
+                    v)
+                  (FsFltz.Geometry.SmoothManifold.evalTwo omega x W v)) →
+              LE.le.{0} (Norm.norm.{0} X) (Norm.norm.{0} W)
+@ExactLiouvilleComparison.CompatibleStructure.inverseContraction_norm_le : ∀ {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} {reference : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (A : ExactLiouvilleComparison.CompatibleStructure reference) (omega : M.Form 2) (x : M.Point)
+  (hnd : M.Nondegenerate omega x)
+  (hweak : ∀ (v : M.Tangent x), LE.le.{0} 0 (FsFltz.Geometry.SmoothManifold.evalTwo omega x v ((A.J x) v))) {t : ℝ}
+  (ht : LE.le.{0} 0 t) (l : A.Dual x),
+  LE.le.{0}
+    (Norm.norm.{0}
+      ((A.inverseContraction
+          (HAdd.hAdd.{0, 0, 0} omega (HSMul.hSMul.{0, 0, 0} t (M.exteriorDerivative reference.primitive))) x
+          (ExactLiouvilleComparison.CompatibleStructure.weak_taming_nondegenerate A omega x hnd hweak ht))
+        l))
+    (Norm.norm.{0} ((A.inverseContraction omega x hnd) l))
+@ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} → ExactLiouvilleComparison.RadialReference M → (ℝ → ℝ) → M.Form 1
+@ExactLiouvilleComparison.LinearAlgebraChecks.radial_metric_norm : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (k : ℝ → ℝ)
+  (H : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  Eq.{1} H.primitive (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P k) →
+    ∀ (A : ExactLiouvilleComparison.CompatibleStructure H),
+      (∀ (x : M.Point), Eq.{1} (A.J x) (P.compatible.J x)) →
+        ∀ (x : M.Point) (v : A.MetricTangent x),
+          Eq.{1} (Norm.norm.{0} v)
+            √(FsFltz.Geometry.SmoothManifold.evalTwo
+                (M.exteriorDerivative (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P k)) x v
+                ((P.compatible.J x) v))
+@ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    ExactLiouvilleComparison.RadialReference M →
+      (ℝ → ℝ) →
+        {H : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+          (A : ExactLiouvilleComparison.CompatibleStructure H) → (x : M.Point) → A.Dual x
+@ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector_apply : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (k : ℝ → ℝ) {H : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (A : ExactLiouvilleComparison.CompatibleStructure H) (x : M.Point) (v : A.MetricTangent x),
+  Eq.{1} ((ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector P k A x) v)
+    (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (k (P.R x)))
+      (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))
+@ExactLiouvilleComparison.LinearAlgebraChecks.first_path_linear_estimate : ∀ {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M) (k : ℝ → ℝ)
+  (H : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  Eq.{1} H.primitive (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P k) →
+    ∀ (A : ExactLiouvilleComparison.CompatibleStructure H),
+      (∀ (x : M.Point), Eq.{1} (A.J x) (P.compatible.J x)) →
+        ∀ (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+          ExactLiouvilleComparison.WeaklyTames P.compatible T →
+            ∀ (x : M.Point) {t : ℝ},
+              LE.le.{0} 0 t →
+                M.Nondegenerate
+                    (HAdd.hAdd.{0, 0, 0} (M.exteriorDerivative T.primitive)
+                      (HSMul.hSMul.{0, 0, 0} t
+                        (M.exteriorDerivative (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P k))))
+                    x ∧
+                  ∃ X W,
+                    (∀ (v : M.Tangent x),
+                        Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative T.primitive) x W v)
+                          (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (k (P.R x)))
+                            (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))) ∧
+                      (∀ (v : M.Tangent x),
+                          Eq.{1}
+                            (FsFltz.Geometry.SmoothManifold.evalTwo
+                              (HAdd.hAdd.{0, 0, 0} (M.exteriorDerivative T.primitive)
+                                (HSMul.hSMul.{0, 0, 0} t
+                                  (M.exteriorDerivative
+                                    (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P k))))
+                              x X v)
+                            (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (k (P.R x)))
+                              (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))) ∧
+                        LE.le.{0} (Norm.norm.{0} X) (Norm.norm.{0} W)
+@ExactLiouvilleComparison.LinearAlgebraChecks.zero_parameter : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (k : ℝ → ℝ)
+  (H : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  Eq.{1} H.primitive (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P k) →
+    ∀ (A : ExactLiouvilleComparison.CompatibleStructure H),
+      (∀ (x : M.Point), Eq.{1} (A.J x) (P.compatible.J x)) →
+        ∀ (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+          ExactLiouvilleComparison.WeaklyTames P.compatible T →
+            ∀ (x : M.Point),
+              ∃ X W,
+                (∀ (v : M.Tangent x),
+                    Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative T.primitive) x W v)
+                      (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (k (P.R x)))
+                        (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))) ∧
+                  (∀ (v : M.Tangent x),
+                      Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative T.primitive) x X v)
+                        (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (k (P.R x)))
+                          (FsFltz.Geometry.SmoothManifold.evalOne P.exactStructure.primitive x v))) ∧
+                    LE.le.{0} (Norm.norm.{0} X) (Norm.norm.{0} W)
+{"cache": "local", "command": ["lake", "env", "lean", "/tmp/linear-work/verification/linear-algebra/Types.lean"], "cwd": "/tmp/linear-work", "duration_seconds": 2.578, "error": null, "failure": null, "lean_file": "verification/linear-algebra/Types.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "1326fb91398e45dfa79764e2574b0e0762b74b19eed506762580472cb6fb3c8a", "status": "passed", "targets": [], "timings": {"build_seconds": 2.576, "engine_seconds": 2.5777810800000225, "preparation_seconds": 0.03760548199988989, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.22628635700039013, "total_seconds": 2.841839013000026, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

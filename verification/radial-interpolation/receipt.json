@@ -1,0 +1,414 @@
+{
+  "scope": "Proved convex radial interpolation, constructed symplectic differential and unique pointwise Moser vectors, energy/radial/Q directional inequalities, native scalar derivatives and uniform exhaustion; no flow, field smoothness or compact-core uniform bound.",
+  "accepted_base_commit": "46fccea69cb9524882bbeda83b0ac2067d22a149",
+  "accepted_statement_review_artifact": "8930b2e3-ab88-498e-8a6f-d3f732fa8f95",
+  "radial_parent_commit": "b4585587a039a28362ab46285ccd3fe98f4655e1",
+  "statement_receipt_companion": "dcd522c772885851078216fedcff18e00c3b1b7d",
+  "source_sha256": {
+    "ExactLiouvilleComparison.lean": "969541ba18a27f912c1210658dd71f9ea6cbd4ab6b0fe7e8218b6bfa7f368144",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "README.md": "7d561f0cc490f5c23365474a49faeda702a5b64025b95c25f1540801ba42946d",
+    "ExactLiouvilleComparison/RadialMetricNorm.lean": "8b7910efc1b16f67e118604b87e9ca740d647cfdcb3eb1a22f006f936de677e8",
+    "ExactLiouvilleComparison/RadialCoefficient.lean": "a639d4dbd9c8b16186466e2a9d3c3f4ac729736b7e08134a16c7df002aeb082a",
+    "ExactLiouvilleComparison/RadialMetricChecks.lean": "346acdc5bc188cb9d97e75f4ca6caf9538e90c25b8a522a4f66570ab1b45b25e",
+    "ExactLiouvilleComparison/LinearAlgebra.lean": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1",
+    "ExactLiouvilleComparison/RadialMetricBundle.lean": "2beabd7169489fcaac0dd7f6c12eec0b063d35afa1bc70c5dc6ca7a68b501578",
+    "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+    "ExactLiouvilleComparison/RadialMetricDual.lean": "73f7c250c522a9c4f0138681031a887faf6829481b5eec9b728a6c6084575ead",
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "ExactLiouvilleComparison/RadialMetricLinear.lean": "4230f3af5f5ac9eeaf4796de421bc3c91ef089ea3585ff146d38450ae9079a3f",
+    "ExactLiouvilleComparison/InterfaceChecks.lean": "32bd5a0e234a94674f49f786772f8b623fa61f48ce65f3d13a85308689941c06",
+    "ExactLiouvilleComparison/LinearAlgebraChecks.lean": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f",
+    "ExactLiouvilleComparison/RadialMetric.lean": "4393795ecc7cd8302c33fdc442303afc828cc94b6ac4265286ab4cc769694dc4",
+    "ExactLiouvilleComparison/RadialMetricConstruction.lean": "7658f90a5a138b823a57411db25794e3979793aef38c3e37ac25b21005be886b",
+    "scripts/verify-linear-algebra.py": "d59b9475f17ad0e321471854b2cde0520f3e350d430a598f88de24a26e8e9f52",
+    "scripts/verify-radial-metric.py": "2d5a5eec96841853bf467c1379f5322c9a70951c59d26aba4ff42447ceda0bef",
+    "docs/linear-algebra.md": "d1597c96453abd2dfc7fcbf91bc9f2332b5e8899e990f7e36c3e4051439cc5e7",
+    "docs/radial-metric.md": "fea00e85d9fb7c638614a4f2651af2222bb25505c196154e4d867b77e789d3ee",
+    "docs/sources.json": "8329a361f6673a40f2a3b0dba19891820d6c503c49562cbf10676bbf50d0569d",
+    "docs/definition-comparison.md": "1a9591add277079f3b8d294b20336502ccca73157a5137f5e9876af6a511b399",
+    "docs/effort-estimate.md": "881e890fe9c165fe70f4579736fe9ffd0e39fe6f0b6cf38a21b6bf1f2a5b5aac",
+    "verification/radial-metric/types.log": "aa03a04c0bee2ba4b2d90b184fc3dcf1d926dcb29a798aabd4101a470801ee50",
+    "verification/radial-metric/axioms.log": "babb632ae582fc075fdf602f91d9f1fcc577af5ebe5417ef7f25753f22fea317",
+    "verification/radial-metric/build.log": "9b54b7c0d14b5a9651e4b382404d70bfd7e0f0eb9087a265832ce3fbd14e34cf",
+    "verification/radial-metric/Types.lean": "53c2c3d50b22c0c3fefc54d5ff1fc880f816cb8e50e6e0a693602a10b8ce9c6a",
+    "verification/radial-metric/AxiomAudit.lean": "0a517dd059d88dd543b9d45b05caf1f95e9908dec9c33c1ec646699eb827020b",
+    "verification/radial-metric/declarations.json": "0e9b0f3b6a4f7184eeac95ae654a8beaca22be7927144590e1877636adf8b8c2",
+    "verification/radial-metric/receipt.json": "423dc225a173ff1ac0dae612eb814bbc48bb6666f30c162d73c3220c17ee54d5",
+    "verification/linear-algebra/Types.lean": "bd3533b7dc8241f6090d6ff5cdd84a623aae0c05ea64d73afedba06251db90de",
+    "verification/linear-algebra/AxiomAudit.lean": "77be42f78d95f4f3713ca9b7aeecc16381549838d55890c660c7c7f8e6d8fc57",
+    "verification/linear-algebra/declarations.json": "2e376e141b3d2fb92a307aa9244bb09ffbfc23b55939052ac3402b7ce7fddb7d",
+    "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+    ".gitignore": "290d64d2b3d0ef2026db75b18f29a761b94345fae94694bb0846abefdada67c8",
+    "ExactLiouvilleComparison/RadialInterpolationChecks.lean": "d27a407be7a5fc50d92daa867794cc52ba97191f98eb4807694433f4805af9e1",
+    "ExactLiouvilleComparison/RadialInterpolationCoefficient.lean": "e2f53289c602bab2da2c428ca61adcd215b158aad24b373b897539c1f1431801",
+    "ExactLiouvilleComparison/RadialInterpolationEstimates.lean": "c657b448a3d15c01c3e156c03c3138ed51d1ba3d41d7e7f9bd020e62c3a561d2",
+    "ExactLiouvilleComparison/RadialInterpolationGeometry.lean": "746160c876499357ea9031263b40e116c652084143e0a800d55ab4361c8e82d4",
+    "verification/radial-interpolation/base-source.json": "a74b3faf53c242ffb16a8fceb05364da4635ed5cd08081da688efb9d1a25a8a5",
+    "verification/radial-interpolation/AxiomAudit.lean": "3575e1fc9c4411b6f8383a25fde5b3f61e2be5434c42747376322431b9090be7",
+    "verification/radial-interpolation/Types.lean": "2a6b4680caaf46e79a0319013aa5bd9d8a9f9a511a164d4c891172b909223e82",
+    "verification/radial-interpolation/declarations.json": "b2cf5f3b1997798e04413ab098e61ca47477f56975367a4147940bf9805d5b74",
+    "scripts/verify-radial-interpolation.py": "1a7b34ba680eaa03bfa9f62afd97325c3859d7213f8bc0e34a5d19c0915f6db2",
+    "docs/radial-interpolation.md": "fe4e8a17625885f473e38c1bf40f091983cb35376e8aea15cd3786435ba52b29",
+    "verification/radial-interpolation/crosswalk-assessment.md": "959840fc8393d012ddd62fdedf989d6e5095b59dfc7f1e14559bb9b117c68b22"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.RadialInterpolationChecks"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.RadialInterpolationChecks"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation",
+        "duration_seconds": 1.91,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "06c0fe175b37531b2f6ea41550995e5b367db530be5a7f969a6f959237dec2d7",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.RadialInterpolationChecks"
+        ],
+        "timings": {
+          "build_seconds": 0.0,
+          "engine_seconds": 1.9103764670007877,
+          "preparation_seconds": 0.04396885100049985,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.18325928800004476,
+          "total_seconds": 2.1376828930006013,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/radial-interpolation/AxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation/verification/radial-interpolation/AxiomAudit.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation",
+        "duration_seconds": 2.712,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/radial-interpolation/AxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "06c0fe175b37531b2f6ea41550995e5b367db530be5a7f969a6f959237dec2d7",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.711,
+          "engine_seconds": 2.7122135770005116,
+          "preparation_seconds": 0.03968195900051796,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.1911296089992902,
+          "total_seconds": 2.943093449999651,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "transitive_axioms": {
+        "ExactLiouvilleComparison.RadialInterpolation.rho": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.delta": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.rho_hasDerivWithinAt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.rho_derivWithin": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.convex_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.coefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.coefficient_prime": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.Q": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.Q_radial_derivative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.rho_parameter_derivative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.Q_parameter_derivative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.Q_lower": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.uniform_exhaustion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.Q_curve_derivative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.exteriorDerivative_add": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.primitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.primitive_parameter_derivative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.WeakDifferential": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.differential_apply": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.nondegenerate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.exactStructure": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.vector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.vector_equation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.vector_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.vector_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.energy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.differential_sq_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.radial": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolation.Q_directional": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.constructed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.core_derivative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.weak_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.sigma_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.equal_coefficients": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.critical_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.RadialInterpolationChecks.scalar_barrier": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/radial-interpolation/Types.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation/verification/radial-interpolation/Types.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b3d1c98d-f3a3-42ee-b877-1b14fd959c92/interpolation",
+        "duration_seconds": 2.692,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/radial-interpolation/Types.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "06c0fe175b37531b2f6ea41550995e5b367db530be5a7f969a6f959237dec2d7",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.69,
+          "engine_seconds": 2.6919763259993488,
+          "preparation_seconds": 0.041189077999661095,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.18556586500017147,
+          "total_seconds": 2.9188024020004377,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    }
+  ],
+  "declarations": [
+    "ExactLiouvilleComparison.RadialInterpolation.rho",
+    "ExactLiouvilleComparison.RadialInterpolation.delta",
+    "ExactLiouvilleComparison.RadialInterpolation.rho_hasDerivWithinAt",
+    "ExactLiouvilleComparison.RadialInterpolation.rho_derivWithin",
+    "ExactLiouvilleComparison.RadialInterpolation.convex_pos",
+    "ExactLiouvilleComparison.RadialInterpolation.coefficient",
+    "ExactLiouvilleComparison.RadialInterpolation.coefficient_prime",
+    "ExactLiouvilleComparison.RadialInterpolation.Q",
+    "ExactLiouvilleComparison.RadialInterpolation.Q_radial_derivative",
+    "ExactLiouvilleComparison.RadialInterpolation.rho_parameter_derivative",
+    "ExactLiouvilleComparison.RadialInterpolation.Q_parameter_derivative",
+    "ExactLiouvilleComparison.RadialInterpolation.Q_lower",
+    "ExactLiouvilleComparison.RadialInterpolation.uniform_exhaustion",
+    "ExactLiouvilleComparison.RadialInterpolation.Q_curve_derivative",
+    "ExactLiouvilleComparison.RadialInterpolation.exteriorDerivative_add",
+    "ExactLiouvilleComparison.RadialInterpolation.primitive",
+    "ExactLiouvilleComparison.RadialInterpolation.primitive_parameter_derivative",
+    "ExactLiouvilleComparison.RadialInterpolation.WeakDifferential",
+    "ExactLiouvilleComparison.RadialInterpolation.differential_apply",
+    "ExactLiouvilleComparison.RadialInterpolation.nondegenerate",
+    "ExactLiouvilleComparison.RadialInterpolation.exactStructure",
+    "ExactLiouvilleComparison.RadialInterpolation.vector",
+    "ExactLiouvilleComparison.RadialInterpolation.vector_equation",
+    "ExactLiouvilleComparison.RadialInterpolation.vector_unique",
+    "ExactLiouvilleComparison.RadialInterpolation.vector_eq_zero",
+    "ExactLiouvilleComparison.RadialInterpolation.energy",
+    "ExactLiouvilleComparison.RadialInterpolation.differential_sq_le",
+    "ExactLiouvilleComparison.RadialInterpolation.radial",
+    "ExactLiouvilleComparison.RadialInterpolation.Q_directional",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.constructed",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.core_derivative",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.weak_zero",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.sigma_zero",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.equal_coefficients",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.critical_point",
+    "ExactLiouvilleComparison.RadialInterpolationChecks.scalar_barrier"
+  ]
+}

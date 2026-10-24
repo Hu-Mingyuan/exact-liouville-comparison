@@ -1,0 +1,1479 @@
+ExactLiouvilleComparison.ThirdPath.Construction : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    ExactLiouvilleComparison.RadialReference M → ExactLiouvilleComparison.ExactSymplecticStructure M → Type
+ExactLiouvilleComparison.ThirdPath.Construction._sizeOf_1 : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        ExactLiouvilleComparison.ThirdPath.Construction P T → ℕ
+ExactLiouvilleComparison.ThirdPath.Construction._sizeOf_inst : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        SizeOf.{1} (ExactLiouvilleComparison.ThirdPath.Construction P T)
+ExactLiouvilleComparison.ThirdPath.Construction.casesOn : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        {motive : ExactLiouvilleComparison.ThirdPath.Construction P T → Sort u} →
+          (t : ExactLiouvilleComparison.ThirdPath.Construction P T) →
+            ((field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) →
+                (smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)) →
+                  (symplectic :
+                      ∀ (s : ↑FsFltz.Geometry.Parameter),
+                        M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                          Set.univ.{0}) →
+                    (equation :
+                        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                          Eq.{1}
+                            (FsFltz.Geometry.SmoothManifold.evalTwo
+                              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x)
+                              v)
+                            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))) →
+                      (unique_field :
+                          ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                            (∀ (w : M.Tangent x),
+                                Eq.{1}
+                                  (FsFltz.Geometry.SmoothManifold.evalTwo
+                                    (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+                                  (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+                              Eq.{1} v (field s x)) →
+                        (joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field) →
+                          (norm_bound :
+                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                LE.le.{0} (Norm.norm.{0} (field s x))
+                                  (HDiv.hDiv.{0, 0, 0}
+                                    (P.compatible.dualNorm x
+                                      (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                    (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))) →
+                            (ratio_le_one :
+                                ∀ (x : M.Point),
+                                  LE.le.{0}
+                                    (HDiv.hDiv.{0, 0, 0}
+                                      (P.compatible.dualNorm x
+                                        (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+                                    1) →
+                              (exterior_bound :
+                                  ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                    LT.lt.{0} P.rstar (P.R x) →
+                                      LE.le.{0}
+                                        (abs.{0}
+                                          (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                            (field s x)))
+                                        (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))) →
+                                (smooth_exhaustion :
+                                    ContMDiff.{0, 0, 0, 0, 0, 0, 0}
+                                      (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+                                      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                                      (ExactLiouvilleComparison.ThirdPath.exhaustion P)) →
+                                  (proper_exhaustion :
+                                      IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)) →
+                                    (lower_exhaustion :
+                                        ∀ (x : M.Point),
+                                          LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)) →
+                                      (core_bound :
+                                          ∃ D,
+                                            LE.le.{0} 0 D ∧
+                                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                LE.le.{0} (P.R x) P.rstar →
+                                                  LE.le.{0}
+                                                    (abs.{0}
+                                                      (M.scalarDerivative
+                                                        (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                        (field s x)))
+                                                    D) →
+                                        (global_bound :
+                                            ∃ D,
+                                              LE.le.{0} 0 D ∧
+                                                ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                  LE.le.{0}
+                                                    (abs.{0}
+                                                      (M.scalarDerivative
+                                                        (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                        (field s x)))
+                                                    D) →
+                                          (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field) →
+                                            (inverse_isotopy :
+                                                ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+                                                  (evolution.map FsFltz.Geometry.parameterOne
+                                                    FsFltz.Geometry.parameterZero)) →
+                                              motive
+                                                { field := field, smooth_primitive := smooth_primitive,
+                                                  symplectic := symplectic, equation := equation,
+                                                  unique_field := unique_field, joint := joint,
+                                                  norm_bound := norm_bound, ratio_le_one := ratio_le_one,
+                                                  exterior_bound := exterior_bound,
+                                                  smooth_exhaustion := smooth_exhaustion,
+                                                  proper_exhaustion := proper_exhaustion,
+                                                  lower_exhaustion := lower_exhaustion, core_bound := core_bound,
+                                                  global_bound := global_bound, evolution := evolution,
+                                                  inverse_isotopy := inverse_isotopy }) →
+              motive t
+ExactLiouvilleComparison.ThirdPath.Construction.core_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  ∃ D,
+    LE.le.{0} 0 D ∧
+      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        LE.le.{0} (P.R x) P.rstar →
+          LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (self.field s x)))
+            D
+ExactLiouvilleComparison.ThirdPath.Construction.ctorIdx : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        ExactLiouvilleComparison.ThirdPath.Construction P T → ℕ
+ExactLiouvilleComparison.ThirdPath.Construction.equation : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+  Eq.{1}
+    (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+      x (self.field s x) v)
+    (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))
+ExactLiouvilleComparison.ThirdPath.Construction.evolution : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        (self : ExactLiouvilleComparison.ThirdPath.Construction P T) →
+          ExactLiouvilleComparison.FirstPathFlow.Evolution self.field
+ExactLiouvilleComparison.ThirdPath.Construction.exterior_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (self.field s x)))
+      (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))
+ExactLiouvilleComparison.ThirdPath.Construction.field : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        ExactLiouvilleComparison.ThirdPath.Construction P T → ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x
+ExactLiouvilleComparison.ThirdPath.Construction.global_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  ∃ D,
+    LE.le.{0} 0 D ∧
+      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (self.field s x))) D
+ExactLiouvilleComparison.ThirdPath.Construction.inverse_isotopy : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+    (self.evolution.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero)
+ExactLiouvilleComparison.ThirdPath.Construction.joint : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint self.field
+ExactLiouvilleComparison.ThirdPath.Construction.lower_exhaustion : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)
+ExactLiouvilleComparison.ThirdPath.Construction.mk : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        (field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) →
+          M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T) →
+            (∀ (s : ↑FsFltz.Geometry.Parameter),
+                M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                  Set.univ.{0}) →
+              (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                  Eq.{1}
+                    (FsFltz.Geometry.SmoothManifold.evalTwo
+                      (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x) v)
+                    (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))) →
+                (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                    (∀ (w : M.Tangent x),
+                        Eq.{1}
+                          (FsFltz.Geometry.SmoothManifold.evalTwo
+                            (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+                          (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+                      Eq.{1} v (field s x)) →
+                  ExactLiouvilleComparison.MoserRegularity.NativeJoint field →
+                    (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                        LE.le.{0} (Norm.norm.{0} (field s x))
+                          (HDiv.hDiv.{0, 0, 0}
+                            (P.compatible.dualNorm x
+                              (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                            (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))) →
+                      (∀ (x : M.Point),
+                          LE.le.{0}
+                            (HDiv.hDiv.{0, 0, 0}
+                              (P.compatible.dualNorm x
+                                (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                              (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+                            1) →
+                        (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                            LT.lt.{0} P.rstar (P.R x) →
+                              LE.le.{0}
+                                (abs.{0}
+                                  (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+                                (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))) →
+                          ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+                              (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                              (ExactLiouvilleComparison.ThirdPath.exhaustion P) →
+                            IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P) →
+                              (∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)) →
+                                (∃ D,
+                                    LE.le.{0} 0 D ∧
+                                      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                        LE.le.{0} (P.R x) P.rstar →
+                                          LE.le.{0}
+                                            (abs.{0}
+                                              (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                (field s x)))
+                                            D) →
+                                  (∃ D,
+                                      LE.le.{0} 0 D ∧
+                                        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                          LE.le.{0}
+                                            (abs.{0}
+                                              (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                (field s x)))
+                                            D) →
+                                    (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field) →
+                                      ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+                                          (evolution.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero) →
+                                        ExactLiouvilleComparison.ThirdPath.Construction P T
+ExactLiouvilleComparison.ThirdPath.Construction.mk._flat_ctor : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        (field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) →
+          M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T) →
+            (∀ (s : ↑FsFltz.Geometry.Parameter),
+                M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                  Set.univ.{0}) →
+              (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                  Eq.{1}
+                    (FsFltz.Geometry.SmoothManifold.evalTwo
+                      (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x) v)
+                    (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))) →
+                (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                    (∀ (w : M.Tangent x),
+                        Eq.{1}
+                          (FsFltz.Geometry.SmoothManifold.evalTwo
+                            (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+                          (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+                      Eq.{1} v (field s x)) →
+                  ExactLiouvilleComparison.MoserRegularity.NativeJoint field →
+                    (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                        LE.le.{0} (Norm.norm.{0} (field s x))
+                          (HDiv.hDiv.{0, 0, 0}
+                            (P.compatible.dualNorm x
+                              (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                            (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))) →
+                      (∀ (x : M.Point),
+                          LE.le.{0}
+                            (HDiv.hDiv.{0, 0, 0}
+                              (P.compatible.dualNorm x
+                                (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                              (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+                            1) →
+                        (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                            LT.lt.{0} P.rstar (P.R x) →
+                              LE.le.{0}
+                                (abs.{0}
+                                  (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+                                (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))) →
+                          ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+                              (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                              (ExactLiouvilleComparison.ThirdPath.exhaustion P) →
+                            IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P) →
+                              (∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)) →
+                                (∃ D,
+                                    LE.le.{0} 0 D ∧
+                                      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                        LE.le.{0} (P.R x) P.rstar →
+                                          LE.le.{0}
+                                            (abs.{0}
+                                              (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                (field s x)))
+                                            D) →
+                                  (∃ D,
+                                      LE.le.{0} 0 D ∧
+                                        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                          LE.le.{0}
+                                            (abs.{0}
+                                              (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                (field s x)))
+                                            D) →
+                                    (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field) →
+                                      ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+                                          (evolution.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero) →
+                                        ExactLiouvilleComparison.ThirdPath.Construction P T
+ExactLiouvilleComparison.ThirdPath.Construction.mk.inj : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  {field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+  {smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)}
+  {symplectic :
+    ∀ (s : ↑FsFltz.Geometry.Parameter),
+      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0}}
+  {equation :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x) v)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))}
+  {unique_field :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      (∀ (w : M.Tangent x),
+          Eq.{1}
+            (FsFltz.Geometry.SmoothManifold.evalTwo
+              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+        Eq.{1} v (field s x)}
+  {joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field}
+  {norm_bound :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LE.le.{0} (Norm.norm.{0} (field s x))
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))}
+  {ratio_le_one :
+    ∀ (x : M.Point),
+      LE.le.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+        1}
+  {exterior_bound :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+          (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))}
+  {smooth_exhaustion :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P)}
+  {proper_exhaustion : IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)}
+  {lower_exhaustion : ∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)}
+  {core_bound :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (P.R x) P.rstar →
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x))) D}
+  {global_bound :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x))) D}
+  {evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field}
+  {inverse_isotopy :
+    ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+      (evolution.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero)}
+  {field_1 : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+  {smooth_primitive_1 : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)}
+  {symplectic_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter),
+      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0}}
+  {equation_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field_1 s x) v)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))}
+  {unique_field_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      (∀ (w : M.Tangent x),
+          Eq.{1}
+            (FsFltz.Geometry.SmoothManifold.evalTwo
+              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+        Eq.{1} v (field_1 s x)}
+  {joint_1 : ExactLiouvilleComparison.MoserRegularity.NativeJoint field_1}
+  {norm_bound_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LE.le.{0} (Norm.norm.{0} (field_1 s x))
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))}
+  {ratio_le_one_1 :
+    ∀ (x : M.Point),
+      LE.le.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+        1}
+  {exterior_bound_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field_1 s x)))
+          (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))}
+  {smooth_exhaustion_1 :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P)}
+  {proper_exhaustion_1 : IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)}
+  {lower_exhaustion_1 : ∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)}
+  {core_bound_1 :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (P.R x) P.rstar →
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field_1 s x)))
+              D}
+  {global_bound_1 :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field_1 s x))) D}
+  {evolution_1 : ExactLiouvilleComparison.FirstPathFlow.Evolution field_1}
+  {inverse_isotopy_1 :
+    ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+      (evolution_1.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero)},
+  Eq.{1}
+      { field := field, smooth_primitive := smooth_primitive, symplectic := symplectic, equation := equation,
+        unique_field := unique_field, joint := joint, norm_bound := norm_bound, ratio_le_one := ratio_le_one,
+        exterior_bound := exterior_bound, smooth_exhaustion := smooth_exhaustion,
+        proper_exhaustion := proper_exhaustion, lower_exhaustion := lower_exhaustion, core_bound := core_bound,
+        global_bound := global_bound, evolution := evolution, inverse_isotopy := inverse_isotopy }
+      { field := field_1, smooth_primitive := smooth_primitive_1, symplectic := symplectic_1, equation := equation_1,
+        unique_field := unique_field_1, joint := joint_1, norm_bound := norm_bound_1, ratio_le_one := ratio_le_one_1,
+        exterior_bound := exterior_bound_1, smooth_exhaustion := smooth_exhaustion_1,
+        proper_exhaustion := proper_exhaustion_1, lower_exhaustion := lower_exhaustion_1, core_bound := core_bound_1,
+        global_bound := global_bound_1, evolution := evolution_1, inverse_isotopy := inverse_isotopy_1 } →
+    Eq.{1} field field_1 ∧ HEq.{1} evolution evolution_1
+ExactLiouvilleComparison.ThirdPath.Construction.mk.injEq : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T))
+  (symplectic :
+    ∀ (s : ↑FsFltz.Geometry.Parameter),
+      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0})
+  (equation :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x) v)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v)))
+  (unique_field :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      (∀ (w : M.Tangent x),
+          Eq.{1}
+            (FsFltz.Geometry.SmoothManifold.evalTwo
+              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+        Eq.{1} v (field s x))
+  (joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field)
+  (norm_bound :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LE.le.{0} (Norm.norm.{0} (field s x))
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x))))
+  (ratio_le_one :
+    ∀ (x : M.Point),
+      LE.le.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+        1)
+  (exterior_bound :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+          (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c)))
+  (smooth_exhaustion :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+  (proper_exhaustion : IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+  (lower_exhaustion : ∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x))
+  (core_bound :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (P.R x) P.rstar →
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x))) D)
+  (global_bound :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x))) D)
+  (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field)
+  (inverse_isotopy :
+    ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+      (evolution.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero))
+  (field_1 : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (smooth_primitive_1 : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T))
+  (symplectic_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter),
+      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0})
+  (equation_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field_1 s x) v)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v)))
+  (unique_field_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      (∀ (w : M.Tangent x),
+          Eq.{1}
+            (FsFltz.Geometry.SmoothManifold.evalTwo
+              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+        Eq.{1} v (field_1 s x))
+  (joint_1 : ExactLiouvilleComparison.MoserRegularity.NativeJoint field_1)
+  (norm_bound_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LE.le.{0} (Norm.norm.{0} (field_1 s x))
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x))))
+  (ratio_le_one_1 :
+    ∀ (x : M.Point),
+      LE.le.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+        1)
+  (exterior_bound_1 :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field_1 s x)))
+          (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c)))
+  (smooth_exhaustion_1 :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+  (proper_exhaustion_1 : IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+  (lower_exhaustion_1 : ∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x))
+  (core_bound_1 :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (P.R x) P.rstar →
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field_1 s x)))
+              D)
+  (global_bound_1 :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field_1 s x))) D)
+  (evolution_1 : ExactLiouvilleComparison.FirstPathFlow.Evolution field_1)
+  (inverse_isotopy_1 :
+    ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+      (evolution_1.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero)),
+  Eq.{1}
+    (Eq.{1}
+      { field := field, smooth_primitive := smooth_primitive, symplectic := symplectic, equation := equation,
+        unique_field := unique_field, joint := joint, norm_bound := norm_bound, ratio_le_one := ratio_le_one,
+        exterior_bound := exterior_bound, smooth_exhaustion := smooth_exhaustion,
+        proper_exhaustion := proper_exhaustion, lower_exhaustion := lower_exhaustion, core_bound := core_bound,
+        global_bound := global_bound, evolution := evolution, inverse_isotopy := inverse_isotopy }
+      { field := field_1, smooth_primitive := smooth_primitive_1, symplectic := symplectic_1, equation := equation_1,
+        unique_field := unique_field_1, joint := joint_1, norm_bound := norm_bound_1, ratio_le_one := ratio_le_one_1,
+        exterior_bound := exterior_bound_1, smooth_exhaustion := smooth_exhaustion_1,
+        proper_exhaustion := proper_exhaustion_1, lower_exhaustion := lower_exhaustion_1, core_bound := core_bound_1,
+        global_bound := global_bound_1, evolution := evolution_1, inverse_isotopy := inverse_isotopy_1 })
+    (Eq.{1} field field_1 ∧ HEq.{1} evolution evolution_1)
+ExactLiouvilleComparison.ThirdPath.Construction.mk.noConfusion : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        {P_1 : Sort u} →
+          {field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x} →
+            {smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)} →
+              {symplectic :
+                  ∀ (s : ↑FsFltz.Geometry.Parameter),
+                    M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                      Set.univ.{0}} →
+                {equation :
+                    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                      Eq.{1}
+                        (FsFltz.Geometry.SmoothManifold.evalTwo
+                          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x) v)
+                        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))} →
+                  {unique_field :
+                      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                        (∀ (w : M.Tangent x),
+                            Eq.{1}
+                              (FsFltz.Geometry.SmoothManifold.evalTwo
+                                (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+                              (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+                          Eq.{1} v (field s x)} →
+                    {joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field} →
+                      {norm_bound :
+                          ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                            LE.le.{0} (Norm.norm.{0} (field s x))
+                              (HDiv.hDiv.{0, 0, 0}
+                                (P.compatible.dualNorm x
+                                  (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))} →
+                        {ratio_le_one :
+                            ∀ (x : M.Point),
+                              LE.le.{0}
+                                (HDiv.hDiv.{0, 0, 0}
+                                  (P.compatible.dualNorm x
+                                    (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                  (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+                                1} →
+                          {exterior_bound :
+                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                LT.lt.{0} P.rstar (P.R x) →
+                                  LE.le.{0}
+                                    (abs.{0}
+                                      (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                        (field s x)))
+                                    (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))} →
+                            {smooth_exhaustion :
+                                ContMDiff.{0, 0, 0, 0, 0, 0, 0}
+                                  (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+                                  (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                                  (ExactLiouvilleComparison.ThirdPath.exhaustion P)} →
+                              {proper_exhaustion :
+                                  IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)} →
+                                {lower_exhaustion :
+                                    ∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)} →
+                                  {core_bound :
+                                      ∃ D,
+                                        LE.le.{0} 0 D ∧
+                                          ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                            LE.le.{0} (P.R x) P.rstar →
+                                              LE.le.{0}
+                                                (abs.{0}
+                                                  (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P)
+                                                    x (field s x)))
+                                                D} →
+                                    {global_bound :
+                                        ∃ D,
+                                          LE.le.{0} 0 D ∧
+                                            ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                              LE.le.{0}
+                                                (abs.{0}
+                                                  (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P)
+                                                    x (field s x)))
+                                                D} →
+                                      {evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field} →
+                                        {inverse_isotopy :
+                                            ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+                                              (evolution.map FsFltz.Geometry.parameterOne
+                                                FsFltz.Geometry.parameterZero)} →
+                                          {field' : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x} →
+                                            {smooth_primitive' :
+                                                M.IsSmoothFormFamily
+                                                  (ExactLiouvilleComparison.ThirdPath.primitive P T)} →
+                                              {symplectic' :
+                                                  ∀ (s : ↑FsFltz.Geometry.Parameter),
+                                                    M.IsSymplecticOn
+                                                      (M.exteriorDerivative
+                                                        (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                                                      Set.univ.{0}} →
+                                                {equation' :
+                                                    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                                                      Eq.{1}
+                                                        (FsFltz.Geometry.SmoothManifold.evalTwo
+                                                          (M.exteriorDerivative
+                                                            (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                                                          x (field' s x) v)
+                                                        (Neg.neg.{0}
+                                                          (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))} →
+                                                  {unique_field' :
+                                                      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point)
+                                                        (v : M.Tangent x),
+                                                        (∀ (w : M.Tangent x),
+                                                            Eq.{1}
+                                                              (FsFltz.Geometry.SmoothManifold.evalTwo
+                                                                (M.exteriorDerivative
+                                                                  (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                                                                x v w)
+                                                              (Neg.neg.{0}
+                                                                (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x
+                                                                  w))) →
+                                                          Eq.{1} v (field' s x)} →
+                                                    {joint' :
+                                                        ExactLiouvilleComparison.MoserRegularity.NativeJoint field'} →
+                                                      {norm_bound' :
+                                                          ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                            LE.le.{0} (Norm.norm.{0} (field' s x))
+                                                              (HDiv.hDiv.{0, 0, 0}
+                                                                (P.compatible.dualNorm x
+                                                                  (ExactLiouvilleComparison.LargeCoefficient.oneCovector
+                                                                    T.primitive x))
+                                                                (ExactLiouvilleComparison.LargeCoefficient.A P
+                                                                  T.primitive (P.R x)))} →
+                                                        {ratio_le_one' :
+                                                            ∀ (x : M.Point),
+                                                              LE.le.{0}
+                                                                (HDiv.hDiv.{0, 0, 0}
+                                                                  (P.compatible.dualNorm x
+                                                                    (ExactLiouvilleComparison.LargeCoefficient.oneCovector
+                                                                      T.primitive x))
+                                                                  (ExactLiouvilleComparison.LargeCoefficient.A P
+                                                                    T.primitive (P.R x)))
+                                                                1} →
+                                                          {exterior_bound' :
+                                                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                                LT.lt.{0} P.rstar (P.R x) →
+                                                                  LE.le.{0}
+                                                                    (abs.{0}
+                                                                      (M.scalarDerivative
+                                                                        (ExactLiouvilleComparison.ThirdPath.exhaustion
+                                                                          P)
+                                                                        x (field' s x)))
+                                                                    (HDiv.hDiv.{0, 0, 0} 1
+                                                                      (HMul.hMul.{0, 0, 0} 2 √P.c))} →
+                                                            {smooth_exhaustion' :
+                                                                ContMDiff.{0, 0, 0, 0, 0, 0, 0}
+                                                                  (modelWithCornersSelf.{0, 0} ℝ
+                                                                    (FsFltz.Geometry.Model d))
+                                                                  (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                                                                  (ExactLiouvilleComparison.ThirdPath.exhaustion P)} →
+                                                              {proper_exhaustion' :
+                                                                  IsProperMap.{0, 0}
+                                                                    (ExactLiouvilleComparison.ThirdPath.exhaustion P)} →
+                                                                {lower_exhaustion' :
+                                                                    ∀ (x : M.Point),
+                                                                      LE.le.{0} 1
+                                                                        (ExactLiouvilleComparison.ThirdPath.exhaustion P
+                                                                          x)} →
+                                                                  {core_bound' :
+                                                                      ∃ D,
+                                                                        LE.le.{0} 0 D ∧
+                                                                          ∀ (s : ↑FsFltz.Geometry.Parameter)
+                                                                            (x : M.Point),
+                                                                            LE.le.{0} (P.R x) P.rstar →
+                                                                              LE.le.{0}
+                                                                                (abs.{0}
+                                                                                  (M.scalarDerivative
+                                                                                    (ExactLiouvilleComparison.ThirdPath.exhaustion
+                                                                                      P)
+                                                                                    x (field' s x)))
+                                                                                D} →
+                                                                    {global_bound' :
+                                                                        ∃ D,
+                                                                          LE.le.{0} 0 D ∧
+                                                                            ∀ (s : ↑FsFltz.Geometry.Parameter)
+                                                                              (x : M.Point),
+                                                                              LE.le.{0}
+                                                                                (abs.{0}
+                                                                                  (M.scalarDerivative
+                                                                                    (ExactLiouvilleComparison.ThirdPath.exhaustion
+                                                                                      P)
+                                                                                    x (field' s x)))
+                                                                                D} →
+                                                                      {evolution' :
+                                                                          ExactLiouvilleComparison.FirstPathFlow.Evolution
+                                                                            field'} →
+                                                                        {inverse_isotopy' :
+                                                                            ExactLiouvilleComparison.SmoothlyIsotopicToIdentity
+                                                                              M
+                                                                              (evolution'.map
+                                                                                FsFltz.Geometry.parameterOne
+                                                                                FsFltz.Geometry.parameterZero)} →
+                                                                          Eq.{1}
+                                                                              { field := field,
+                                                                                smooth_primitive := smooth_primitive,
+                                                                                symplectic := symplectic,
+                                                                                equation := equation,
+                                                                                unique_field := unique_field,
+                                                                                joint := joint,
+                                                                                norm_bound := norm_bound,
+                                                                                ratio_le_one := ratio_le_one,
+                                                                                exterior_bound := exterior_bound,
+                                                                                smooth_exhaustion := smooth_exhaustion,
+                                                                                proper_exhaustion := proper_exhaustion,
+                                                                                lower_exhaustion := lower_exhaustion,
+                                                                                core_bound := core_bound,
+                                                                                global_bound := global_bound,
+                                                                                evolution := evolution,
+                                                                                inverse_isotopy := inverse_isotopy }
+                                                                              { field := field',
+                                                                                smooth_primitive := smooth_primitive',
+                                                                                symplectic := symplectic',
+                                                                                equation := equation',
+                                                                                unique_field := unique_field',
+                                                                                joint := joint',
+                                                                                norm_bound := norm_bound',
+                                                                                ratio_le_one := ratio_le_one',
+                                                                                exterior_bound := exterior_bound',
+                                                                                smooth_exhaustion := smooth_exhaustion',
+                                                                                proper_exhaustion := proper_exhaustion',
+                                                                                lower_exhaustion := lower_exhaustion',
+                                                                                core_bound := core_bound',
+                                                                                global_bound := global_bound',
+                                                                                evolution := evolution',
+                                                                                inverse_isotopy := inverse_isotopy' } →
+                                                                            (HEq.{1} field field' →
+                                                                                HEq.{1} evolution evolution' → P_1) →
+                                                                              P_1
+ExactLiouvilleComparison.ThirdPath.Construction.mk.sizeOf_spec : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T))
+  (symplectic :
+    ∀ (s : ↑FsFltz.Geometry.Parameter),
+      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0})
+  (equation :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x) v)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v)))
+  (unique_field :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+      (∀ (w : M.Tangent x),
+          Eq.{1}
+            (FsFltz.Geometry.SmoothManifold.evalTwo
+              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+        Eq.{1} v (field s x))
+  (joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field)
+  (norm_bound :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LE.le.{0} (Norm.norm.{0} (field s x))
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x))))
+  (ratio_le_one :
+    ∀ (x : M.Point),
+      LE.le.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+        1)
+  (exterior_bound :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      LT.lt.{0} P.rstar (P.R x) →
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+          (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c)))
+  (smooth_exhaustion :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+  (proper_exhaustion : IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+  (lower_exhaustion : ∀ (x : M.Point), LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x))
+  (core_bound :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (P.R x) P.rstar →
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x))) D)
+  (global_bound :
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x))) D)
+  (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field)
+  (inverse_isotopy :
+    ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+      (evolution.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero)),
+  Eq.{1}
+    (SizeOf.sizeOf.{1}
+      { field := field, smooth_primitive := smooth_primitive, symplectic := symplectic, equation := equation,
+        unique_field := unique_field, joint := joint, norm_bound := norm_bound, ratio_le_one := ratio_le_one,
+        exterior_bound := exterior_bound, smooth_exhaustion := smooth_exhaustion,
+        proper_exhaustion := proper_exhaustion, lower_exhaustion := lower_exhaustion, core_bound := core_bound,
+        global_bound := global_bound, evolution := evolution, inverse_isotopy := inverse_isotopy })
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          (HAdd.hAdd.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (SizeOf.sizeOf.{0} joint))
+              (SizeOf.sizeOf.{0} proper_exhaustion))
+            (SizeOf.sizeOf.{0} core_bound))
+          (SizeOf.sizeOf.{0} global_bound))
+        (SizeOf.sizeOf.{1} evolution))
+      (SizeOf.sizeOf.{0} inverse_isotopy))
+ExactLiouvilleComparison.ThirdPath.Construction.noConfusion : {P : Sort u} →
+  {d : ℕ} →
+    {M : FsFltz.Geometry.SmoothManifold d} →
+      {P_1 : ExactLiouvilleComparison.RadialReference M} →
+        {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+          {t : ExactLiouvilleComparison.ThirdPath.Construction P_1 T} →
+            {d' : ℕ} →
+              {M' : FsFltz.Geometry.SmoothManifold d'} →
+                {P' : ExactLiouvilleComparison.RadialReference M'} →
+                  {T' : ExactLiouvilleComparison.ExactSymplecticStructure M'} →
+                    {t' : ExactLiouvilleComparison.ThirdPath.Construction P' T'} →
+                      Eq.{1} d d' →
+                        HEq.{2} M M' →
+                          HEq.{1} P_1 P' →
+                            HEq.{1} T T' →
+                              HEq.{1} t t' → ExactLiouvilleComparison.ThirdPath.Construction.noConfusionType.{u} P t t'
+ExactLiouvilleComparison.ThirdPath.Construction.noConfusionType : Sort u →
+  {d : ℕ} →
+    {M : FsFltz.Geometry.SmoothManifold d} →
+      {P : ExactLiouvilleComparison.RadialReference M} →
+        {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+          ExactLiouvilleComparison.ThirdPath.Construction P T →
+            {d' : ℕ} →
+              {M' : FsFltz.Geometry.SmoothManifold d'} →
+                {P' : ExactLiouvilleComparison.RadialReference M'} →
+                  {T' : ExactLiouvilleComparison.ExactSymplecticStructure M'} →
+                    ExactLiouvilleComparison.ThirdPath.Construction P' T' → Sort u
+ExactLiouvilleComparison.ThirdPath.Construction.norm_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  LE.le.{0} (Norm.norm.{0} (self.field s x))
+    (HDiv.hDiv.{0, 0, 0} (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+ExactLiouvilleComparison.ThirdPath.Construction.proper_exhaustion : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)
+ExactLiouvilleComparison.ThirdPath.Construction.ratio_le_one : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (x : M.Point),
+  LE.le.{0}
+    (HDiv.hDiv.{0, 0, 0} (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+    1
+ExactLiouvilleComparison.ThirdPath.Construction.rec : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        {motive : ExactLiouvilleComparison.ThirdPath.Construction P T → Sort u} →
+          ((field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) →
+              (smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)) →
+                (symplectic :
+                    ∀ (s : ↑FsFltz.Geometry.Parameter),
+                      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                        Set.univ.{0}) →
+                  (equation :
+                      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                        Eq.{1}
+                          (FsFltz.Geometry.SmoothManifold.evalTwo
+                            (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x)
+                            v)
+                          (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))) →
+                    (unique_field :
+                        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                          (∀ (w : M.Tangent x),
+                              Eq.{1}
+                                (FsFltz.Geometry.SmoothManifold.evalTwo
+                                  (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+                                (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+                            Eq.{1} v (field s x)) →
+                      (joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field) →
+                        (norm_bound :
+                            ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                              LE.le.{0} (Norm.norm.{0} (field s x))
+                                (HDiv.hDiv.{0, 0, 0}
+                                  (P.compatible.dualNorm x
+                                    (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                  (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))) →
+                          (ratio_le_one :
+                              ∀ (x : M.Point),
+                                LE.le.{0}
+                                  (HDiv.hDiv.{0, 0, 0}
+                                    (P.compatible.dualNorm x
+                                      (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                    (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+                                  1) →
+                            (exterior_bound :
+                                ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                  LT.lt.{0} P.rstar (P.R x) →
+                                    LE.le.{0}
+                                      (abs.{0}
+                                        (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                          (field s x)))
+                                      (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))) →
+                              (smooth_exhaustion :
+                                  ContMDiff.{0, 0, 0, 0, 0, 0, 0}
+                                    (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+                                    (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                                    (ExactLiouvilleComparison.ThirdPath.exhaustion P)) →
+                                (proper_exhaustion :
+                                    IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)) →
+                                  (lower_exhaustion :
+                                      ∀ (x : M.Point),
+                                        LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)) →
+                                    (core_bound :
+                                        ∃ D,
+                                          LE.le.{0} 0 D ∧
+                                            ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                              LE.le.{0} (P.R x) P.rstar →
+                                                LE.le.{0}
+                                                  (abs.{0}
+                                                    (M.scalarDerivative
+                                                      (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+                                                  D) →
+                                      (global_bound :
+                                          ∃ D,
+                                            LE.le.{0} 0 D ∧
+                                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                LE.le.{0}
+                                                  (abs.{0}
+                                                    (M.scalarDerivative
+                                                      (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (field s x)))
+                                                  D) →
+                                        (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field) →
+                                          (inverse_isotopy :
+                                              ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+                                                (evolution.map FsFltz.Geometry.parameterOne
+                                                  FsFltz.Geometry.parameterZero)) →
+                                            motive
+                                              { field := field, smooth_primitive := smooth_primitive,
+                                                symplectic := symplectic, equation := equation,
+                                                unique_field := unique_field, joint := joint, norm_bound := norm_bound,
+                                                ratio_le_one := ratio_le_one, exterior_bound := exterior_bound,
+                                                smooth_exhaustion := smooth_exhaustion,
+                                                proper_exhaustion := proper_exhaustion,
+                                                lower_exhaustion := lower_exhaustion, core_bound := core_bound,
+                                                global_bound := global_bound, evolution := evolution,
+                                                inverse_isotopy := inverse_isotopy }) →
+            (t : ExactLiouvilleComparison.ThirdPath.Construction P T) → motive t
+ExactLiouvilleComparison.ThirdPath.Construction.recOn : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {P : ExactLiouvilleComparison.RadialReference M} →
+      {T : ExactLiouvilleComparison.ExactSymplecticStructure M} →
+        {motive : ExactLiouvilleComparison.ThirdPath.Construction P T → Sort u} →
+          (t : ExactLiouvilleComparison.ThirdPath.Construction P T) →
+            ((field : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) →
+                (smooth_primitive : M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)) →
+                  (symplectic :
+                      ∀ (s : ↑FsFltz.Geometry.Parameter),
+                        M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+                          Set.univ.{0}) →
+                    (equation :
+                        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                          Eq.{1}
+                            (FsFltz.Geometry.SmoothManifold.evalTwo
+                              (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x (field s x)
+                              v)
+                            (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))) →
+                      (unique_field :
+                          ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+                            (∀ (w : M.Tangent x),
+                                Eq.{1}
+                                  (FsFltz.Geometry.SmoothManifold.evalTwo
+                                    (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+                                  (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+                              Eq.{1} v (field s x)) →
+                        (joint : ExactLiouvilleComparison.MoserRegularity.NativeJoint field) →
+                          (norm_bound :
+                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                LE.le.{0} (Norm.norm.{0} (field s x))
+                                  (HDiv.hDiv.{0, 0, 0}
+                                    (P.compatible.dualNorm x
+                                      (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                    (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))) →
+                            (ratio_le_one :
+                                ∀ (x : M.Point),
+                                  LE.le.{0}
+                                    (HDiv.hDiv.{0, 0, 0}
+                                      (P.compatible.dualNorm x
+                                        (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+                                      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+                                    1) →
+                              (exterior_bound :
+                                  ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                    LT.lt.{0} P.rstar (P.R x) →
+                                      LE.le.{0}
+                                        (abs.{0}
+                                          (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                            (field s x)))
+                                        (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))) →
+                                (smooth_exhaustion :
+                                    ContMDiff.{0, 0, 0, 0, 0, 0, 0}
+                                      (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+                                      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0})
+                                      (ExactLiouvilleComparison.ThirdPath.exhaustion P)) →
+                                  (proper_exhaustion :
+                                      IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)) →
+                                    (lower_exhaustion :
+                                        ∀ (x : M.Point),
+                                          LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)) →
+                                      (core_bound :
+                                          ∃ D,
+                                            LE.le.{0} 0 D ∧
+                                              ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                LE.le.{0} (P.R x) P.rstar →
+                                                  LE.le.{0}
+                                                    (abs.{0}
+                                                      (M.scalarDerivative
+                                                        (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                        (field s x)))
+                                                    D) →
+                                        (global_bound :
+                                            ∃ D,
+                                              LE.le.{0} 0 D ∧
+                                                ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                                                  LE.le.{0}
+                                                    (abs.{0}
+                                                      (M.scalarDerivative
+                                                        (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                                                        (field s x)))
+                                                    D) →
+                                          (evolution : ExactLiouvilleComparison.FirstPathFlow.Evolution field) →
+                                            (inverse_isotopy :
+                                                ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+                                                  (evolution.map FsFltz.Geometry.parameterOne
+                                                    FsFltz.Geometry.parameterZero)) →
+                                              motive
+                                                { field := field, smooth_primitive := smooth_primitive,
+                                                  symplectic := symplectic, equation := equation,
+                                                  unique_field := unique_field, joint := joint,
+                                                  norm_bound := norm_bound, ratio_le_one := ratio_le_one,
+                                                  exterior_bound := exterior_bound,
+                                                  smooth_exhaustion := smooth_exhaustion,
+                                                  proper_exhaustion := proper_exhaustion,
+                                                  lower_exhaustion := lower_exhaustion, core_bound := core_bound,
+                                                  global_bound := global_bound, evolution := evolution,
+                                                  inverse_isotopy := inverse_isotopy }) →
+              motive t
+ExactLiouvilleComparison.ThirdPath.Construction.smooth_exhaustion : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+    (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P)
+ExactLiouvilleComparison.ThirdPath.Construction.smooth_primitive : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M}
+  (self : ExactLiouvilleComparison.ThirdPath.Construction P T),
+  M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)
+ExactLiouvilleComparison.ThirdPath.Construction.symplectic : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (s : ↑FsFltz.Geometry.Parameter),
+  M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0}
+ExactLiouvilleComparison.ThirdPath.Construction.unique_field : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {P : ExactLiouvilleComparison.RadialReference M}
+  {T : ExactLiouvilleComparison.ExactSymplecticStructure M} (self : ExactLiouvilleComparison.ThirdPath.Construction P T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+  (∀ (w : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+    Eq.{1} v (self.field s x)
+ExactLiouvilleComparison.ThirdPath.Target : {d : ℕ} → {M : FsFltz.Geometry.SmoothManifold d} → Prop
+ExactLiouvilleComparison.ThirdPath.coefficient : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      ExactLiouvilleComparison.ExactSymplecticStructure M → ExactLiouvilleComparison.RadialCoefficient P.rstar
+ExactLiouvilleComparison.ThirdPath.construction : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        ExactLiouvilleComparison.WeaklyTames P.compatible T → ExactLiouvilleComparison.ThirdPath.Construction P T
+ExactLiouvilleComparison.ThirdPath.construction._proof_1 : (HAdd.hAdd.{0, 0, 0} 1 1).AtLeastTwo
+ExactLiouvilleComparison.ThirdPath.construction._proof_2 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    LE.le.{0}
+      (abs.{0}
+        (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+          (ExactLiouvilleComparison.ThirdPath.field P T hw s x)))
+      (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))
+ExactLiouvilleComparison.ThirdPath.construction._proof_3 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  ∃ D,
+    LE.le.{0} 0 D ∧
+      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        LE.le.{0} (P.R x) P.rstar →
+          LE.le.{0}
+            (abs.{0}
+              (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+                (ExactLiouvilleComparison.ThirdPath.field P T hw s x)))
+            D
+ExactLiouvilleComparison.ThirdPath.construction._proof_4 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  ∃ D,
+    LE.le.{0} 0 D ∧
+      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        LE.le.{0}
+          (abs.{0}
+            (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x
+              (ExactLiouvilleComparison.ThirdPath.field P T hw s x)))
+          D
+ExactLiouvilleComparison.ThirdPath.construction._proof_5 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+    ((ExactLiouvilleComparison.ThirdPath.evolution P T hw).map FsFltz.Geometry.parameterOne
+      FsFltz.Geometry.parameterZero)
+ExactLiouvilleComparison.ThirdPath.differential_eq : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (s : ℝ),
+  Eq.{1} (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T s))
+    (ExactLiouvilleComparison.ThirdPath.form P T s)
+ExactLiouvilleComparison.ThirdPath.energy_lower : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  ExactLiouvilleComparison.WeaklyTames P.compatible T →
+    ∀ {s : ℝ},
+      LE.le.{0} 0 s →
+        ∀ (x : M.Point) (v : M.Tangent x),
+          LE.le.{0}
+            (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x))
+              (HPow.hPow.{0, 0, 0} (Norm.norm.{0} v) 2))
+            (FsFltz.Geometry.SmoothManifold.evalTwo (ExactLiouvilleComparison.ThirdPath.form P T s) x v
+              ((P.compatible.J x) v))
+ExactLiouvilleComparison.ThirdPath.evolution : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) →
+          ExactLiouvilleComparison.FirstPathFlow.Evolution (ExactLiouvilleComparison.ThirdPath.field P T hw)
+ExactLiouvilleComparison.ThirdPath.evolution_exists : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  Nonempty.{1} (ExactLiouvilleComparison.FirstPathFlow.Evolution (ExactLiouvilleComparison.ThirdPath.field P T hw))
+ExactLiouvilleComparison.ThirdPath.evolution_inverse_isotopy : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+  (H : ExactLiouvilleComparison.FirstPathFlow.Evolution Z),
+  ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+    (H.map FsFltz.Geometry.parameterOne FsFltz.Geometry.parameterZero)
+ExactLiouvilleComparison.ThirdPath.exhaustion : {d : ℕ} → {M : FsFltz.Geometry.SmoothManifold d} → ExactLiouvilleComparison.RadialReference M → M.Point → ℝ
+ExactLiouvilleComparison.ThirdPath.exhaustion.eq_1 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M) (x : M.Point),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.exhaustion P x) √(P.R x)
+ExactLiouvilleComparison.ThirdPath.exhaustion_bddBelow : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M),
+  BddBelow.{0} (Set.range.{0, 1} (ExactLiouvilleComparison.ThirdPath.exhaustion P))
+ExactLiouvilleComparison.ThirdPath.exhaustion_core_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x},
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint Z →
+    ∃ D,
+      LE.le.{0} 0 D ∧
+        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0} (P.R x) P.rstar →
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (Z s x))) D
+ExactLiouvilleComparison.ThirdPath.exhaustion_derivative : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M) (x : M.Point)
+  (v : M.Tangent x),
+  Eq.{1} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x v)
+    (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √(P.R x))) (M.scalarDerivative P.R x v))
+ExactLiouvilleComparison.ThirdPath.exhaustion_exterior_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M) (x : M.Point),
+  LT.lt.{0} P.rstar (P.R x) →
+    ∀ (v : M.Tangent x),
+      LE.le.{0} (Norm.norm.{0} v) 1 →
+        LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x v))
+          (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 √P.c))
+ExactLiouvilleComparison.ThirdPath.exhaustion_global_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x},
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint Z →
+    (∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point), LE.le.{0} (Norm.norm.{0} (Z s x)) 1) →
+      ∃ D,
+        LE.le.{0} 0 D ∧
+          ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+            LE.le.{0} (abs.{0} (M.scalarDerivative (ExactLiouvilleComparison.ThirdPath.exhaustion P) x (Z s x))) D
+ExactLiouvilleComparison.ThirdPath.exhaustion_lower : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M) (x : M.Point),
+  LE.le.{0} 1 (ExactLiouvilleComparison.ThirdPath.exhaustion P x)
+ExactLiouvilleComparison.ThirdPath.exhaustion_proper : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M),
+  IsProperMap.{0, 0} (ExactLiouvilleComparison.ThirdPath.exhaustion P)
+ExactLiouvilleComparison.ThirdPath.exhaustion_smooth : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M),
+  ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+    (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.ThirdPath.exhaustion P)
+ExactLiouvilleComparison.ThirdPath.field : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        ExactLiouvilleComparison.WeaklyTames P.compatible T → ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x
+ExactLiouvilleComparison.ThirdPath.field._proof_1 : ContinuousConstSMul.{0, 0} ℝ ℝ
+ExactLiouvilleComparison.ThirdPath.field._proof_2 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  ExactLiouvilleComparison.WeaklyTames P.compatible T →
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point), M.Nondegenerate (ExactLiouvilleComparison.ThirdPath.form P T ↑s) x
+ExactLiouvilleComparison.ThirdPath.field.congr_simp : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P P_1 : ExactLiouvilleComparison.RadialReference M)
+  (e_P : Eq.{1} P P_1) (T T_1 : ExactLiouvilleComparison.ExactSymplecticStructure M) (e_T : Eq.{1} T T_1)
+  (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) (s s_1 : ↑FsFltz.Geometry.Parameter),
+  Eq.{1} s s_1 →
+    ∀ (x : M.Point),
+      Eq.{1} (ExactLiouvilleComparison.ThirdPath.field P T hw s x)
+        (ExactLiouvilleComparison.ThirdPath.field P_1 T_1 ⋯ s_1 x)
+ExactLiouvilleComparison.ThirdPath.field_equation : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+  Eq.{1}
+    (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s))
+      x (ExactLiouvilleComparison.ThirdPath.field P T hw s x) v)
+    (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))
+ExactLiouvilleComparison.ThirdPath.field_equation_form : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+  Eq.{1}
+    (FsFltz.Geometry.SmoothManifold.evalTwo (ExactLiouvilleComparison.ThirdPath.form P T ↑s) x
+      (ExactLiouvilleComparison.ThirdPath.field P T hw s x) v)
+    (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v))
+ExactLiouvilleComparison.ThirdPath.field_intervalSmooth : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  M.IsSmoothIntervalVectorFieldFamily (ExactLiouvilleComparison.ThirdPath.field P T hw)
+ExactLiouvilleComparison.ThirdPath.field_joint : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint (ExactLiouvilleComparison.ThirdPath.field P T hw)
+ExactLiouvilleComparison.ThirdPath.field_norm_bound : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  LE.le.{0} (Norm.norm.{0} (ExactLiouvilleComparison.ThirdPath.field P T hw s x))
+    (HDiv.hDiv.{0, 0, 0} (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+ExactLiouvilleComparison.ThirdPath.field_norm_le_one : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  LE.le.{0} (Norm.norm.{0} (ExactLiouvilleComparison.ThirdPath.field P T hw s x)) 1
+ExactLiouvilleComparison.ThirdPath.field_unique : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x),
+  (∀ (w : M.Tangent x),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo
+          (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) x v w)
+        (Neg.neg.{0} (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x w))) →
+    Eq.{1} v (ExactLiouvilleComparison.ThirdPath.field P T hw s x)
+ExactLiouvilleComparison.ThirdPath.flow : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        ExactLiouvilleComparison.WeaklyTames P.compatible T →
+          ↑FsFltz.Geometry.Parameter → ↑FsFltz.Geometry.Parameter → M.SmoothEquiv M
+ExactLiouvilleComparison.ThirdPath.flow_compose : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (r s t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  Eq.{1} ((ExactLiouvilleComparison.ThirdPath.flow P T hw s t) ((ExactLiouvilleComparison.ThirdPath.flow P T hw r s) x))
+    ((ExactLiouvilleComparison.ThirdPath.flow P T hw r t) x)
+ExactLiouvilleComparison.ThirdPath.flow_initial : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point), Eq.{1} ((ExactLiouvilleComparison.ThirdPath.flow P T hw s s) x) x
+ExactLiouvilleComparison.ThirdPath.flow_inverse : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s t : ↑FsFltz.Geometry.Parameter),
+  Eq.{1} (Diffeomorph.symm.{0, 0, 0, 0, 0, 0, 0} (ExactLiouvilleComparison.ThirdPath.flow P T hw s t))
+    (ExactLiouvilleComparison.ThirdPath.flow P T hw t s)
+ExactLiouvilleComparison.ThirdPath.flow_isotopy : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (t : ↑FsFltz.Geometry.Parameter),
+  ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+    (ExactLiouvilleComparison.ThirdPath.flow P T hw FsFltz.Geometry.parameterZero t)
+ExactLiouvilleComparison.ThirdPath.flow_unique : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s t : ↑FsFltz.Geometry.Parameter) (γ : ℝ → M.Point),
+  ExactLiouvilleComparison.FirstPathFlow.IsSolution (ExactLiouvilleComparison.ThirdPath.field P T hw) γ
+      (Set.uIcc.{0} ↑s ↑t) →
+    Eq.{1} (γ ↑t) ((ExactLiouvilleComparison.ThirdPath.flow P T hw s t) (γ ↑s))
+ExactLiouvilleComparison.ThirdPath.form : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    ExactLiouvilleComparison.RadialReference M → ExactLiouvilleComparison.ExactSymplecticStructure M → ℝ → M.Form 2
+ExactLiouvilleComparison.ThirdPath.form._proof_1 : ContinuousAdd.{0} ℝ
+ExactLiouvilleComparison.ThirdPath.form._proof_2 : ContinuousConstSMul.{0, 0} ℝ ℝ
+ExactLiouvilleComparison.ThirdPath.form._proof_3 : SMulCommClass.{0, 0, 0} ℝ ℝ ℝ
+ExactLiouvilleComparison.ThirdPath.form_apply : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (s : ℝ) (x : M.Point) (v w : M.Tangent x),
+  Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo (ExactLiouvilleComparison.ThirdPath.form P T s) x v w)
+    (HAdd.hAdd.{0, 0, 0}
+      (FsFltz.Geometry.SmoothManifold.evalTwo
+        (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.coefficient P T).primitive) x v w)
+      (HMul.hMul.{0, 0, 0} s (FsFltz.Geometry.SmoothManifold.evalTwo (M.exteriorDerivative T.primitive) x v w)))
+ExactLiouvilleComparison.ThirdPath.form_family : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.form P T)
+ExactLiouvilleComparison.ThirdPath.full_interval_solution : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  ∃ γ,
+    Eq.{1} (γ ↑s) x ∧
+      ExactLiouvilleComparison.FirstPathFlow.IsSolution (ExactLiouvilleComparison.ThirdPath.field P T hw) γ
+          FsFltz.Geometry.parameterInterval ∧
+        ∀ (t : ↑FsFltz.Geometry.Parameter), Eq.{1} (γ ↑t) ((ExactLiouvilleComparison.ThirdPath.flow P T hw s t) x)
+ExactLiouvilleComparison.ThirdPath.inverseEndpoint : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        ExactLiouvilleComparison.WeaklyTames P.compatible T → M.SmoothEquiv M
+ExactLiouvilleComparison.ThirdPath.inverseEndpoint_direction : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.primitive P T ↑FsFltz.Geometry.parameterOne)
+      (HAdd.hAdd.{0, 0, 0} T.primitive
+        (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive))) ∧
+    Eq.{1} (ExactLiouvilleComparison.ThirdPath.primitive P T ↑FsFltz.Geometry.parameterZero)
+        (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P
+          (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive)) ∧
+      Eq.{1} (ExactLiouvilleComparison.ThirdPath.inverseEndpoint P T hw)
+          (Diffeomorph.symm.{0, 0, 0, 0, 0, 0, 0}
+            (ExactLiouvilleComparison.ThirdPath.flow P T hw FsFltz.Geometry.parameterZero
+              FsFltz.Geometry.parameterOne)) ∧
+        ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M
+          (ExactLiouvilleComparison.ThirdPath.inverseEndpoint P T hw)
+ExactLiouvilleComparison.ThirdPath.inverseEndpoint_eq : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.inverseEndpoint P T hw)
+    (Diffeomorph.symm.{0, 0, 0, 0, 0, 0, 0}
+      (ExactLiouvilleComparison.ThirdPath.flow P T hw FsFltz.Geometry.parameterZero FsFltz.Geometry.parameterOne))
+ExactLiouvilleComparison.ThirdPath.inverseEndpoint_isotopy : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M (ExactLiouvilleComparison.ThirdPath.inverseEndpoint P T hw)
+ExactLiouvilleComparison.ThirdPath.isotopy_symm : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {F : M.SmoothEquiv M},
+  ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M F →
+    ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M (Diffeomorph.symm.{0, 0, 0, 0, 0, 0, 0} F)
+ExactLiouvilleComparison.ThirdPath.nondegenerate : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  ExactLiouvilleComparison.WeaklyTames P.compatible T →
+    ∀ {s : ℝ}, LE.le.{0} 0 s → ∀ (x : M.Point), M.Nondegenerate (ExactLiouvilleComparison.ThirdPath.form P T s) x
+ExactLiouvilleComparison.ThirdPath.primitive : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    ExactLiouvilleComparison.RadialReference M → ExactLiouvilleComparison.ExactSymplecticStructure M → ℝ → M.Form 1
+ExactLiouvilleComparison.ThirdPath.primitive._proof_1 : ContinuousAdd.{0} ℝ
+ExactLiouvilleComparison.ThirdPath.primitive._proof_2 : ContinuousConstSMul.{0, 0} ℝ ℝ
+ExactLiouvilleComparison.ThirdPath.primitive._proof_3 : SMulCommClass.{0, 0, 0} ℝ ℝ ℝ
+ExactLiouvilleComparison.ThirdPath.primitive.eq_1 : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (s : ℝ),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.primitive P T s)
+    (HAdd.hAdd.{0, 0, 0}
+      (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P
+        (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive))
+      (HSMul.hSMul.{0, 0, 0} s T.primitive))
+ExactLiouvilleComparison.ThirdPath.primitive_family : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  M.IsSmoothFormFamily (ExactLiouvilleComparison.ThirdPath.primitive P T)
+ExactLiouvilleComparison.ThirdPath.primitive_one : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.primitive P T 1)
+    (HAdd.hAdd.{0, 0, 0} T.primitive
+      (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P
+        (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive)))
+ExactLiouvilleComparison.ThirdPath.primitive_parameter_derivative : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (s : ℝ) (x : M.Point) (v : M.Tangent x),
+  HasDerivAt.{0, 0}
+    (fun t => FsFltz.Geometry.SmoothManifold.evalOne (ExactLiouvilleComparison.ThirdPath.primitive P T t) x v)
+    (FsFltz.Geometry.SmoothManifold.evalOne T.primitive x v) s
+ExactLiouvilleComparison.ThirdPath.primitive_smooth : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (s : ℝ),
+  M.IsSmoothForm (ExactLiouvilleComparison.ThirdPath.primitive P T s)
+ExactLiouvilleComparison.ThirdPath.primitive_zero : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.primitive P T 0)
+    (ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive P
+      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive))
+ExactLiouvilleComparison.ThirdPath.ratio_le_one : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (x : M.Point),
+  LE.le.{0}
+    (HDiv.hDiv.{0, 0, 0} (P.compatible.dualNorm x (ExactLiouvilleComparison.LargeCoefficient.oneCovector T.primitive x))
+      (ExactLiouvilleComparison.LargeCoefficient.A P T.primitive (P.R x)))
+    1
+ExactLiouvilleComparison.ThirdPath.symplectic : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M),
+  ExactLiouvilleComparison.WeaklyTames P.compatible T →
+    ∀ (s : ↑FsFltz.Geometry.Parameter),
+      M.IsSymplecticOn (M.exteriorDerivative (ExactLiouvilleComparison.ThirdPath.primitive P T ↑s)) Set.univ.{0}
+ExactLiouvilleComparison.ThirdPath.thirdPathFlow : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}, ExactLiouvilleComparison.ThirdPath.Target
+ExactLiouvilleComparison.ThirdPath.trajectory : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (P : ExactLiouvilleComparison.RadialReference M) →
+      (T : ExactLiouvilleComparison.ExactSymplecticStructure M) →
+        ExactLiouvilleComparison.WeaklyTames P.compatible T → ℝ → ℝ → M.Point → M.Point
+ExactLiouvilleComparison.ThirdPath.trajectory_agrees : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s t : ↑FsFltz.Geometry.Parameter),
+  Eq.{1} (ExactLiouvilleComparison.ThirdPath.trajectory P T hw ↑s ↑t)
+    ⇑(ExactLiouvilleComparison.ThirdPath.flow P T hw s t)
+ExactLiouvilleComparison.ThirdPath.trajectory_chart_solves : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s t : ↑FsFltz.Geometry.Parameter) (x a : M.Point),
+  Membership.mem.{0, 0}
+      (PartialEquiv.source.{0, 0}
+        (PartialHomeomorph.toPartialEquiv.{0, 0}
+          (OpenPartialHomeomorph.toPartialHomeomorph.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a))))
+      ((ExactLiouvilleComparison.ThirdPath.flow P T hw s t) x) →
+    HasDerivWithinAt.{0, 0}
+      (fun u =>
+        ↑(chartAt.{0, 0} (FsFltz.Geometry.Model d) a) (ExactLiouvilleComparison.ThirdPath.trajectory P T hw (↑s) u x))
+      ((M.chartTangentMap a ((ExactLiouvilleComparison.ThirdPath.flow P T hw s t) x))
+        (ExactLiouvilleComparison.ThirdPath.field P T hw t ((ExactLiouvilleComparison.ThirdPath.flow P T hw s t) x)))
+      FsFltz.Geometry.parameterInterval ↑t
+ExactLiouvilleComparison.ThirdPath.trajectory_smooth : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T),
+  ∃ U,
+    IsOpen.{0} U ∧
+      SProd.sprod.{0, 0, 0} FsFltz.Geometry.parameterInterval
+            (SProd.sprod.{0, 0, 0} FsFltz.Geometry.parameterInterval Set.univ.{0}) ⊆
+          U ∧
+        ContMDiffOn.{0, 0, 0, 0, 0, 0, 0}
+          (ModelWithCorners.prod.{0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ ℝ)
+            (ModelWithCorners.prod.{0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ ℝ)
+              (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))))
+          (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d)) (↑Top.top.{0})
+          (fun p => ExactLiouvilleComparison.ThirdPath.trajectory P T hw p.1 p.2.1 p.2.2) U
+ExactLiouvilleComparison.ThirdPath.trajectory_solves : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+  ExactLiouvilleComparison.FirstPathFlow.IsSolution (ExactLiouvilleComparison.ThirdPath.field P T hw)
+    (fun t => ExactLiouvilleComparison.ThirdPath.trajectory P T hw (↑s) t x) FsFltz.Geometry.parameterInterval

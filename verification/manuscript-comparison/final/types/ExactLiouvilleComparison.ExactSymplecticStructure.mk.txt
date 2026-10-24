@@ -1,0 +1,13 @@
+ExactLiouvilleComparison.ExactSymplecticStructure.mk : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (primitive :
+        @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+      (smooth_primitive :
+          @FsFltz.Geometry.SmoothManifold.IsSmoothForm d (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) M
+            primitive) →
+        (symplectic :
+            @FsFltz.Geometry.SmoothManifold.IsSymplecticOn d M
+              (@FsFltz.Geometry.SmoothManifold.exteriorDerivative d
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) M primitive)
+              (@Set.univ.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))) →
+          @ExactLiouvilleComparison.ExactSymplecticStructure d M

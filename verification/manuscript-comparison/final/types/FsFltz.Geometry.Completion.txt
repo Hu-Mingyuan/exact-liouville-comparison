@@ -1,0 +1,1 @@
+FsFltz.Geometry.Completion : {d : Nat} → (D : FsFltz.Geometry.LiouvilleDomain d) → Type 1

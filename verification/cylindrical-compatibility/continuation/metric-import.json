@@ -1,0 +1,129 @@
+{
+  "mission": "cb9ae06d-d834-411a-b819-c2ec3eb1ebc8",
+  "mission_revision": 1,
+  "objective": "86760810-08b9-4687-a4a9-37f6a45e361c",
+  "objective_revision": 1,
+  "integration_owner": "9997dc64-3871-4296-b839-1a516314042b",
+  "parent_mission": "deee4e3c-9772-491a-b842-98913f062983",
+  "publication": {
+    "operation_id": "4ba85729-8145-4d32-82de-31a3c9934176",
+    "artifact_id": "c8050360-5cba-4467-9d55-afecbdbb49b5",
+    "publication_id": "40c2fff1-931a-4862-b447-afba383424d7",
+    "forge_item_id": null,
+    "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+    "branch": "horizon/changes/4ba85729-8145-4d32-82de-31a3c9934176",
+    "base_commit_oid": "2af4981f20dc84e741473130e9c0d22545e4a17f",
+    "commit_oid": "7c9b105a42bf756c4a6ac5931fa6d42bbebd4334",
+    "verified_at": "2026-10-24T01:20:18.758469+00:00",
+    "verification": "git_tree_delta",
+    "scope": "Exact requested file operations, commit parent, and preservation of unchanged tree entries",
+    "changed_paths": [
+      "ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean",
+      "ExactLiouvilleComparison/CylindricalCompatibilityContactBundleStatement.lean",
+      "ExactLiouvilleComparison/CylindricalCompatibilityRelativeMetric.lean",
+      "ExactLiouvilleComparison/CylindricalCompatibilityRelativeMetricConsumers.lean",
+      "ExactLiouvilleComparison/CylindricalCompatibilityRelativeMetricStatement.lean",
+      "docs/cylindrical-compatibility-relative-metric-crosswalk.md",
+      "docs/cylindrical-compatibility-relative-metric-proof.md",
+      "scripts/verify-cylindrical-compatibility-relative-metric.py",
+      "verification/cylindrical-compatibility-relative-metric/CylindricalCompatibilityRelativeMetricAxioms.lean",
+      "verification/cylindrical-compatibility-relative-metric/CylindricalCompatibilityRelativeMetricInventory.lean",
+      "verification/cylindrical-compatibility-relative-metric/axioms.log",
+      "verification/cylindrical-compatibility-relative-metric/axioms.tsv",
+      "verification/cylindrical-compatibility-relative-metric/build.log",
+      "verification/cylindrical-compatibility-relative-metric/final-receipt.json",
+      "verification/cylindrical-compatibility-relative-metric/final-review.md",
+      "verification/cylindrical-compatibility-relative-metric/inputs.json",
+      "verification/cylindrical-compatibility-relative-metric/inventory.log",
+      "verification/cylindrical-compatibility-relative-metric/statement-build.log",
+      "verification/cylindrical-compatibility-relative-metric/statement-review.md",
+      "verification/cylindrical-compatibility-relative-metric/types.txt.gz.base64",
+      "verification/cylindrical-compatibility-relative-metric/types.txt.names"
+    ],
+    "lean_validation_included": false
+  },
+  "changed_source_sha256": {
+    "ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean": "2b276b85b2ad29cf340c78307027d53f668cdf4bae688bf8c526409324d72491",
+    "ExactLiouvilleComparison/CylindricalCompatibilityContactBundleStatement.lean": "59c11b065b1be054c67f04f1dde915b37373b54e8982101a1c15936df4e2262e",
+    "ExactLiouvilleComparison/CylindricalCompatibilityRelativeMetric.lean": "054f9ef2d0e4cd7a5de2139ffa2926e9221d43e7c9678bb3e4068a57f734f2ba",
+    "ExactLiouvilleComparison/CylindricalCompatibilityRelativeMetricConsumers.lean": "7af67cbca36e9aa599ae18381357c50606000f5ae828c58b902c9857e0a95fea",
+    "ExactLiouvilleComparison/CylindricalCompatibilityRelativeMetricStatement.lean": "23ca4b0455249007b02fd38690eb855606e5b9ae6789308291ee61af9527406b",
+    "docs/cylindrical-compatibility-relative-metric-crosswalk.md": "5ad74029d05e2c4e6cc8d86ddb9e0e0929f149f48b2ffe2bd030697e4ba1b31c",
+    "docs/cylindrical-compatibility-relative-metric-proof.md": "4300484899d5b490551103cc09bb7c5fdeaaba18cd1301b7e453188bbc00f63b",
+    "scripts/verify-cylindrical-compatibility-relative-metric.py": "a207946d244ec34a90eb6c90b16bc8836dd7422a568aae1af9e61424798a79bb",
+    "verification/cylindrical-compatibility-relative-metric/CylindricalCompatibilityRelativeMetricAxioms.lean": "fb31858668db5947643e3c89da637d410e325b663f8bb87aa174e82c7ac30248",
+    "verification/cylindrical-compatibility-relative-metric/CylindricalCompatibilityRelativeMetricInventory.lean": "d8ec5c4907b46759521b6afed19e829abbc5991ca33510835234b020e04ffcf5",
+    "verification/cylindrical-compatibility-relative-metric/axioms.log": "5fb5e6a48301bcac7fa6e36437867cf190ae849a2ffb2f2c75b6691f2f8a358e",
+    "verification/cylindrical-compatibility-relative-metric/axioms.tsv": "eea222d26b41f14936e1f3377daf46be09f9a99a1596ddb583577a7ff1c8dbf6",
+    "verification/cylindrical-compatibility-relative-metric/build.log": "6fbf164444d1249209a749446322217bd1494b683e8b509e53a6a607f5ebc450",
+    "verification/cylindrical-compatibility-relative-metric/final-receipt.json": "05b2b2731e6b63c91a70d631017ac38ef716bdeade9b819ae2425c99bbe360b6",
+    "verification/cylindrical-compatibility-relative-metric/final-review.md": "f0525ed15be8747bd972a8d0c4269202698ed162ddc8732ee321cd3251a3fef8",
+    "verification/cylindrical-compatibility-relative-metric/inputs.json": "ee5ff44db224a31cfa432093889a9b7358fe918e03989ed5a2d0636b20651490",
+    "verification/cylindrical-compatibility-relative-metric/inventory.log": "704424da2bffd05fa09640b8c4e18b958a9726d6009160369f96e90028999320",
+    "verification/cylindrical-compatibility-relative-metric/statement-build.log": "047b9ddaaf3a689d9da8a2756ef39eeefb03a15221d3c0c307766832ea95d7ca",
+    "verification/cylindrical-compatibility-relative-metric/statement-review.md": "933313802e213604e5adc384873bef9232dc357b60f9e02c502fd04d616880b9",
+    "verification/cylindrical-compatibility-relative-metric/types.txt.gz.base64": "060a6df334a8e2f7d59adc2fe7321aae4e6426c32ac54ef33b29703769fe25fa",
+    "verification/cylindrical-compatibility-relative-metric/types.txt.names": "660aedd620cb6bce7a87ef3c7e3ad6cdd96b68de5577de9bb9c3af67e8f30b32"
+  },
+  "unchanged_baseline_inputs": {
+    "repository": "31e09b7d-6080-4383-8e4e-92b14780690a",
+    "commit": "2af4981f20dc84e741473130e9c0d22545e4a17f",
+    "verified_inputs": {
+      "ExactLiouvilleComparison/CylindricalCompatibilityRelativeSection.lean": {
+        "blob_oid": "fd05aaeeb61d696bee30b840ac66bceb95a8ac23",
+        "sha256": "373eadd9496de297b3ffba8917d69812ea9a8ed844297bb5ec93a82038091218"
+      },
+      "ExactLiouvilleComparison/Geometry.lean": {
+        "blob_oid": "dc780dad2324196fb98aec2b49f1e8260f538158",
+        "sha256": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326"
+      },
+      "docs/objective.md": {
+        "blob_oid": "d25e1e58256842ba422143a0912960c9d1e86479",
+        "sha256": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8"
+      },
+      "docs/reference/exact_liouville_comparison.tex": {
+        "blob_oid": "cffdfc2bc63f86b88cd5d7fdb5edb47abe23ec3b",
+        "sha256": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576"
+      },
+      "lake-manifest.json": {
+        "blob_oid": "a7312e2343c78858b37a44b34b90499bbfea7bc0",
+        "sha256": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83"
+      },
+      "lakefile.toml": {
+        "blob_oid": "e20d3156e8c056af7e8cdfcbafab97de9c29c19a",
+        "sha256": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe"
+      },
+      "lean-toolchain": {
+        "blob_oid": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+        "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+      }
+    }
+  },
+  "checked_source_key": "ac2b3cbb42177fae530657b5d8dc9821816570c69ddec019376104c82c01a542",
+  "validation_artifact": "66bb6374-a0c6-4082-a69c-2ab37df22aec",
+  "final_review_artifact": "072e8976-d1b5-4fd7-bba9-f9df6c40f3ce",
+  "statement_review_artifact": "a34780aa-a260-4f61-a958-511ecc9f7898",
+  "proof_endpoints": [
+    "ExactLiouvilleComparison.CylindricalCompatibility.RelativeMetric.relativeMetric",
+    "ExactLiouvilleComparison.CylindricalCompatibility.RelativeMetric.spdMetric",
+    "ExactLiouvilleComparison.CylindricalCompatibility.RelativeMetric.exists_relative_metric",
+    "ExactLiouvilleComparison.CylindricalCompatibility.RelativeMetric.ofSPD",
+    "ExactLiouvilleComparison.CylindricalCompatibility.RelativeMetric.ofSPD_inner",
+    "ExactLiouvilleComparison.CylindricalCompatibility.RelativeMetric.spd_unitBall_bounded"
+  ],
+  "validation": {
+    "three_checks_snapshot_verified": true,
+    "common_source_key": true,
+    "declarations": 129,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "independent_final_review": "ACCEPT"
+  },
+  "integration_instructions": "Import ExactLiouvilleComparison.CylindricalCompatibilityRelativeMetric. Use exists_relative_metric for closed K in open U; use ofSPD and ofSPD_inner for the parent final globally smooth SPD omega(.,J.) field. Integrate the scoped new-file delta from the exact commit, preserving concurrent parent work. Two reused ContactBundle files are exact c245b3 source; if already integrated, check hashes instead of overwriting a newer parent version. No shared Geometry, parent RelativeSection, manuscript or pinned dependency changes are required.",
+  "remaining_parent_scope": "Actual end J transport, end metric/form pairing, normalization application, final g=omega(.,J.), cylindrical existence and extension, and final comparison consumers remain owned by the parent. This child does not close the parent mission or global phase.",
+  "proof_route_correction": "Control notice121e82b4 authorized reuse of already published native generic chart metrics; exact specialization and PositiveMetric-to-SPD bridge replace duplicate local construction. All mission criteria preserved.",
+  "publication_policy": "Private Forgejo only; no GitHub or final packaging."
+}

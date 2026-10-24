@@ -1,0 +1,416 @@
+{
+  "adapter": {
+    "source_bindings": 3902,
+    "audited_declarations": 123,
+    "definition_bodies": 53,
+    "axiom_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "checks": [
+      {
+        "command": [
+          "horizon-lean-check",
+          "ExactLiouvilleComparison.FiniteTypePresentationConsumers"
+        ],
+        "managed": {
+          "cache": "local",
+          "command": [
+            "lake",
+            "build",
+            "ExactLiouvilleComparison.FiniteTypePresentationConsumers"
+          ],
+          "cwd": "/var/lib/archon-worker/workspaces/assignments/57837227-ce81-4390-a06d-88075fd4d5e7",
+          "duration_seconds": 7.474,
+          "error": null,
+          "failure": null,
+          "lean_file": null,
+          "mode": "lake",
+          "ok": true,
+          "probe": false,
+          "repeated_deferred": false,
+          "returncode": 0,
+          "snapshot_verified": true,
+          "source_key": "2b675e79355f5670dde8072ee1cddf0d156fd6072535d301c4f534ea6ed082f7",
+          "status": "passed",
+          "targets": [
+            "ExactLiouvilleComparison.FiniteTypePresentationConsumers"
+          ],
+          "timings": {
+            "build_seconds": 5.113,
+            "engine_seconds": 7.4744295539985615,
+            "preparation_seconds": 0.04379512500054261,
+            "prepare_seconds": 0.0,
+            "source_fingerprint_seconds": 0.1694103379977605,
+            "total_seconds": 7.687691402999917,
+            "wait_seconds": 0.0
+          },
+          "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+        }
+      },
+      {
+        "command": [
+          "horizon-lean-check",
+          "--lean",
+          "verification/finite-type-presentation/Audit.lean"
+        ],
+        "managed": {
+          "cache": "local",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "/var/lib/archon-worker/workspaces/assignments/57837227-ce81-4390-a06d-88075fd4d5e7/verification/finite-type-presentation/Audit.lean"
+          ],
+          "cwd": "/var/lib/archon-worker/workspaces/assignments/57837227-ce81-4390-a06d-88075fd4d5e7",
+          "duration_seconds": 45.055,
+          "error": null,
+          "failure": null,
+          "lean_file": "verification/finite-type-presentation/Audit.lean",
+          "mode": "lean",
+          "ok": true,
+          "probe": false,
+          "repeated_deferred": false,
+          "returncode": 0,
+          "snapshot_verified": true,
+          "source_key": "2b675e79355f5670dde8072ee1cddf0d156fd6072535d301c4f534ea6ed082f7",
+          "status": "passed",
+          "targets": [],
+          "timings": {
+            "build_seconds": 45.054,
+            "engine_seconds": 45.05545173500104,
+            "preparation_seconds": 0.04158227299922146,
+            "prepare_seconds": 0.0,
+            "source_fingerprint_seconds": 0.18345264899835456,
+            "total_seconds": 45.280559512000764,
+            "wait_seconds": 0.0
+          },
+          "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+        }
+      },
+      {
+        "command": [
+          "horizon-lean-check",
+          "--lean",
+          "ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean"
+        ],
+        "managed": {
+          "cache": "local",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "/var/lib/archon-worker/workspaces/assignments/57837227-ce81-4390-a06d-88075fd4d5e7/ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean"
+          ],
+          "cwd": "/var/lib/archon-worker/workspaces/assignments/57837227-ce81-4390-a06d-88075fd4d5e7",
+          "duration_seconds": 3.74,
+          "error": null,
+          "failure": null,
+          "lean_file": "ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean",
+          "mode": "lean",
+          "ok": true,
+          "probe": false,
+          "repeated_deferred": false,
+          "returncode": 0,
+          "snapshot_verified": true,
+          "source_key": "2b675e79355f5670dde8072ee1cddf0d156fd6072535d301c4f534ea6ed082f7",
+          "status": "passed",
+          "targets": [],
+          "timings": {
+            "build_seconds": 3.738,
+            "engine_seconds": 3.7397831130001578,
+            "preparation_seconds": 0.04065639799955534,
+            "prepare_seconds": 0.0,
+            "source_fingerprint_seconds": 0.1569051030000992,
+            "total_seconds": 3.937408611000137,
+            "wait_seconds": 0.0
+          },
+          "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+        }
+      }
+    ],
+    "receipt_sha256": "9cd0bbb89ebe2bb902f363323474b0f05db452ece06df5bb2d5c816c5f6c5de6"
+  },
+  "assembly": {
+    "source_bindings": 383,
+    "audited_declarations": 119,
+    "definition_bodies": 46,
+    "axiom_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "checks": [
+      {
+        "command": [
+          "horizon-lean-check",
+          "ExactLiouvilleComparison.ManuscriptComparisonConsumers"
+        ],
+        "managed": {
+          "cache": "local",
+          "command": [
+            "lake",
+            "build",
+            "ExactLiouvilleComparison.ManuscriptComparisonConsumers"
+          ],
+          "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a",
+          "duration_seconds": 2.145,
+          "error": null,
+          "failure": null,
+          "lean_file": null,
+          "mode": "lake",
+          "ok": true,
+          "probe": false,
+          "repeated_deferred": false,
+          "returncode": 0,
+          "snapshot_verified": true,
+          "source_key": "4840c779fdd4be2ee441da0ea97e682adec6eb82d4d9eadf647d5c4d1deab854",
+          "status": "passed",
+          "targets": [
+            "ExactLiouvilleComparison.ManuscriptComparisonConsumers"
+          ],
+          "timings": {
+            "build_seconds": 0.0,
+            "engine_seconds": 2.1452845089997936,
+            "preparation_seconds": 0.05853597100031038,
+            "prepare_seconds": 0.0,
+            "source_fingerprint_seconds": 0.16698542699941754,
+            "total_seconds": 2.37087520499972,
+            "wait_seconds": 0.0
+          },
+          "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+        }
+      },
+      {
+        "command": [
+          "horizon-lean-check",
+          "--lean",
+          "verification/manuscript-comparison/Audit.lean"
+        ],
+        "managed": {
+          "cache": "local",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/verification/manuscript-comparison/Audit.lean"
+          ],
+          "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a",
+          "duration_seconds": 17.182,
+          "error": null,
+          "failure": null,
+          "lean_file": "verification/manuscript-comparison/Audit.lean",
+          "mode": "lean",
+          "ok": true,
+          "probe": false,
+          "repeated_deferred": false,
+          "returncode": 0,
+          "snapshot_verified": true,
+          "source_key": "4840c779fdd4be2ee441da0ea97e682adec6eb82d4d9eadf647d5c4d1deab854",
+          "status": "passed",
+          "targets": [],
+          "timings": {
+            "build_seconds": 17.181,
+            "engine_seconds": 17.182613805000074,
+            "preparation_seconds": 0.04046099900006084,
+            "prepare_seconds": 0.0,
+            "source_fingerprint_seconds": 0.1597290569998222,
+            "total_seconds": 17.382866678000028,
+            "wait_seconds": 0.0
+          },
+          "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+        }
+      },
+      {
+        "command": [
+          "horizon-lean-check",
+          "--lean",
+          "ExactLiouvilleComparison/ManuscriptComparisonConsumers.lean"
+        ],
+        "managed": {
+          "cache": "local",
+          "command": [
+            "lake",
+            "env",
+            "lean",
+            "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/ExactLiouvilleComparison/ManuscriptComparisonConsumers.lean"
+          ],
+          "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a",
+          "duration_seconds": 3.756,
+          "error": null,
+          "failure": null,
+          "lean_file": "ExactLiouvilleComparison/ManuscriptComparisonConsumers.lean",
+          "mode": "lean",
+          "ok": true,
+          "probe": false,
+          "repeated_deferred": false,
+          "returncode": 0,
+          "snapshot_verified": true,
+          "source_key": "4840c779fdd4be2ee441da0ea97e682adec6eb82d4d9eadf647d5c4d1deab854",
+          "status": "passed",
+          "targets": [],
+          "timings": {
+            "build_seconds": 3.755,
+            "engine_seconds": 3.7562826430003042,
+            "preparation_seconds": 0.040766713000266463,
+            "prepare_seconds": 0.0,
+            "source_fingerprint_seconds": 0.16815904200029763,
+            "total_seconds": 3.96528982000018,
+            "wait_seconds": 0.0
+          },
+          "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+        }
+      }
+    ],
+    "receipt_sha256": "95a49b0bfbf0e0cbe398ba49c976c8d63bbcc5d34eeb724a034e485876414d11"
+  },
+  "preserved_base_bindings": 362,
+  "archive_members": 185,
+  "adapter_imports": 3853,
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "proof_source": "7fafdc3c53d58d2b4357c6e798d30b2469455781",
+  "accepted_source": "94da2d773b528be72576f71d95ac1dd8ff720cbf",
+  "preserved_comparison_base": "a2bc048aa4b718217b2dc414106ab4d5d14a3c70",
+  "targeted_readback": {
+    "docs/finite-type-presentation-handoff.md": {
+      "sha256": "5a135d6645f72c580b160b8faf7b42282f30bbc0fece3b51371f07cd0560fb88",
+      "bytes": 4887
+    },
+    "docs/finite-type-presentation-crosswalk.md": {
+      "sha256": "bb974415f900333d6f185342b3febfb638cef1aabfa427b43519be36988cc092",
+      "bytes": 8611
+    },
+    "ExactLiouvilleComparison/FiniteTypePresentation.lean": {
+      "sha256": "a9269d25d698f9265bedebb8bb97c9605b486cd169f766302424682252c8ad01",
+      "bytes": 4838
+    },
+    "ExactLiouvilleComparison/Statement.lean": {
+      "sha256": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+      "bytes": 9880
+    },
+    "ExactLiouvilleComparison/FiniteTypeComparison.lean": {
+      "sha256": "68910a4ecf2f6a6fe1750abb097bc6e47ef24ce849ee8c16f2f9fb82f0ff36d5",
+      "bytes": 3091
+    },
+    "ExactLiouvilleComparison/ManuscriptComparison.lean": {
+      "sha256": "8cdce5ebc889aa5a796ac158817677f24bc63d824857353940d84574e2eee060",
+      "bytes": 897
+    },
+    "ExactLiouvilleComparison/MainComparison.lean": {
+      "sha256": "cb00802192436e1c4bd1672bfa6b56814e1a4ae776686598c909f323c992709e",
+      "bytes": 5177
+    },
+    "ExactLiouvilleComparison/ManuscriptComparisonConsumers.lean": {
+      "sha256": "ed5ccd76a5adfcc865f90043db87ac49184a593bff2e3f7dc635ac0cd60f0cec",
+      "bytes": 4012
+    },
+    "ExactLiouvilleComparison/SteinComparison.lean": {
+      "sha256": "6f1cf4fab120e3dfd1822f52776e147c02787c6472c3bc5b4c13dc739da3feb6",
+      "bytes": 4147
+    },
+    "ExactLiouvilleComparison/FiniteTypePresentationStatement.lean": {
+      "sha256": "1c0a143611518562a99d2de11002165cc19905ca25e10cb873aaf7b7691cbc0d",
+      "bytes": 8146
+    },
+    "ExactLiouvilleComparison/Geometry.lean": {
+      "sha256": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+      "bytes": 7929
+    },
+    "ExactLiouvilleComparison/CommonReferenceComparison.lean": {
+      "sha256": "163666997ab72a8595036234277101af1b44bb82d020f8c3eae2ca46c8918656",
+      "bytes": 1289
+    },
+    "ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean": {
+      "sha256": "2b6f4931ba44b7e15e1c5c0abee8d6b2b4bf9da244e2e7e60190255ebf44b9f7",
+      "bytes": 5942
+    },
+    "docs/reference/exact_liouville_comparison.tex": {
+      "sha256": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+      "bytes": 21068
+    },
+    "verification/finite-type-presentation/final-review.md": {
+      "sha256": "120097a44527fa851adaa47c2b50826c9508fab00ab085b4d7499f1ce78c3a90",
+      "bytes": 9116
+    },
+    "verification/finite-type-presentation/base-bindings.json": {
+      "sha256": "25c093085fc8fd377d4005811ad36590b402b2a8828bb7312943edc93c21c9cc",
+      "bytes": 43192
+    },
+    "verification/finite-type-presentation/statement-hashes.json": {
+      "sha256": "55e1b97d41a01bccf7909c4b12e6cc4e61f59af54b1943ca08dd3a79c00b5ba3",
+      "bytes": 254
+    },
+    "verification/finite-type-presentation/statement-review.md": {
+      "sha256": "84fc5d7ee40e6fea9268d3a6466e5533f12f77b22900fda47a7666e7892082a5",
+      "bytes": 7114
+    },
+    "verification/finite-type-presentation/audit-archive.json": {
+      "sha256": "d729a5268cac0674781d7dd865ace252e63f0cb90613013e529fb974bf942684",
+      "bytes": 28595
+    },
+    "verification/manuscript-comparison/final-review.md": {
+      "sha256": "9be97b11d8103461d7815228aa90c110fd6a374577f7fa37c249e046537b30f1",
+      "bytes": 15876
+    },
+    "verification/manuscript-comparison/final/receipt.json": {
+      "sha256": "95a49b0bfbf0e0cbe398ba49c976c8d63bbcc5d34eeb724a034e485876414d11",
+      "bytes": 113493
+    },
+    "verification/finite-type-presentation/final/receipt.json.gz": {
+      "sha256": "a0ede8a51688f646e1cdfd4866ad82383d0c69a89423b8dc1d660d092265911e",
+      "bytes": 426217
+    }
+  },
+  "head_recheck": {
+    "time_utc": "2026-10-23T23:52:31.092494+00:00",
+    "heads": {
+      "horizon/changes/33762d5b-f220-46bd-b170-30fb59066356": {
+        "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+        "branch": "horizon/changes/33762d5b-f220-46bd-b170-30fb59066356",
+        "commit_oid": "94da2d773b528be72576f71d95ac1dd8ff720cbf"
+      },
+      "horizon/changes/0c107de4-e292-4d2b-9749-39cadc372f34": {
+        "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+        "branch": "horizon/changes/0c107de4-e292-4d2b-9749-39cadc372f34",
+        "commit_oid": "7fafdc3c53d58d2b4357c6e798d30b2469455781"
+      },
+      "horizon/changes/10d75671-996d-4d7f-a160-ab48229661a3": {
+        "repository_id": "31e09b7d-6080-4383-8e4e-92b14780690a",
+        "branch": "horizon/changes/10d75671-996d-4d7f-a160-ab48229661a3",
+        "commit_oid": "a2bc048aa4b718217b2dc414106ab4d5d14a3c70"
+      }
+    }
+  },
+  "decision": "ACCEPT combined comparison proofs and native adapter at exact source; WITHHOLD full requested Lean/phase acceptance pending restored cylindrical-J existence and prescribed-end extension",
+  "superseded_artifacts": [
+    "7d2ca617-28e7-4b62-9bec-84c65256630e",
+    "b63d1300-ef2e-4547-93cc-5d8a2b6c82ff"
+  ],
+  "mission_correction": {
+    "notice": "3ab62656-6913-4d8d-9291-128c7cd602a3",
+    "reason": "New explicit user directive restores supporting J work; earlier cancellation interpreted a mathematical question as scope reduction",
+    "original_mission": "deee4e3c-9772-491a-b842-98913f062983",
+    "reopen_operation": "259eaee9-a81a-49b7-ad97-c6f4b5a6395f",
+    "original_author": "91d5e34d-1b8e-44f9-9c24-377fb7b7f87d",
+    "continuation_owner": "9997dc64-3871-4296-b839-1a516314042b",
+    "execution": "cb92b158-b2b0-409d-b8a9-a45f75c031d4",
+    "status": "running",
+    "start_utc": "2026-10-23T23:55:04.111175+00:00",
+    "heartbeat_utc": "2026-10-23T23:55:34.281282+00:00",
+    "root": "91f6a7c7-1eb9-4e2c-bb7e-39389d62ea18",
+    "successor": "22d7c3b2-83c5-4053-b760-ea9942fe1722"
+  },
+  "final_head_recheck_utc": "2026-10-23T23:56:06.150458+00:00"
+}

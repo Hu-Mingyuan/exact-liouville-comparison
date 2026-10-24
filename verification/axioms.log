@@ -1,0 +1,31 @@
+'ExactLiouvilleComparison.CompatibleStructure.tangent_norm_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.covector_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.flatLinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.flatLinear_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.flatEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.inverseContraction_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.CompatibleStructure.inverseNorm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.completePrimitive_preserves_flow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.completePrimitive_positive_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.radial_quantity_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.MainTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CommonReferenceTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.CompleteLiouvilleComparisonTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FiniteTypeTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.SteinTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.SteinReferenceConstructionTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.PackagedSteinTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.steinTarget_of_construction_and_packaged' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.steinTarget_requires_construction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ManuscriptTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/AxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334", "duration_seconds": 2.843, "error": null, "failure": null, "lean_file": "verification/AxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "dac4d6fcb45086bcd411de1eb19f75aaaa63a08e4d1e0fedf2d0c8b702f19957", "status": "passed", "targets": [], "timings": {"build_seconds": 2.841, "engine_seconds": 2.842863763999958, "preparation_seconds": 0.04001162300028227, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.17215021000038178, "total_seconds": 3.0550957340001332, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

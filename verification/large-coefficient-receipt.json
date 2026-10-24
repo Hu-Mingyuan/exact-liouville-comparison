@@ -1,0 +1,471 @@
+{
+  "scope": "Bounded Mn/A/Aproperties construction for an arbitrary smooth primitive; no flow, comparison theorem or phase acceptance.",
+  "base": {
+    "semantic_commit": "46fccea69cb9524882bbeda83b0ac2067d22a149",
+    "semantic_review_artifact": "8930b2e3-ab88-498e-8a6f-d3f732fa8f95",
+    "source_base": "4bb94fa4a3d5f42b4107846cd2f9adb0758385d6",
+    "source_base_publication": "eba431ff-eb36-4d19-ba6d-d95ebb959ac4",
+    "repository_id": "fe83a2bb-5147-4bfd-b750-19b11c583d74",
+    "method": "Exact-commit repository-file API read and byte comparison; unauthenticated Git clone was unavailable. Isolated local git snapshot is a build workspace, not accepted or published history.",
+    "unchanged_sha256": {
+      "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+      "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+      "ExactLiouvilleComparison.lean": "969541ba18a27f912c1210658dd71f9ea6cbd4ab6b0fe7e8218b6bfa7f368144",
+      "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+      "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+      "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "docs/objective.md": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8",
+      "docs/definition-comparison.md": "1a9591add277079f3b8d294b20336502ccca73157a5137f5e9876af6a511b399",
+      "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+      "ExactLiouvilleComparison/SmallCoefficient.lean": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+      "ExactLiouvilleComparison/SmallCoefficientK.lean": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769"
+    },
+    "scalar_attribution_mission": "f013dab4-6ac4-406e-b524-a18c0db7f73a",
+    "radial_attribution_mission": "b52749be-7471-4774-92ed-7c623614bbee"
+  },
+  "source_sha256": {
+    "ExactLiouvilleComparison/LargeCoefficient.lean": "e07ab91f6341bcee9e67127424167c9689c9c24f96d8df2ba00ec03a197c0ff8",
+    "ExactLiouvilleComparison/LargeCoefficientNorm.lean": "fc1900c9fc9230508344d7e4c389c500ec4d5f2c6d74adaf1a96a950b6efbe46",
+    "ExactLiouvilleComparison/LargeCoefficientSeries.lean": "42d9e8a7113fedc34b77fc2fd55649d0e83a54d332ffb8eec5e50dcb277a3094",
+    "ExactLiouvilleComparison/SmallCoefficient.lean": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+    "ExactLiouvilleComparison/SmallCoefficientK.lean": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769",
+    "verification/LargeCoefficientConsumer.lean": "6b174b4157a47a931c790d5e8bb9b1c9a6c55313d406209cd85d378ee20d757a",
+    "verification/LargeCoefficientAxiomAudit.lean": "ca881ff69f61864ff7eb396c5c073d2dbf5026cea081367fd1eaf1a6a819dba0",
+    "verification/LargeCoefficientTypes.lean": "a6a455c24d8440d3357f52682b1af2ede3e01a4412b3dbe04e1c4036fae612f0",
+    "verification/LargeCoefficientCrosswalk.md": "5abbff8202f90c398b96a1d69d38dc5f74929ce6e4ef2fb1bd0949dac104a985",
+    "verification/large-coefficient-base.json": "eb0e3399873f7a6e96a52cb7d476df235681f625774f3ee70db753dfeb37a502",
+    "scripts/verify-large-coefficient.py": "7973851f60865903b31f529f11d38e1f8c8f4416c49495542eda3273dad1800d",
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.LargeCoefficient"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.LargeCoefficient"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 1.968,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "13ad9e6782d475b70704bef1285dd825cc14de539f18c77f0d16dd4b42374c89",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.LargeCoefficient"
+        ],
+        "timings": {
+          "build_seconds": 0.0,
+          "engine_seconds": 1.968044256000212,
+          "preparation_seconds": 0.04021392799950263,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.1684698489989387,
+          "total_seconds": 2.176777003999632,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/LargeCoefficientConsumer.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/LargeCoefficientConsumer.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 3.041,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/LargeCoefficientConsumer.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "13ad9e6782d475b70704bef1285dd825cc14de539f18c77f0d16dd4b42374c89",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 3.039,
+          "engine_seconds": 3.0408555579997483,
+          "preparation_seconds": 0.03683511899998848,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.23226216900002328,
+          "total_seconds": 3.3100235510000857,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_types": [
+        "ExactLiouvilleComparison.LargeCoefficientChecks.arbitrary_primitive",
+        "ExactLiouvilleComparison.LargeCoefficientChecks.interpolation_endpoints",
+        "ExactLiouvilleComparison.LargeCoefficientChecks.empty_manifold_levels"
+      ],
+      "declarations": {
+        "ExactLiouvilleComparison.LargeCoefficientChecks.arbitrary_primitive": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficientChecks.interpolation_endpoints": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficientChecks.empty_manifold_levels": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/LargeCoefficientTypes.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/LargeCoefficientTypes.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 3.285,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/LargeCoefficientTypes.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "13ad9e6782d475b70704bef1285dd825cc14de539f18c77f0d16dd4b42374c89",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 3.282,
+          "engine_seconds": 3.285689889000423,
+          "preparation_seconds": 0.07065005099957489,
+          "prepare_seconds": 0.001,
+          "source_fingerprint_seconds": 0.23759757399875525,
+          "total_seconds": 3.5940324709999913,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_types": [
+        "ExactLiouvilleComparison.LargeCoefficient.oneCovector",
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm",
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm_locally_bounded",
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm_bddAbove_on_compact",
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel",
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel_compact",
+        "ExactLiouvilleComparison.LargeCoefficient.levels",
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel_norm_bddAbove",
+        "ExactLiouvilleComparison.LargeCoefficient.levels_empty",
+        "ExactLiouvilleComparison.LargeCoefficient.levels_mono",
+        "ExactLiouvilleComparison.LargeCoefficient.A",
+        "ExactLiouvilleComparison.LargeCoefficient.A_formula",
+        "ExactLiouvilleComparison.LargeCoefficient.A_locally_finite",
+        "ExactLiouvilleComparison.LargeCoefficient.coefficient_properties",
+        "ExactLiouvilleComparison.LargeCoefficient.k_le_A",
+        "ExactLiouvilleComparison.LargeCoefficient.coefficient_properties"
+      ],
+      "declarations": {}
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/LargeCoefficientAxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334/verification/LargeCoefficientAxiomAudit.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/05f12d87-cb78-4af9-97d3-acef5ae50334",
+        "duration_seconds": 2.614,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/LargeCoefficientAxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "13ad9e6782d475b70704bef1285dd825cc14de539f18c77f0d16dd4b42374c89",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.613,
+          "engine_seconds": 2.6144220210007916,
+          "preparation_seconds": 0.04082467399985035,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.15589158299917472,
+          "total_seconds": 2.811192060999929,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_types": [],
+      "declarations": {
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel_compact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel_mono": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.levels": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.sublevel_norm_bddAbove": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.one_le_levels": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.levels_empty": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.levels_mono": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.norm_le_levels": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_formula": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_locally_finite": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_core": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_monotone": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_deriv_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.one_le_A": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_radial_pos": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.A_dominates": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.k_le_A": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.coefficient_properties": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.oneCovector": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.oneCovector_apply": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm_locally_bounded": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.formNorm_bddAbove_on_compact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.stepTerm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.stepTerm_zero": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_eq_sum": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_locally_finite": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.stepTerm_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_eq_core": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.stepTerm_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_ge_zero_term": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_monotone": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_deriv_nonneg": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_radial_pos": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.LargeCoefficient.series_ge_level": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+import ExactLiouvilleComparison.MoserRegularityStatement
+set_option pp.universes true
+set_option pp.explicit true
+set_option pp.proofs false
+#print ExactLiouvilleComparison.MoserRegularity.NativeJoint
+#print ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget
+#print ExactLiouvilleComparison.MoserRegularity.FirstTarget
+#print ExactLiouvilleComparison.MoserRegularity.InterpolationTarget
+#print ExactLiouvilleComparison.MoserRegularity.firstField
+#print ExactLiouvilleComparison.MoserRegularity.interpolationField
+#print ExactLiouvilleComparison.MoserRegularity.barrierRate

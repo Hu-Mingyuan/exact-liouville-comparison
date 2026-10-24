@@ -1,0 +1,1 @@
+FsFltz.Geometry.SmoothManifold.SmoothEmbedding : {d e : Nat} → (M : FsFltz.Geometry.SmoothManifold d) → (N : FsFltz.Geometry.SmoothManifold e) → Type

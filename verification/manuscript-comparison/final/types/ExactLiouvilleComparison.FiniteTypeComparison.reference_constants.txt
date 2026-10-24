@@ -1,0 +1,20 @@
+ExactLiouvilleComparison.FiniteTypeComparison.reference_constants : ∀ {d : Nat} {D : FsFltz.Geometry.LiouvilleDomain d} (C : @FsFltz.Geometry.Completion d D)
+  (A :
+    @ExactLiouvilleComparison.CompatibleStructure d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.completionReference d D C))
+  (cyl : @ExactLiouvilleComparison.CylindricalStructure d D C A),
+  And
+    (@Eq.{1} Real
+      (@ExactLiouvilleComparison.RadialReference.c d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.FiniteTypeRadial.reference d D C A cyl))
+      (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+    (@Eq.{1} Real
+      (@ExactLiouvilleComparison.RadialReference.rstar d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.FiniteTypeRadial.reference d D C A cyl))
+      (@OfNat.ofNat.{0} Real (nat_lit 2)
+        (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+          (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+            (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))))))

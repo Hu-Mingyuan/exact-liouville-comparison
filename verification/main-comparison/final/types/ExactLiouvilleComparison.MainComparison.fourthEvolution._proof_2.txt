@@ -1,0 +1,8 @@
+ExactLiouvilleComparison.MainComparison.fourthEvolution._proof_2 : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d} (P : @ExactLiouvilleComparison.RadialReference d M)
+  (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M),
+  @Filter.Tendsto.{0, 0} Real Real
+    (fun (r : Real) =>
+      @HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) r
+        (@ExactLiouvilleComparison.RadialCoefficient.rho (@ExactLiouvilleComparison.RadialReference.rstar d M P)
+          (@ExactLiouvilleComparison.RadialInterpolationFlow.oneCoefficient d M P) r))
+    (@Filter.atTop.{0} Real Real.instPreorder) (@Filter.atTop.{0} Real Real.instPreorder)

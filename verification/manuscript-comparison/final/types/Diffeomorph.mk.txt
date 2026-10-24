@@ -1,0 +1,50 @@
+Diffeomorph.mk : {𝕜 : Type u_1} →
+  [inst : NontriviallyNormedField.{u_1} 𝕜] →
+    {E : Type u_2} →
+      [inst_1 : NormedAddCommGroup.{u_2} E] →
+        [inst_2 :
+            @NormedSpace.{u_1, u_2} 𝕜 E (@NontriviallyNormedField.toNormedField.{u_1} 𝕜 inst)
+              (@NormedAddCommGroup.toSeminormedAddCommGroup.{u_2} E inst_1)] →
+          {E' : Type u_3} →
+            [inst_3 : NormedAddCommGroup.{u_3} E'] →
+              [inst_4 :
+                  @NormedSpace.{u_1, u_3} 𝕜 E' (@NontriviallyNormedField.toNormedField.{u_1} 𝕜 inst)
+                    (@NormedAddCommGroup.toSeminormedAddCommGroup.{u_3} E' inst_3)] →
+                {H : Type u_5} →
+                  [inst_5 : TopologicalSpace.{u_5} H] →
+                    {H' : Type u_6} →
+                      [inst_6 : TopologicalSpace.{u_6} H'] →
+                        {I : @ModelWithCorners.{u_1, u_2, u_5} 𝕜 inst E inst_1 inst_2 H inst_5} →
+                          {I' : @ModelWithCorners.{u_1, u_3, u_6} 𝕜 inst E' inst_3 inst_4 H' inst_6} →
+                            {M : Type u_9} →
+                              [inst_7 : TopologicalSpace.{u_9} M] →
+                                [inst_8 : @ChartedSpace.{u_5, u_9} H inst_5 M inst_7] →
+                                  {M' : Type u_10} →
+                                    [inst_9 : TopologicalSpace.{u_10} M'] →
+                                      [inst_10 : @ChartedSpace.{u_6, u_10} H' inst_6 M' inst_9] →
+                                        {n : WithTop.{0} ENat} →
+                                          (toEquiv : Equiv.{u_9 + 1, u_10 + 1} M M') →
+                                            (contMDiff_toFun :
+                                                @ContMDiff.{u_1, u_2, u_5, u_9, u_3, u_6, u_10} 𝕜 inst E inst_1 inst_2 H
+                                                  inst_5 I M inst_7 inst_8 E' inst_3 inst_4 H' inst_6 I' M' inst_9
+                                                  inst_10 n
+                                                  (@DFunLike.coe.{max (u_10 + 1) (u_9 + 1), u_9 + 1, u_10 + 1}
+                                                    (Equiv.{u_9 + 1, u_10 + 1} M M') M (fun (x : M) => M')
+                                                    (@EquivLike.toFunLike.{max (u_10 + 1) (u_9 + 1), u_9 + 1, u_10 + 1}
+                                                      (Equiv.{u_9 + 1, u_10 + 1} M M') M M'
+                                                      (@Equiv.instEquivLike.{u_9 + 1, u_10 + 1} M M'))
+                                                    toEquiv)) →
+                                              (contMDiff_invFun :
+                                                  @ContMDiff.{u_1, u_3, u_6, u_10, u_2, u_5, u_9} 𝕜 inst E' inst_3
+                                                    inst_4 H' inst_6 I' M' inst_9 inst_10 E inst_1 inst_2 H inst_5 I M
+                                                    inst_7 inst_8 n
+                                                    (@DFunLike.coe.{max (u_10 + 1) (u_9 + 1), u_10 + 1, u_9 + 1}
+                                                      (Equiv.{u_10 + 1, u_9 + 1} M' M) M' (fun (x : M') => M)
+                                                      (@EquivLike.toFunLike.{max (u_10 + 1) (u_9 + 1), u_10 + 1,
+                                                            u_9 + 1}
+                                                        (Equiv.{u_10 + 1, u_9 + 1} M' M) M' M
+                                                        (@Equiv.instEquivLike.{u_10 + 1, u_9 + 1} M' M))
+                                                      (@Equiv.symm.{u_9 + 1, u_10 + 1} M M' toEquiv))) →
+                                                @Diffeomorph.{u_1, u_2, u_3, u_5, u_6, u_9, u_10} 𝕜 inst E inst_1 inst_2
+                                                  E' inst_3 inst_4 H inst_5 H' inst_6 I I' M inst_7 inst_8 M' inst_9
+                                                  inst_10 n

@@ -1,0 +1,27 @@
+{
+  "reviewed_source_commit": "fc62cb8cd481691b773d92dd2ef47a6eca6434c3",
+  "publication_id": "018eadf8-81ed-4318-9858-2872dfd85013",
+  "independent_maintenance_assignment": "a3d1745c-b8cb-4524-9a47-3212a9534462",
+  "independent_maintenance_mission": "7b94c465-2432-4756-b23e-70e6a4d54ac0",
+  "integration_assignment": "05f12d87-cb78-4af9-97d3-acef5ae50334",
+  "integration_mission": "35518290-ed35-47a8-a227-c5d55b1c117f",
+  "status": "completed: changes_requested; gate not accepted",
+  "open_external_access": null,
+  "review_artifact_id": "53281a78-30ff-48c0-b61f-ceebc1718d9e",
+  "access_resolution": "Exact local archive inspected; verification/cluster-access.json",
+  "wake_condition_historical": {
+    "version": 1,
+    "expression": {
+      "op": "status_in",
+      "target": {
+        "kind": "assignment",
+        "id": "a3d1745c-b8cb-4524-9a47-3212a9534462"
+      },
+      "values": [
+        "completed",
+        "failed",
+        "cancelled"
+      ]
+    }
+  }
+}

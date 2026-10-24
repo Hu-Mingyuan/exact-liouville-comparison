@@ -1,0 +1,23 @@
+{
+  "kind": "supplemental native mathematical source review",
+  "reviewer": "/root/scalar_review",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "finding": "No mathematical defect found within the declared scalar scope.",
+  "checks": [
+    "Arbitrary accepted AdmissibleGrowth 1, without global extension or stronger growth",
+    "Continuous max extension used only for FTC; smoothness derived on the original ray",
+    "Actual interval integrals and exact pinned manuscript cutoff",
+    "Endpoint derivatives, m positivity including chi=1, one positive tail constant and both limits",
+    "Same growth witness, constant and compact exception retained by the consumer"
+  ],
+  "limitation": "Supplemental source review, not formal maintainer acceptance or an independent build/axiom receipt. Existing accepted semantic gate remains unchanged.",
+  "final_supplement": "Consumer differs from initially reviewed bytes only by appended audit commands and completion marker; reviewer verified final hash.",
+  "source_sha256": {
+    "verification/SmallCoefficientCrosswalk.md": "85d651fd4707efd69d2a98aef7719525e542ce2b994245dd9ae39301040df008",
+    "ExactLiouvilleComparison/SmallCoefficient.lean": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+    "ExactLiouvilleComparison/SmallCoefficientK.lean": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769",
+    "ExactLiouvilleComparison/SmallCoefficientAsymptotic.lean": "3a0ce24020ac34baffa2caffae906cc675081ae752ae9bdc87988b1d571f339b",
+    "verification/SmallCoefficientConsumer.lean": "a8609d6085ce60d879729e14e5a54d0723afed89c59c9775a19e5dbd9edc0dbd"
+  }
+}

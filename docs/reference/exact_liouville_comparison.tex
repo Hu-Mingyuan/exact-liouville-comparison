@@ -1,0 +1,472 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=27mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+\hypersetup{pdftitle={Exact comparison of Liouville forms under weak taming},pdfsubject={A radial Moser criterion with finite-type and Stein applications}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\numberwithin{equation}{section}
+\setlist[enumerate]{itemsep=3pt,topsep=5pt,leftmargin=24pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Exact comparison of Liouville forms}
+\fancyhead[R]{\small Weak taming}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\title{\vspace{-12mm}Exact comparison of Liouville forms\protect\\ under weak taming}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-13mm}
+\begin{abstract}
+We give a sufficient condition for two exact symplectic structures to be related by an exact symplectomorphism isotopic to the identity. Relative to a fixed compatible almost complex structure, the assumptions are weak taming and an integral growth bound on the inverse symplectic form. No growth bound on its primitive is required. A common radial formulation includes both a finite-type Liouville reference structure and the standard exact K\"ahler structure on a properly embedded Stein manifold. We give explicit radial coefficients and prove completeness of all four Moser flows, including their reverse flows.
+\end{abstract}
+
+\section{The comparison criterion}
+
+Let $X$ be a smooth manifold without boundary. Fix a one-form $\beta$ such that $\Omega=d\beta$ is symplectic, and an $\Omega$-compatible almost complex structure $J$. Thus
+\[
+\Omega(Jv,Jw)=\Omega(v,w),\qquad
+g(v,w):=\Omega(v,Jw)
+\]
+is a Riemannian metric. We do not assume that $J$ is integrable.
+
+Suppose that there are a smooth proper function $R:X\to[1,\infty)$ and constants $c>0$ and $r_*>1$ such that, on $\{R>r_*\}$,
+\begin{equation}\label{eq:radialsetup}
+\beta=-c\,dR\circ J,
+\qquad a:=c\abs{dR}_g^2\le R.
+\end{equation}
+There is no radial condition on the compact set $\{R\le r_*\}$. Section~\ref{sec:applications} verifies this setup for finite-type Liouville manifolds and properly embedded Stein manifolds.
+
+For a symplectic form $\omega$, the norm of its inverse means
+\begin{equation}\label{eq:inversenorm}
+\omega^\flat(v)=\iota_v\omega,\qquad
+\norm{\omega^{-1}}_g
+=\norm{(\omega^\flat)^{-1}}_{g^*\to g}
+=\frac{1}{\displaystyle\inf_{\abs{v}_g=1}\abs{\iota_v\omega}_{g^*}}.
+\end{equation}
+All estimates below are pointwise unless a supremum is written.
+
+\begin{theorem}\label{thm:main}
+In the preceding setup, let $\lambda$ be a smooth real one-form on $X$ such that $\omega=d\lambda$ is symplectic and
+\begin{equation}\label{eq:weak}
+\omega(v,Jv)\ge0\qquad\text{for every }v\in TX.
+\end{equation}
+Suppose there are a constant $C>0$ and a smooth function $B:[1,\infty)\to(0,\infty)$ such that
+\begin{equation}\label{eq:growth}
+B(r)\ge r,\qquad
+\int_1^\infty\frac{r}{B(r)^2}\,dr=\infty,
+\qquad \norm{\omega^{-1}}_g\le C B(R)
+\end{equation}
+outside a compact subset of $X$.
+Then there are a diffeomorphism $F:X\to X$, smoothly isotopic to the identity, and a smooth function $h:X\to\R$ such that
+\begin{equation}\label{eq:conclusion}
+F^*\lambda=\beta+dh,
+\qquad F^*\omega=\Omega.
+\end{equation}
+No growth bound on $\abs{\lambda}_g$ or $\abs{\lambda-\beta}_g$ is required. No completeness assumption on either primitive's Liouville vector field is needed in this radial formulation.
+\end{theorem}
+
+Condition~\eqref{eq:weak} is called \emph{weak taming} in this note; nondegeneracy of $\omega$ is a separate assumption. By increasing $C$, the last bound in \eqref{eq:growth} holds on all of $X$, since $\omega$ is nondegenerate and $R$ is proper.
+
+The simplest growth bound is $\norm{\omega^{-1}}_g=O(R)$, for which one takes $B(r)=r$. Another allowed bound is
+\[
+\norm{\omega^{-1}}_g=O\bigl(R\sqrt{1+\log R}\bigr).
+\]
+The integral condition is sufficient; no optimality is claimed.
+
+\begin{remark}\label{rem:scope}
+The conclusion is an exact symplectomorphism of the open manifolds, isotopic to the identity. Neither $h$ nor the isotopy is required to have compact support. We construct a path of exact symplectic forms together with global Moser identifications; we do not assert that the chosen intermediate primitives form a controlled finite-type Liouville deformation.
+\end{remark}
+
+\section{Radial metrics and global flows}
+
+Every radial coefficient $\rho:[1,\infty)\to(0,\infty)$ used below is constant on $[1,r_*]$. Set
+\[
+\eta_\rho=d(\rho(R)\beta),\qquad
+h_\rho(v,w)=\eta_\rho(v,Jw).
+\]
+On $\{R\le r_*\}$, one has $h_\rho=\rho g$. On $\{R>r_*\}$, equation~\eqref{eq:radialsetup} gives
+\begin{equation}\label{eq:radialmetric}
+h_\rho(v,w)=\rho g(v,w)
++c\rho'\bigl(dR(v)dR(w)+dR(Jv)dR(Jw)\bigr).
+\end{equation}
+The coefficients $\rho,\rho'$ in formulas on $X$ are evaluated at $R$.
+
+\begin{lemma}\label{lem:metric}
+If $\rho(r)>0$ and $\rho(r)+r\rho'(r)>0$, then $\eta_\rho$ is $J$-compatible. On $\{R>r_*\}$, put $D_\rho=\rho+\rho'a$. Then
+\begin{equation}\label{eq:duals}
+D_\rho>0,\qquad
+\abs{dR}_{h_\rho}^2=\frac{a}{cD_\rho},\qquad
+\abs{\beta}_g^2=ca.
+\end{equation}
+If $\rho'\le0$, then $(\rho+R\rho')g\le h_\rho\le\rho g$ on all of $X$. If $\rho'\ge0$, then $h_\rho\ge\rho g$ on all of $X$.
+\end{lemma}
+
+\begin{proof}
+Where $dR\ne0$, the eigenvalues of \eqref{eq:radialmetric} relative to $g$ are $D_\rho$ on the plane spanned by $\nabla_gR,J\nabla_gR$ and $\rho$ on its orthogonal complement. If $\rho'\le0$, then $D_\rho\ge\rho+R\rho'>0$; if $\rho'\ge0$, then $D_\rho\ge\rho>0$. The same computation gives the dual norm. At $dR=0$, the formulas hold with $a=0$. The identity for $\beta$ follows from $J$-orthogonality and \eqref{eq:radialsetup}. On the compact core, $\rho'=0$, so all the metric assertions are immediate.
+\end{proof}
+
+\begin{lemma}\label{lem:linear}
+Let $\eta$ be a $J$-compatible symplectic form on a vector space, with $h=\eta(\,\cdot\,,J\,\cdot\,)$. Let $\omega$ be a nondegenerate two-form with $\omega(v,Jv)\ge0$. For $t\ge0$, the form $\omega+t\eta$ is nondegenerate. Moreover,
+\[
+\iota_X(\omega+t\eta)=\iota_W\omega
+\quad\Longrightarrow\quad \abs{X}_h\le\abs{W}_h.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $\omega(v,w)=h(Cv,w)$ and $T=-JC$. Then
+\[
+h(Tv,v)=\omega(v,Jv)\ge0,\qquad C+tJ=J(T+t\id),
+\]
+and
+\[
+\abs{(T+t\id)v}_h^2
+=\abs{Tv}_h^2+2t\,h(Tv,v)+t^2\abs{v}_h^2
+\ge\abs{Tv}_h^2.
+\]
+The operator $T+t\id$ is invertible, including at $t=0$ because $\omega$ is nondegenerate. Since $T$ commutes with its resolvent,
+\[
+\norm{(T+t\id)^{-1}T}_h
+=\norm{T(T+t\id)^{-1}}_h\le1.
+\]
+The contraction equation is $(T+t\id)X=TW$.
+\end{proof}
+
+For a smooth path of primitives $\mu_t$ with $d\mu_t$ symplectic, our Moser convention is
+\begin{equation}\label{eq:moser}
+\iota_{X_t}d\mu_t=-\dot\mu_t.
+\end{equation}
+A trajectory of a smooth time-dependent vector field extends through a finite time endpoint if it stays in a compact set. In particular, a uniform bound $\abs{X_tP}\le C$ for a smooth proper function $P$, bounded below, gives existence in both time directions on $[0,1]$. An estimate holding outside a fixed compact set suffices, since the derivative is uniformly bounded on that compact set.
+
+\begin{lemma}[Radial interpolation]\label{lem:bridge}
+Let $\sigma$ be a one-form satisfying $d\sigma(v,Jv)\ge0$; $d\sigma$ may be degenerate. Let $\rho_0,\rho_1$ be positive smooth functions, constant on $[1,r_*]$, such that
+\begin{equation}\label{eq:bridgehyp}
+\rho_i+r\rho_i'>0\quad(i=0,1),\qquad
+\rho_1\ge\rho_0,\qquad r\rho_0(r)\longrightarrow\infty.
+\end{equation}
+Put $\rho_u=(1-u)\rho_0+u\rho_1$. Then
+\[
+\mu_u=\sigma+\rho_u(R)\beta,\qquad 0\le u\le1,
+\]
+has symplectic differential, and its Moser flow exists for the full interval in both directions, from every initial time.
+\end{lemma}
+
+\begin{proof}
+Let $\delta=\rho_1-\rho_0\ge0$, $h_u=h_{\rho_u}$, and $D_u=\rho_u+\rho_u'a$. Lemma~\ref{lem:metric} and weak taming give
+\[
+d\mu_u(v,Jv)=d\sigma(v,Jv)+\abs{v}_{h_u}^2>0\qquad(v\ne0).
+\]
+On $\{R>r_*\}$, evaluate the Moser equation on $JX_u$ to obtain
+\begin{equation}\label{eq:bridgeenergy}
+\abs{X_u}_{h_u}^2+d\sigma(X_u,JX_u)=-c\delta X_uR.
+\end{equation}
+If $\delta=0$, then $X_u=0$. Otherwise $Y=-X_uR\ge0$, and
+\[
+Y^2\le\abs{dR}_{h_u}^2\abs{X_u}_{h_u}^2
+\le\frac{a}{cD_u}\,c\delta Y.
+\]
+Thus, outside the compact core,
+\begin{equation}\label{eq:bridgeradial}
+0\le-X_uR\le\frac{\delta a}{D_u}.
+\end{equation}
+For $Q_u(r)=r\rho_u(r)$, the positivity of $\rho_u+R\rho_u'$ implies
+\begin{align}
+\frac d{du}Q_u(R(x(u)))
+&=\delta R+(\rho_u+R\rho_u')X_uR\notag\\
+&\ge\delta\left(R-\frac{a(\rho_u+R\rho_u')}{\rho_u+\rho_u'a}\right)
+=\frac{\delta\rho_u(R-a)}{D_u}\ge0.
+\label{eq:Qmonotone}
+\end{align}
+
+These two inequalities are only asserted on $\{R>r_*\}$. On the compact core, smoothness and compactness of the parameter interval give constants $C_0,C_1$ with
+\[
+X_uR\le C_0,\qquad
+(\partial_u+X_u)\bigl(Q_u(R)\bigr)\ge-C_1
+\]
+globally. The first inequality bounds $R$ in forward time. If $u\le u_0$, the second gives
+\[
+Q_u(R(x(u)))\le Q_{u_0}(R(x(u_0)))+C_1(u_0-u).
+\]
+Since $Q_u(r)\ge r\rho_0(r)\to\infty$ uniformly in $u$, this bounds $R$ in reverse time. Properness proves completeness in both directions.
+\end{proof}
+
+\section{Explicit choices of the coefficients}
+
+We construct a small coefficient $k$ and a large coefficient $A$, both constant on $[1,r_*]$. Define a smooth nondecreasing step function by
+\[
+q(t)=\begin{cases}e^{-1/t},&t>0,\\0,&t\le0,\end{cases}
+\qquad \vartheta(t)=\frac{q(t)}{q(t)+q(1-t)}.
+\]
+Thus $\vartheta=0$ on $(-\infty,0]$ and $\vartheta=1$ on $[1,\infty)$.
+
+Set
+\begin{equation}\label{eq:S}
+S(r)=1+\int_1^r\frac{u}{B(u)^2}\,du,
+\qquad \chi(r)=\vartheta(r-r_*).
+\end{equation}
+Then $1\le S(r)\le1+\log r$ and $S(r)\to\infty$. Define
+\begin{equation}\label{eq:k}
+\boxed{\displaystyle
+k(r)=\exp\left(\int_1^r\chi(s)
+\left(\frac{S'(s)}{2S(s)}-\frac1s\right)ds\right).}
+\end{equation}
+Since $rS'(r)/(2S(r))=r^2/(2B(r)^2S(r))\le1/2$, one has
+\begin{equation}\label{eq:kproperties}
+0<k\le1,\qquad k'=0\text{ on }[1,r_*],\qquad k'\le0,
+\end{equation}
+and
+\begin{equation}\label{eq:m}
+m(r):=k(r)+rk'(r)
+=k(r)\left(1-\chi(r)+\frac{\chi(r)r^2}{2B(r)^2S(r)}\right)>0.
+\end{equation}
+For $r\ge r_*+1$, there is a constant $b_0>0$ such that
+\begin{equation}\label{eq:kasymptotic}
+k(r)=b_0\frac{\sqrt{S(r)}}r,
+\qquad m(r)=\frac{b_0r}{2B(r)^2\sqrt{S(r)}}.
+\end{equation}
+In particular, $rk(r)\to\infty$. Lemma~\ref{lem:metric} gives
+\begin{equation}\label{eq:smallmetric}
+\eta=d(k(R)\beta)\text{ is }J\text{-compatible},
+\qquad m(R)g\le h:=\eta(\,\cdot\,,J\,\cdot\,)\le k(R)g.
+\end{equation}
+
+For the large coefficient, put
+\begin{equation}\label{eq:Mn}
+M_n=1+\sup_{\{R\le r_*+n+1\}}\abs{\lambda}_g,
+\qquad n=0,1,2,\ldots,
+\end{equation}
+with the supremum of an empty set taken to be zero. Properness gives $M_n<\infty$, and $M_{n+1}\ge M_n$. Define
+\begin{equation}\label{eq:A}
+\boxed{\displaystyle
+A(r)=M_0+\sum_{j=1}^\infty(M_j-M_{j-1})\,
+\vartheta(r-r_*-j+1).}
+\end{equation}
+This sum is locally finite. Hence $A$ is smooth, constant on $[1,r_*]$, and $A'\ge0$. If $r\in[r_*+n,r_*+n+1]$, every term with $j\le n$ has reached its full value, so $A(r)\ge M_n$. For $r\le r_*$, the term $M_0$ already bounds the primitive. Therefore
+\begin{equation}\label{eq:Aproperties}
+A\ge1\ge k,\qquad A+rA'>0,
+\qquad A(R(x))\ge1+\abs{\lambda_x}_g.
+\end{equation}
+There is no upper growth restriction on $A$.
+
+\section{Proof of the comparison theorem}
+
+We compare the following primitives:
+\begin{equation}\label{eq:paths}
+\lambda\ \longrightarrow\ \lambda+k\beta\
+\longrightarrow\ \lambda+A\beta\
+\longrightarrow\ A\beta\
+\longrightarrow\ \beta.
+\end{equation}
+For the last two arrows we use inverses of the forward flows specified below. In each case we prove existence from every initial time in both directions.
+
+\subsection*{The first path}
+Let $\mu_t=\lambda+t k\beta$ and $\eta=d(k\beta)$. Lemma~\ref{lem:linear} shows that $d\mu_t=\omega+t\eta$ is symplectic. Define $W$ by $\iota_W\omega=-k\beta$. Then
+\[
+\iota_{X_t}(\omega+t\eta)=\iota_W\omega,
+\qquad \abs{X_t}_h\le\abs{W}_h.
+\]
+Using \eqref{eq:growth} and \eqref{eq:smallmetric},
+\[
+\abs{W}_g\le C B(R)k(R)\abs{\beta}_g,
+\qquad \abs{X_t}_g\le\sqrt{\frac{k(R)}{m(R)}}\abs{W}_g.
+\]
+On $\{R>r_*\}$, one has $\abs{dR}_g\abs{\beta}_g=a\le R$. Hence, for $R\ge r_*+1$,
+\begin{align}
+\abs{X_tR}
+&\le C B(R)k(R)R\sqrt{\frac{k(R)}{m(R)}}\notag\\
+&=\sqrt2\,Cb_0\frac{B(R)^2S(R)}R.
+\label{eq:firstestimate}
+\end{align}
+Since $S'(r)=r/B(r)^2$, it follows that
+\begin{equation}\label{eq:firstproper}
+\abs{X_t\log S(R)}\le\sqrt2\,Cb_0
+\qquad\text{for }R\ge r_*+1.
+\end{equation}
+The same derivative is uniformly bounded on the complementary compact set. The function $\log S(R)$ is proper and bounded below. Thus the first flow is complete in both parameter directions.
+
+\subsection*{The second path}
+Apply Lemma~\ref{lem:bridge} with
+\[
+\sigma=\lambda,\qquad \rho_0=k,\qquad \rho_1=A.
+\]
+Its hypotheses follow from \eqref{eq:weak}, \eqref{eq:m}, \eqref{eq:kasymptotic}, and \eqref{eq:Aproperties}. Therefore the Moser flow for
+\[
+\mu_u=\lambda+\bigl((1-u)k+uA\bigr)\beta
+\]
+exists globally in both directions. In particular, arbitrarily rapid growth of $A$ is harmless: the reverse-time proper function satisfies
+\[
+Q_u(r)=r\bigl((1-u)k(r)+uA(r)\bigr)\ge rk(r)\to\infty.
+\]
+
+\subsection*{The third path}
+Consider the forward path $\mu_s=A\beta+s\lambda$, $0\le s\le1$. Since $A'\ge0$ and $\omega$ weakly tames $J$,
+\[
+d\mu_s(v,Jv)=d(A\beta)(v,Jv)+s\omega(v,Jv)
+\ge A\abs{v}_g^2.
+\]
+Thus $d\mu_s$ is symplectic. Evaluating $\iota_{X_s}d\mu_s=-\lambda$ on $JX_s$ gives
+\[
+A\abs{X_s}_g^2\le-\lambda(JX_s)
+\le\abs{\lambda}_g\abs{X_s}_g.
+\]
+Consequently,
+\begin{equation}\label{eq:thirdestimate}
+\abs{X_s}_g\le\frac{\abs{\lambda}_g}{A}\le1,
+\qquad \abs{X_s\sqrt R}\le\frac1{2\sqrt c}
+\quad\text{on }\{R>r_*\}.
+\end{equation}
+The derivative of $\sqrt R$ is uniformly bounded on the compact core as well. Properness of $\sqrt R$ proves completeness; no separate assumption of metric completeness is used. We use the inverse endpoint map to pass from $\lambda+A\beta$ to $A\beta$.
+
+\subsection*{The fourth path}
+Apply Lemma~\ref{lem:bridge} with $\sigma=0$, $\rho_0=1$, and $\rho_1=A$. This gives a complete flow for
+\[
+\mu_v=\bigl(1+v(A-1)\bigr)\beta.
+\]
+Its inverse endpoint map passes from $A\beta$ to $\beta$.
+
+\subsection*{Exactness and the isotopy}
+Let $G_t$ denote the flow of \eqref{eq:moser} for any one of these forward paths, starting at the identity. Cartan's formula gives
+\[
+\frac d{dt}G_t^*\mu_t
+=G_t^*\bigl(\dot\mu_t+\iota_{X_t}d\mu_t+d(\mu_t(X_t))\bigr)
+=d\bigl(G_t^*(\mu_t(X_t))\bigr).
+\]
+Therefore
+\begin{equation}\label{eq:exactness}
+G_1^*\mu_1=\mu_0+dH,
+\qquad H(x)=\int_0^1\mu_t(X_t)(G_t(x))\,dt.
+\end{equation}
+The function $H$ is globally smooth. Exactness is preserved by composition and inversion.
+
+Write $G_1,G_2,G_3,G_4$ for the four forward endpoint maps in the order above. The composite
+\[
+\Psi=G_4^{-1}\circ G_3^{-1}\circ G_2\circ G_1
+\]
+satisfies $\Psi^*\beta=\lambda+df$. Hence
+\[
+F=\Psi^{-1},\qquad h=-f\circ F
+\]
+satisfy \eqref{eq:conclusion}. All four endpoint maps and their inverses are isotopic to the identity. Reparametrizing the four intervals to be constant near their endpoints produces a smooth concatenation. Reversing \eqref{eq:paths}, this also gives a smooth path $\Lambda_t$ from $\beta$ to $\lambda$ and diffeomorphisms $F_t$ with
+\[
+F_0=\id,\qquad F_1=F,\qquad
+F_t^*\Lambda_t=\beta+dh_t.
+\]
+This proves Theorem~\ref{thm:main}.
+
+\section{Finite-type Liouville and Stein cases}\label{sec:applications}
+
+\subsection{Two Liouville forms}
+Let $(X,\lambda_0)$ be the completion of a Liouville domain $(W,\lambda_0)$, and put $Y=\partial W$, $\alpha=\lambda_0|_Y$. Thus
+\[
+X=W\cup_Y(Y\times[1,\infty)),\qquad
+\lambda_0=r\alpha\text{ on the end}.
+\]
+This is the finite-type complete Liouville setting used here. Let $R_\alpha$ be the Reeb vector field, characterized by $\alpha(R_\alpha)=1$ and $\iota_{R_\alpha}d\alpha=0$. Choose a $d\lambda_0$-compatible almost complex structure $J$ with
+\begin{equation}\label{eq:cylJ}
+J(r\partial_r)=R_\alpha,\qquad J(\ker\alpha)=\ker\alpha
+\end{equation}
+on the end, where the restriction to $\ker\alpha$ is independent of $r$ and $d\alpha$-compatible. Such an end structure extends compatibly over the compact core. Set $g=d\lambda_0(\,\cdot\,,J\,\cdot\,)$.
+
+\begin{corollary}[Finite-type reference]\label{cor:liouville}
+Let $\lambda_1$ be a smooth one-form on $X$ such that $\omega_1=d\lambda_1$ is symplectic and weakly tames this $J$. Suppose there are $C>0$ and a smooth $B:[1,\infty)\to(0,\infty)$ with
+\[
+B(r)\ge r,\qquad
+\int_1^\infty\frac{r}{B(r)^2}\,dr=\infty,
+\qquad \norm{\omega_1^{-1}}_g\le C B(r)
+\]
+for all sufficiently large $r$ on the end. Then there are a diffeomorphism $F$ isotopic to the identity and a smooth $h$ with
+\[
+F^*\lambda_1=\lambda_0+dh.
+\]
+In particular, this is a comparison criterion for two Liouville forms. No growth bound on their difference is required.
+\end{corollary}
+
+\begin{proof}
+On the end, \eqref{eq:cylJ} gives
+\[
+\lambda_0=-dr\circ J,\qquad \abs{dr}_g^2=r.
+\]
+Choose a smooth proper function $R\ge1$ equal to $r$ for $r\ge2$ and bounded by $2$ on the remaining compact set. Then \eqref{eq:radialsetup} holds for $\beta=\lambda_0$, $c=1$, and $r_*=2$. Apply Theorem~\ref{thm:main}.
+\end{proof}
+
+\begin{remark}
+With this reference metric, $\norm{(d\lambda_0)^{-1}}_g=1$. Thus the hypothesis on $\omega_1^{-1}$ measures its nondegeneracy relative to the fixed reference structure. Weak taming is an additional hypothesis; inverse-norm estimates at the endpoints do not by themselves ensure nondegeneracy of the straight-line interpolation.
+\end{remark}
+
+\subsection{Properly embedded Stein manifolds}
+Let $(X,J)$ admit a proper holomorphic embedding
+\[
+\iota=(F_1,\ldots,F_N):X\hookrightarrow\C^N.
+\]
+Put
+\begin{equation}\label{eq:steinsetup}
+R=e+\sum_{\nu=1}^N\abs{F_\nu}^2,\qquad
+\beta=-\frac14dR\circ J,
+\qquad \Omega=d\beta,\qquad g=\Omega(\,\cdot\,,J\,\cdot\,).
+\end{equation}
+The metric $g$ is the induced Euclidean metric. Properness of $\iota$ implies properness of $R$, and
+\begin{equation}\label{eq:steinradial}
+\abs{dR}_g^2\le4(R-e),\qquad
+a:=\frac14\abs{dR}_g^2\le R-e<R.
+\end{equation}
+
+\begin{corollary}[Stein reference]\label{cor:stein}
+In the setup \eqref{eq:steinsetup}, let $\lambda$ be any smooth primitive of a symplectic form $\omega=d\lambda$ with $\omega(v,Jv)\ge0$. Suppose there are a smooth $B:[e,\infty)\to(0,\infty)$ and $C>0$ such that
+\[
+B(r)\ge r,\qquad
+\int_e^\infty\frac{r}{B(r)^2}\,dr=\infty,
+\qquad \norm{\omega^{-1}}_g\le C B(R)
+\]
+outside a compact set. Then there are $F$ isotopic to the identity and $h\in C^\infty(X)$ such that
+\[
+F^*\lambda=\beta+dh.
+\]
+No finite-type assumption on the Stein structure is required.
+\end{corollary}
+
+\begin{proof}
+Equations~\eqref{eq:steinsetup}--\eqref{eq:steinradial} verify \eqref{eq:radialsetup} with $c=1/4$. Extend $B$ smoothly to $[1,\infty)$ while preserving $B(r)\ge r$, allowing a change on a bounded interval. Such a change does not affect the integral condition or the estimate at infinity. Theorem~\ref{thm:main} applies.
+\end{proof}
+
+This includes smooth closed affine submanifolds of $\C^N$. More generally, a Stein manifold equipped with a proper holomorphic embedding has the stated reference structure; the bound is measured in the metric of that chosen embedding. The Stein case is a special case of the common radial theorem, not of a finite-type assertion.
+
+\subsection{Comparison through a common reference}
+\begin{corollary}\label{cor:two}
+Fix one radial reference $(X,\beta,J,g,R,c,r_*)$ as in Section~1. Suppose $\lambda_1$ and $\lambda_2$ each satisfy Theorem~\ref{thm:main}, with possibly different constants $C_i$ and functions $B_i$. Then there are a diffeomorphism $\Phi$ isotopic to the identity and $q\in C^\infty(X)$ such that
+\[
+\Phi^*\lambda_1=\lambda_2+dq.
+\]
+\end{corollary}
+
+\begin{proof}
+Choose $F_i^*\lambda_i=\beta+dh_i$. Then
+\[
+\Phi=F_1\circ F_2^{-1},\qquad
+q=(h_1-h_2)\circ F_2^{-1}
+\]
+give the required identity.
+\end{proof}
+
+\begin{remark}
+If $\omega$ is $J$-anti-invariant, meaning $\omega(Jv,Jw)=-\omega(v,w)$, then $\omega(v,Jv)=0$. Thus anti-invariance is included in weak taming. The proof also shows why the primitive needs no prescribed growth bound: it is absent from the first Moser right-hand side, and the coefficient $A$ can dominate it in the third path without obstructing the intervening radial flow.
+\end{remark}
+
+\end{document}

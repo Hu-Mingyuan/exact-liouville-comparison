@@ -1,0 +1,17 @@
+import ExactLiouvilleComparison
+
+/-! Transitive final-root audit. Only propext, Classical.choice, and Quot.sound
+are allowed. Broader source-bound development audits have separate receipts. -/
+#print axioms ExactLiouvilleComparison.MainComparison.mainTarget
+#print axioms ExactLiouvilleComparison.ManuscriptComparison.manuscriptTarget
+#print axioms ExactLiouvilleComparison.ManuscriptComparison.completeLiouvilleComparisonTarget
+#print axioms ExactLiouvilleComparison.CylindricalCompatibility.existenceTarget
+#print axioms ExactLiouvilleComparison.CylindricalCompatibility.extensionTarget
+#print axioms ExactLiouvilleComparison.CylindricalCompatibility.consumerTarget
+#print axioms ExactLiouvilleComparison.CylindricalCompatibility.extension_of_prescribed_kernel
+#print axioms ExactLiouvilleComparison.NativeIntegration.constructedComparison
+#print axioms ExactLiouvilleComparison.NativeIntegration.prescribedExtension
+#print axioms ExactLiouvilleComparison.NativeIntegration.manuscript
+#print axioms ExactLiouvilleComparison.NativeIntegration.complete
+#print axioms ExactLiouvilleComparison.NativeIntegration.allDimensions
+#print axioms ExactLiouvilleComparison.NativeIntegration.everyPrescribedEnd

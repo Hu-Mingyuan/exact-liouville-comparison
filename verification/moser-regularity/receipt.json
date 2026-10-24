@@ -1,0 +1,503 @@
+{
+  "scope": "Bounded inverse contraction, joint native Moser regularity and compact/global scalar bounds only; no flows/comparison/phase acceptance.",
+  "source_sha256": {
+    "ExactLiouvilleComparison/FirstPathChecks.lean": "7fee13337880e005bee80260cc8301abdffaf665c9f1d7fbd213d0156058e6cb",
+    "ExactLiouvilleComparison/FirstPathCoefficient.lean": "591014599d70f6bf68c20c7a231b53f04f19f146a6bf0ccec6220412e5b36aac",
+    "ExactLiouvilleComparison/FirstPathEstimate.lean": "4a3d334c1f741ad53b94d4395a751916e0520407eddeafc69c65f6c51bfa084a",
+    "ExactLiouvilleComparison/FirstPathExhaustion.lean": "c32921488a6d0a34b513e4279b9eeb4d035fa3884d35a5a682f91f1809fc2daf",
+    "ExactLiouvilleComparison/FirstPathVector.lean": "c9fd5bbc2e6d288b5659892011e436e162e7f90b9ce700932ff6d21c29048b63",
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "ExactLiouvilleComparison/InterfaceChecks.lean": "32bd5a0e234a94674f49f786772f8b623fa61f48ce65f3d13a85308689941c06",
+    "ExactLiouvilleComparison/LinearAlgebra.lean": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1",
+    "ExactLiouvilleComparison/LinearAlgebraChecks.lean": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f",
+    "ExactLiouvilleComparison/MoserRegularityChecks.lean": "602b942347684f85d0b0142f2c95b6645742ed2809b589b55c43fa3bea616e09",
+    "ExactLiouvilleComparison/MoserRegularityCompact.lean": "77204133bd37ef23206c1d43d53db3853e69bc6470252268011b6c73409ab826",
+    "ExactLiouvilleComparison/MoserRegularityFields.lean": "8ef90c4df28f103792ee415afa2ad21b3a398a9c3ad8cb3675b83da371146370",
+    "ExactLiouvilleComparison/MoserRegularityGlobal.lean": "81c7ee5fc61973bd82ad60c7cc5566e1ad28d0213753e91ec9cb9f2a8f0c30a7",
+    "ExactLiouvilleComparison/MoserRegularityInverse.lean": "60ba290c2101e743af3cf2fdb3ee80fddd22b34c47f988d34c00a00d20cb8f07",
+    "ExactLiouvilleComparison/MoserRegularityStatement.lean": "fecaeb5bfe5e16df859c8805915e525cca0ddbbe084f0c0649dc9532e6c9eb0b",
+    "ExactLiouvilleComparison/RadialCoefficient.lean": "a639d4dbd9c8b16186466e2a9d3c3f4ac729736b7e08134a16c7df002aeb082a",
+    "ExactLiouvilleComparison/RadialInterpolationChecks.lean": "d27a407be7a5fc50d92daa867794cc52ba97191f98eb4807694433f4805af9e1",
+    "ExactLiouvilleComparison/RadialInterpolationCoefficient.lean": "e2f53289c602bab2da2c428ca61adcd215b158aad24b373b897539c1f1431801",
+    "ExactLiouvilleComparison/RadialInterpolationEstimates.lean": "c657b448a3d15c01c3e156c03c3138ed51d1ba3d41d7e7f9bd020e62c3a561d2",
+    "ExactLiouvilleComparison/RadialInterpolationGeometry.lean": "746160c876499357ea9031263b40e116c652084143e0a800d55ab4361c8e82d4",
+    "ExactLiouvilleComparison/RadialMetric.lean": "4393795ecc7cd8302c33fdc442303afc828cc94b6ac4265286ab4cc769694dc4",
+    "ExactLiouvilleComparison/RadialMetricBundle.lean": "2beabd7169489fcaac0dd7f6c12eec0b063d35afa1bc70c5dc6ca7a68b501578",
+    "ExactLiouvilleComparison/RadialMetricChecks.lean": "346acdc5bc188cb9d97e75f4ca6caf9538e90c25b8a522a4f66570ab1b45b25e",
+    "ExactLiouvilleComparison/RadialMetricConstruction.lean": "7658f90a5a138b823a57411db25794e3979793aef38c3e37ac25b21005be886b",
+    "ExactLiouvilleComparison/RadialMetricDual.lean": "73f7c250c522a9c4f0138681031a887faf6829481b5eec9b728a6c6084575ead",
+    "ExactLiouvilleComparison/RadialMetricLinear.lean": "4230f3af5f5ac9eeaf4796de421bc3c91ef089ea3585ff146d38450ae9079a3f",
+    "ExactLiouvilleComparison/RadialMetricNorm.lean": "8b7910efc1b16f67e118604b87e9ca740d647cfdcb3eb1a22f006f936de677e8",
+    "ExactLiouvilleComparison/SmallCoefficient.lean": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627",
+    "ExactLiouvilleComparison/SmallCoefficientAsymptotic.lean": "3a0ce24020ac34baffa2caffae906cc675081ae752ae9bdc87988b1d571f339b",
+    "ExactLiouvilleComparison/SmallCoefficientK.lean": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769",
+    "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+    "ExactLiouvilleComparison.lean": "969541ba18a27f912c1210658dd71f9ea6cbd4ab6b0fe7e8218b6bfa7f368144",
+    "docs/moser-regularity.md": "a73d70aa5cb50f135225de8615780e98b3e0b60ef10a31263c88c534d3f77c05",
+    "docs/objective.md": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8",
+    "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "scripts/verify-moser-regularity.py": "a754489b07f1cfd48f2fc894ee34c9c73648bff14ddcea7bf957557b35757fc8",
+    "verification/moser-regularity/AxiomAudit.lean": "fac8c619b525ea53c58b0947370fadec92f52625f6f8e450bab8375273c4f308",
+    "verification/moser-regularity/StatementTypes.lean": "644b7ed0c49677b5de6470fa5874a71803335fa07ed99dab5b72cc4a88a9d117",
+    "verification/moser-regularity/Types.lean": "8513f8733deb5c7066771993729c7203772c28fac518b11047d35e57feed75c1",
+    "verification/moser-regularity/base-integration.json": "9d38e05b85e3116fbb889316a0a8544f3afce4bc96c26e3f50f0c642e846ef9c",
+    "verification/moser-regularity/crosswalk.md": "181207fb6387a7ad7eebf43e2071ede701776be086f776dfca20efaea06a78f6",
+    "verification/moser-regularity/declarations.json": "447c24a78fe2ac060df5cd0a1dc75f5fbb1c82dcdcbc7161fbc45aeecea150a0",
+    "verification/moser-regularity/inputs.json": "2e3ff03002d9dd4b0a5bdca6f0282d5ee728b2735694836081d38f3e8b6876fa",
+    "verification/moser-regularity/preserved.json": "fd0862221018c0fb414102d6654f4f797b9c65453c7a430c162bd74aa234f35b",
+    "verification/moser-regularity/proof-crosswalk-review.md": "c2823da0d175a2564df8ccd2713d3887d1ad8d007e2a393efd3682017537de78",
+    "verification/moser-regularity/statement-review.md": "0ed3482404661609305c24afac1ba7723600d9e0885c5955b2780a7b7529dc07"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.MoserRegularityChecks"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.MoserRegularityChecks"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison",
+        "duration_seconds": 2.218,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "ff3e687c32c2822ec6aba39ac1c81e403ee34d51f9dd97bb6cebcf400ef9d3d3",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.MoserRegularityChecks"
+        ],
+        "timings": {
+          "build_seconds": 0.0,
+          "engine_seconds": 2.217922126999838,
+          "preparation_seconds": 0.04718684699946607,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.21510288399804267,
+          "total_seconds": 2.480290169,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/moser-regularity/Types.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/moser-regularity/Types.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison",
+        "duration_seconds": 3.409,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/moser-regularity/Types.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "ff3e687c32c2822ec6aba39ac1c81e403ee34d51f9dd97bb6cebcf400ef9d3d3",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 3.407,
+          "engine_seconds": 3.4088633860010304,
+          "preparation_seconds": 0.051889300000766525,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.24062436400163278,
+          "total_seconds": 3.701457623999886,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "elaborated_declarations": [
+        "ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_first",
+        "ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_interpolation",
+        "ExactLiouvilleComparison.MoserRegularityChecks.first_actual",
+        "ExactLiouvilleComparison.MoserRegularityChecks.interpolation_actual",
+        "ExactLiouvilleComparison.MoserRegularityChecks.zero_parameter",
+        "ExactLiouvilleComparison.MoserRegularityChecks.degenerate_sigma",
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_section",
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_scalarDerivative",
+        "ExactLiouvilleComparison.MoserRegularity.compact_abs_bound",
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint.compact_scalar_bound",
+        "ExactLiouvilleComparison.MoserRegularity.first_compact",
+        "ExactLiouvilleComparison.MoserRegularity.scalarDerivative_linear",
+        "ExactLiouvilleComparison.MoserRegularity.radialQ",
+        "ExactLiouvilleComparison.MoserRegularity.radialQ_smooth",
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate_linear",
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate_continuous",
+        "ExactLiouvilleComparison.MoserRegularity.core_compact",
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_compact",
+        "ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_affine",
+        "ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_const",
+        "ExactLiouvilleComparison.MoserRegularity.first_joint",
+        "ExactLiouvilleComparison.MoserRegularity.W_smooth",
+        "ExactLiouvilleComparison.MoserRegularity.interpolationForm",
+        "ExactLiouvilleComparison.MoserRegularity.interpolationForm_eq",
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_joint",
+        "ExactLiouvilleComparison.MoserRegularity.first_intervalSmooth",
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_intervalSmooth",
+        "ExactLiouvilleComparison.MoserRegularity.first_global",
+        "ExactLiouvilleComparison.MoserRegularity.first_growth_consumer",
+        "ExactLiouvilleComparison.MoserRegularity.Q_scalarDerivative",
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate_eq",
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_global",
+        "ExactLiouvilleComparison.MoserRegularity.solve",
+        "ExactLiouvilleComparison.MoserRegularity.solve_equation",
+        "ExactLiouvilleComparison.MoserRegularity.solution_unique",
+        "ExactLiouvilleComparison.MoserRegularity.solve_eq_inverseContraction",
+        "ExactLiouvilleComparison.MoserRegularity.contraction_chart",
+        "ExactLiouvilleComparison.MoserRegularity.solve_chart",
+        "ExactLiouvilleComparison.MoserRegularity.solve_smoothFamily",
+        "ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_smoothFamily",
+        "ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_equation",
+        "ExactLiouvilleComparison.MoserRegularity.inverse_bridge",
+        "ExactLiouvilleComparison.MoserRegularity.intervalSmooth_of_equation",
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint",
+        "ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget",
+        "ExactLiouvilleComparison.MoserRegularity.firstField",
+        "ExactLiouvilleComparison.MoserRegularity.interpolationField",
+        "ExactLiouvilleComparison.MoserRegularity.FirstTarget",
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate",
+        "ExactLiouvilleComparison.MoserRegularity.InterpolationTarget"
+      ]
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/moser-regularity/AxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/moser-regularity/AxiomAudit.lean"
+        ],
+        "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison",
+        "duration_seconds": 3.825,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/moser-regularity/AxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "ff3e687c32c2822ec6aba39ac1c81e403ee34d51f9dd97bb6cebcf400ef9d3d3",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 3.823,
+          "engine_seconds": 3.8248964180002076,
+          "preparation_seconds": 0.044782355000279495,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.2817800780012476,
+          "total_seconds": 4.151543508000032,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "declarations": {
+        "ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_first": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_interpolation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularityChecks.first_actual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularityChecks.interpolation_actual": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularityChecks.zero_parameter": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularityChecks.degenerate_sigma": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_section": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_scalarDerivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.compact_abs_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint.compact_scalar_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.first_compact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.scalarDerivative_linear": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.radialQ": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.radialQ_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate_linear": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate_continuous": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.core_compact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_compact": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_affine": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_const": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.first_joint": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.W_smooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolationForm": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolationForm_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_joint": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.first_intervalSmooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_intervalSmooth": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.first_global": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.first_growth_consumer": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.Q_scalarDerivative": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate_eq": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolation_global": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.solve": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.solve_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.solution_unique": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.solve_eq_inverseContraction": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.contraction_chart": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.solve_chart": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.solve_smoothFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_smoothFamily": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.inverse_bridge": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.intervalSmooth_of_equation": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.NativeJoint": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.firstField": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.interpolationField": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.FirstTarget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.barrierRate": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ExactLiouvilleComparison.MoserRegularity.InterpolationTarget": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  ],
+  "declaration_count": 50,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "statement_review": "verification/moser-regularity/statement-review.md",
+  "proof_crosswalk_review": "verification/moser-regularity/proof-crosswalk-review.md"
+}

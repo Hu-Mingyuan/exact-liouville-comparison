@@ -1,0 +1,7 @@
+✖ [2461/2461] Building ExactLiouvilleComparison.CylindricalCompatibilityNormalizationStatement
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison.CylindricalCompatibilityNormalizationStatement
+✔ [2461/2461] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationStatement (14s)
+Build completed successfully (2461 jobs).
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.CylindricalCompatibilityNormalizationStatement"], "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a", "duration_seconds": 20.188, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "d94192df4bbe81390dee7fd7a86a662c7fd9c64bcb555878c7045381097db1eb", "status": "passed", "targets": ["ExactLiouvilleComparison.CylindricalCompatibilityNormalizationStatement"], "timings": {"build_seconds": 16.934, "engine_seconds": 20.188209623000148, "preparation_seconds": 0.05952192299992021, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.492464121998637, "total_seconds": 20.74026908400083, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

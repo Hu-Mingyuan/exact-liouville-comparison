@@ -1,0 +1,16 @@
+ExactLiouvilleComparison.CompleteLiouvilleComparisonTarget := ∀ (d : Nat) (M : FsFltz.Geometry.SmoothManifold d) (P : @ExactLiouvilleComparison.RadialReference d M)
+  (x :
+    @FsFltz.Geometry.CompletePrimitive d M
+      (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M
+        (@ExactLiouvilleComparison.RadialReference.exactStructure d M P)))
+  (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M)
+  (x : @FsFltz.Geometry.CompletePrimitive d M (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M T)),
+  @ExactLiouvilleComparison.WeaklyTames d M (@ExactLiouvilleComparison.RadialReference.exactStructure d M P)
+      (@ExactLiouvilleComparison.RadialReference.compatible d M P) T →
+    @ExactLiouvilleComparison.GrowthAtInfinity d M (@ExactLiouvilleComparison.RadialReference.exactStructure d M P)
+        (@ExactLiouvilleComparison.RadialReference.compatible d M P) T
+        (@ExactLiouvilleComparison.RadialReference.R d M P)
+        (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) →
+      @ExactLiouvilleComparison.ExactComparison d M (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M T)
+        (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M
+          (@ExactLiouvilleComparison.RadialReference.exactStructure d M P))

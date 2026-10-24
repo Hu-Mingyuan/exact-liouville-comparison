@@ -1,0 +1,44 @@
+ExactLiouvilleComparison.CylindricalCompatibility.extension_of_prescribed_kernel {d : ℕ}
+  {D : FsFltz.Geometry.LiouvilleDomain d} (C : FsFltz.Geometry.Completion D)
+  (j :
+    (y : D.domain.boundary.Point) →
+      ↥(CylindricalCompatibility.ContactFiber D y) →L[ℝ] ↥(CylindricalCompatibility.ContactFiber D y))
+  (hj :
+    CylindricalCompatibility.ContactBundle.SmoothKernelEndomorphism D
+      (CylindricalCompatibility.ContactBundle.Atlas.prebundle D) j)
+  (hsquare : ∀ (y : D.domain.boundary.Point) (v : ↥(CylindricalCompatibility.ContactFiber D y)), (j y) ((j y) v) = -v)
+  (hinvariant :
+    ∀ (y : D.domain.boundary.Point) (v w : ↥(CylindricalCompatibility.ContactFiber D y)),
+      (D.domain.boundary.contactHyperplaneDifferential (CylindricalCompatibility.alpha D) y) ![(j y) v, (j y) w] =
+        (D.domain.boundary.contactHyperplaneDifferential (CylindricalCompatibility.alpha D) y) ![v, w])
+  (hpositive :
+    ∀ (y : D.domain.boundary.Point) (v : ↥(D.domain.boundary.contactHyperplane (CylindricalCompatibility.alpha D) y)),
+      v ≠ 0 →
+        0 < (D.domain.boundary.contactHyperplaneDifferential (CylindricalCompatibility.alpha D) y) ![v, (j y) v]) :
+  ∃ A,
+    Nonempty (CylindricalStructure C A) ∧
+      ∀ (y : D.domain.boundary.Point) (t : ℝ),
+        0 ≤ t →
+          ∀ (v : D.domain.boundary.Tangent y) (s : ℝ),
+            (A.J (C.endMap (y, t))) ((mfderiv% C.endMap (y, t)) (v, s)) =
+              (mfderiv% C.endMap (y, t))
+                (↑((j y) ((CylindricalCompatibility.boundaryKernelProjection D y) v)) +
+                    s • CylindricalCompatibility.boundaryReeb D y,
+                  -FsFltz.Geometry.SmoothManifold.evalOne (CylindricalCompatibility.alpha D) y v)
+ExactLiouvilleComparison.NativeIntegration.constructedComparison {k : ℕ} {M : Type} [TopologicalSpace M] [T2Space M]
+  [SecondCountableTopology M] [CompactSpace M] [ChartedSpace (EuclideanHalfSpace (k + 1)) M]
+  [IsManifold (modelWithCornersEuclideanHalfSpace (k + 1)) (↑⊤) M] (α : FsFltz.Geometry.IntrinsicLiouville.Form k M 1)
+  (hα : FsFltz.Geometry.IntrinsicLiouville.IsLocallyExtendibleForm α)
+  (hnd :
+    ∀ (x : M),
+      FsFltz.Geometry.IntrinsicLiouville.Nondegenerate (FsFltz.Geometry.IntrinsicLiouville.exteriorDerivative α) x)
+  (hout : FiniteTypePresentation.LocalOutward α) : NativeIntegration.ConstructedComparison α hα hnd hout
+ExactLiouvilleComparison.NativeIntegration.prescribedExtension {k : ℕ} {M : Type} [TopologicalSpace M] [T2Space M]
+  [SecondCountableTopology M] [CompactSpace M] [ChartedSpace (EuclideanHalfSpace (k + 1)) M]
+  [IsManifold (modelWithCornersEuclideanHalfSpace (k + 1)) (↑⊤) M] (α : FsFltz.Geometry.IntrinsicLiouville.Form k M 1)
+  (hα : FsFltz.Geometry.IntrinsicLiouville.IsLocallyExtendibleForm α)
+  (hnd :
+    ∀ (x : M),
+      FsFltz.Geometry.IntrinsicLiouville.Nondegenerate (FsFltz.Geometry.IntrinsicLiouville.exteriorDerivative α) x)
+  (hout : FiniteTypePresentation.LocalOutward α) : NativeIntegration.PrescribedExtension α hα hnd hout
+{"cache": "local", "command": ["lake", "env", "lean", "/var/lib/archon-worker/scratch/publication-e994-v1/verification/FinalConsumer.lean"], "cwd": "/var/lib/archon-worker/scratch/publication-e994-v1", "duration_seconds": 4.546, "error": null, "failure": null, "lean_file": "verification/FinalConsumer.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563", "status": "passed", "targets": [], "timings": {"build_seconds": 4.507, "engine_seconds": 4.546602812002675, "preparation_seconds": 0.05507144600051106, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.3212453349988209, "total_seconds": 4.923047154999949, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

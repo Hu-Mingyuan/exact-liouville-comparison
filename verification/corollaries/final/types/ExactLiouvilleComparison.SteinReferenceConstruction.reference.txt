@@ -1,0 +1,3 @@
+ExactLiouvilleComparison.SteinReferenceConstruction.reference : {d N : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N) → @ExactLiouvilleComparison.SteinReference d N M i

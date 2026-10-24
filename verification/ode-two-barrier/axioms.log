@@ -1,0 +1,42 @@
+'ExactLiouvilleComparison.ODE.twoBarrier_forward_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_reverse_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_forward_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_reverse_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_spatial_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_compact_confinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrier_finiteIntervalExistence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.smoothEvolution_of_compact_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.compact_field_localization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.eqOn_closed_of_hasMFDerivWithinAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.enlarged_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.evolutionPatch_of_finite_curve' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch.domain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch.open_domain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.EvolutionPatch.agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.evolutionDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_eq_patch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.isOpen_evolutionDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_contMDiffAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.localEvolution_solves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.strip_subset_evolutionDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.evolution_of_finite_existence_global' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.evolution_of_finite_existence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.twoBarrierEvolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+TWO_BARRIER_AXIOMAUDIT_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b6688f87-bebd-4b49-8f64-beb706227741/two-barrier/verification/ode-two-barrier/AxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b6688f87-bebd-4b49-8f64-beb706227741/two-barrier", "duration_seconds": 4.488, "error": null, "failure": null, "lean_file": "verification/ode-two-barrier/AxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "b34d14916c600887fc61716fa439453b8f7a6c35c13ce11e20d6ba27eccca0dc", "status": "passed", "targets": [], "timings": {"build_seconds": 4.485, "engine_seconds": 4.487938803998986, "preparation_seconds": 0.08360735700080113, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.2613787449990923, "total_seconds": 4.833000520000496, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

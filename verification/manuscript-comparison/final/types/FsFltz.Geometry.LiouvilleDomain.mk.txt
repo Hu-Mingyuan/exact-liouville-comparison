@@ -1,0 +1,3 @@
+FsFltz.Geometry.LiouvilleDomain.mk : {d : Nat} →
+  (domain : FsFltz.Geometry.CompactDomain d) →
+    (liouville : @FsFltz.Geometry.LiouvilleStructure d domain) → FsFltz.Geometry.LiouvilleDomain d

@@ -1,0 +1,5 @@
+ExactLiouvilleComparison.CompatibleStructure.MetricTangent := fun {d : Nat} {M : FsFltz.Geometry.SmoothManifold d}
+    {reference : @ExactLiouvilleComparison.ExactSymplecticStructure d M}
+    (_A : @ExactLiouvilleComparison.CompatibleStructure d M reference)
+    (x : @FsFltz.Geometry.SmoothManifold.Point d M) =>
+  @FsFltz.Geometry.SmoothManifold.Tangent d M x

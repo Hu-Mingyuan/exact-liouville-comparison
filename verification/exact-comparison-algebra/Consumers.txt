@@ -1,0 +1,45 @@
+ExactComparisonAlgebraConsumers.composition_sign {d : ℕ} {M : SmoothManifold d} {a b c : M.Form 1}
+  {F G : M.SmoothEquiv M} {h k : M.Point → ℝ} (wF : Witness M a b F h) (wG : Witness M b c G k) :
+  (∀ (x : M.Point) (v : M.Tangent x),
+      evalOne (M.pullback M (fun y => F (G y)) a) x v =
+        evalOne c x v + M.scalarDerivative (fun y => k y + h (G y)) x v) ∧
+    M.pullback M (fun y => F (G y)) (M.exteriorDerivative a) = M.exteriorDerivative c
+ExactComparisonAlgebraConsumers.inversion_sign {d : ℕ} {M : SmoothManifold d} {a b : M.Form 1} {F : M.SmoothEquiv M}
+  {h : M.Point → ℝ} (w : Witness M a b F h) :
+  (∀ (x : M.Point) (v : M.Tangent x),
+      evalOne (M.pullback M (⇑(Diffeomorph.symm F)) b) x v =
+        evalOne a x v + M.scalarDerivative (fun y => -h ((Diffeomorph.symm F) y)) x v) ∧
+    M.pullback M (⇑(Diffeomorph.symm F)) (M.exteriorDerivative b) = M.exteriorDerivative a
+ExactComparisonAlgebraConsumers.round_trip {d : ℕ} {M : SmoothManifold d} {a b : M.Form 1} {F : M.SmoothEquiv M}
+  {h : M.Point → ℝ} (w : Witness M a b F h) : Witness M a a (Diffeomorph.refl 𝓘(ℝ, Model d) M.Point ∞) fun x => 0
+ExactComparisonAlgebraConsumers.common_reference_explicit {d : ℕ} {M : SmoothManifold d} {a b reference : M.Form 1}
+  {F₁ F₂ : M.SmoothEquiv M} {h₁ h₂ : M.Point → ℝ} (w₁ : Witness M a reference F₁ h₁)
+  (w₂ : Witness M b reference F₂ h₂) :
+  ∃ Phi q,
+    (∀ (x : M.Point), Phi x = F₁ ((Diffeomorph.symm F₂) x)) ∧
+      (∀ (x : M.Point), q x = h₁ ((Diffeomorph.symm F₂) x) - h₂ ((Diffeomorph.symm F₂) x)) ∧
+        SmoothlyIsotopicToIdentity M Phi ∧
+          ContMDiff 𝓘(ℝ, Model d) 𝓘(ℝ, ℝ) ∞ q ∧
+            (∀ (x : M.Point) (v : M.Tangent x),
+                evalOne (M.pullback M (⇑Phi) a) x v = evalOne b x v + M.scalarDerivative q x v) ∧
+              M.pullback M (⇑Phi) (M.exteriorDerivative a) = M.exteriorDerivative b
+ExactComparisonAlgebraConsumers.common_reference_isotopy {d : ℕ} {M : SmoothManifold d} {a b reference : M.Form 1}
+  {F₁ F₂ : M.SmoothEquiv M} {h₁ h₂ : M.Point → ℝ} (w₁ : Witness M a reference F₁ h₁)
+  (w₂ : Witness M b reference F₂ h₂) :
+  ∃ H,
+    (∀ (x : M.Point), (H 0) x = x) ∧
+      (∀ (x : M.Point), (H 1) x = F₁ ((Diffeomorph.symm F₂) x)) ∧
+        ContMDiffOn (𝓘(ℝ, ℝ).prod 𝓘(ℝ, Model d)) 𝓘(ℝ, Model d) ∞ (fun p => (H p.1) p.2) (Icc 0 1 ×ˢ univ) ∧
+          ContMDiffOn (𝓘(ℝ, ℝ).prod 𝓘(ℝ, Model d)) 𝓘(ℝ, Model d) ∞ (fun p => (Diffeomorph.symm (H p.1)) p.2)
+            (Icc 0 1 ×ˢ univ)
+ExactComparisonAlgebraConsumers.relation_consumer {d : ℕ} {M : SmoothManifold d} {a b reference : M.Form 1}
+  (wa : ExactComparison M a reference) (wb : ExactComparison M b reference) :
+  ExactComparison M a b ∧ ExactComparison M b a
+'ExactComparisonAlgebraConsumers.composition_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactComparisonAlgebraConsumers.inversion_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactComparisonAlgebraConsumers.round_trip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactComparisonAlgebraConsumers.common_reference_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactComparisonAlgebraConsumers.common_reference_isotopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactComparisonAlgebraConsumers.relation_consumer' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXACT_COMPARISON_CONSUMERS_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/var/lib/archon-worker/workspaces/assignments/89176935-a647-4427-bcb9-5fb06647618f/verification/exact-comparison-algebra/Consumers.lean"], "cwd": "/var/lib/archon-worker/workspaces/assignments/89176935-a647-4427-bcb9-5fb06647618f", "duration_seconds": 3.071, "error": null, "failure": null, "lean_file": "verification/exact-comparison-algebra/Consumers.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "0b6e8abe4af411cc1e1b318d1a17b488cd6221ec6cf7baae034c01e54e920bc6", "status": "passed", "targets": [], "timings": {"build_seconds": 3.069, "engine_seconds": 3.071350274999986, "preparation_seconds": 0.03792353199997933, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.16789201200003845, "total_seconds": 3.2772338280000213, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

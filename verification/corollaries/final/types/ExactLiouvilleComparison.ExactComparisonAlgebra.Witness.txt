@@ -1,0 +1,6 @@
+ExactLiouvilleComparison.ExactComparisonAlgebra.Witness : {d : Nat} →
+  (M : FsFltz.Geometry.SmoothManifold d) →
+    (source target :
+        @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+      (F : @FsFltz.Geometry.SmoothManifold.SmoothEquiv d d M M) →
+        (h : @FsFltz.Geometry.SmoothManifold.Point d M → Real) → Prop

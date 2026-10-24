@@ -1,0 +1,1 @@
+ExactLiouvilleComparison.SmoothlyIsotopicToIdentity : {d : Nat} → (M : FsFltz.Geometry.SmoothManifold d) → (F : @FsFltz.Geometry.SmoothManifold.SmoothEquiv d d M M) → Prop

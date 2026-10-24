@@ -1,0 +1,5 @@
+ExactLiouvilleComparison.FiniteTypeComparison.native_of_exactComparison : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d}
+  {source target :
+    @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))}
+  (h : @ExactLiouvilleComparison.ExactComparison d M source target),
+  @ExactLiouvilleComparison.FiniteTypeComparison.NativeConclusion d M source target

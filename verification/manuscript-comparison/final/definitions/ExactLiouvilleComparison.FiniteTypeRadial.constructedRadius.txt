@@ -1,0 +1,15 @@
+ExactLiouvilleComparison.FiniteTypeRadial.constructedRadius := fun {d : Nat} {D : FsFltz.Geometry.LiouvilleDomain d} (C : @FsFltz.Geometry.Completion d D)
+    (A :
+      @ExactLiouvilleComparison.CompatibleStructure d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.completionReference d D C))
+    (cyl : @ExactLiouvilleComparison.CylindricalStructure d D C A) =>
+  @ExactLiouvilleComparison.FiniteTypeRadial.Radius.mk d D C A (@ExactLiouvilleComparison.FiniteTypeRadial.radius d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_smooth d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_proper d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_lower d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_end_eq d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_core_bound d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.constructedRadius._proof_2 d D C)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_primitive d D C A cyl)
+    (@ExactLiouvilleComparison.FiniteTypeRadial.radius_dual_sq d D C A cyl)

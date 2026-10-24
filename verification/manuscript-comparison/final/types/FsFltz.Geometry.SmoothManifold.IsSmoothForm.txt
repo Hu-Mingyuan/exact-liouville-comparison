@@ -1,0 +1,1 @@
+FsFltz.Geometry.SmoothManifold.IsSmoothForm : {d k : Nat} → (M : FsFltz.Geometry.SmoothManifold d) → (eta : @FsFltz.Geometry.SmoothManifold.Form d M k) → Prop

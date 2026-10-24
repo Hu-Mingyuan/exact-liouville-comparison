@@ -1,0 +1,354 @@
+ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_first {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (x : M.Point) (t : ℝ) (ht : LE.le.{0} 0 t) :
+  Eq.{1}
+    (ExactLiouvilleComparison.MoserRegularity.solve (ExactLiouvilleComparison.FirstPath.form P G T t)
+      (HSMul.hSMul.{0, 0, 0} (-1) (ExactLiouvilleComparison.FirstPath.coefficient P G).primitive) x)
+    (ExactLiouvilleComparison.FirstPath.X P G T hw x t ht)
+ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_interpolation {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} (P : ExactLiouvilleComparison.RadialReference M)
+  (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) (σ : M.Form 1) (hσ : M.IsSmoothForm σ)
+  (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) (t : ↑FsFltz.Geometry.Parameter)
+  (x : M.Point) :
+  Eq.{1}
+    (ExactLiouvilleComparison.MoserRegularity.solve
+      (ExactLiouvilleComparison.MoserRegularity.interpolationForm P q₀ q₁ σ ↑t)
+      (HSub.hSub.{0, 0, 0} q₀.primitive q₁.primitive) x)
+    (ExactLiouvilleComparison.RadialInterpolation.vector
+      (ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)) σ hσ hw
+      (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁) x)
+ExactLiouvilleComparison.MoserRegularityChecks.first_actual {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  {C : ℝ} (hC : LT.lt.{0} 0 C) (K : Set.{0} M.Point) (hK : IsCompact.{0} K)
+  (hb : ∀ x ∉ K, LE.le.{0} (P.compatible.inverseNorm T x) (HMul.hMul.{0, 0, 0} C (G.B (P.R x)))) :
+  (ExactLiouvilleComparison.MoserRegularity.NativeJoint fun t x =>
+      ExactLiouvilleComparison.FirstPath.X P G T hw x (↑t) (Subtype.property.{1} t).left) ∧
+    (M.IsSmoothIntervalVectorFieldFamily fun t x =>
+        ExactLiouvilleComparison.FirstPath.X P G T hw x (↑t) (Subtype.property.{1} t).left) ∧
+      ∃ D,
+        LE.le.{0} 0 D ∧
+          ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+            LE.le.{0}
+              (abs.{0}
+                (M.scalarDerivative (fun y => Real.log (ExactLiouvilleComparison.SmallCoefficient.S G (P.R y))) x
+                  (ExactLiouvilleComparison.FirstPath.X P G T hw x (↑t) (Subtype.property.{1} t).left)))
+              D
+ExactLiouvilleComparison.MoserRegularityChecks.interpolation_actual {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (horder : ∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) (σ : M.Form 1)
+  (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) :
+  (ExactLiouvilleComparison.MoserRegularity.NativeJoint fun t x =>
+      ExactLiouvilleComparison.RadialInterpolation.vector
+        (ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)) σ hσ hw
+        (fun r => HSub.hSub.{0, 0, 0} (q₁.rho r) (q₀.rho r)) x) ∧
+    ∃ C₀ C₁,
+      LE.le.{0} 0 C₀ ∧
+        LE.le.{0} 0 C₁ ∧
+          ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+            LE.le.{0}
+                (M.scalarDerivative P.R x
+                  (ExactLiouvilleComparison.RadialInterpolation.vector
+                    (ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)) σ hσ
+                    hw (fun r => HSub.hSub.{0, 0, 0} (q₁.rho r) (q₀.rho r)) x))
+                C₀ ∧
+              LE.le.{0} (Neg.neg.{0} C₁)
+                (ExactLiouvilleComparison.MoserRegularity.barrierRate P q₀ q₁
+                  (ExactLiouvilleComparison.MoserRegularity.interpolationField P q₀ q₁ σ hσ hw) t x)
+ExactLiouvilleComparison.MoserRegularityChecks.zero_parameter {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (x : M.Point) :
+  Eq.{1} (ExactLiouvilleComparison.MoserRegularity.firstField P G T hw FsFltz.Geometry.parameterZero x)
+    (ExactLiouvilleComparison.FirstPath.W P G T x)
+ExactLiouvilleComparison.MoserRegularityChecks.degenerate_sigma {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar) :
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint
+    (ExactLiouvilleComparison.MoserRegularity.interpolationField P q₀ q₁ 0
+      (FsFltz.Geometry.SmoothManifold.isSmoothForm_zero M) ExactLiouvilleComparison.RadialInterpolationChecks.weak_zero)
+ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_section {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+  (hZ : ExactLiouvilleComparison.MoserRegularity.NativeJoint Z) : Continuous.{0, 0} fun p => ⟨p.2, Z p.1 p.2⟩
+ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_scalarDerivative {d : ℕ}
+  {M : FsFltz.Geometry.SmoothManifold d} {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+  (hZ : ExactLiouvilleComparison.MoserRegularity.NativeJoint Z) (f : M.Point → ℝ)
+  (hf :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) f) :
+  Continuous.{0, 0} fun p => M.scalarDerivative f p.2 (Z p.1 p.2)
+ExactLiouvilleComparison.MoserRegularity.compact_abs_bound {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (f : Prod.{0, 0} (↑FsFltz.Geometry.Parameter) M.Point → ℝ) (hf : Continuous.{0, 0} f) (K : Set.{0} M.Point)
+  (hK : IsCompact.{0} K) :
+  ∃ C,
+    LE.le.{0} 0 C ∧
+      ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        Membership.mem.{0, 0} K x → LE.le.{0} (abs.{0} (f (Prod.mk.{0, 0} t x))) C
+ExactLiouvilleComparison.MoserRegularity.NativeJoint.compact_scalar_bound {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+  (hZ : ExactLiouvilleComparison.MoserRegularity.NativeJoint Z) (f : M.Point → ℝ)
+  (hf :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) f)
+  (K : Set.{0} M.Point) (hK : IsCompact.{0} K) :
+  ∃ C,
+    LE.le.{0} 0 C ∧
+      ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        Membership.mem.{0, 0} K x → LE.le.{0} (abs.{0} (M.scalarDerivative f x (Z t x))) C
+ExactLiouvilleComparison.MoserRegularity.first_compact {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) :
+  ExactLiouvilleComparison.MoserRegularity.FirstTarget P G T hw
+ExactLiouvilleComparison.MoserRegularity.scalarDerivative_linear {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (f g : M.Point → ℝ)
+  (hf :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) f)
+  (hg :
+    ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+      (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) g)
+  (a b : ℝ) (x : M.Point) (v : M.Tangent x) :
+  Eq.{1}
+    (M.scalarDerivative (fun y => HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} a (f y)) (HMul.hMul.{0, 0, 0} b (g y))) x v)
+    (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} a (M.scalarDerivative f x v))
+      (HMul.hMul.{0, 0, 0} b (M.scalarDerivative g x v)))
+ExactLiouvilleComparison.MoserRegularity.radialQ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (x : M.Point) : ℝ
+ExactLiouvilleComparison.MoserRegularity.radialQ_smooth {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q : ExactLiouvilleComparison.RadialCoefficient P.rstar) :
+  ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+    (modelWithCornersSelf.{0, 0} ℝ ℝ) (↑Top.top.{0}) (ExactLiouvilleComparison.MoserRegularity.radialQ P q)
+ExactLiouvilleComparison.MoserRegularity.barrierRate_linear {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) :
+  Eq.{1} (ExactLiouvilleComparison.MoserRegularity.barrierRate P q₀ q₁ Z t x)
+    (HAdd.hAdd.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x)) (P.R x))
+      (HAdd.hAdd.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 ↑t)
+          (M.scalarDerivative (ExactLiouvilleComparison.MoserRegularity.radialQ P q₀) x (Z t x)))
+        (HMul.hMul.{0, 0, 0} (↑t)
+          (M.scalarDerivative (ExactLiouvilleComparison.MoserRegularity.radialQ P q₁) x (Z t x)))))
+ExactLiouvilleComparison.MoserRegularity.barrierRate_continuous {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (hZ : ExactLiouvilleComparison.MoserRegularity.NativeJoint Z) :
+  Continuous.{0, 0} fun p => ExactLiouvilleComparison.MoserRegularity.barrierRate P q₀ q₁ Z p.1 p.2
+ExactLiouvilleComparison.MoserRegularity.core_compact {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) : IsCompact.{0} (Set.ofPred.{0} fun x => LE.le.{0} (P.R x) P.rstar)
+ExactLiouvilleComparison.MoserRegularity.interpolation_compact {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) :
+  ExactLiouvilleComparison.MoserRegularity.InterpolationTarget P q₀ q₁ σ hσ hw
+ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_affine {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {k : ℕ}
+  (eta zeta : M.Form k) (he : M.IsSmoothForm eta) (hz : M.IsSmoothForm zeta) :
+  M.IsSmoothFormFamily fun t => HAdd.hAdd.{0, 0, 0} eta (HSMul.hSMul.{0, 0, 0} t zeta)
+ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_const {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} {k : ℕ}
+  (eta : M.Form k) (he : M.IsSmoothForm eta) : M.IsSmoothFormFamily fun x => eta
+ExactLiouvilleComparison.MoserRegularity.first_joint {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) :
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint (ExactLiouvilleComparison.MoserRegularity.firstField P G T hw)
+ExactLiouvilleComparison.MoserRegularity.W_smooth {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) :
+  ContMDiff.{0, 0, 0, 0, 0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))
+    (ModelWithCorners.tangent.{0, 0, 0} (modelWithCornersSelf.{0, 0} ℝ (FsFltz.Geometry.Model d))) ↑Top.top.{0} fun x =>
+    ⟨x, ExactLiouvilleComparison.FirstPath.W P G T x⟩
+ExactLiouvilleComparison.MoserRegularity.interpolationForm {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (t : ℝ) : M.Form 2
+ExactLiouvilleComparison.MoserRegularity.interpolationForm_eq {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (t : ℝ) (ht : Membership.mem.{0, 0} FsFltz.Geometry.parameterInterval t) :
+  Eq.{1}
+    (M.exteriorDerivative
+      (ExactLiouvilleComparison.RadialInterpolation.primitive
+        (ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ t ht) σ))
+    (ExactLiouvilleComparison.MoserRegularity.interpolationForm P q₀ q₁ σ t)
+ExactLiouvilleComparison.MoserRegularity.interpolation_joint {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) :
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint
+    (ExactLiouvilleComparison.MoserRegularity.interpolationField P q₀ q₁ σ hσ hw)
+ExactLiouvilleComparison.MoserRegularity.first_intervalSmooth {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) :
+  M.IsSmoothIntervalVectorFieldFamily (ExactLiouvilleComparison.MoserRegularity.firstField P G T hw)
+ExactLiouvilleComparison.MoserRegularity.interpolation_intervalSmooth {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) :
+  M.IsSmoothIntervalVectorFieldFamily (ExactLiouvilleComparison.MoserRegularity.interpolationField P q₀ q₁ σ hσ hw)
+ExactLiouvilleComparison.MoserRegularity.first_global {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  {C : ℝ} (hC : LT.lt.{0} 0 C) (K : Set.{0} M.Point) (hK : IsCompact.{0} K)
+  (hb : ∀ x ∉ K, LE.le.{0} (P.compatible.inverseNorm T x) (HMul.hMul.{0, 0, 0} C (G.B (P.R x)))) :
+  ∃ D,
+    LE.le.{0} 0 D ∧
+      ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        LE.le.{0}
+          (abs.{0}
+            (M.scalarDerivative (ExactLiouvilleComparison.FirstPath.exhaustion P G) x
+              (ExactLiouvilleComparison.MoserRegularity.firstField P G T hw t x)))
+          D
+ExactLiouvilleComparison.MoserRegularity.first_growth_consumer {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (T : ExactLiouvilleComparison.ExactSymplecticStructure M)
+  (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (hg : ExactLiouvilleComparison.GrowthAtInfinity P.compatible T P.R 1) :
+  ∃ G,
+    ExactLiouvilleComparison.MoserRegularity.NativeJoint
+        (ExactLiouvilleComparison.MoserRegularity.firstField P G T hw) ∧
+      IsProperMap.{0, 0} (ExactLiouvilleComparison.FirstPath.exhaustion P G) ∧
+        BddBelow.{0} (Set.range.{0, 1} (ExactLiouvilleComparison.FirstPath.exhaustion P G)) ∧
+          ∃ D,
+            LE.le.{0} 0 D ∧
+              ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                LE.le.{0}
+                  (abs.{0}
+                    (M.scalarDerivative (ExactLiouvilleComparison.FirstPath.exhaustion P G) x
+                      (ExactLiouvilleComparison.MoserRegularity.firstField P G T hw t x)))
+                  D
+ExactLiouvilleComparison.MoserRegularity.Q_scalarDerivative {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) (v : M.Tangent x) :
+  Eq.{1} (M.scalarDerivative (fun y => ExactLiouvilleComparison.RadialInterpolation.Q q₀ q₁ (↑t) (P.R y)) x v)
+    (HMul.hMul.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0}
+        ((ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)).rho (P.R x))
+        (HMul.hMul.{0, 0, 0} (P.R x)
+          ((ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)).rhoPrime
+            (P.R x))))
+      (M.scalarDerivative P.R x v))
+ExactLiouvilleComparison.MoserRegularity.barrierRate_eq {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) :
+  Eq.{1} (ExactLiouvilleComparison.MoserRegularity.barrierRate P q₀ q₁ Z t x)
+    (HAdd.hAdd.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (ExactLiouvilleComparison.RadialInterpolation.delta q₀ q₁ (P.R x)) (P.R x))
+      (HMul.hMul.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0}
+          ((ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)).rho (P.R x))
+          (HMul.hMul.{0, 0, 0} (P.R x)
+            ((ExactLiouvilleComparison.RadialInterpolation.coefficient q₀ q₁ (↑t) (Subtype.property.{1} t)).rhoPrime
+              (P.R x))))
+        (M.scalarDerivative P.R x (Z t x))))
+ExactLiouvilleComparison.MoserRegularity.interpolation_global {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (horder : ∀ (r : ℝ), Membership.mem.{0, 0} (Set.Ici.{0} 1) r → LE.le.{0} (q₀.rho r) (q₁.rho r)) (σ : M.Form 1)
+  (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) :
+  ∃ C₀ C₁,
+    LE.le.{0} 0 C₀ ∧
+      LE.le.{0} 0 C₁ ∧
+        ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+          LE.le.{0}
+              (M.scalarDerivative P.R x
+                (ExactLiouvilleComparison.MoserRegularity.interpolationField P q₀ q₁ σ hσ hw t x))
+              C₀ ∧
+            LE.le.{0} (Neg.neg.{0} C₁)
+              (ExactLiouvilleComparison.MoserRegularity.barrierRate P q₀ q₁
+                (ExactLiouvilleComparison.MoserRegularity.interpolationField P q₀ q₁ σ hσ hw) t x)
+ExactLiouvilleComparison.MoserRegularity.solve {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (eta : M.Form 2)
+  (alpha : M.Form 1) (x : M.Point) : M.Tangent x
+ExactLiouvilleComparison.MoserRegularity.solve_equation {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (eta : M.Form 2)
+  (alpha : M.Form 1) (x : M.Point) (hn : M.Nondegenerate eta x) (w : M.Tangent x) :
+  Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo eta x (ExactLiouvilleComparison.MoserRegularity.solve eta alpha x) w)
+    (FsFltz.Geometry.SmoothManifold.evalOne alpha x w)
+ExactLiouvilleComparison.MoserRegularity.solution_unique {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (eta : M.Form 2)
+  (x : M.Point) (hn : M.Nondegenerate eta x) (v z : M.Tangent x)
+  (he :
+    ∀ (w : M.Tangent x),
+      Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo eta x v w) (FsFltz.Geometry.SmoothManifold.evalTwo eta x z w)) :
+  Eq.{1} v z
+ExactLiouvilleComparison.MoserRegularity.solve_eq_inverseContraction {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {S : ExactLiouvilleComparison.ExactSymplecticStructure M} (A : ExactLiouvilleComparison.CompatibleStructure S)
+  (eta : M.Form 2) (alpha : M.Form 1) (x : M.Point) (hn : M.Nondegenerate eta x) (l : A.Dual x)
+  (hl : ∀ (w : A.MetricTangent x), Eq.{1} (l w) (FsFltz.Geometry.SmoothManifold.evalOne alpha x w)) :
+  Eq.{1} (ExactLiouvilleComparison.MoserRegularity.solve eta alpha x) ((A.inverseContraction eta x hn) l)
+ExactLiouvilleComparison.MoserRegularity.contraction_chart {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (eta : M.Form 2) (alpha : M.Form 1) (Z : (x : M.Point) → M.Tangent x) (a : M.Point) {y : FsFltz.Geometry.Model d}
+  (hy :
+    Membership.mem.{0, 0}
+      (PartialEquiv.target.{0, 0}
+        (PartialHomeomorph.toPartialEquiv.{0, 0}
+          (OpenPartialHomeomorph.toPartialHomeomorph.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a))))
+      y)
+  (hsol :
+    ∀ (w : M.Tangent (↑(OpenPartialHomeomorph.symm.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a)) y)),
+      Eq.{1}
+        (FsFltz.Geometry.SmoothManifold.evalTwo eta
+          (↑(OpenPartialHomeomorph.symm.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a)) y)
+          (Z (↑(OpenPartialHomeomorph.symm.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a)) y)) w)
+        (FsFltz.Geometry.SmoothManifold.evalOne alpha
+          (↑(OpenPartialHomeomorph.symm.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a)) y) w)) :
+  Eq.{1} ((ContinuousAlternatingMap.curryLeft.{0, 0, 0} (M.formInChart a eta y)) (M.vectorInChart a Z y))
+    (M.formInChart a alpha y)
+ExactLiouvilleComparison.MoserRegularity.solve_chart {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (eta : M.Form 2)
+  (alpha : M.Form 1) (a : M.Point) {y : FsFltz.Geometry.Model d}
+  (hy :
+    Membership.mem.{0, 0}
+      (PartialEquiv.target.{0, 0}
+        (PartialHomeomorph.toPartialEquiv.{0, 0}
+          (OpenPartialHomeomorph.toPartialHomeomorph.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a))))
+      y)
+  (hn : M.Nondegenerate eta (↑(OpenPartialHomeomorph.symm.{0, 0} (chartAt.{0, 0} (FsFltz.Geometry.Model d) a)) y)) :
+  Eq.{1} (M.vectorInChart a (ExactLiouvilleComparison.MoserRegularity.solve eta alpha) y)
+    ((ContinuousLinearMap.inverse.{0, 0, 0} (FsFltz.Geometry.SmoothManifold.chartContraction (M.formInChart a eta y)))
+      ((ContinuousLinearEquiv.symm.{0, 0, 0, 0} (FsFltz.Geometry.SmoothManifold.chartOneFormEquiv d))
+        (M.formInChart a alpha y)))
+ExactLiouvilleComparison.MoserRegularity.solve_smoothFamily {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (eta : ℝ → M.Form 2) (alpha : ℝ → M.Form 1) (he : M.IsSmoothFormFamily eta) (ha : M.IsSmoothFormFamily alpha)
+  (hn :
+    ∀ (t : ℝ), Membership.mem.{0, 0} FsFltz.Geometry.parameterInterval t → ∀ (x : M.Point), M.Nondegenerate (eta t) x) :
+  M.IsSmoothVectorFieldFamily fun t => ExactLiouvilleComparison.MoserRegularity.solve (eta t) (alpha t)
+ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_smoothFamily {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (E : ℝ → (x : M.Point) → M.Tangent x) (hE : M.IsSmoothVectorFieldFamily E)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (he : ∀ (t : ↑FsFltz.Geometry.Parameter), Eq.{1} (E ↑t) (Z t)) :
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint Z
+ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_equation {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (eta : ℝ → M.Form 2) (alpha : ℝ → M.Form 1) (he : M.IsSmoothFormFamily eta) (ha : M.IsSmoothFormFamily alpha)
+  (hn :
+    ∀ (t : ℝ), Membership.mem.{0, 0} FsFltz.Geometry.parameterInterval t → ∀ (x : M.Point), M.Nondegenerate (eta t) x)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) (w : M.Tangent x),
+      Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo (eta ↑t) x (Z t x) w)
+        (FsFltz.Geometry.SmoothManifold.evalOne (alpha ↑t) x w)) :
+  ExactLiouvilleComparison.MoserRegularity.NativeJoint Z
+ExactLiouvilleComparison.MoserRegularity.inverse_bridge {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} :
+  ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget
+ExactLiouvilleComparison.MoserRegularity.intervalSmooth_of_equation {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (eta : ℝ → M.Form 2) (alpha : ℝ → M.Form 1) (he : M.IsSmoothFormFamily eta) (ha : M.IsSmoothFormFamily alpha)
+  (hn :
+    ∀ (t : ℝ), Membership.mem.{0, 0} FsFltz.Geometry.parameterInterval t → ∀ (x : M.Point), M.Nondegenerate (eta t) x)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ∀ (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) (w : M.Tangent x),
+      Eq.{1} (FsFltz.Geometry.SmoothManifold.evalTwo (eta ↑t) x (Z t x) w)
+        (FsFltz.Geometry.SmoothManifold.evalOne (alpha ↑t) x w)) :
+  M.IsSmoothIntervalVectorFieldFamily Z
+ExactLiouvilleComparison.MoserRegularity.NativeJoint {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) : Prop
+ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} : Prop
+ExactLiouvilleComparison.MoserRegularity.firstField {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T)
+  (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) : M.Tangent x
+ExactLiouvilleComparison.MoserRegularity.interpolationField {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ)
+  (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) : M.Tangent x
+ExactLiouvilleComparison.MoserRegularity.FirstTarget {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (G : ExactLiouvilleComparison.AdmissibleGrowth 1)
+  (T : ExactLiouvilleComparison.ExactSymplecticStructure M) (hw : ExactLiouvilleComparison.WeaklyTames P.compatible T) :
+  Prop
+ExactLiouvilleComparison.MoserRegularity.barrierRate {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) (t : ↑FsFltz.Geometry.Parameter) (x : M.Point) : ℝ
+ExactLiouvilleComparison.MoserRegularity.InterpolationTarget {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (P : ExactLiouvilleComparison.RadialReference M) (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient P.rstar)
+  (σ : M.Form 1) (hσ : M.IsSmoothForm σ) (hw : ExactLiouvilleComparison.RadialInterpolation.WeakDifferential σ) : Prop
+MOSER_REGULARITY_TYPES_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/moser-regularity/Types.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 3.409, "error": null, "failure": null, "lean_file": "verification/moser-regularity/Types.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "ff3e687c32c2822ec6aba39ac1c81e403ee34d51f9dd97bb6cebcf400ef9d3d3", "status": "passed", "targets": [], "timings": {"build_seconds": 3.407, "engine_seconds": 3.4088633860010304, "preparation_seconds": 0.051889300000766525, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.24062436400163278, "total_seconds": 3.701457623999886, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

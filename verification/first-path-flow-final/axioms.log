@@ -1,0 +1,57 @@
+'ExactLiouvilleComparison.FirstPathFlow.IsSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.Evolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.Target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.GrowthTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.FiniteIntervalExistenceTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.native_open_of_chart_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.native_open_of_interval_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.chart_hasDerivWithinAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.compact_sublevel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.scalar_hasDerivWithinAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.scalar_displacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.compact_confinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.first_native_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.first_growth_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlowChecks.exact_endpoints' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.exists_bounded_smooth_compact_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.contMDiff_cutoff_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.scalar_bound_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.finiteIntervalExistence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.smooth_scalar_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.extend_strip_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.globally_bounded_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.global_solution_of_scalar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.SmoothEvolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.smoothEvolution_of_scalar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.SmoothEvolution.isotopy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.ODE.SmoothEvolution.extend_closed_curve' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.ODE.SmoothEvolution.unique_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.evolution_of_scalar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.firstPathFlow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.firstPathFlow_of_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlow.evolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlowFinalChecks.native_ode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlowFinalChecks.inverse_and_isotopy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ExactLiouvilleComparison.FirstPathFlowFinalChecks.growth_consumer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FIRST_PATH_FLOW_FINAL_AXIOMAUDIT_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison/verification/first-path-flow-final/AxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 3.794, "error": null, "failure": null, "lean_file": "verification/first-path-flow-final/AxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "594725001cc38b0d974c12b6adad457ab058114875f18bc3818e6aa264166fe6", "status": "passed", "targets": [], "timings": {"build_seconds": 3.793, "engine_seconds": 3.7946600960003707, "preparation_seconds": 0.03951781199975812, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.16453779800212942, "total_seconds": 3.998777320000954, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

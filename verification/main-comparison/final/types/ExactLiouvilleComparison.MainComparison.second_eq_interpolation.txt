@@ -1,0 +1,14 @@
+ExactLiouvilleComparison.MainComparison.second_eq_interpolation : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d} (P : @ExactLiouvilleComparison.RadialReference d M)
+  (G :
+    ExactLiouvilleComparison.AdmissibleGrowth (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+  (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M),
+  @Eq.{1}
+    ((u : Real) →
+      @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+    (@ExactLiouvilleComparison.MainComparison.secondPrimitive d M P G T)
+    (@ExactLiouvilleComparison.MainComparison.interpolationPrimitive d M P
+      (@ExactLiouvilleComparison.FirstPath.coefficient d M P G)
+      (@ExactLiouvilleComparison.RadialInterpolationFlow.largeCoefficient d M P
+        (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M T)
+        (@ExactLiouvilleComparison.ExactSymplecticStructure.smooth_primitive d M T))
+      (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M T))

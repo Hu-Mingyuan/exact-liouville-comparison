@@ -1,0 +1,252 @@
+[
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_first"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularityChecks.inverse_is_existing_interpolation"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularityChecks.first_actual"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularityChecks.interpolation_actual"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularityChecks.zero_parameter"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularityChecks.degenerate_sigma"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_section"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.NativeJoint.continuous_scalarDerivative"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.compact_abs_bound"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.NativeJoint.compact_scalar_bound"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.first_compact"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.scalarDerivative_linear"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.radialQ"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.radialQ_smooth"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.barrierRate_linear"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.barrierRate_continuous"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.core_compact"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolation_compact"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_affine"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.smoothFormFamily_const"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.first_joint"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.W_smooth"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolationForm"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolationForm_eq"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolation_joint"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.first_intervalSmooth"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolation_intervalSmooth"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityGlobal.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.first_global"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityGlobal.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.first_growth_consumer"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityGlobal.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.Q_scalarDerivative"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityGlobal.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.barrierRate_eq"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityGlobal.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolation_global"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.solve"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.solve_equation"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.solution_unique"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.solve_eq_inverseContraction"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.contraction_chart"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.solve_chart"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.solve_smoothFamily"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_smoothFamily"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.nativeJoint_of_equation"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.inverse_bridge"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "kind": "theorem",
+    "name": "ExactLiouvilleComparison.MoserRegularity.intervalSmooth_of_equation"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.NativeJoint"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.InverseBridgeTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.firstField"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.interpolationField"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.FirstTarget"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.barrierRate"
+  },
+  {
+    "file": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "kind": "def",
+    "name": "ExactLiouvilleComparison.MoserRegularity.InterpolationTarget"
+  }
+]

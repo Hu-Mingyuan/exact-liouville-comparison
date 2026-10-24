@@ -1,0 +1,5 @@
+import ExactLiouvilleComparison.FiniteTypeRadialMetricStatement
+set_option pp.all true
+#print ExactLiouvilleComparison.FiniteTypeRadialMetric.EndRadius
+#print ExactLiouvilleComparison.FiniteTypeRadialMetric.Target
+#print FsFltz.Geometry.SmoothManifold.scalarDerivative

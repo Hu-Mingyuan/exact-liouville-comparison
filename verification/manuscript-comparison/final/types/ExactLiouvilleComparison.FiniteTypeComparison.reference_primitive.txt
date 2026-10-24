@@ -1,0 +1,16 @@
+ExactLiouvilleComparison.FiniteTypeComparison.reference_primitive : ∀ {d : Nat} {D : FsFltz.Geometry.LiouvilleDomain d} (C : @FsFltz.Geometry.Completion d D)
+  (A :
+    @ExactLiouvilleComparison.CompatibleStructure d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.completionReference d D C))
+  (cyl : @ExactLiouvilleComparison.CylindricalStructure d D C A),
+  @Eq.{1}
+    (@FsFltz.Geometry.SmoothManifold.Form d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+    (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d
+      (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+      (@ExactLiouvilleComparison.RadialReference.exactStructure d
+        (@FsFltz.Geometry.CompleteLiouvilleManifold.manifold d (@FsFltz.Geometry.Completion.ambient d D C))
+        (@ExactLiouvilleComparison.FiniteTypeRadial.reference d D C A cyl)))
+    (@FsFltz.Geometry.CompleteLiouvilleManifold.primitive d (@FsFltz.Geometry.Completion.ambient d D C))

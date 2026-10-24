@@ -1,0 +1,8 @@
+ExactLiouvilleComparison.MainComparison.secondPrimitive._proof_1 : @ContinuousAdd.{0} Real
+  (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+  (@Distrib.toAdd.{0} Real
+    (@NonUnitalNonAssocSemiring.toDistrib.{0} Real
+      (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring.{0} Real
+        (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing.{0} Real
+          (@NonUnitalCommRing.toNonUnitalNonAssocCommRing.{0} Real
+            (@CommRing.toNonUnitalCommRing.{0} Real Real.commRing))))))

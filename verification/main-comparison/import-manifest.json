@@ -1,0 +1,1017 @@
+[
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathEndpoints.lean",
+    "sha256": "1a1fb2872ad1fa46371fb2e83f782c349bf0bba03d8a0227160d02bcfd739512"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathEstimates.lean",
+    "sha256": "c0c58372c97f6327b3b9ccfe6bb4c59cccfd787e31aa67083164a4acecb54f2f"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathExhaustion.lean",
+    "sha256": "528c8e24bd328043b17603a47392174962fae242462f4b959306cb044c156fc3"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathField.lean",
+    "sha256": "2cb10e87bedb69168cf2ec9c1ebd4808b156827032ca97e4f9e5c323b84bc988"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathFlow.lean",
+    "sha256": "33b3574e5805832587874c33c67b3d025e6f5f6d2cc4c380f7d3092b6f2c6a08"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathFlowConsumers.lean",
+    "sha256": "9551992ea2cb386d44859ca7d88b14c0b6be71176c5685610b60dead69603d09"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "ExactLiouvilleComparison/ThirdPathStatement.lean",
+    "sha256": "5cfd8cc26dadec7cf72da708c25d275b27d366ccf907a1e0d0d2c8977f2437ab"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "docs/third-path-crosswalk.md",
+    "sha256": "14737140da60ac599e25a199c7d46d3ca20b904d8a6eed4f604c1b15a0b78099"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "docs/third-path-progress.md",
+    "sha256": "7db582a80647752bca0ee5c4b31330ea4c26ace0abcf9cc77746edbb307d3f6a"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "docs/third-path-proof-guide.md",
+    "sha256": "6661446dfe99cea41f2098a6bba09eae9ea186b873592ae1d60ca2327737befc"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "scripts/verify-third-path-exhaustion.py",
+    "sha256": "4a95fdf5a1737000dfaa408c47cde68e81d5ae316b73b785bd5c6978f0c54942"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "scripts/verify-third-path-inputs.py",
+    "sha256": "97df8a3aaed42098f8ec846b4d2fcecc45ec2fce118b79ad5690550ec8db8665"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "scripts/verify-third-path-statement.py",
+    "sha256": "ac34d29e40aa92fbc6e4bae07c2a9c75d6e9ac839c850e70d44d38a485a8cf45"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "scripts/verify-third-path.py",
+    "sha256": "0677dd0d195685b8f96d81c3f53cedc57288e8d75da8c6ba48b94460887de409"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/AxiomAudit.lean",
+    "sha256": "a4d5e462eeab6c204b497bc9975d180144677c5bd8cd2d06362a1da3b51a1231"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/Consumer.lean",
+    "sha256": "52888b4f7e06d26c7834c421d34cd9204b2128cc39012d3343bfb0beccba063d"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/DeclarationTypes.lean",
+    "sha256": "fb0b7645d2cdbe7c1b0706dae72beb21ea0e8ee43a8bb14bcf99b3ecc825bc69"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/README.md",
+    "sha256": "d7fc13f55aba5e711f1638a7e70ddef0a98ded5cb223bf2e4fcc5f47e072b9f9"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/baseline.json",
+    "sha256": "4e9bf1e9decf231d203e7abd3d24626b5a0f81ee157565013e8476168dbd2357"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/declarations.json",
+    "sha256": "a0acf36ac50a44d9b8d63927837db8a58ae38e966e72df8e2a2ec234835a6e15"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/elaborated-types.txt",
+    "sha256": "5aeac3ee072bff8229c17b10d4fe96ac4278a04606477103f1761b7279063040"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path-exhaustion/receipt.json",
+    "sha256": "e79fb1527c3b62a128a54652dfc9d61bfcd264575277a9ea4a9bc1e43b63ff52"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/FinalAxioms.lean",
+    "sha256": "83c4ee3ad85bcdda5df7ced020862a9a8bb318b55e60ab5ca21e338c277f51b5"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/FinalInventory.lean",
+    "sha256": "a5d73d35eb4f16bc53a67ad3d3a30f2525a885d049b33beff695f994e83991fe"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/InputAxioms.lean",
+    "sha256": "d260c59d542101465adc8490433b2c36be23a24ae9925f990226f2b4ccf094e7"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/InputTypes.lean",
+    "sha256": "62c4060c7a1cf65a7147d7ffdc58a2e49370d1a89e5b1a40388065e7059f4ca0"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/StatementInventory.lean",
+    "sha256": "8445a7c5219925b9e9f0b6297c09ad007dae7f0434f32b2f301d122538c295ce"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/axiom-audit.json",
+    "sha256": "a8ef1cf733e10fdf8d1821e064e194a794e9413bafcf02d9dadc1cbe99351ea5"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/baseline.json",
+    "sha256": "ec2ba362aac2b59bb0b63c64d32162afbcf9e6e94e1e3adb879f12c3658c3c80"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/declarations.json",
+    "sha256": "f4985c4c41b8304b99e6ad9cf6ab9cfa81ddb771a909b03efd469ba40bd02306"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/dependency-state.json",
+    "sha256": "4246ea3b7e87f03b4b4923825490e8ccb57402193c7cf0a6fee74d1428969b72"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/endpoints-check.json",
+    "sha256": "0b401abddfa38f9bb810236c8137e0e650287ec3a19cc0c4b617912114307ef0"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/endpoints-check.stderr",
+    "sha256": "0544bce057465078292de2034c4434772d85d24c1f834959c2d2b28aab68ee62"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/environment-declarations.json",
+    "sha256": "e7e1ccff3be3a09955cca9be8cffdddb641f4b348de598dfcf5c12c9bf378e7e"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/field-estimates-check.json",
+    "sha256": "1bd033b0ce5eb3d65006519b885a7d171b4abff3cb8ee42db2f50677d70e6b4c"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/field-estimates-check.stderr",
+    "sha256": "28e2f482cb841788b4fbbf9eaebd4dc2a6c5684632ffcb5a067690804ceb5522"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/final-axioms.txt",
+    "sha256": "68d4b16ce87db6f719737094acfb2a9a60cececab1615c2d906d67ddba2a3a1a"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/final-build.txt",
+    "sha256": "026baef7e452acaa2b1fbaa7bd5c566e8e075c17cff814838a54ac57ba96e0e3"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/final-elaborated-types.txt",
+    "sha256": "96c5cba806c90ca3dbc84429145806a4ceedcfec47f53f892a70b45b48856f32"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/final-inventory.txt",
+    "sha256": "7f83dabdb4bb979725488de652daafe26f9c10375c5b196f971f3a30061020e1"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/input-declarations.json",
+    "sha256": "85cba62dfb4d3791f2ea6fc48ccdd8cc713ca176fece0ef0336a898f87443fe6"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/inputs-receipt.json",
+    "sha256": "9ec3c7d3e4affe47c4e6c618f478c0931951ad1880edf98b4d4d9ec8b2fa3d83"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/receipt.json",
+    "sha256": "33aa1217f677ba77c7c1e3b12258ccc1db3790b63fb66afc03abafd46145a7ff"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-check-initial.json",
+    "sha256": "82923f2693535358b85c89039ea4275ae5360252d795a4038c3a3ad817c03f99"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-check-initial.stderr",
+    "sha256": "01b89ae9f887e8616c393c0312ce8f60d38d92dd3d3c5acc581d9ad8ef38a09b"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-check.json",
+    "sha256": "230cbe360510577ee11ef5109a56e0cda0465cb77926fb66c10d8dc3e5cd85e3"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-check.stderr",
+    "sha256": "6b1d787e2d0c13a5d08c4d280884f7f870448a0f966ebda1b2ad917ea4b651a9"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-inventory-check.json",
+    "sha256": "d196f6522434756177b319da635c123f7cd6f1e14761b914c0941ae45eb1fca2"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-inventory-check.stderr",
+    "sha256": "51f5160974ab6167e659362e922dc8d80d4b22b87ffe360453a35d5fa8414b22"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-inventory.txt",
+    "sha256": "51f5160974ab6167e659362e922dc8d80d4b22b87ffe360453a35d5fa8414b22"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-review.md",
+    "sha256": "d0a6cb9dfb0cd91ea8550728aac767533d652cbd87022d5f9326fcbb8900b74b"
+  },
+  {
+    "commit": "c1773eba6457e4e3331cee126a6da07fc62333ac",
+    "path": "verification/third-path/statement-source-hashes.json",
+    "sha256": "cadab521ce423007487d57944ffadd59c5b925b96e442448323648a7eb797306"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "ExactLiouvilleComparison/ExactComparisonAlgebra.lean",
+    "sha256": "c15c5b615805b3c62c760c54d49c2a363c8c0c43e338c24cfa90f71248568e14"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "ExactLiouvilleComparison/ExactComparisonAlgebraIsotopy.lean",
+    "sha256": "fc992b860a6c9f13dd8083d59ed01f6638068456a59d5e0a7a080b4a1c2d868b"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "ExactLiouvilleComparison/ExactComparisonAlgebraStatement.lean",
+    "sha256": "c6059259870eefe1ac19c2b81694d669d884abb0f99ca38351701a09e97a3a36"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "docs/exact-comparison-algebra.md",
+    "sha256": "3e80c2c234d233e9f01ca0a1fe6e482fcc809af23a8067555cacde13d6412a7e"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "scripts/verify-exact-comparison-algebra.py",
+    "sha256": "9582a482dc7f13a89389940a6738aa6a698c33ad22fb1839860d54797d1cb222"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/Axioms.lean",
+    "sha256": "0bd7e79a9a0f50314bb6c42b9d9ce3a74be4c808c2c084fb6c6243a36c4d5432"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/Axioms.txt",
+    "sha256": "4a8f7135d8ddc223871e0ae9884a1b1ec1e76f806412701c39aa85c8060b7583"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/Consumers.lean",
+    "sha256": "73a229c8f9ef753fa6c5da06b8e352bb705360e3fa737202042a670835f671d5"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/Consumers.txt",
+    "sha256": "7c0461789d92f3975df9cfaa75e3d2b18c7cfee4c524011b20576cec530697a3"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/InterfaceTypes.lean",
+    "sha256": "6665497001a242fec689eb730082e450899a2f677c369e0f046c20ca3ae728d0"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/InterfaceTypes.txt",
+    "sha256": "044f6b8785d62f1554e3e61616fdba389c665822b8c35bb9bc34a167e3e93ab3"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/Types.lean",
+    "sha256": "7693b72737801904a2d6a1085abd604fb5eb190b01f0021ee83642da1ccada0d"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/Types.txt",
+    "sha256": "9201843d32b4be401175dce299468c796b80b855320fb8c6b7e2d2954bb7bb17"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/build.txt",
+    "sha256": "187a6da07a6e49a479dc3cf1f10f5bdc5f09da6014c2f344c8c4e4dd09ab6dd2"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/declarations.json",
+    "sha256": "912f9050a770a1d374a87be15438378e36acbb369ef7aaf8bb929cbb08400f2c"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/delivery.json",
+    "sha256": "f7eaf1347ec74df459f16da0d971aa643c03bc1dc59b3152a9fd781609b8a504"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/final-review.md",
+    "sha256": "79e55e251f6ba5f8927364f89b7417cb89e2684f1f9ba1d51fda051a33e75dd1"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/preserved-inputs.json",
+    "sha256": "091ecb73833be8a9f61a6432dea223178bf409d6ceecb8e6952acce051c501b7"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/receipt.json",
+    "sha256": "eedf09169a03ec6554f897987e5c2744275845977fe1e81dee097c4d8cc3cdf2"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/statement-check.json",
+    "sha256": "687dc68d29fcfc5aaf9510dd12b1b36681c8b16a9122583c863150b52dd9bc18"
+  },
+  {
+    "commit": "7389b2f8b1b85a87eb83cb245cd3f3855c721dd5",
+    "path": "verification/exact-comparison-algebra/statement-review.md",
+    "sha256": "fe16294e61eb4bb11c8dc4ce221763bb109ecb85645012d42b22b1e9f8b3026f"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison.lean",
+    "sha256": "969541ba18a27f912c1210658dd71f9ea6cbd4ab6b0fe7e8218b6bfa7f368144"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathChecks.lean",
+    "sha256": "7fee13337880e005bee80260cc8301abdffaf665c9f1d7fbd213d0156058e6cb"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathCoefficient.lean",
+    "sha256": "591014599d70f6bf68c20c7a231b53f04f19f146a6bf0ccec6220412e5b36aac"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathEstimate.lean",
+    "sha256": "4a3d334c1f741ad53b94d4395a751916e0520407eddeafc69c65f6c51bfa084a"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathExactness.lean",
+    "sha256": "7d48df3426e4861cdcd455ee015e7486ebc07cb5aca352f41dcf944d0dfbb47e"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathExactnessInputs.lean",
+    "sha256": "48b79d9ffdb1c6f8a940ee2e4382528e8f798442ed345d1432d9db130caf3aaf"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathExactnessPullback.lean",
+    "sha256": "28d21c2e0e73a15998961b016a9025ad50536b8a6b7f8f93b6dea027e0964dec"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathExactnessStatement.lean",
+    "sha256": "614ecf82d9cb3419dd5c49c77f6b4b57cf86be1684708270c3a8d6e19a549c94"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathExhaustion.lean",
+    "sha256": "c32921488a6d0a34b513e4279b9eeb4d035fa3884d35a5a682f91f1809fc2daf"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathFlow.lean",
+    "sha256": "d67f7c7692525f291deffbaf0df24ea478b59a243570ee4ccb7883ccfee35897"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathFlowChecks.lean",
+    "sha256": "8f608bbb912d2048e2dead1a6e9d64721405b5748ef34643a428cad7aeb1a171"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathFlowFinalChecks.lean",
+    "sha256": "b89ec691fae1a9f2663fa08b03e03c5bde71b622d29f0301e804bf1a1063ed29"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathFlowInputs.lean",
+    "sha256": "7560d937b516b0a30b35151491af5d349496b2883255cd1a23f57d1ad629daa0"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathFlowStatement.lean",
+    "sha256": "2c698398955a83619d3324db968796982952449a0aa4c1987ecb96730c721217"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/FirstPathVector.lean",
+    "sha256": "c9fd5bbc2e6d288b5659892011e436e162e7f90b9ce700932ff6d21c29048b63"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/Geometry.lean",
+    "sha256": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/InterfaceChecks.lean",
+    "sha256": "32bd5a0e234a94674f49f786772f8b623fa61f48ce65f3d13a85308689941c06"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/LargeCoefficient.lean",
+    "sha256": "e07ab91f6341bcee9e67127424167c9689c9c24f96d8df2ba00ec03a197c0ff8"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/LargeCoefficientNorm.lean",
+    "sha256": "fc1900c9fc9230508344d7e4c389c500ec4d5f2c6d74adaf1a96a950b6efbe46"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/LargeCoefficientSeries.lean",
+    "sha256": "42d9e8a7113fedc34b77fc2fd55649d0e83a54d332ffb8eec5e50dcb277a3094"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/LinearAlgebra.lean",
+    "sha256": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/LinearAlgebraChecks.lean",
+    "sha256": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactness.lean",
+    "sha256": "34ceac4c53f36bfadb8c12d483b5d660519c3894eddd64e23ffdc23a9363af86"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessCancellation.lean",
+    "sha256": "a47fad56c2094f909769ee9747148312dbd60d3234df6a3d618d1c2a1cffc4bf"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessCartan.lean",
+    "sha256": "42ebdb1bb65ee08bf0af26335d0981d379ee44dcea537933079baa74edf0501e"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessCartanCalculus.lean",
+    "sha256": "b7aba97b3e9b1e8c8924b07c1458bc53748c1deb37a03049bcb02a6006bd26dc"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessCartanCharts.lean",
+    "sha256": "e091bf5cd7c7ce4d1b8671c5401cbf18245fda9d350cebbc17f956e1efa95679"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessCartanRegularity.lean",
+    "sha256": "c2ed689e4ee3a729cb97109531101c4846be75ef1e3d573c32f7b230dedac86d"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessEndpointSteps.lean",
+    "sha256": "005471b612d992a20ec80e4580738522c15e5b0efceb5e4043c36b735409c1da"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessExterior.lean",
+    "sha256": "fbc553408fca1418517a2decd90a5bc0c627048925d752f469d0850dabe66349"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegral.lean",
+    "sha256": "e83cd5aa400eadcb89852b0a4d58cbb12b7b421e7eab642fe676f7ad4e13fc32"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegralChecks.lean",
+    "sha256": "f6668f69409b7525c7ea2dc33e010ea77a40d658ba9526e27d831f85f037f6d1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegralEuclidean.lean",
+    "sha256": "54de8e43c66a116fe0979dc0b6f47289b51761e98cf951f764abefa529e49344"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegralEuclideanChecks.lean",
+    "sha256": "330ad091e0ac99d8178e747500656aca9eea793d420fd2afdb0d2e257db3833f"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegralEuclideanStatement.lean",
+    "sha256": "9a5abd5bb8b4cf6bfe61a108555e1d75e05a0d81541516a3e8b777005af04831"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegralRegularity.lean",
+    "sha256": "9fed69f95db597b78dd440d14f785769d14741a7bb02b785df7910fe2d61f285"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessIntegralStatement.lean",
+    "sha256": "7ab6bd4b013e4f2f4f139385d41b578495efbe92744dc98850f328c93c381ebc"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessPullback.lean",
+    "sha256": "0333dc04420cbd59805871bb1ebd9941e1bc322f11557c047c2c30eacab6487a"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserExactnessStatement.lean",
+    "sha256": "13e919fbf803aab75c3758a0c8ab3045fb284dbe3628db19274c9fa4cad3ff88"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserRegularityChecks.lean",
+    "sha256": "602b942347684f85d0b0142f2c95b6645742ed2809b589b55c43fa3bea616e09"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserRegularityCompact.lean",
+    "sha256": "77204133bd37ef23206c1d43d53db3853e69bc6470252268011b6c73409ab826"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserRegularityFields.lean",
+    "sha256": "8ef90c4df28f103792ee415afa2ad21b3a398a9c3ad8cb3675b83da371146370"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserRegularityGlobal.lean",
+    "sha256": "81c7ee5fc61973bd82ad60c7cc5566e1ad28d0213753e91ec9cb9f2a8f0c30a7"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserRegularityInverse.lean",
+    "sha256": "60ba290c2101e743af3cf2fdb3ee80fddd22b34c47f988d34c00a00d20cb8f07"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/MoserRegularityStatement.lean",
+    "sha256": "fecaeb5bfe5e16df859c8805915e525cca0ddbbe084f0c0649dc9532e6c9eb0b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEClosedUniqueness.lean",
+    "sha256": "0a3fb154cb14c001e086402169e49af6fcdf78d2ae366c0a05b5584f8183fc33"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEContinuation.lean",
+    "sha256": "23f47f09944ddff65928949fe7385226a2e7b3b274dda87396eec8b155de9927"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEContinuationCutoff.lean",
+    "sha256": "7371c5defeccd22af52bf034cd66aacb642d2181da2ef1d49e62cf5cccc4e80b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEContinuationStatement.lean",
+    "sha256": "d1f8ad17b89f7acea0a9c757319bcfc027666df264c9471ba01d0c03164598f1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEGlobalExistence.lean",
+    "sha256": "3554dfd76cdefb2973d9a698d4e7d16e66f627e781befdf639409e2a739c4dfb"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEGlobalField.lean",
+    "sha256": "25a4cb46ce0bfa489b9ebfe4ba41f3fbbcbb34549befd8c7c6379044a9f91957"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEIntervalRegularity.lean",
+    "sha256": "644643d6a1b33f6fe816e49b83fedccbeda377bb7a2ff23d8e5117a34d944bf7"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODEScalarConfinement.lean",
+    "sha256": "0b07b6c8765cb2cbe1a81407ec1f051f80fd9d3f5003fe711a99e2c708083fa8"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODESmoothEvolution.lean",
+    "sha256": "6f70c38ccfe9628315b20fd8cfc313521529d708fbbc374020d3ebced26981f8"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrier.lean",
+    "sha256": "86fb566e2a61507e33d4168a6dede320111d59fed5891da2680ad259231c8aa0"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierConfinement.lean",
+    "sha256": "bd10ac404e00c985b50091701882400f08576e77758ebd85eeffdbd419501959"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierExistence.lean",
+    "sha256": "fc2efd63070a58bf63b84ce143cbc850dddd9aace5b4e93ca9d580a85507a8df"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierLocalization.lean",
+    "sha256": "ef7d37a76a994e2be21424a7f52e81b11b5f856160c3c16bfa278ebf8593daba"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierLocalizationPatch.lean",
+    "sha256": "5cdc67126ed2028ec672ced1dcd0539c51d825c7ae480c8a45c6ce20106776e5"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierSmooth.lean",
+    "sha256": "41edf8838dc5a99744e252a76b498b7f98d448da1415e07b203bbbcc80c1bf87"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierSmoothAssembly.lean",
+    "sha256": "bd707273547418472904e8260c0d1a3e03f14ae1951fb85e309f6b79e20a7138"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/ODETwoBarrierStatement.lean",
+    "sha256": "81b206239999b41a479672cc5a73673115a5c09f3393d0438674bf2df794eb17"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialCoefficient.lean",
+    "sha256": "a639d4dbd9c8b16186466e2a9d3c3f4ac729736b7e08134a16c7df002aeb082a"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationChecks.lean",
+    "sha256": "d27a407be7a5fc50d92daa867794cc52ba97191f98eb4807694433f4805af9e1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationCoefficient.lean",
+    "sha256": "e2f53289c602bab2da2c428ca61adcd215b158aad24b373b897539c1f1431801"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationEstimates.lean",
+    "sha256": "c657b448a3d15c01c3e156c03c3138ed51d1ba3d41d7e7f9bd020e62c3a561d2"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationFlow.lean",
+    "sha256": "70f7a368a8e0d54ca041976073dbbe73dbfea64734c5a61d0977917ae4e47ce1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationFlowChecks.lean",
+    "sha256": "c207524ac2e3f12436e69262d51f3ac36b2f96378d3f3c545fac0fbbed54d67b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationFlowCoefficients.lean",
+    "sha256": "c494e751fd75f7ad95a72e271ea4ca945c7ebfa947ff5c18a91459674a50806c"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationFlowEqual.lean",
+    "sha256": "97b2ba6eaafb09a8041726a295507cdab218f5424a12d8415bc84eb06c8a9462"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationFlowInputs.lean",
+    "sha256": "9d90c3b0cf7bf4260edad41f785a07eca9a6bbe5dc6370fe5925fd212e4e54da"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationFlowStatement.lean",
+    "sha256": "a9e8a8f144f240846f4b3e85ab26f78877aa063a2fbf2a478b78bf4c90c7d123"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialInterpolationGeometry.lean",
+    "sha256": "746160c876499357ea9031263b40e116c652084143e0a800d55ab4361c8e82d4"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetric.lean",
+    "sha256": "4393795ecc7cd8302c33fdc442303afc828cc94b6ac4265286ab4cc769694dc4"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetricBundle.lean",
+    "sha256": "2beabd7169489fcaac0dd7f6c12eec0b063d35afa1bc70c5dc6ca7a68b501578"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetricChecks.lean",
+    "sha256": "346acdc5bc188cb9d97e75f4ca6caf9538e90c25b8a522a4f66570ab1b45b25e"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetricConstruction.lean",
+    "sha256": "7658f90a5a138b823a57411db25794e3979793aef38c3e37ac25b21005be886b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetricDual.lean",
+    "sha256": "73f7c250c522a9c4f0138681031a887faf6829481b5eec9b728a6c6084575ead"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetricLinear.lean",
+    "sha256": "4230f3af5f5ac9eeaf4796de421bc3c91ef089ea3585ff146d38450ae9079a3f"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/RadialMetricNorm.lean",
+    "sha256": "8b7910efc1b16f67e118604b87e9ca740d647cfdcb3eb1a22f006f936de677e8"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/SmallCoefficient.lean",
+    "sha256": "a82b7a1d4f7f4076a363bb77d9be2b7564fa4a5b95df53789dab78e711833627"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/SmallCoefficientAsymptotic.lean",
+    "sha256": "3a0ce24020ac34baffa2caffae906cc675081ae752ae9bdc87988b1d571f339b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/SmallCoefficientK.lean",
+    "sha256": "152e2d026dd8b9dff3cee0e221f0ba1c5d4478668d64c0d26910b400ae736769"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "ExactLiouvilleComparison/Statement.lean",
+    "sha256": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "docs/moser-exactness-crosswalk.md",
+    "sha256": "8ef14df1d02dd25e95e5909604f5c666add9f80c61f41e5c67a8c5f4d3b30bf1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "docs/moser-exactness-proof.md",
+    "sha256": "38ecb19913294966f0fec3187cdcb2f33369bb96b9594a8fd23f225b3c00526b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "docs/objective.md",
+    "sha256": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "docs/reference/exact_liouville_comparison.tex",
+    "sha256": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "docs/sdu-continuation.md",
+    "sha256": "7a3185ed52ae68cedd9687a446752903ea2937f01a0e4bd00ff4958b3978e804"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "lake-manifest.json",
+    "sha256": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "lakefile.toml",
+    "sha256": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "lean-toolchain",
+    "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "scripts/verify-moser-exactness-final.py",
+    "sha256": "abe7e8eca8fae6368d095fbb300a203fb1eeff98f56af6d50641bf2a886e32bc"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/AxiomAudit.lean",
+    "sha256": "8ae26abc881c9463d9a1edeadad32483c0bbd07a5071df79cb3ad2a1d2096294"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ElaboratedStatements.lean",
+    "sha256": "390b6554a6e23266e4c4b99cceed10f40db4e07904432e7ca07be176f907fa81"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/FirstPathAxiomAudit.lean",
+    "sha256": "ef2a30a96b7de3285a9ea76c52b8ef19c19662e8bfe0b1e1283f6509f9d7eeaf"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/FirstPathConsumer.lean",
+    "sha256": "be307d16c9008894bd36c5aafcb624e21d0227d9d011c51fbd25068249c36ace"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/FirstPathTypes.lean",
+    "sha256": "55fff2e0a5f56ac7ac3961275bd0c3fdc093177a8448bc344f5029ef971fb8ee"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/LargeCoefficientAxiomAudit.lean",
+    "sha256": "ca881ff69f61864ff7eb396c5c073d2dbf5026cea081367fd1eaf1a6a819dba0"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/LargeCoefficientConsumer.lean",
+    "sha256": "6b174b4157a47a931c790d5e8bb9b1c9a6c55313d406209cd85d378ee20d757a"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/LargeCoefficientTypes.lean",
+    "sha256": "a6a455c24d8440d3357f52682b1af2ede3e01a4412b3dbe04e1c4036fae612f0"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/SmallCoefficientAxiomAudit.lean",
+    "sha256": "5e4f59d6a9d531a2706dcc3eef903af1ebd493147c2934d97834179ed2a28436"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/SmallCoefficientConsumer.lean",
+    "sha256": "a8609d6085ce60d879729e14e5a54d0723afed89c59c9775a19e5dbd9edc0dbd"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/first-path-flow-final/AxiomAudit.lean",
+    "sha256": "423516de7e7d03e0d7f7ddef71756c7210502791e6f305973ff06a8cf6c57c2d"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/first-path-flow-final/Types.lean",
+    "sha256": "b9f1f570ce0fe600fbf7ffe79cb3b4266e6e0c06d161d0a43f24cf6b470619f9"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/first-path-flow/AxiomAudit.lean",
+    "sha256": "e10ca5aecd5aa8d84bf14b7d5ed5cd0a2fa632d68babeec8d4f14203c3c93afe"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/first-path-flow/StatementTypes.lean",
+    "sha256": "e4c5bd1b49011b77e4ce42ae7de1a2f7bf874f8bb0a8392fb5f1546f03512584"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/first-path-flow/Types.lean",
+    "sha256": "c519adc9ec7e813f7790dde471b571459e07e8b08567d57a40d0f0e31fc2f74d"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/linear-algebra/AxiomAudit.lean",
+    "sha256": "77be42f78d95f4f3713ca9b7aeecc16381549838d55890c660c7c7f8e6d8fc57"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/linear-algebra/Types.lean",
+    "sha256": "bd3533b7dc8241f6090d6ff5cdd84a623aae0c05ea64d73afedba06251db90de"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/moser-exactness/FinalAudit.lean",
+    "sha256": "b03bd3a165b75ec81655149ff54e18b20955bcf41efed17a963c0691759ea8fc"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/moser-exactness/FinalConsumer.lean",
+    "sha256": "5671231399f8c3f150a8e446b1e4b3667d62816c3c11e5350b44d313f75777da"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/moser-regularity/AxiomAudit.lean",
+    "sha256": "fac8c619b525ea53c58b0947370fadec92f52625f6f8e450bab8375273c4f308"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/moser-regularity/StatementTypes.lean",
+    "sha256": "644b7ed0c49677b5de6470fa5874a71803335fa07ed99dab5b72cc4a88a9d117"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/moser-regularity/Types.lean",
+    "sha256": "8513f8733deb5c7066771993729c7203772c28fac518b11047d35e57feed75c1"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ode-continuation/AxiomAudit.lean",
+    "sha256": "dc43afa788e096c2da5a8d273f0d55d0b092d80ce4f309d6929f5320ac51cfde"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ode-continuation/Types.lean",
+    "sha256": "6185ab09ab403d54838b87bfbe6cf1ef24cd3288d1c995b2b96f174450c55572"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ode-two-barrier-smooth/AxiomAudit.lean",
+    "sha256": "cac69f6bd4e4002e43de047742c72e2f7f79beee140ab664d67d242fb5635b93"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ode-two-barrier-smooth/Types.lean",
+    "sha256": "af5f0be2c56c8d3fb55f80fc868e4a4d1aa6bf1d08e13090e492064d8c0cbee4"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ode-two-barrier/AxiomAudit.lean",
+    "sha256": "e7fbdb7e469287139b9bf6424d0c7e590e74fc075f5eb8bcb05414dc6202ebef"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/ode-two-barrier/DeclarationTypes.lean",
+    "sha256": "20474bd3a1da085d8df1ee993250037b55008897895335cc7cf4b364b51f24f7"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation-flow-final/AxiomAudit.lean",
+    "sha256": "cb1e93499e0b6abf0b9bd8c8778c2712a6ef0ada5bdfae24d09b62e767c2f278"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation-flow-final/DeclarationTypes.lean",
+    "sha256": "1cc31c19456355ebfa8456377b63f5adabd12687836ab3a79fabcc492373b295"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation-flow/InputAxiomAudit.lean",
+    "sha256": "7bb348ce23e1d02d800b4a05f358f03a9ec156a7c512d44abb22c62b0f53eede"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation-flow/InputTypes.lean",
+    "sha256": "179c66f7f8b2c0859be477a29601abf9b2c2dfd6f9919c0ffb69e66a672e8bc3"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation-flow/StatementTypes.lean",
+    "sha256": "e6b92b101acfdff9975d8cf2b497f3927b794693dbb7337e24d0dcce9ecb316f"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation/AxiomAudit.lean",
+    "sha256": "3575e1fc9c4411b6f8383a25fde5b3f61e2be5434c42747376322431b9090be7"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-interpolation/Types.lean",
+    "sha256": "2a6b4680caaf46e79a0319013aa5bd9d8a9f9a511a164d4c891172b909223e82"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-metric/AxiomAudit.lean",
+    "sha256": "0a517dd059d88dd543b9d45b05caf1f95e9908dec9c33c1ec646699eb827020b"
+  },
+  {
+    "commit": "a7d1220ce86078b4c57df64447ce7743bd39a040",
+    "path": "verification/radial-metric/Types.lean",
+    "sha256": "53c2c3d50b22c0c3fefc54d5ff1fc880f816cb8e50e6e0a693602a10b8ce9c6a"
+  }
+]

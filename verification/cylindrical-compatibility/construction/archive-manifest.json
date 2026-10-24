@@ -1,0 +1,49 @@
+{
+  "encoding": "Concatenate the ASCII base64 parts in order, decode base64, verify the gzip SHA256, then extract the tar with safe regular-file handling. SHA256.json binds every inner file.",
+  "gzip_sha256": "63986e903e85fedc75778db3b52b8e56c21502fcadba1e1b44d3f7e6304b4f3f",
+  "gzip_bytes": 1495751,
+  "parts": [
+    {
+      "path": "verification/cylindrical-compatibility/construction/evidence-part-00.b64",
+      "sha256": "98ded658f96bbbfc3c74449049e88d4be093f377f8cce99dfcc2813c861974dd",
+      "bytes": 600000
+    },
+    {
+      "path": "verification/cylindrical-compatibility/construction/evidence-part-01.b64",
+      "sha256": "a077010767ec9aafcae686fb458a2cb350c438fff4f5d67004a543abdd51c872",
+      "bytes": 600000
+    },
+    {
+      "path": "verification/cylindrical-compatibility/construction/evidence-part-02.b64",
+      "sha256": "d77c0cddd95cafd0628b81b7d7ee3c13b3cc71aa9c5e3ea798f1d5c1c7f83a48",
+      "bytes": 600000
+    },
+    {
+      "path": "verification/cylindrical-compatibility/construction/evidence-part-03.b64",
+      "sha256": "7a66f081db47f2756fdf63d3d115323866d4e33b4f23422d191983db3cfe7815",
+      "bytes": 194336
+    }
+  ],
+  "file_sha256": {
+    "verification/cylindrical-compatibility/construction/audit.log": "7962005f20f8f8c3bf75b0841f5eccfc09b5fc8f18c0fc1b4e9b741ab4f6a351",
+    "verification/cylindrical-compatibility/construction/axioms.json": "5e443958627a6fa266638c5078e80c2d627cdf92b8ed4ef205c078b107af525f",
+    "verification/cylindrical-compatibility/construction/axioms.tsv": "515c5093752af40b1e9ee8add4d007f62d52cffe350414a7b84bf207075742a6",
+    "verification/cylindrical-compatibility/construction/build.log": "0fd84ffc5cffb955d77c771cefb2aabcf7f7e2870c56a79862ce3e174edebe36",
+    "verification/cylindrical-compatibility/construction/consumers.log": "99f132f38bf04f5ca5096b93a0951f3198ae7d29384cdd07b755954617de66ab",
+    "verification/cylindrical-compatibility/construction/declarations.jsonl": "f969f3b479a15546c09c754cb26a476ffdfac549dd0b90f4d7597cd50dfdec07",
+    "verification/cylindrical-compatibility/construction/declarations.jsonl.gz": "c1e6cba3e6fabcbd17e33ccd883461aa6439b057e240d66999312bc9080fc2ad",
+    "verification/cylindrical-compatibility/construction/final-review.md": "3e3400f3f4bcc4a8bd242c8181bdbc1d313550229a5b5f8594c7ce2f90da44cc",
+    "verification/cylindrical-compatibility/construction/inventory.txt": "23676b2044a4c90b24c87fa2fa192e8b0934b03c6d1984a9b872e6ad86ae69eb",
+    "verification/cylindrical-compatibility/construction/modules.txt": "035a91746096817e413d18bd35fd9a5c5d0280e9a419e4f1803facc5f51ce9d8",
+    "verification/cylindrical-compatibility/construction/names.txt": "89f84c3845602e3b2f1c9b4f4c763970ff55b85e53e591af7f59df55614e50dd",
+    "verification/cylindrical-compatibility/construction/receipt.json": "1d2200c7aabef18fe740e89b8a3a41fcfb0da5b262f8e7c61df1f9f4f1d1420a",
+    "verification/cylindrical-compatibility/construction/source-publication.json": "726f20e9d6df123e2679b00d8f86c69f340305bf6f7a8443b55db0b708b4c7f6",
+    "verification/cylindrical-compatibility-relative-metric/final-receipt.json": "05b2b2731e6b63c91a70d631017ac38ef716bdeade9b819ae2425c99bbe360b6",
+    "verification/cylindrical-compatibility-relative-metric/final-review.md": "f0525ed15be8747bd972a8d0c4269202698ed162ddc8732ee321cd3251a3fef8",
+    "verification/cylindrical-contact/full/receipt.json": "270e91000230715cf5b86277c5f4235004dae89a43e5a404018ebb6c49608ee6",
+    "verification/cylindrical-contact/full-review.md": "aead5f53ce9a0d63e185f8c28c9c8cc635e01f62103befa3307e42d817c6036b"
+  },
+  "source_commit": "4ba77aa5da8f23a528e75e2800ab7f9112a16569",
+  "source_publication": "697f21ac-7103-49ec-8be9-8d3be5b9d41d",
+  "scope": "Accepted bounded existence/extension/native consumers and exact source-bound verification; no root release acceptance."
+}

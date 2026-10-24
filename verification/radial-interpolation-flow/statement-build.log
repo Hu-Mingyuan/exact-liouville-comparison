@@ -1,0 +1,8 @@
+✖ [3624/3625] Building ExactLiouvilleComparison.RadialInterpolationFlowStatement
+error: target is out-of-date and needs to be rebuilt
+Some required targets logged failures:
+- ExactLiouvilleComparison.RadialInterpolationFlowStatement
+✔ [3624/3625] Built ExactLiouvilleComparison.RadialInterpolationFlowStatement (2.6s)
+✔ [3625/3625] Built ExactLiouvilleComparison.ODETwoBarrierStatement (4.5s)
+Build completed successfully (3625 jobs).
+{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.ODETwoBarrierStatement"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 13.117, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "294beda7a483e42c6731cd284e23e60b35d8cb7eb6b80333ebc18388e41b05e6", "status": "passed", "targets": ["ExactLiouvilleComparison.ODETwoBarrierStatement"], "timings": {"build_seconds": 9.62, "engine_seconds": 13.117490266999084, "preparation_seconds": 0.40785880600014934, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.4012886509990494, "total_seconds": 13.926748281999608, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

@@ -1,0 +1,11 @@
+ExactLiouvilleComparison.MainComparison.third_exactness : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d} (P : @ExactLiouvilleComparison.RadialReference d M)
+  (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M)
+  (hw :
+    @ExactLiouvilleComparison.WeaklyTames d M (@ExactLiouvilleComparison.RadialReference.exactStructure d M P)
+      (@ExactLiouvilleComparison.RadialReference.compatible d M P) T),
+  And
+    (@ExactLiouvilleComparison.MoserExactness.PullbackDerivative d M
+      (@ExactLiouvilleComparison.ThirdPath.primitive d M P T) (@ExactLiouvilleComparison.ThirdPath.field d M P T hw)
+      (@ExactLiouvilleComparison.ThirdPath.evolution d M P T hw))
+    (@ExactLiouvilleComparison.MoserExactness.Endpoint d M (@ExactLiouvilleComparison.ThirdPath.primitive d M P T)
+      (@ExactLiouvilleComparison.ThirdPath.field d M P T hw) (@ExactLiouvilleComparison.ThirdPath.evolution d M P T hw))

@@ -1,0 +1,9 @@
+ExactLiouvilleComparison.MainComparison.interpolation_equation : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d} (P : @ExactLiouvilleComparison.RadialReference d M)
+  (q₀ q₁ : ExactLiouvilleComparison.RadialCoefficient (@ExactLiouvilleComparison.RadialReference.rstar d M P))
+  (σ : @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+  (hσ :
+    @FsFltz.Geometry.SmoothManifold.IsSmoothForm d (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) M σ)
+  (hw : @ExactLiouvilleComparison.RadialInterpolation.WeakDifferential d M P σ),
+  @ExactLiouvilleComparison.MoserExactness.Equation d M
+    (@ExactLiouvilleComparison.MainComparison.interpolationPrimitive d M P q₀ q₁ σ)
+    (@ExactLiouvilleComparison.MoserRegularity.interpolationField d M P q₀ q₁ σ hσ hw)

@@ -1,0 +1,145 @@
+# Combined Lean acceptance decision
+
+Maintainer mission `c5be4cd1-bd95-4a17-ae91-57d6044b7863`, revision 1.
+Decision: **ACCEPT the combined comparison proofs and native adapter** at private commit
+`94da2d773b528be72576f71d95ac1dd8ff720cbf`, repository
+`31e09b7d-6080-4383-8e4e-92b14780690a`, branch
+`horizon/changes/33762d5b-f220-46bd-b170-30fb59066356`.
+**Full requested Lean acceptance remains open** because a new explicit user
+directive requires continuation of cylindrical-J existence and prescribed-end
+extension. This is not root completion, acceptance of the final standalone
+release, or GitHub publication. No repair of the accepted comparison or adapter
+proofs is identified.
+
+## Accepted mathematical scope
+
+The unchanged statements and actual proof entry points are:
+
+| Result | Declaration in `ExactLiouvilleComparison` |
+| --- | --- |
+| General radial exact-symplectic comparison | `MainComparison.mainTarget` |
+| Finite-type comparison with the chosen cylindrical J | `FiniteTypeComparison.finiteTypeTarget` |
+| Constructed Stein reference and comparison | `SteinComparison.steinTarget` |
+| Two forms through a common reference | `CommonReferenceComparison.commonReferenceTarget` |
+| Assembly of the four results | `ManuscriptComparison.manuscriptTarget` |
+| Prescribed complete Liouville specialization | `ManuscriptComparison.completeLiouvilleComparisonTarget` |
+| Native compact-boundary source adapter | `FiniteTypePresentation.nativeTarget` |
+| Direct native-source consumer | `FiniteTypePresentation.Consumers.nativeComparison` |
+
+The general theorem retains weak nonnegative taming, every admissible B, the
+compact exception and unrestricted primitive growth. It constructs the native
+diffeomorphism, smooth identity-start isotopy, smooth gauge and both pullback
+identities without a completeness premise. The metric is explicitly
+g=d beta(.,J.); its tangent inner product, dual and inverse-contraction operator
+norms are retained. The separate complete specialization carries both prescribed
+`CompletePrimitive` values, with actual jointly smooth all-real flows and the
+positive contraction convention. It claims neither completeness from a gauge
+change nor conjugacy of the Liouville fields.
+
+The adapter closes C1 by constructing the actual quotient from the native source
+and proving full primitive, field, carrier, boundary, attached-end and exponential
+end identifications. The quotient is selected before J and the comparison form.
+It reuses the pinned native completion construction and the accepted comparison.
+Its positive-dimensional half-space model and local smooth coefficient-extension
+convention are explicit. It supplies no arbitrary independently given-X transport
+or new zero-dimensional native construction. These are the boundaries permitted
+by the prior coverage ruling, not restrictions added to the existing
+every-dimension `FiniteTypeTarget`. The Stein result retains the already approved
+native real Cauchy–Riemann presentation; no separate complex-manifold adapter is
+claimed or newly required.
+
+## Scope correction and evidence
+
+The adapter closes C1 from `docs/manuscript-coverage-decision.md`. The earlier
+operator/maintainer correction `2d058217-9c6b-47a1-849d-4752d1ad47d1` had removed
+cylindrical-J existence/extension from the delivery frontier. On that basis the
+initial decision artifact `7d2ca617-28e7-4b62-9bec-84c65256630e` proposed in-scope
+Lean acceptance. **That artifact is superseded by this corrected decision.**
+
+During final ledger reconciliation, operator notice
+`3ab62656-6913-4d8d-9291-128c7cd602a3` supplied a newer explicit user directive:
+continue the cylindrical-J work; the prior cancellation was a mistaken
+interpretation of a question about theorem assumptions. This is the reason for
+the mission correction. Chosen J remains a faithful hypothesis of the unchanged
+comparison; its supporting existence/extension is again unfinished requested
+work. No existing theorem is weakened and no existence theorem is claimed proved.
+
+I reopened the original mission `deee4e3c-9772-491a-b842-98913f062983` at revision
+3 through operation `259eaee9-a81a-49b7-ad97-c6f4b5a6395f`, retaining all criteria.
+The original author `91d5e34d-1b8e-44f9-9c24-377fb7b7f87d` had completed normally.
+Installed lifecycle code permits `resume_session` only for paused pending
+sessions and rejects `resume_assignment` for settled objective sessions.
+Accordingly the root planner created one supported continuation on the same
+original mission: `9997dc64-3871-4296-b839-1a516314042b`, Astra/high, verified
+RUNNING with start time 2026-10-23 23:55:04 UTC. It reuses archive
+`24b8ee9589e80d6e415cf978e895cc33338deeb3`, verified publication
+`c647518f-c8cc-4b4c-8df5-cfc236c0f33d`, and the original statement/review/reuse work.
+This preserves provenance and avoids competing proof owners. Historical cancelled
+status and the adapter’s then-stale sibling text must not override this directive.
+Future cancellation, stopping proof work or material scope changes require
+explicit user confirmation; routine authorized runtime repairs remain allowed.
+
+Reused evidence:
+
+- Verified final publication `9a5e56b1-eeb3-4ac9-8ae1-822f81cc916b` and manifest
+  `59d2a2b8-3bd3-4380-8ead-4dcb8944c063` bind the final delivery to reviewed proof
+  `7fafdc3c53d58d2b4357c6e798d30b2469455781`. Its descendant adds four
+  review/handoff/evidence files only. Accepted comparison base is
+  `a2bc048aa4b718217b2dc414106ab4d5d14a3c70`.
+- Independent pre-proof statement/crosswalk reviews and final assembly review
+  `verification/manuscript-comparison/final-review.md` are preserved. Independent
+  adapter final review `27aa053e-4bbe-4722-8ba4-c6f69615a54f` accepts the actual
+  proof and consumer; handoff is `6a50af01-642e-422f-ab76-5419c51bf8a8`.
+- I checked 3,902 adapter and 383 assembly source bindings, all 362 adapter
+  baseline bindings, frozen adapter statement hashes and all ten dependency
+  pins with clean tracked dependency trees. The 155 shared receipt bindings
+  agree. Targeted readback of the final commit matches the inspected theorem,
+  definition, consumer, manuscript, review and receipt bytes.
+- All three existing managed checks in each receipt passed with verified source
+  snapshots. Source keys are
+  `2b675e79355f5670dde8072ee1cddf0d156fd6072535d301c4f534ea6ed082f7`
+  (adapter) and
+  `4840c779fdd4be2ee441da0ea97e682adec6eb82d4d9eadf647d5c4d1deab854`
+  (assembly). These validate the named theorem closures and consumers, not a
+  new default-root release build.
+- All 123 adapter and 119 assembly stored type records and all 53/46 definition
+  records passed hash, decompression and length checks. Both transitive axiom
+  unions are exactly `propext`, `Classical.choice`, `Quot.sound`. The adapter's
+  185 archived evidence member hashes match. No new build or duplicate review
+  was commissioned because no unresolved comparison/adapter acceptance question
+  remained after these source checks.
+
+The exact delivery, reviewed proof and preserved comparison-base branch heads
+were rechecked immediately before this decision. Machine-readable evidence is
+`verification/lean-acceptance/evidence.json`. The manuscript remains unchanged,
+SHA-256 `8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576`.
+
+## Retained integration and release work
+
+Root `91f6a7c7-1eb9-4e2c-bb7e-39389d62ea18` remains open. Its existing scheduler
+planner `a916197d-1c8d-404e-8da4-d37150f06c71` performed continuation dispatch;
+its existing successor `22d7c3b2-83c5-4053-b760-ea9942fe1722` retains root
+integration and recovery. No replacement planner or duplicate proof mission was
+created by this maintenance.
+
+The full Lean acceptance gate for final exposition remains unsatisfied pending
+the requested cylindrical-J supporting result and its combined acceptance.
+The root also still owes the standalone library export/build entry point, accurate README and guides,
+editable LaTeX and visually checked PDFs, licensing/provenance, reproducible
+release scripts and CI, final source-bound release validation and the exact
+operator publication-ready commit. Final GitHub delivery remains last.
+
+Phase advancement is withheld while the requested proof remains open. There is
+also a precise source-input issue for the eventual transition:
+all seven registered ready workspaces still report roadmap commit
+`f8b5b6bcb56a18c0094d15fed4619ff100327e30` as both head and base. The installed
+`accept_phase` implementation would automatically choose that old source, and
+explicit postprocessing input must equal a registered workspace head/base.
+The root/successor must arrange a verified isolated workspace at the accepted
+delivery (or a justified release descendant), obtain truthful host registration,
+and, after full Lean acceptance, request phase advancement citing the updated
+combined evidence. Do not relabel stale
+metadata as verified, select the old source, or repeat the accepted proofs.
+The private destination library is `068552d1-29d5-4668-8eae-eff05da33918`.
+This maintenance makes no `accept_phase` or root-completion claim and preserves
+the existing successor. No final PDFs, packaging or GitHub upload was performed.

@@ -1,0 +1,6 @@
+ExactLiouvilleComparison.CompatibleStructure.inverseNorm : {d : Nat} →
+  {M : FsFltz.Geometry.SmoothManifold d} →
+    {reference : @ExactLiouvilleComparison.ExactSymplecticStructure d M} →
+      (A : @ExactLiouvilleComparison.CompatibleStructure d M reference) →
+        (S : @ExactLiouvilleComparison.ExactSymplecticStructure d M) →
+          (x : @FsFltz.Geometry.SmoothManifold.Point d M) → Real

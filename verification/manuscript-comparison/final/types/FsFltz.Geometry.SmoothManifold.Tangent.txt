@@ -1,0 +1,1 @@
+FsFltz.Geometry.SmoothManifold.Tangent : {d : Nat} → (M : FsFltz.Geometry.SmoothManifold d) → (x : @FsFltz.Geometry.SmoothManifold.Point d M) → Type

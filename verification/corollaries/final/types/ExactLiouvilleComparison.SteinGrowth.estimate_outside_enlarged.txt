@@ -1,0 +1,29 @@
+ExactLiouvilleComparison.SteinGrowth.estimate_outside_enlarged : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d} {S : @ExactLiouvilleComparison.ExactSymplecticStructure d M}
+  (A : @ExactLiouvilleComparison.CompatibleStructure d M S) (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M)
+  (R : @FsFltz.Geometry.SmoothManifold.Point d M → Real)
+  (B :
+    ExactLiouvilleComparison.AdmissibleGrowth
+      (Real.exp (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))))
+  (C : Real) (K : Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+  (hbound :
+    ∀ (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+      Not
+          (@Membership.mem.{0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+            (Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+            (@Set.instMembership.{0} (@FsFltz.Geometry.SmoothManifold.Point d M)) K x) →
+        @LE.le.{0} Real Real.instLE (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d M S A T x)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) C
+            (@ExactLiouvilleComparison.AdmissibleGrowth.B
+              (Real.exp (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))) B (R x))))
+  (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+  Not
+      (@Membership.mem.{0, 0} (@FsFltz.Geometry.SmoothManifold.Point d M)
+        (Set.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+        (@Set.instMembership.{0} (@FsFltz.Geometry.SmoothManifold.Point d M))
+        (@ExactLiouvilleComparison.SteinGrowth.enlargedException.{0} (@FsFltz.Geometry.SmoothManifold.Point d M) R K)
+        x) →
+    @LE.le.{0} Real Real.instLE (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d M S A T x)
+      (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) C
+        (@ExactLiouvilleComparison.AdmissibleGrowth.B
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+          (ExactLiouvilleComparison.SteinGrowth.extend B) (R x)))

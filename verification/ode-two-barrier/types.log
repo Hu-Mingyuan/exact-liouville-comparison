@@ -1,0 +1,292 @@
+ExactLiouvilleComparison.ODE.twoBarrier_forward_cutoff {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (R : M.Point → ℝ)
+  (x : M.Point) (v : M.Tangent x) {c C : ℝ} (hc : c ∈ Set.Icc 0 1) (hC : 0 ≤ C) (hv : M.scalarDerivative R x v ≤ C) :
+  M.scalarDerivative R x (c • v) ≤ C
+ExactLiouvilleComparison.ODE.twoBarrier_reverse_cutoff {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Q : ℝ → M.Point → ℝ) (t : ℝ) (x : M.Point) (v : M.Tangent x) {c C : ℝ} (hc : c ∈ Set.Icc 0 1) (hC : 0 ≤ C)
+  (ht : 0 ≤ deriv (fun u => Q u x) t) (hv : -C ≤ deriv (fun u => Q u x) t + M.scalarDerivative (Q t) x v) :
+  -C ≤ deriv (fun u => Q u x) t + M.scalarDerivative (Q t) x (c • v)
+ExactLiouvilleComparison.ODE.twoBarrier_hasDerivAt {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} (Q : ℝ → M.Point → ℝ)
+  (hQ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ ℝ) ↑⊤ fun p => Q p.1 p.2)
+  {γ : ℝ → M.Point} {t : ℝ} {v : M.Tangent (γ t)} (hγ : HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 v)) :
+  HasDerivAt (fun u => Q u (γ u)) (deriv (fun u => Q u (γ t)) t + M.scalarDerivative (Q t) (γ t) v) t
+ExactLiouvilleComparison.ODE.twoBarrier_forward_displacement {f f' : ℝ → ℝ} {C : ℝ}
+  (hf : ∀ u ∈ FsFltz.Geometry.parameterInterval, HasDerivAt f (f' u) u)
+  (hb : ∀ u ∈ FsFltz.Geometry.parameterInterval, f' u ≤ C) {s t : ℝ} (hs : s ∈ FsFltz.Geometry.parameterInterval)
+  (ht : t ∈ FsFltz.Geometry.parameterInterval) (hst : s ≤ t) : f t ≤ f s + C * (t - s)
+ExactLiouvilleComparison.ODE.twoBarrier_reverse_displacement {f f' : ℝ → ℝ} {C : ℝ}
+  (hf : ∀ u ∈ FsFltz.Geometry.parameterInterval, HasDerivAt f (f' u) u)
+  (hb : ∀ u ∈ FsFltz.Geometry.parameterInterval, -C ≤ f' u) {s t : ℝ} (hs : s ∈ FsFltz.Geometry.parameterInterval)
+  (ht : t ∈ FsFltz.Geometry.parameterInterval) (hts : t ≤ s) : f t ≤ f s + C * (s - t)
+ExactLiouvilleComparison.ODE.twoBarrier_spatial_hasDerivAt {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (R : M.Point → ℝ)
+  (hR : ContMDiff (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (modelWithCornersSelf ℝ ℝ) (↑⊤) R)
+  {γ : ℝ → M.Point} {t : ℝ} {v : M.Tangent (γ t)} (hγ : HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 v)) :
+  HasDerivAt (fun u => R (γ u)) (M.scalarDerivative R (γ t) v) t
+ExactLiouvilleComparison.ODE.twoBarrier_compact_confinement {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (R : M.Point → ℝ)
+  (hR : ContMDiff (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (modelWithCornersSelf ℝ ℝ) (↑⊤) R)
+  (hp : IsProperMap R) (hl : BddBelow (Set.range R)) (Q : ℝ → M.Point → ℝ)
+  (hQ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ ℝ) ↑⊤ fun p => Q p.1 p.2)
+  (hcontrol : ∀ (L : ℝ), ∃ A, ∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), Q t x ≤ L → R x ≤ A) {C₀ C₁ : ℝ}
+  (hC₀ : 0 ≤ C₀) (hC₁ : 0 ≤ C₁) (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) :
+  ∃ K,
+    IsCompact K ∧
+      ∀ (W : ℝ → (y : M.Point) → M.Tangent y),
+        (∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (y : M.Point), M.scalarDerivative R y (W t y) ≤ C₀) →
+          (∀ t ∈ FsFltz.Geometry.parameterInterval,
+              ∀ (y : M.Point), -C₁ ≤ deriv (fun u => Q u y) t + M.scalarDerivative (Q t) y (W t y)) →
+            ∀ (γ : ℝ → M.Point),
+              γ ↑s = x →
+                (∀ t ∈ FsFltz.Geometry.parameterInterval,
+                    HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (W t (γ t)))) →
+                  ∀ t ∈ FsFltz.Geometry.parameterInterval, γ t ∈ K
+ExactLiouvilleComparison.ODE.twoBarrier_finiteIntervalExistence {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) (Ω : Set (ℝ × M.Point)) (hΩ : IsOpen Ω)
+  (hstrip : FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆ Ω)
+  (hZ :
+    ContMDiffOn ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent (↑⊤) (fun p => ⟨p.2, Z p.1 p.2⟩) Ω)
+  (R : M.Point → ℝ)
+  (hR : ContMDiff (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (modelWithCornersSelf ℝ ℝ) (↑⊤) R)
+  (hp : IsProperMap R) (hl : BddBelow (Set.range R)) (Q : ℝ → M.Point → ℝ)
+  (hQ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ ℝ) ↑⊤ fun p => Q p.1 p.2)
+  (hcontrol : ∀ (L : ℝ), ∃ A, ∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), Q t x ≤ L → R x ≤ A) (C₀ C₁ : ℝ)
+  (hC₀ : 0 ≤ C₀) (hC₁ : 0 ≤ C₁)
+  (hforward : ∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), M.scalarDerivative R x (Z t x) ≤ C₀)
+  (hpartial : ∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), 0 ≤ deriv (fun u => Q u x) t)
+  (hreverse :
+    ∀ t ∈ FsFltz.Geometry.parameterInterval,
+      ∀ (x : M.Point), -C₁ ≤ deriv (fun u => Q u x) t + M.scalarDerivative (Q t) x (Z t x))
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) :
+  ∃ γ,
+    γ ↑s = x ∧ ∀ t ∈ FsFltz.Geometry.parameterInterval, HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (Z t (γ t)))
+ExactLiouvilleComparison.ODE.smoothEvolution_of_compact_support {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  {K : Set (ℝ × M.Point)} (hK : IsCompact K) (hz : ∀ p ∉ K, Z p.1 p.2 = 0) :
+  Nonempty (ExactLiouvilleComparison.ODE.SmoothEvolution Z)
+ExactLiouvilleComparison.ODE.compact_field_localization {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  {K : Set (ℝ × M.Point)} (hK : IsCompact K) :
+  ∃ W _H V,
+    (ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+        (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, W p.1 p.2⟩) ∧
+      K ⊆ ↑V ∧ ∀ p ∈ V, W p.1 p.2 = Z p.1 p.2
+ExactLiouvilleComparison.ODE.eqOn_closed_of_hasMFDerivWithinAt {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  {γ δ : ℝ → M.Point} {s t : ℝ} (hcγ : ContinuousOn γ (Set.uIcc s t)) (hcδ : ContinuousOn δ (Set.uIcc s t))
+  (hγ : ∀ u ∈ Set.uIcc s t, HasMFDerivAt[Set.uIcc s t] γ u (ContinuousLinearMap.smulRight 1 (Z u (γ u))))
+  (hδ : ∀ u ∈ Set.uIcc s t, HasMFDerivAt[Set.uIcc s t] δ u (ContinuousLinearMap.smulRight 1 (Z u (δ u))))
+  (hi : γ s = δ s) : γ t = δ t
+ExactLiouvilleComparison.ODE.EvolutionPatch {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) : Type
+ExactLiouvilleComparison.ODE.enlarged_interval {S : Set ℝ} (hS : IsOpen S) (hI : Set.Icc 0 1 ⊆ S) :
+  ∃ a b, a < 0 ∧ 1 < b ∧ Set.Icc a b ⊆ S
+ExactLiouvilleComparison.ODE.evolutionPatch_of_finite_curve {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  (s : ↑FsFltz.Geometry.Parameter) (x : M.Point) {γ : ℝ → M.Point} (hi : γ ↑s = x)
+  (hγ : ∀ t ∈ FsFltz.Geometry.parameterInterval, HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (Z t (γ t)))) :
+  ∃ P, (↑s, x) ∈ P.source
+ExactLiouvilleComparison.ODE.EvolutionPatch.domain {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x} (P : ExactLiouvilleComparison.ODE.EvolutionPatch Z) : Set (ℝ × ℝ × M.Point)
+ExactLiouvilleComparison.ODE.EvolutionPatch.open_domain {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x} (P : ExactLiouvilleComparison.ODE.EvolutionPatch Z) : IsOpen P.domain
+ExactLiouvilleComparison.ODE.EvolutionPatch.agree {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x}
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  (P Q : ExactLiouvilleComparison.ODE.EvolutionPatch Z) {p : ℝ × ℝ × M.Point} (hp : p ∈ P.domain) (hq : p ∈ Q.domain) :
+  P.map p.1 p.2.1 p.2.2 = Q.map p.1 p.2.1 p.2.2
+ExactLiouvilleComparison.ODE.evolutionDomain {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) : Set (ℝ × ℝ × M.Point)
+ExactLiouvilleComparison.ODE.localEvolution {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) (s t : ℝ) (x : M.Point) : M.Point
+ExactLiouvilleComparison.ODE.localEvolution_eq_patch {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x}
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  (P : ExactLiouvilleComparison.ODE.EvolutionPatch Z) {p : ℝ × ℝ × M.Point} (hp : p ∈ P.domain) :
+  ExactLiouvilleComparison.ODE.localEvolution Z p.1 p.2.1 p.2.2 = P.map p.1 p.2.1 p.2.2
+ExactLiouvilleComparison.ODE.isOpen_evolutionDomain {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x} : IsOpen (ExactLiouvilleComparison.ODE.evolutionDomain Z)
+ExactLiouvilleComparison.ODE.localEvolution_contMDiffAt {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x}
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  {p : ℝ × ℝ × M.Point} (hp : p ∈ ExactLiouvilleComparison.ODE.evolutionDomain Z) :
+  ContMDiffAt
+    ((modelWithCornersSelf ℝ ℝ).prod
+      ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d))))
+    (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (↑⊤)
+    (fun q => ExactLiouvilleComparison.ODE.localEvolution Z q.1 q.2.1 q.2.2) p
+ExactLiouvilleComparison.ODE.localEvolution_initial {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x}
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  (s : ℝ) (x : M.Point) : ExactLiouvilleComparison.ODE.localEvolution Z s s x = x
+ExactLiouvilleComparison.ODE.localEvolution_solves {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x}
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  {s t : ℝ} {x : M.Point} (hp : (s, t, x) ∈ ExactLiouvilleComparison.ODE.evolutionDomain Z) :
+  HasMFDerivAt% (fun u => ExactLiouvilleComparison.ODE.localEvolution Z s u x) t
+    (ContinuousLinearMap.smulRight 1 (Z t (ExactLiouvilleComparison.ODE.localEvolution Z s t x)))
+ExactLiouvilleComparison.ODE.strip_subset_evolutionDomain {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  {Z : ℝ → (x : M.Point) → M.Tangent x}
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  (hex :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      ∃ γ,
+        γ ↑s = x ∧
+          ∀ t ∈ FsFltz.Geometry.parameterInterval, HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (Z t (γ t)))) :
+  FsFltz.Geometry.parameterInterval ×ˢ FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆
+    ExactLiouvilleComparison.ODE.evolutionDomain Z
+ExactLiouvilleComparison.ODE.evolution_of_finite_existence_global {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x)
+  (hZ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, Z p.1 p.2⟩)
+  (hex :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      ∃ γ,
+        γ ↑s = x ∧
+          ∀ t ∈ FsFltz.Geometry.parameterInterval, HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (Z t (γ t)))) :
+  Nonempty (ExactLiouvilleComparison.FirstPathFlow.Evolution fun t => Z ↑t)
+ExactLiouvilleComparison.ODE.evolution_of_finite_existence {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) {Ω : Set (ℝ × M.Point)} (hΩ : IsOpen Ω)
+  (hstrip : FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆ Ω)
+  (hZ :
+    ContMDiffOn ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent (↑⊤) (fun p => ⟨p.2, Z p.1 p.2⟩) Ω)
+  (hex :
+    ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      ∃ γ,
+        γ ↑s = x ∧
+          ∀ t ∈ FsFltz.Geometry.parameterInterval, HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (Z t (γ t)))) :
+  Nonempty (ExactLiouvilleComparison.FirstPathFlow.Evolution fun t => Z ↑t)
+ExactLiouvilleComparison.ODE.twoBarrierEvolution {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} :
+  ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget
+def ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget : {d : ℕ} → {M : FsFltz.Geometry.SmoothManifold d} → Prop :=
+fun {d} {M} =>
+  ∀ (Z : ℝ → (x : M.Point) → M.Tangent x) (Ω : Set (ℝ × M.Point)),
+    IsOpen Ω →
+      FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆ Ω →
+        ContMDiffOn ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+            (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent (↑⊤) (fun p => ⟨p.2, Z p.1 p.2⟩) Ω →
+          ∀ (R : M.Point → ℝ),
+            ContMDiff (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (modelWithCornersSelf ℝ ℝ) (↑⊤) R →
+              IsProperMap R →
+                BddBelow (Set.range R) →
+                  ∀ (Q : ℝ → M.Point → ℝ),
+                    (ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+                        (modelWithCornersSelf ℝ ℝ) ↑⊤ fun p => Q p.1 p.2) →
+                      (∀ (L : ℝ), ∃ A, ∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), Q t x ≤ L → R x ≤ A) →
+                        ∀ (C₀ C₁ : ℝ),
+                          0 ≤ C₀ →
+                            0 ≤ C₁ →
+                              (∀ t ∈ FsFltz.Geometry.parameterInterval,
+                                  ∀ (x : M.Point), M.scalarDerivative R x (Z t x) ≤ C₀) →
+                                (∀ t ∈ FsFltz.Geometry.parameterInterval,
+                                    ∀ (x : M.Point), 0 ≤ deriv (fun u => Q u x) t) →
+                                  (∀ t ∈ FsFltz.Geometry.parameterInterval,
+                                      ∀ (x : M.Point),
+                                        -C₁ ≤ deriv (fun u => Q u x) t + M.scalarDerivative (Q t) x (Z t x)) →
+                                    Nonempty (ExactLiouvilleComparison.FirstPathFlow.Evolution fun t => Z ↑t)
+structure ExactLiouvilleComparison.FirstPathFlow.Evolution {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x) : Type
+number of parameters: 3
+fields:
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.map : ↑FsFltz.Geometry.Parameter →
+      ↑FsFltz.Geometry.Parameter → M.SmoothEquiv M
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.extension : ℝ → ℝ → M.Point → M.Point
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.agrees : ∀ (s t : ↑FsFltz.Geometry.Parameter),
+      self.extension ↑s ↑t = ⇑(self.map s t)
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.smooth : ∃ U,
+      IsOpen U ∧
+        FsFltz.Geometry.parameterInterval ×ˢ FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆ U ∧
+          ContMDiffOn
+            ((modelWithCornersSelf ℝ ℝ).prod
+              ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d))))
+            (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (↑⊤) (fun p => self.extension p.1 p.2.1 p.2.2) U
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.initial : ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      (self.map s s) x = x
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.solves : ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      ExactLiouvilleComparison.FirstPathFlow.IsSolution Z (fun t => self.extension (↑s) t x)
+        FsFltz.Geometry.parameterInterval
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.chart_solves : ∀ (s t : ↑FsFltz.Geometry.Parameter) (x a : M.Point),
+      (self.map s t) x ∈ (chartAt (FsFltz.Geometry.Model d) a).source →
+        HasDerivWithinAt (fun u => ↑(chartAt (FsFltz.Geometry.Model d) a) (self.extension (↑s) u x))
+          ((M.chartTangentMap a ((self.map s t) x)) (Z t ((self.map s t) x))) FsFltz.Geometry.parameterInterval ↑t
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.unique : ∀ (s t : ↑FsFltz.Geometry.Parameter) (γ : ℝ → M.Point),
+      ExactLiouvilleComparison.FirstPathFlow.IsSolution Z γ (Set.uIcc ↑s ↑t) → γ ↑t = (self.map s t) (γ ↑s)
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.compose : ∀ (r s t : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+      (self.map s t) ((self.map r s) x) = (self.map r t) x
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.inverse : ∀ (s t : ↑FsFltz.Geometry.Parameter),
+      Diffeomorph.symm (self.map s t) = self.map t s
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.isotopy : ∀ (t : ↑FsFltz.Geometry.Parameter),
+      ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M (self.map FsFltz.Geometry.parameterZero t)
+constructor:
+  ExactLiouvilleComparison.FirstPathFlow.Evolution.mk {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+    {Z : ↑FsFltz.Geometry.Parameter → (x : M.Point) → M.Tangent x}
+    (map : ↑FsFltz.Geometry.Parameter → ↑FsFltz.Geometry.Parameter → M.SmoothEquiv M)
+    (extension : ℝ → ℝ → M.Point → M.Point)
+    (agrees : ∀ (s t : ↑FsFltz.Geometry.Parameter), extension ↑s ↑t = ⇑(map s t))
+    (smooth :
+      ∃ U,
+        IsOpen U ∧
+          FsFltz.Geometry.parameterInterval ×ˢ FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆ U ∧
+            ContMDiffOn
+              ((modelWithCornersSelf ℝ ℝ).prod
+                ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d))))
+              (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (↑⊤) (fun p => extension p.1 p.2.1 p.2.2) U)
+    (initial : ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point), (map s s) x = x)
+    (solves :
+      ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+        ExactLiouvilleComparison.FirstPathFlow.IsSolution Z (fun t => extension (↑s) t x)
+          FsFltz.Geometry.parameterInterval)
+    (chart_solves :
+      ∀ (s t : ↑FsFltz.Geometry.Parameter) (x a : M.Point),
+        (map s t) x ∈ (chartAt (FsFltz.Geometry.Model d) a).source →
+          HasDerivWithinAt (fun u => ↑(chartAt (FsFltz.Geometry.Model d) a) (extension (↑s) u x))
+            ((M.chartTangentMap a ((map s t) x)) (Z t ((map s t) x))) FsFltz.Geometry.parameterInterval ↑t)
+    (unique :
+      ∀ (s t : ↑FsFltz.Geometry.Parameter) (γ : ℝ → M.Point),
+        ExactLiouvilleComparison.FirstPathFlow.IsSolution Z γ (Set.uIcc ↑s ↑t) → γ ↑t = (map s t) (γ ↑s))
+    (compose : ∀ (r s t : ↑FsFltz.Geometry.Parameter) (x : M.Point), (map s t) ((map r s) x) = (map r t) x)
+    (inverse : ∀ (s t : ↑FsFltz.Geometry.Parameter), Diffeomorph.symm (map s t) = map t s)
+    (isotopy :
+      ∀ (t : ↑FsFltz.Geometry.Parameter),
+        ExactLiouvilleComparison.SmoothlyIsotopicToIdentity M (map FsFltz.Geometry.parameterZero t)) :
+    ExactLiouvilleComparison.FirstPathFlow.Evolution Z
+theorem ExactLiouvilleComparison.ODE.twoBarrierEvolution : ∀ {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d},
+  ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget :=
+fun {d} {M} Z Ω hΩ hstrip hZ R hR hp hl Q hQ hcontrol C₀ C₁ hC₀ hC₁ hforward hpartial hreverse =>
+  ExactLiouvilleComparison.ODE.evolution_of_finite_existence Z hΩ hstrip hZ
+    (ExactLiouvilleComparison.ODE.twoBarrier_finiteIntervalExistence Z Ω hΩ hstrip hZ R hR hp hl Q hQ hcontrol C₀ C₁ hC₀
+      hC₁ hforward hpartial hreverse)
+TWO_BARRIER_DECLARATIONTYPES_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b6688f87-bebd-4b49-8f64-beb706227741/two-barrier/verification/ode-two-barrier/DeclarationTypes.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/b6688f87-bebd-4b49-8f64-beb706227741/two-barrier", "duration_seconds": 10.185, "error": null, "failure": null, "lean_file": "verification/ode-two-barrier/DeclarationTypes.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "b34d14916c600887fc61716fa439453b8f7a6c35c13ce11e20d6ba27eccca0dc", "status": "passed", "targets": [], "timings": {"build_seconds": 10.184, "engine_seconds": 10.185549018000529, "preparation_seconds": 0.04050756899960106, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.23978615300075035, "total_seconds": 10.465959814000598, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

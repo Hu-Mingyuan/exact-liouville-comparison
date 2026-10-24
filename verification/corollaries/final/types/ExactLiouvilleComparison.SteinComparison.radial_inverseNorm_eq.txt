@@ -1,0 +1,13 @@
+ExactLiouvilleComparison.SteinComparison.radial_inverseNorm_eq : ∀ {d N : Nat} {M : FsFltz.Geometry.SmoothManifold d} (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N)
+  (P : @ExactLiouvilleComparison.SteinReference d N M i) (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M)
+  (x : @FsFltz.Geometry.SmoothManifold.Point d M),
+  @Eq.{1} Real
+    (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d M
+      (@ExactLiouvilleComparison.RadialReference.exactStructure d M
+        (@ExactLiouvilleComparison.SteinRadial.reference d N M i P))
+      (@ExactLiouvilleComparison.RadialReference.compatible d M
+        (@ExactLiouvilleComparison.SteinRadial.reference d N M i P))
+      T x)
+    (@ExactLiouvilleComparison.CompatibleStructure.inverseNorm d M
+      (@ExactLiouvilleComparison.SteinReference.exactStructure d N M i P)
+      (@ExactLiouvilleComparison.SteinReference.compatible d N M i P) T x)

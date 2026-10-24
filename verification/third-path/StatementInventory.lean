@@ -1,0 +1,17 @@
+import ExactLiouvilleComparison.ThirdPathStatement
+
+set_option pp.universes true
+set_option pp.fullNames true
+#print ExactLiouvilleComparison.ThirdPath.primitive
+#print ExactLiouvilleComparison.ThirdPath.exhaustion
+#print ExactLiouvilleComparison.ThirdPath.Construction
+#print ExactLiouvilleComparison.ThirdPath.Target
+#print ExactLiouvilleComparison.FirstPathFlow.Evolution
+#print ExactLiouvilleComparison.MoserRegularity.NativeJoint
+#print ExactLiouvilleComparison.RadialReference
+#print ExactLiouvilleComparison.CompatibleStructure
+#print ExactLiouvilleComparison.WeaklyTames
+#print axioms ExactLiouvilleComparison.ThirdPath.primitive
+#print axioms ExactLiouvilleComparison.ThirdPath.exhaustion
+#print axioms ExactLiouvilleComparison.ThirdPath.Construction
+#print axioms ExactLiouvilleComparison.ThirdPath.Target

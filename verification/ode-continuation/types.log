@@ -1,0 +1,48 @@
+ExactLiouvilleComparison.ODE.exists_bounded_smooth_compact_cutoff {E H Q : Type} [NormedAddCommGroup E]
+  [NormedSpace ℝ E] [TopologicalSpace H] {I : ModelWithCorners ℝ E H} [TopologicalSpace Q] [ChartedSpace H Q]
+  [IsManifold I (↑⊤) Q] [FiniteDimensional ℝ E] [LocallyCompactSpace H] [T2Space Q] [SecondCountableTopology Q]
+  {K U : Set Q} (hK : IsCompact K) (hU : IsOpen U) (hKU : K ⊆ U) :
+  ∃ χ V,
+    ContMDiff I (modelWithCornersSelf ℝ ℝ) (↑⊤) χ ∧
+      (∀ (p : Q), χ p ∈ Set.Icc 0 1) ∧ K ⊆ ↑V ∧ (∀ p ∈ V, χ p = 1) ∧ IsCompact (tsupport χ) ∧ tsupport χ ⊆ U
+ExactLiouvilleComparison.ODE.contMDiff_cutoff_field {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) {Ω : Set (ℝ × M.Point)} (hΩ : IsOpen Ω)
+  (hZ :
+    ContMDiffOn ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent (↑⊤) (fun p => ⟨p.2, Z p.1 p.2⟩) Ω)
+  (χ : ℝ × M.Point → ℝ)
+  (hχ :
+    ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+      (modelWithCornersSelf ℝ ℝ) (↑⊤) χ)
+  (hsupp : tsupport χ ⊆ Ω) :
+  ContMDiff ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+    (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent ↑⊤ fun p => ⟨p.2, χ p • Z p.1 p.2⟩
+ExactLiouvilleComparison.ODE.scalar_bound_cutoff {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d}
+  (Z : ℝ → (x : M.Point) → M.Tangent x) (P : M.Point → ℝ) (χ : ℝ × M.Point → ℝ)
+  (hχ : ∀ (p : ℝ × M.Point), χ p ∈ Set.Icc 0 1) {D : ℝ}
+  (hb : ∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), |M.scalarDerivative P x (Z t x)| ≤ D) (t : ℝ) :
+  t ∈ FsFltz.Geometry.parameterInterval → ∀ (x : M.Point), |M.scalarDerivative P x (χ (t, x) • Z t x)| ≤ D
+ExactLiouvilleComparison.ODE.finiteIntervalExistence {d : ℕ} {M : FsFltz.Geometry.SmoothManifold d} :
+  ExactLiouvilleComparison.ODE.FiniteIntervalExistenceTarget
+def ExactLiouvilleComparison.ODE.FiniteIntervalExistenceTarget : {d : ℕ} →
+  {M : FsFltz.Geometry.SmoothManifold d} → Prop :=
+fun {d} {M} =>
+  ∀ (Z : ℝ → (x : M.Point) → M.Tangent x) (Ω : Set (ℝ × M.Point)),
+    IsOpen Ω →
+      FsFltz.Geometry.parameterInterval ×ˢ Set.univ ⊆ Ω →
+        ContMDiffOn ((modelWithCornersSelf ℝ ℝ).prod (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)))
+            (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)).tangent (↑⊤) (fun p => ⟨p.2, Z p.1 p.2⟩) Ω →
+          ∀ (P : M.Point → ℝ),
+            ContMDiff (modelWithCornersSelf ℝ (FsFltz.Geometry.Model d)) (modelWithCornersSelf ℝ ℝ) (↑⊤) P →
+              IsProperMap P →
+                BddBelow (Set.range P) →
+                  ∀ (D : ℝ),
+                    0 ≤ D →
+                      (∀ t ∈ FsFltz.Geometry.parameterInterval, ∀ (x : M.Point), |M.scalarDerivative P x (Z t x)| ≤ D) →
+                        ∀ (s : ↑FsFltz.Geometry.Parameter) (x : M.Point),
+                          ∃ γ,
+                            γ ↑s = x ∧
+                              ∀ t ∈ FsFltz.Geometry.parameterInterval,
+                                HasMFDerivAt% γ t (ContinuousLinearMap.smulRight 1 (Z t (γ t)))
+ODE_CONTINUATION_TYPES_COMPLETE
+{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/e70033f6-ec8c-4a0d-8b00-f7800de0b33c/verification/ode-continuation/Types.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/e70033f6-ec8c-4a0d-8b00-f7800de0b33c", "duration_seconds": 3.436, "error": null, "failure": null, "lean_file": "verification/ode-continuation/Types.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "be9d83204a58774a86bcb1371de172b8e3f0238f25dc94e9f40fe90dbf9f2083", "status": "passed", "targets": [], "timings": {"build_seconds": 3.435, "engine_seconds": 3.436560467000163, "preparation_seconds": 0.04052048799894692, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.2209625750019768, "total_seconds": 3.6981125499987684, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

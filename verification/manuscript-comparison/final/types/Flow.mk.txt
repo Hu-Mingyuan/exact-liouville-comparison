@@ -1,0 +1,24 @@
+Flow.mk : {τ : Type u_1} →
+  {α : Type u_2} →
+    [inst : TopologicalSpace.{u_1} τ] →
+      [inst_1 : TopologicalSpace.{u_2} α] →
+        [inst_2 : AddZero.{u_1} τ] →
+          (toFun : τ → α → α) →
+            (cont' :
+                @Continuous.{max u_2 u_1, u_2} (Prod.{u_1, u_2} τ α) α
+                  (@instTopologicalSpaceProd.{u_1, u_2} τ α inst inst_1) inst_1
+                  (@Function.uncurry.{u_1, u_2, u_2 + 1} τ α α toFun)) →
+              (map_add' :
+                  ∀ (t₁ t₂ : τ) (x : α),
+                    @Eq.{u_2 + 1} α
+                      (toFun
+                        (@HAdd.hAdd.{u_1, u_1, u_1} τ τ τ (@instHAdd.{u_1} τ (@AddZero.toAdd.{u_1} τ inst_2)) t₁ t₂) x)
+                      (toFun t₁ (toFun t₂ x))) →
+                (map_zero' :
+                    ∀ (x : α),
+                      @Eq.{u_2 + 1} α
+                        (toFun
+                          (@OfNat.ofNat.{u_1} τ (nat_lit 0) (@Zero.toOfNat0.{u_1} τ (@AddZero.toZero.{u_1} τ inst_2)))
+                          x)
+                        x) →
+                  @Flow.{u_1, u_2} τ α inst inst_1 inst_2

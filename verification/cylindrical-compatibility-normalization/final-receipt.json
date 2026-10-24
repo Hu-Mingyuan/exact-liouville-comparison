@@ -1,0 +1,2029 @@
+{
+  "scope": "Actual native smooth compatible normalization from supplied metric, arbitrary finite rank and empty base, fiberwise recovery, arbitrary-frame naturality, native tangent consumers. Cylindrical extension is outside this prerequisite.",
+  "mission": "50754190-03fe-44b3-830e-5b109eca0470",
+  "source_sha256": {
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebra.lean": "f07d9f699e0f4f671e621c961638733582d7fed75beccabf9def5613048bb2ac",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebraChecks.lean": "611fbcf3877937e35bb804ca521764064a0dd3bd245c5f854d1b464b98091a14",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebraNative.lean": "fa3b6bf275babfcacc6e95ad33987c56fce151005efc3d906ea7a962a4c58566",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebraNaturality.lean": "a563c9891cf09041060e8e3e9be7317bb1aab7099db652fa53b240bee052ed62",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebraRecovery.lean": "00f543999f099df620a0f2cb03d5d086c5290cc9f4844367ee501c16ef9bff02",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebraStatement.lean": "9089c2951c21eaa757f5a739bb1f6d976512c659855706638832896f64b26ecc",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationBundle.lean": "8f1c86bddf64304a1a4148a0a7d5511770787a3c54a45f6a5a0b73d1999bf32b",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationBundleCoordinates.lean": "e3ad9a4ee3183b1e2c440b57865821969613780296b503628fa7a6d5eb2dfc33",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationChecks.lean": "754bbc49bacfd791f07ef0eaa67087642963d9dd70a7b370a1b2817d3a7a6f75",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationConsumers.lean": "72a56a7c46785639af2a161367c1de469722205df7d1d48f2c9dc8b595dabf84",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationCoordinates.lean": "c09c5d1fb367e4839be2046380003ad29363d1057789fabe66211d780b8c2f21",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationDegenerate.lean": "b4f30b3daeeda2d3c4069166b8589796243c49126aed3777f917d8a5db8f8cdb",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationFrames.lean": "bb9f33d44a4d81e1e0e63e83bbf6d5acf1435e861e0ebbad0fbac602c49be6e9",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationRegularity.lean": "8b03aea572f0bace8424a99f2355b34b5849a55ec8fd6c9fff8f90c99d571326",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrt.lean": "8e8aa4a0f2c6e4384d1390cb099df0994c41366a754884abcfd30719b23a24d0",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtStatement.lean": "08336671690a328ddd69215f3e9417e5a609f445a37a1b5cf755dbba981eee0c",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationSqrtSylvester.lean": "4686019828e4507f4951302bae0d6202fb203c1ad90dd9ed27e15fd28fca5583",
+    "ExactLiouvilleComparison/CylindricalCompatibilityNormalizationStatement.lean": "a100611cd3ccc7a9076e318f3b4fc8e376f1dd9e1fc304004e4adec270ec2fc3",
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "docs/cylindrical-compatibility-normalization-crosswalk.md": "3c009a3a5bbd22219fff51ac1b6e3ed5140d057b9e3c48d95c74e0a1f8ab906c",
+    "docs/cylindrical-compatibility-normalization-progress.md": "f1981f26d0c03b10c77a5767814c37a56b6cb6fbb13ce93dde6673929549a757",
+    "docs/cylindrical-compatibility-normalization-proof.md": "a1d802b074ab5db6ed8540d56da0f511fad30e06dcacb7c43f26df515b723ec3",
+    "docs/normalization-algebra-crosswalk.md": "6f92381c2f2c08bfb3bb1dfc357b46bff764f334fad1afa4fb9013a10976d56a",
+    "docs/normalization-algebra-proof.md": "68b81cdf7981a918d0727366961eb0819053d0041df2e54a8bf184ebafb9af54",
+    "docs/normalization-sqrt-crosswalk.md": "dbf445394cbe3e586a93f2704af10d4cd4bdb1f00ff7c90056666407f82cc215",
+    "docs/normalization-sqrt-proof.md": "f18ff296e8f00797a55d2e0a43e962cebb66ef224be50e3b801771c28c8a3aa2",
+    "docs/objective.md": "0f7ca4a2449cca3d400e7afda913364582be71f858fe31475fa60665502ce5e8",
+    "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "scripts/verify-cylindrical-compatibility-normalization.py": "5c06319c2d11526d3d13a453d452fdb572a092b284fae7cf4fc47e268976f330",
+    "verification/cylindrical-compatibility-normalization/CylindricalCompatibilityNormalizationAxioms.lean": "4f7196dc01e4e6af5f2d62015a367978bffa591f0dceecf9ba9bed03dc7ae027",
+    "verification/cylindrical-compatibility-normalization/CylindricalCompatibilityNormalizationInventory.lean": "6354437f6b6d451773b35686ab77982efc8e19a81d4090e125533387385e3bdb",
+    "verification/cylindrical-compatibility-normalization/degenerate-review.md": "c2a7bdda564064cb9eeb48447e6c73ea7ffffcc5d1b4693a6497be2cfe2d1d21",
+    "verification/cylindrical-compatibility-normalization/statement-review.md": "162a6c70b1e5b69962377ded2a890c806b31fb70fcaafa196eee92baf53ed2eb"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "cache": "local",
+      "command": [
+        "lake",
+        "build",
+        "ExactLiouvilleComparison.CylindricalCompatibilityNormalizationConsumers"
+      ],
+      "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a",
+      "duration_seconds": 1.799,
+      "error": null,
+      "failure": null,
+      "lean_file": null,
+      "mode": "lake",
+      "ok": true,
+      "probe": false,
+      "repeated_deferred": false,
+      "returncode": 0,
+      "snapshot_verified": true,
+      "source_key": "19e5815b49e1915d49ca23dd41011ecfa863462c939cd0564b219cb9b14df972",
+      "status": "passed",
+      "targets": [
+        "ExactLiouvilleComparison.CylindricalCompatibilityNormalizationConsumers"
+      ],
+      "timings": {
+        "build_seconds": 0.0,
+        "engine_seconds": 1.7987301510001998,
+        "preparation_seconds": 0.04694064900104422,
+        "prepare_seconds": 0.0,
+        "source_fingerprint_seconds": 0.20315851199848112,
+        "total_seconds": 2.048895853000431,
+        "wait_seconds": 0.0
+      },
+      "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+    },
+    {
+      "cache": "local",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/verification/cylindrical-compatibility-normalization/CylindricalCompatibilityNormalizationInventory.lean"
+      ],
+      "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a",
+      "duration_seconds": 21.396,
+      "error": null,
+      "failure": null,
+      "lean_file": "verification/cylindrical-compatibility-normalization/CylindricalCompatibilityNormalizationInventory.lean",
+      "mode": "lean",
+      "ok": true,
+      "probe": false,
+      "repeated_deferred": false,
+      "returncode": 0,
+      "snapshot_verified": true,
+      "source_key": "19e5815b49e1915d49ca23dd41011ecfa863462c939cd0564b219cb9b14df972",
+      "status": "passed",
+      "targets": [],
+      "timings": {
+        "build_seconds": 21.395,
+        "engine_seconds": 21.3966523830004,
+        "preparation_seconds": 0.03791051400003198,
+        "prepare_seconds": 0.0,
+        "source_fingerprint_seconds": 0.21954458000072918,
+        "total_seconds": 21.654164112000217,
+        "wait_seconds": 0.0
+      },
+      "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+    },
+    {
+      "cache": "local",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a/verification/cylindrical-compatibility-normalization/CylindricalCompatibilityNormalizationAxioms.lean"
+      ],
+      "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a",
+      "duration_seconds": 4.373,
+      "error": null,
+      "failure": null,
+      "lean_file": "verification/cylindrical-compatibility-normalization/CylindricalCompatibilityNormalizationAxioms.lean",
+      "mode": "lean",
+      "ok": true,
+      "probe": false,
+      "repeated_deferred": false,
+      "returncode": 0,
+      "snapshot_verified": true,
+      "source_key": "19e5815b49e1915d49ca23dd41011ecfa863462c939cd0564b219cb9b14df972",
+      "status": "passed",
+      "targets": [],
+      "timings": {
+        "build_seconds": 4.372,
+        "engine_seconds": 4.373430612999073,
+        "preparation_seconds": 0.04388789599943266,
+        "prepare_seconds": 0.0,
+        "source_fingerprint_seconds": 0.21101060299952223,
+        "total_seconds": 4.628445995998845,
+        "wait_seconds": 0.0
+      },
+      "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+    }
+  ],
+  "source_declarations": [
+    "ExactLiouvilleComparison.NormalizationAlgebra.mul_inv",
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_mul",
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_unit",
+    "ExactLiouvilleComparison.NormalizationAlgebra.posDef_transpose",
+    "ExactLiouvilleComparison.NormalizationAlgebra.sqrt_posDef",
+    "ExactLiouvilleComparison.NormalizationAlgebra.root_posDef",
+    "ExactLiouvilleComparison.NormalizationAlgebra.root_sq",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_pull",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_skew",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_isAlt",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_nondegenerate_iff",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_posDef",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_skew",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_unit",
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_transpose",
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_unit",
+    "ExactLiouvilleComparison.NormalizationAlgebra.neg_sq_posDef",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_posDef",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_sq",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_commute",
+    "ExactLiouvilleComparison.NormalizationAlgebra.commute_inv_right",
+    "ExactLiouvilleComparison.NormalizationAlgebra.mul_inv_cancel_right",
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_mul_cancel_right",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polar_factor_sq",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polar_factor_metric",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_eq_whitened",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_sq",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_metric",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_metric_posDef",
+    "ExactLiouvilleComparison.NormalizationAlgebra.compatible_of_metric",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_compatible",
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeForm",
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeComplex",
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeComplex_sq",
+    "ExactLiouvilleComparison.NormalizationAlgebra.plane_metric",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_plane",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_native_recovery",
+    "ExactLiouvilleComparison.NormalizationAlgebra.zero_rank_admissible",
+    "ExactLiouvilleComparison.NormalizationAlgebra.zero_rank_compatible",
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism",
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism_apply",
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm",
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm_apply",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_left",
+    "ExactLiouvilleComparison.NormalizationAlgebra.associated_operator_equation",
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_eq_whitened_operator",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_native",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_native_naturality",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_rank_zero",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_neg",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_mul_orthogonal",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_one_orthogonal",
+    "ExactLiouvilleComparison.NormalizationAlgebra.sqrt_pull_orthogonal",
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_pull_orthogonal",
+    "ExactLiouvilleComparison.NormalizationAlgebra.whitening_orthogonal",
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_pull",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_pull",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_naturality",
+    "ExactLiouvilleComparison.NormalizationAlgebra.naturalityContract",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_recovery",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalizationContract",
+    "ExactLiouvilleComparison.NormalizationAlgebra.recoveryContract",
+    "ExactLiouvilleComparison.NormalizationAlgebra.Mat",
+    "ExactLiouvilleComparison.NormalizationAlgebra.Vec",
+    "ExactLiouvilleComparison.NormalizationAlgebra.form",
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull",
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot",
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew",
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot",
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize",
+    "ExactLiouvilleComparison.NormalizationAlgebra.Compatible",
+    "ExactLiouvilleComparison.NormalizationAlgebra.NormalizationContract",
+    "ExactLiouvilleComparison.NormalizationAlgebra.RecoveryContract",
+    "ExactLiouvilleComparison.NormalizationAlgebra.NaturalityContract",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_compatible",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_recovery",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_eq_frame",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_contMDiff",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates_apply",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffAt_bilinearCoordinates",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_bilinearCoordinates",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn_coordinates",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangent_normalization",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangent_normalization_relative_recovery",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_apply",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.form_matrixIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL_apply",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn_apply",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL_apply",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL_apply",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffAt_matrixIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffAt_endomorphismIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_isEmpty",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_subsingleton_fibers",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_subsingleton_model",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_finrank_zero",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_posDef",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_skew",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_isUnit",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_compatible",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn_mulVec",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_recovery",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.frameChange",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.frameChange_mulVec",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.frameChange_isUnit",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_frameChange",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_frame_independent",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_sqrt_comp",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_inv_sqrt_comp",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_skew",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_normalize_of_posDef",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_normalize",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffWithinAt_sqrt_comp",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffWithinAt_inv_sqrt_comp",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffWithinAt_normalize",
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_sqrt_posDef",
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_sqrt_comp",
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_inverse_sqrt_comp",
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiff_sqrt_comp",
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiff_inverse_sqrt_comp",
+    "ExactLiouvilleComparison.NormalizationSqrt.relative_sqrt_contract",
+    "ExactLiouvilleComparison.NormalizationSqrt.sqrt_composition_contract",
+    "ExactLiouvilleComparison.NormalizationSqrt.inverse_sqrt_composition_contract",
+    "ExactLiouvilleComparison.NormalizationSqrt.SylvesterContract",
+    "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract",
+    "ExactLiouvilleComparison.NormalizationSqrt.SqrtCompositionContract",
+    "ExactLiouvilleComparison.NormalizationSqrt.InverseSqrtCompositionContract",
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester",
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester_apply",
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester_injective",
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv",
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv_apply",
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester_contract",
+    "ExactLiouvilleComparison.NormalizationSqrt.hasFDerivAt_sq",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.Compatible",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm",
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget"
+  ],
+  "environment_declaration_count": 344,
+  "axioms": {
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.Compatible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.Compatible._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.Compatible._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.Compatible._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.NormalizationTarget._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm._sizeOf_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm._sizeOf_inst": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.alternating": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.casesOn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.ctorIdx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.mk._flat_ctor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.mk.inj": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.mk.injEq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.mk.noConfusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.mk.sizeOf_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.noConfusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.noConfusionType": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.nondegenerate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.rec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.recOn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.SymplecticForm.smooth": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_10": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_11": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_12": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_13": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_14": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates._proof_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates.congr_simp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.bilinearCoordinates_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffAt_bilinearCoordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffAt_endomorphismIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffAt_matrixIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_inv_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_normalize": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_normalize_of_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_skew": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffOn_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffWithinAt_inv_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffWithinAt_normalize": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.contMDiffWithinAt_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endMatrixIn_mulVec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismInL_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.endomorphismIn_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.form_matrixIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.frameChange": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.frameChange_isUnit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.frameChange_mulVec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.instContMDiffMulRealMatModelWithCornersSelfSomeENatTop": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_10": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_11": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_12": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_13": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_14": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_15": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_16": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_17": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_18": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_19": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_20": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_22": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_23": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_24": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_25": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL._proof_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixEndL_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixInL_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_bilinearCoordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_frameChange": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_isUnit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.matrixIn_skew": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_10": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizationFrame._proof_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_finrank_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_isEmpty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_subsingleton_fibers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalization_of_subsingleton_model": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_compatible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_frame_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_frame_independent._simp_1_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_recovery": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizeIn_recovery._simp_1_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_compatible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_contMDiff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_eq_frame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.normalizedEndomorphism_recovery": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._aux_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._aux_11": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._aux_17": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._aux_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._aux_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_10": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_13": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_14": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_15": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_16": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_19": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_20": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_21": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_22": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedAddCommGroup._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedSpace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangentNormedSpace._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangent_normalization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.CylindricalCompatibility.Normalization.tangent_normalization_relative_recovery": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.Compatible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.Mat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.NaturalityContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.NormalizationContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.RecoveryContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.Vec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.associated_operator_equation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.commute_inv_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.compatible_of_metric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_10": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_11": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_12": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_13": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_14": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_15": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm._proof_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.continuousForm_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.endomorphism_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_eq_whitened": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_isAlt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_left._simp_1_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_nondegenerate_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_pull": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_pull._simp_1_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.form_skew": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_mul_cancel_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_pull_orthogonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.inv_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.metricRoot._proof_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.mul_inv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.mul_inv_cancel_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.naturalityContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.neg_sq_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalizationContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_compatible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_metric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_metric_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_native": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_native_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_native_recovery": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_naturality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_naturality._abel_1_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_plane": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_rank_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_recovery": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_recovery._abel_1_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_recovery._simp_1_2": [],
+    "ExactLiouvilleComparison.NormalizationAlgebra.normalize_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeComplex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeComplex.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeComplex_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeForm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.planeForm.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.plane_metric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_commute": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_pull": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polarRoot_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polar_factor_metric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.polar_factor_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.posDef_transpose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_mul_orthogonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_neg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_one_orthogonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_skew": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.pull_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.recoveryContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.root_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.root_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew.eq_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_eq_whitened_operator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_eq_whitened_operator._simp_1_1": [],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_pull": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_transpose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.skew_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.sqrt_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.sqrt_pull_orthogonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.whitening_orthogonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.whitening_orthogonal._simp_1_1": [],
+    "ExactLiouvilleComparison.NormalizationAlgebra.zero_rank_admissible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationAlgebra.zero_rank_compatible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.InverseSqrtCompositionContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.RelativeSqrtContract._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.SqrtCompositionContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.SylvesterContract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_inverse_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiffOn_sqrt_posDef": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiff_inverse_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.contDiff_sqrt_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.hasFDerivAt_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.inverse_sqrt_composition_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.relative_sqrt_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sqrt_composition_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_10": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_11": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester._proof_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv._proof_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv._proof_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv._proof_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv._proof_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv._proof_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvesterEquiv_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ExactLiouvilleComparison.NormalizationSqrt.sylvester_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "uncompressed_inventory_sha256": "b1f91b4faedd4af2c036811df9fff8c9bec0ab43840ae9b1bef1e3e63dd090f9",
+  "uncompressed_inventory_bytes": 18774671,
+  "generated_sha256": {
+    "verification/cylindrical-compatibility-normalization/types.txt.gz.base64": "7d97d630bf7a7b29a1b611170a2755257b1374a787cd12ed5fea33367cec3a63",
+    "verification/cylindrical-compatibility-normalization/types.txt.names": "feda920bea48e2dea892ad40543b05e42776c4059d6acdf280b266685f7880a6",
+    "verification/cylindrical-compatibility-normalization/axioms.tsv": "17eb9beb27401edf6182267fa5dea62d9ae6c2da925ed10fc0cf3198755d3a97"
+  }
+}

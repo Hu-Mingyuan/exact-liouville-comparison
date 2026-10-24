@@ -1,0 +1,248 @@
+{
+  "scope": "Proved weak-taming linear algebra and native radial pointwise consumer only; no comparison theorem or flow.",
+  "accepted_base_commit": "46fccea69cb9524882bbeda83b0ac2067d22a149",
+  "accepted_statement_review_artifact": "8930b2e3-ab88-498e-8a6f-d3f732fa8f95",
+  "source_sha256": {
+    "ExactLiouvilleComparison/Geometry.lean": "2b30f2be23bb8f1338b72ed0fdfd26f67ee8fef1cf70f4f5f4a5e7430a307326",
+    "ExactLiouvilleComparison/Statement.lean": "ff7798a4a5c0adc5b27b27766bddc7b123a6923d0c9063983b7a04eb5daa07b7",
+    "ExactLiouvilleComparison/LinearAlgebra.lean": "7c4c02c25b53b4df0bd54b5ff1ba884ff7e2469d6e8040f7fce38c9ecbc993c1",
+    "ExactLiouvilleComparison/LinearAlgebraChecks.lean": "3f68a573a64421a2a1b2a9ae0c93b0faf4cfae2d6b141ba4434c656a0b7af00f",
+    "verification/linear-algebra/AxiomAudit.lean": "77be42f78d95f4f3713ca9b7aeecc16381549838d55890c660c7c7f8e6d8fc57",
+    "verification/linear-algebra/Types.lean": "bd3533b7dc8241f6090d6ff5cdd84a623aae0c05ea64d73afedba06251db90de",
+    "verification/linear-algebra/declarations.json": "2e376e141b3d2fb92a307aa9244bb09ffbfc23b55939052ac3402b7ce7fddb7d",
+    "scripts/verify-linear-algebra.py": "d59b9475f17ad0e321471854b2cde0520f3e350d430a598f88de24a26e8e9f52",
+    "docs/linear-algebra.md": "d1597c96453abd2dfc7fcbf91bc9f2332b5e8899e990f7e36c3e4051439cc5e7",
+    "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
+    "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576"
+  },
+  "pins": {
+    "fsfltz": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+  },
+  "checks": [
+    {
+      "command": [
+        "horizon-lean-check",
+        "ExactLiouvilleComparison.LinearAlgebra",
+        "ExactLiouvilleComparison.LinearAlgebraChecks"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "build",
+          "ExactLiouvilleComparison.LinearAlgebra",
+          "ExactLiouvilleComparison.LinearAlgebraChecks"
+        ],
+        "cwd": "/tmp/linear-work",
+        "duration_seconds": 2.065,
+        "error": null,
+        "failure": null,
+        "lean_file": null,
+        "mode": "lake",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "1326fb91398e45dfa79764e2574b0e0762b74b19eed506762580472cb6fb3c8a",
+        "status": "passed",
+        "targets": [
+          "ExactLiouvilleComparison.LinearAlgebra",
+          "ExactLiouvilleComparison.LinearAlgebraChecks"
+        ],
+        "timings": {
+          "build_seconds": 0.0,
+          "engine_seconds": 2.06545737200031,
+          "preparation_seconds": 0.04579459399974439,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.16515032999996038,
+          "total_seconds": 2.2765170370003034,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/linear-algebra/AxiomAudit.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/tmp/linear-work/verification/linear-algebra/AxiomAudit.lean"
+        ],
+        "cwd": "/tmp/linear-work",
+        "duration_seconds": 2.421,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/linear-algebra/AxiomAudit.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "1326fb91398e45dfa79764e2574b0e0762b74b19eed506762580472cb6fb3c8a",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.419,
+          "engine_seconds": 2.4212809580003523,
+          "preparation_seconds": 0.037508852000428305,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.17963230399982422,
+          "total_seconds": 2.6384861520000413,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      },
+      "transitive_axioms": {
+        "ExactLiouvilleComparison.norm_le_of_weak_positive_equation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.weak_taming_linear_nondegenerate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.weak_taming_linear_contraction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.metricInnerProductSpace": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.metric_inner_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.weak_taming_nondegenerate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.weak_taming_contraction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.CompatibleStructure.inverseContraction_norm_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.LinearAlgebraChecks.radial_metric_norm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector_apply": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.LinearAlgebraChecks.first_path_linear_estimate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ExactLiouvilleComparison.LinearAlgebraChecks.zero_parameter": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "command": [
+        "horizon-lean-check",
+        "--lean",
+        "verification/linear-algebra/Types.lean"
+      ],
+      "returncode": 0,
+      "managed": {
+        "cache": "local",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/tmp/linear-work/verification/linear-algebra/Types.lean"
+        ],
+        "cwd": "/tmp/linear-work",
+        "duration_seconds": 2.578,
+        "error": null,
+        "failure": null,
+        "lean_file": "verification/linear-algebra/Types.lean",
+        "mode": "lean",
+        "ok": true,
+        "probe": false,
+        "repeated_deferred": false,
+        "returncode": 0,
+        "snapshot_verified": true,
+        "source_key": "1326fb91398e45dfa79764e2574b0e0762b74b19eed506762580472cb6fb3c8a",
+        "status": "passed",
+        "targets": [],
+        "timings": {
+          "build_seconds": 2.576,
+          "engine_seconds": 2.5777810800000225,
+          "preparation_seconds": 0.03760548199988989,
+          "prepare_seconds": 0.0,
+          "source_fingerprint_seconds": 0.22628635700039013,
+          "total_seconds": 2.841839013000026,
+          "wait_seconds": 0.0
+        },
+        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
+      }
+    }
+  ],
+  "declarations": [
+    "ExactLiouvilleComparison.norm_le_of_weak_positive_equation",
+    "ExactLiouvilleComparison.weak_taming_linear_nondegenerate",
+    "ExactLiouvilleComparison.weak_taming_linear_contraction",
+    "ExactLiouvilleComparison.CompatibleStructure.metricInnerProductSpace",
+    "ExactLiouvilleComparison.CompatibleStructure.metric_inner_eq",
+    "ExactLiouvilleComparison.CompatibleStructure.weak_taming_nondegenerate",
+    "ExactLiouvilleComparison.CompatibleStructure.weak_taming_contraction",
+    "ExactLiouvilleComparison.CompatibleStructure.inverseContraction_norm_le",
+    "ExactLiouvilleComparison.LinearAlgebraChecks.radialPrimitive",
+    "ExactLiouvilleComparison.LinearAlgebraChecks.radial_metric_norm",
+    "ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector",
+    "ExactLiouvilleComparison.LinearAlgebraChecks.firstPathCovector_apply",
+    "ExactLiouvilleComparison.LinearAlgebraChecks.first_path_linear_estimate",
+    "ExactLiouvilleComparison.LinearAlgebraChecks.zero_parameter"
+  ]
+}
