@@ -1,6 +1,6 @@
 # Source and dependency notices
 
-The mathematical source is the user-supplied manuscript identified, with its unchanged source hash, in [docs/sources.json](docs/sources.json). The project is delivered as a private repository; this notice does not grant a new public license for the manuscript or original project work.
+The mathematical source is the user-supplied manuscript identified, with its unchanged source hash, in [docs/sources.json](docs/sources.json). This repository is public. This notice does not grant a new license for the manuscript or original project work.
 
 The Lean library directly imports these pinned upstream dependencies. Their original source files and license terms are retained when Lake materializes them:
 

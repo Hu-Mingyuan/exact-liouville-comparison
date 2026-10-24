@@ -6,7 +6,7 @@ $$F^*\lambda=\beta+dh.$$
 
 The project also constructs cylindrical compatible almost-complex structures on a Liouville completion and extends prescribed compatible contact-distribution data over its compact core.
 
-The combined Lean formalization was accepted at `e994427720c4af8d3915d86609c6fe0538f7c031`. This delivery preserves all 191 mathematical source files exactly. The final library build, public consumers, and thirteen final-root axiom checks passed separately; see the [verification receipt](verification/publication/receipt.json). Both PDFs include the cylindrical construction and prescribed extension and have been rendered and checked against the Lean statements.
+The comparison and cylindrical construction have been proved in Lean. The library build, public consumers, and thirteen final-root axiom checks passed locally and in a [standalone GitHub Actions run](https://github.com/Hu-Mingyuan/exact-liouville-comparison/actions/runs/40055251963). The [verification guide](verification/README.md) connects the current sources to those checks. Both PDFs include the cylindrical construction and prescribed extension and have been checked against the Lean statements.
 
 ## Read the mathematics
 
@@ -66,6 +66,23 @@ All declaration names below are relative to `ExactLiouvilleComparison`.
 
 A target defined as a `Prop` states a goal. The proof declarations listed above inhabit those propositions. The [default library entry point](ExactLiouvilleComparison.lean) imports the proof assemblies.
 
+For example, after building the library, a Lean file in this project can use:
+
+```lean
+import ExactLiouvilleComparison
+
+open ExactLiouvilleComparison
+
+example : MainTarget := MainComparison.mainTarget
+example : ManuscriptTarget := ManuscriptComparison.manuscriptTarget
+example : CylindricalCompatibility.ExistenceTarget :=
+  CylindricalCompatibility.existenceTarget
+example : CylindricalCompatibility.ExtensionTarget :=
+  CylindricalCompatibility.extensionTarget
+```
+
+These examples are included in [FinalConsumer.lean](verification/FinalConsumer.lean). Some statement-file comments and development notes describe the earlier stage when a target was introduced; the proof declarations above and final verification records establish its completed status.
+
 ## Repository layout
 
 ```text
@@ -85,14 +102,16 @@ lake-manifest.json                Exact dependency revisions
 
 ## Reproduce the checks
 
-With Elan, Git, and Python 3 installed, run from the repository root:
+Use Linux or Ubuntu under WSL on Windows, with Elan (`lake` on `PATH`), Git, Python 3, and Bash 4 or newer installed:
 
 ```sh
+git clone https://github.com/Hu-Mingyuan/exact-liouville-comparison.git
+cd exact-liouville-comparison
 bash scripts/fetch-cache.sh
 python3 scripts/verify.py
 ```
 
-The cache command uses the locked dependency revisions. The verifier builds the library and final consumer, checks that mathematical sources match the accepted snapshot, and rejects unexpected transitive axioms. The only permitted axioms are `propext`, `Classical.choice`, and `Quot.sound`. See the [verification guide](verification/README.md) for the distinction between this final-root check and the broader development audits.
+The cache command uses the locked dependency revisions from public upstream repositories. The verifier runs with ordinary Lake, builds the library and final consumer, checks that mathematical sources match the accepted snapshot, and rejects unexpected transitive axioms. Success ends with `PUBLICATION_INTERFACE_VERIFIED`; the receipt and logs are written to `verification/publication/`. The only permitted axioms are `propext`, `Classical.choice`, and `Quot.sound`. See the [verification guide](verification/README.md) for the distinction between this final-root check and the broader development audits.
 
 | Dependency | Pinned revision |
 | --- | --- |
@@ -104,8 +123,6 @@ The cache command uses the locked dependency revisions. The verifier builds the 
 
 The mathematical source is the supplied manuscript *Exact comparison of Liouville forms under weak taming*, identified in [docs/sources.json](docs/sources.json). The exposition follows the actual formalized definitions and proofs.
 
-[Bohan Fang's FsFltz](https://github.com/bohanfang/fs-fltz-minimal) is an unmodified pinned dependency, licensed upstream under Apache-2.0, using native Mathlib geometry. The project follows the separate theorem/proof/verification organization of [cluster-skeleton](https://github.com/Hu-Mingyuan/cluster-skeleton).
+[Bohan Fang's FsFltz](https://github.com/bohanfang/fs-fltz-minimal) is an unmodified pinned dependency, licensed upstream under Apache-2.0, using native Mathlib geometry. The repository layout follows the author's separate, private `cluster-skeleton` project. That repository is a layout reference; the build dependencies are fetched from public upstream repositories and pinned in `lake-manifest.json`.
 
 See [NOTICES.md](NOTICES.md) for dependency licensing and source attribution.
-
-The delivery is intended as a private source repository. No website deployment is configured.

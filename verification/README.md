@@ -2,13 +2,15 @@
 
 ## Current delivery boundary
 
-The combined formalization was accepted at private commit `e994427720c4af8d3915d86609c6fe0538f7c031`. This delivery retains all 191 mathematical Lean files byte-for-byte; [accepted-library.json](accepted-library.json) binds them. The [publication receipt](publication/receipt.json) records the separate successful build, consumer, and thirteen final-root axiom checks.
+The combined formalization was accepted at private Forgejo commit `e994427720c4af8d3915d86609c6fe0538f7c031`. This is a development provenance identifier, separate from the public GitHub commit history. This delivery retains all 191 mathematical Lean files byte-for-byte; [accepted-library.json](accepted-library.json) binds them. The [publication receipt](publication/receipt.json) records the separate successful build, consumer, and thirteen final-root axiom checks.
+
+[GitHub Actions run 40055251963](https://github.com/Hu-Mingyuan/exact-liouville-comparison/actions/runs/40055251963) also passed using ordinary Lake at public commit `f51a6895cb4326c073650bcbd7f62cd5bbb5bcce`. Its downloaded receipt binds 199 compilation inputs and thirteen final-root axiom sets. Those inputs match the published sources; later documentation-only corrections leave them unchanged. The `lean-verification` artifact retains that run's receipt and logs for GitHub's artifact-retention period. The committed receipt above records the local managed checks; it is a separate record from the cloud artifact.
 
 The root import exposes the accepted native integration and its proof assemblies. The additional publication consumers have their own exact-source receipt; earlier component receipts are not used to certify these additions automatically.
 
 ## Reproduce the public interface checks
 
-From the repository root, with Elan, Git and Python 3 available:
+From the repository root on Linux or Ubuntu under WSL, with Elan (`lake` on `PATH`), Git, Python 3, and Bash 4 or newer available:
 
 ```sh
 bash scripts/fetch-cache.sh
