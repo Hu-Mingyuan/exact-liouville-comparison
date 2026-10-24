@@ -1,9 +1,0 @@
-⚠ [2764/2764] Replayed ExactLiouvilleComparison.CylindricalCompatibilityStatement
-warning: ExactLiouvilleComparison/CylindricalCompatibilityStatement.lean:61:37: Variable name `C` is not explicitly referenced.
-
-Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
-  [apply] _C
-
-Note: This linter can be disabled with `set_option linter.unusedVariables false`
-All targets up-to-date (2764 jobs).
-{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.CylindricalCompatibilityStatement"], "cwd": "/var/lib/archon-worker/workspaces/assignments/715bfb6e-da34-4a2a-b10b-1821801f6a8a", "duration_seconds": 1.723, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "980e83fbcee8f4b64651cd8a14ff271fd8d0e1e3bc349ff9d6c0a62ba5bf3c5c", "status": "passed", "targets": ["ExactLiouvilleComparison.CylindricalCompatibilityStatement"], "timings": {"build_seconds": 0.0, "engine_seconds": 1.7229610710000998, "preparation_seconds": 0.04885496799943212, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.20107545099926938, "total_seconds": 1.9729601099998035, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

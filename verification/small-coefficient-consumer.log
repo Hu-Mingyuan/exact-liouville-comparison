@@ -1,8 +1,0 @@
-'ExactLiouvilleComparison.SmallCoefficient.Consumer.construction' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-'ExactLiouvilleComparison.SmallCoefficient.Consumer.from_growthAtInfinity' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-SMALL_COEFFICIENT_CONSUMER_COMPLETE
-{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/0ae8a63c-5e0c-4b13-a4f4-2cfc6961f269/small-coefficient/verification/SmallCoefficientConsumer.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/provider-scratch/0ae8a63c-5e0c-4b13-a4f4-2cfc6961f269/small-coefficient", "duration_seconds": 2.363, "error": null, "failure": null, "lean_file": "verification/SmallCoefficientConsumer.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "e9a0e825ce666ffd90c721d0184d87b4472d4c2863a7bad377d29c83c4820025", "status": "passed", "targets": [], "timings": {"build_seconds": 2.362, "engine_seconds": 2.3636339129998305, "preparation_seconds": 0.05171120399973006, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.20144308999988425, "total_seconds": 2.6168559320003624, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

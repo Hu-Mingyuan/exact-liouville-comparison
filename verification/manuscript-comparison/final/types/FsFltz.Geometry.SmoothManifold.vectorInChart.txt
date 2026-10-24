@@ -1,5 +1,0 @@
-FsFltz.Geometry.SmoothManifold.vectorInChart : {d : Nat} →
-  (M : FsFltz.Geometry.SmoothManifold d) →
-    (a : @FsFltz.Geometry.SmoothManifold.Point d M) →
-      (Z : (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x) →
-        (y : FsFltz.Geometry.Model d) → FsFltz.Geometry.Model d

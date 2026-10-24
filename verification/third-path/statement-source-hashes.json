@@ -1,9 +1,0 @@
-{
-  "ExactLiouvilleComparison/ThirdPathStatement.lean": "5cfd8cc26dadec7cf72da708c25d275b27d366ccf907a1e0d0d2c8977f2437ab",
-  "docs/third-path-crosswalk.md": "14737140da60ac599e25a199c7d46d3ca20b904d8a6eed4f604c1b15a0b78099",
-  "verification/third-path/StatementInventory.lean": "8445a7c5219925b9e9f0b6297c09ad007dae7f0434f32b2f301d122538c295ce",
-  "docs/reference/exact_liouville_comparison.tex": "8e5ae225e12eb1adcc4f3851e5e5e026e0de2b9436ba0e6e1301e8771ca90576",
-  "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
-  "lakefile.toml": "c7d42cdedda54d0e58045c68b2e768fc032394e016c824f307cd29d6ac6e28fe",
-  "lake-manifest.json": "2790d3bafa974c7cbdd6e9ca85ac8e33d1caf801ab00d645ceebaea8aa65ba83"
-}

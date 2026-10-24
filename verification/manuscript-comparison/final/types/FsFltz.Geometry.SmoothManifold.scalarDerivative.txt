@@ -1,4 +1,0 @@
-FsFltz.Geometry.SmoothManifold.scalarDerivative : {d : Nat} →
-  (M : FsFltz.Geometry.SmoothManifold d) →
-    (f : @FsFltz.Geometry.SmoothManifold.Point d M → Real) →
-      (x : @FsFltz.Geometry.SmoothManifold.Point d M) → (v : @FsFltz.Geometry.SmoothManifold.Tangent d M x) → Real

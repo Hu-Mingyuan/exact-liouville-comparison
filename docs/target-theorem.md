@@ -54,4 +54,4 @@ The combined comparison proof is `ManuscriptComparison.manuscriptTarget`. [Finit
 
 ## Verification boundary
 
-These descriptions identify the intended and implemented theorem terms. Source-bound receipts and independent reviews establish the scope of accepted results. The [verification guide](../verification/README.md) records the completed combined publication checks and the updated, visually inspected theorem and proof PDFs.
+The [verification guide](../verification/README.md) gives the commands for compiling the actual proof terms, checking their transitive axioms, and matching the exact source hashes. It also links the document check for the theorem and proof PDFs.

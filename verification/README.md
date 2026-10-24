@@ -1,50 +1,40 @@
-# Verification and source provenance
+# Verify the formalization
 
-## Current delivery boundary
-
-The combined formalization was accepted at private Forgejo commit `e994427720c4af8d3915d86609c6fe0538f7c031`. This is a development provenance identifier, separate from the public GitHub commit history. This delivery retains all 191 mathematical Lean files byte-for-byte; [accepted-library.json](accepted-library.json) binds them. The [publication receipt](publication/receipt.json) records the separate successful build, consumer, and thirteen final-root axiom checks.
-
-[GitHub Actions run 40055251963](https://github.com/Hu-Mingyuan/exact-liouville-comparison/actions/runs/40055251963) also passed using ordinary Lake at public commit `f51a6895cb4326c073650bcbd7f62cd5bbb5bcce`. Its downloaded receipt binds 199 compilation inputs and thirteen final-root axiom sets. Those inputs match the published sources; later documentation-only corrections leave them unchanged. The `lean-verification` artifact retains that run's receipt and logs for GitHub's artifact-retention period. The committed receipt above records the local managed checks; it is a separate record from the cloud artifact.
-
-The root import exposes the accepted native integration and its proof assemblies. The additional publication consumers have their own exact-source receipt; earlier component receipts are not used to certify these additions automatically.
-
-## Reproduce the public interface checks
-
-From the repository root on Linux or Ubuntu under WSL, with Elan (`lake` on `PATH`), Git, Python 3, and Bash 4 or newer available:
+From the repository root on Linux or Ubuntu under WSL, with Elan (`lake` on `PATH`), Git, Python 3, and Bash 4 or newer installed:
 
 ```sh
 bash scripts/fetch-cache.sh
 python3 scripts/verify.py
 ```
 
-`fetch-cache.sh` reuses the cluster project's cache workflow with this project's module path. It materializes locked dependency sources and obtains the imported pinned Mathlib cache. It does not request newer dependency revisions.
+The first command obtains dependency sources and compiled caches at the revisions in `lake-manifest.json`. The verifier uses ordinary Lake and performs:
 
-[FinalConsumer.lean](FinalConsumer.lean) checks that the default import exposes proof terms for `MainTarget`, `ManuscriptTarget`, complete comparison, cylindrical existence, prescribed extension, and the native quotient application. [PublicationAxioms.lean](PublicationAxioms.lean) prints transitive axiom sets for thirteen final roots, including the direct prescribed-kernel theorem. The verifier parses every expected result and fails on missing roots or axioms outside `propext`, `Classical.choice`, and `Quot.sound`.
+```sh
+lake --rehash build ExactLiouvilleComparison
+lake env lean verification/FinalConsumer.lean
+lake env lean verification/PublicationAxioms.lean
+```
 
-On an already configured Horizon host, `python3 scripts/verify.py --managed` uses its normal build admission and shared caches. Ordinary readers use the default Lake commands. Results are written to `verification/publication/receipt.json`; its status and exact source hashes, rather than the existence of a log, determine whether the check passed.
+Success ends with `PUBLICATION_INTERFACE_VERIFIED`. The [CI workflow](../.github/workflows/lean.yml) runs the same commands.
 
-This simple final-root audit is distinct from the broader module/declaration audits in the component receipts. Their declaration counts must not be added together or presented as the size of one combined audit.
+## What is checked
 
-## Source-bound development evidence
+- All 191 mathematical Lean files match the SHA-256 manifest in [accepted-library.json](accepted-library.json).
+- The toolchain is Lean 4.34.1, and every dependency checkout is clean and matches its pinned revision.
+- The default library import builds, and [FinalConsumer.lean](FinalConsumer.lean) applies the actual proof terms for the comparison, its applications, cylindrical existence, prescribed extension, and native quotient integration.
+- [PublicationAxioms.lean](PublicationAxioms.lean) checks thirteen final theorem roots and all their transitive axiom dependencies. Only `propext`, `Classical.choice`, and `Quot.sound` are permitted. Missing audit results or additional axioms fail verification; this excludes `sorryAx` and custom axioms in these proofs.
+- All 199 compilation inputs retain the same hashes throughout verification.
 
-The existing `scripts/verify-*.py` scripts and their corresponding subdirectories retain the development checks, exact statement/input bindings, native consumers, transitive audits, and independent reviews. They use Horizon's managed environment; they are not the standalone installation requirement for a reader.
+The theorem statements are defined as propositions; the consumer checks use their completed proof terms. See the [definition guide](../docs/definition-comparison.md) for the mathematical meaning of the hypotheses and the [proof map](../docs/proof-blueprint.md) for their implementations.
 
-| Result | Evidence or exact import binding |
-| --- | --- |
-| General radial comparison | [main-comparison](main-comparison) |
-| Finite-type and manuscript assembly | [manuscript-comparison](manuscript-comparison) |
-| Native finite-type presentation | [finite-type-presentation](finite-type-presentation) |
-| Global cylindrical construction | [cylindrical-compatibility/construction](cylindrical-compatibility/construction) |
-| Relative metric extension | [metric-import.json](cylindrical-compatibility/continuation/metric-import.json) |
-| Contact existence | [contact-import.json](cylindrical-compatibility/continuation/contact-import.json) |
-| Combined native quotient, constructed reference and comparison | [native integration review](native-integration/final-review.md) |
+## Included verification evidence
 
-A component's acceptance requires its exact source, successful snapshot-verified checks, permitted-only transitive axioms, and an independent review of that scope. A queued task, successful publication transport, or compiled target declaration alone does not establish the theorem.
+The [receipt](publication/receipt.json) and its three logs are the actual ordinary-Lake output of [successful CI run 40055251963](https://github.com/Hu-Mingyuan/exact-liouville-comparison/actions/runs/40055251963):
 
-## Final publication checks
+- [build.log](publication/build.log): library compilation.
+- [consumer.log](publication/consumer.log): final theorem consumers.
+- [axioms.log](publication/axioms.log): thirteen transitive axiom checks.
 
-The accepted native integration has three snapshot-verified checks, 3,029 permitted-only transitive declaration audits, and independent statement/proof review. Its 876-declaration type/definition inventory includes the actual native quotient, chosen metric, prescribed extension, and comparison endpoints. These counts describe that accepted integration receipt, not the smaller final-root publication check.
+The receipt binds every compilation input and each log by SHA-256. All those input hashes match the delivered files. Re-running the verifier replaces these four files with the new result, including its status, toolchain, dependency revisions, source hashes, and axiom sets.
 
-The three final publication checks passed with one verified source key, `8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563`. Dependency revisions and cleanliness, all accepted mathematical source bytes, and all thirteen final-root axiom sets were checked. The [document check](document-check.json) records the seven-page theorem PDF and fourteen-page proof PDF, their source hashes, all-page visual inspection, and statement/proof correspondence.
-
-A pending or failed GitHub Actions run is not successful verification. Runtime credentials, provider/session transcripts, and unrelated files are outside the final publication.
+The [document check](document-check.json) records the exact PDF and LaTeX hashes, comparison with the Lean statements and proofs, and visual inspection of all 21 pages. The mathematical definitions and proof terms remain directly available for inspection in the source.

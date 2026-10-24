@@ -1,4 +1,0 @@
-FsFltz.Geometry.SmoothManifold.evalOne : {d : Nat} →
-  {M : FsFltz.Geometry.SmoothManifold d} →
-    (α : @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
-      (x : @FsFltz.Geometry.SmoothManifold.Point d M) → (v : @FsFltz.Geometry.SmoothManifold.Tangent d M x) → Real

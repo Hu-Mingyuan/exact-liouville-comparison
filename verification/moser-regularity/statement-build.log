@@ -1,7 +1,0 @@
-✖ [3616/3616] Building ExactLiouvilleComparison.MoserRegularityStatement
-error: target is out-of-date and needs to be rebuilt
-Some required targets logged failures:
-- ExactLiouvilleComparison.MoserRegularityStatement
-✔ [3616/3616] Built ExactLiouvilleComparison.MoserRegularityStatement (2.8s)
-Build completed successfully (3616 jobs).
-{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison.MoserRegularityStatement"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/exact-liouville-comparison", "duration_seconds": 7.421, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "1d6a2a831210662822f62c666c01800bdbc8650a143114d38792919c4894eae0", "status": "passed", "targets": ["ExactLiouvilleComparison.MoserRegularityStatement"], "timings": {"build_seconds": 5.234, "engine_seconds": 7.421480377999615, "preparation_seconds": 0.044940728999790736, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.16333502199995564, "total_seconds": 7.629812713001229, "wait_seconds": 0.001}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

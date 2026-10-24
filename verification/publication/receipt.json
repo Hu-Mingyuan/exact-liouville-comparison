@@ -1,137 +1,35 @@
 {
   "status": "passed",
-  "checked_at_utc": "2026-10-24T02:35:59.029358+00:00",
+  "checked_at_utc": "2026-10-24T02:44:32.133096+00:00",
   "scope": "accepted library equality, public entry point, consumers and final-root transitive axioms",
-  "mode": "managed",
+  "mode": "lake",
   "checks": [
     {
       "command": [
-        "horizon-lean-check",
-        "--root",
-        "/var/lib/archon-worker/scratch/publication-e994-v1",
+        "lake",
+        "--rehash",
+        "build",
         "ExactLiouvilleComparison"
       ],
-      "returncode": 0,
-      "managed": {
-        "cache": "local",
-        "command": [
-          "lake",
-          "build",
-          "ExactLiouvilleComparison"
-        ],
-        "cwd": "/var/lib/archon-worker/scratch/publication-e994-v1",
-        "duration_seconds": 36.756,
-        "error": null,
-        "failure": null,
-        "lean_file": null,
-        "mode": "lake",
-        "ok": true,
-        "probe": false,
-        "repeated_deferred": false,
-        "returncode": 0,
-        "snapshot_verified": true,
-        "source_key": "8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563",
-        "status": "passed",
-        "targets": [
-          "ExactLiouvilleComparison"
-        ],
-        "timings": {
-          "build_seconds": 32.333,
-          "engine_seconds": 36.757819124999514,
-          "preparation_seconds": 0.04540413499853457,
-          "prepare_seconds": 0.0,
-          "source_fingerprint_seconds": 0.7212005660003342,
-          "total_seconds": 37.52472680600113,
-          "wait_seconds": 0.0
-        },
-        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
-      }
+      "returncode": 0
     },
     {
       "command": [
-        "horizon-lean-check",
-        "--root",
-        "/var/lib/archon-worker/scratch/publication-e994-v1",
-        "--lean",
+        "lake",
+        "env",
+        "lean",
         "verification/FinalConsumer.lean"
       ],
-      "returncode": 0,
-      "managed": {
-        "cache": "local",
-        "command": [
-          "lake",
-          "env",
-          "lean",
-          "/var/lib/archon-worker/scratch/publication-e994-v1/verification/FinalConsumer.lean"
-        ],
-        "cwd": "/var/lib/archon-worker/scratch/publication-e994-v1",
-        "duration_seconds": 4.546,
-        "error": null,
-        "failure": null,
-        "lean_file": "verification/FinalConsumer.lean",
-        "mode": "lean",
-        "ok": true,
-        "probe": false,
-        "repeated_deferred": false,
-        "returncode": 0,
-        "snapshot_verified": true,
-        "source_key": "8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563",
-        "status": "passed",
-        "targets": [],
-        "timings": {
-          "build_seconds": 4.507,
-          "engine_seconds": 4.546602812002675,
-          "preparation_seconds": 0.05507144600051106,
-          "prepare_seconds": 0.0,
-          "source_fingerprint_seconds": 0.3212453349988209,
-          "total_seconds": 4.923047154999949,
-          "wait_seconds": 0.0
-        },
-        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
-      }
+      "returncode": 0
     },
     {
       "command": [
-        "horizon-lean-check",
-        "--root",
-        "/var/lib/archon-worker/scratch/publication-e994-v1",
-        "--lean",
+        "lake",
+        "env",
+        "lean",
         "verification/PublicationAxioms.lean"
       ],
-      "returncode": 0,
-      "managed": {
-        "cache": "local",
-        "command": [
-          "lake",
-          "env",
-          "lean",
-          "/var/lib/archon-worker/scratch/publication-e994-v1/verification/PublicationAxioms.lean"
-        ],
-        "cwd": "/var/lib/archon-worker/scratch/publication-e994-v1",
-        "duration_seconds": 3.466,
-        "error": null,
-        "failure": null,
-        "lean_file": "verification/PublicationAxioms.lean",
-        "mode": "lean",
-        "ok": true,
-        "probe": false,
-        "repeated_deferred": false,
-        "returncode": 0,
-        "snapshot_verified": true,
-        "source_key": "8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563",
-        "status": "passed",
-        "targets": [],
-        "timings": {
-          "build_seconds": 3.465,
-          "engine_seconds": 3.466127856001549,
-          "preparation_seconds": 0.03665600499880384,
-          "prepare_seconds": 0.0,
-          "source_fingerprint_seconds": 0.3200622860058502,
-          "total_seconds": 3.8229167360004794,
-          "wait_seconds": 0.0
-        },
-        "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"
-      }
+      "returncode": 0
     }
   ],
   "lean_version": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
@@ -423,9 +321,9 @@
     ]
   },
   "evidence_sha256": {
-    "axioms.log": "73af23fe9c1276b4163e6607d2d5b607ca710c7e137aa4c23054873c43c11307",
-    "build.log": "ac67489ea920a82755a6b4f1518d8a05156fd15f82518e316c6abb4cb3bbd3f3",
-    "consumer.log": "1f14dfb5c3021100b55747e38a923e3e7d357080d6d40fc7883380b2dbbce87a"
+    "axioms.log": "e270459328577d2b4a605c9b5ab9afcfb91c360225b4fbf2f4fe2f5d230807e9",
+    "build.log": "53e7a0522d0cf429b225abdb1340073547bbc2676739a86edba8c4283ac3c103",
+    "consumer.log": "4aae945891e332997ca8d81754fd0434bf6118feb502314f30a43660d898dcfd"
   },
-  "finished_at_utc": "2026-10-24T02:36:46.503027+00:00"
+  "finished_at_utc": "2026-10-24T03:03:03.605018+00:00"
 }

@@ -1,4 +1,0 @@
-ExactLiouvilleComparison.SteinGrowth.extend : (B :
-    ExactLiouvilleComparison.AdmissibleGrowth
-      (Real.exp (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))) →
-  ExactLiouvilleComparison.AdmissibleGrowth (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))

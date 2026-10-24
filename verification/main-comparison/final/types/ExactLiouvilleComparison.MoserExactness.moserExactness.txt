@@ -1,1 +1,0 @@
-ExactLiouvilleComparison.MoserExactness.moserExactness : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d}, @ExactLiouvilleComparison.MoserExactness.Target d M

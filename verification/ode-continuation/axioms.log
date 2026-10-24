@@ -1,8 +1,0 @@
-'ExactLiouvilleComparison.ODE.exists_bounded_smooth_compact_cutoff' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-'ExactLiouvilleComparison.ODE.contMDiff_cutoff_field' depends on axioms: [propext, Classical.choice, Quot.sound]
-'ExactLiouvilleComparison.ODE.scalar_bound_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
-'ExactLiouvilleComparison.ODE.finiteIntervalExistence' depends on axioms: [propext, Classical.choice, Quot.sound]
-ODE_CONTINUATION_AXIOMAUDIT_COMPLETE
-{"cache": "local", "command": ["lake", "env", "lean", "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/e70033f6-ec8c-4a0d-8b00-f7800de0b33c/verification/ode-continuation/AxiomAudit.lean"], "cwd": "/home/no_body/.local/share/archon-horizon/fast-runtime/workspaces/assignments/e70033f6-ec8c-4a0d-8b00-f7800de0b33c", "duration_seconds": 3.872, "error": null, "failure": null, "lean_file": "verification/ode-continuation/AxiomAudit.lean", "mode": "lean", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "be9d83204a58774a86bcb1371de172b8e3f0238f25dc94e9f40fe90dbf9f2083", "status": "passed", "targets": [], "timings": {"build_seconds": 3.869, "engine_seconds": 3.8725391139996646, "preparation_seconds": 0.06971092499952647, "prepare_seconds": 0.001, "source_fingerprint_seconds": 0.24189722499977506, "total_seconds": 4.184246863998851, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

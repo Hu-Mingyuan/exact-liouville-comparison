@@ -1,1 +1,0 @@
-ExactLiouvilleComparison.FirstPathExactness.firstPathExactness : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d}, @ExactLiouvilleComparison.FirstPathExactness.Target d M

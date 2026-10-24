@@ -1,1 +1,0 @@
-FsFltz.Geometry.CompleteLiouvilleManifold : (d : Nat) → Type 1

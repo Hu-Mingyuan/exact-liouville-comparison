@@ -1,1 +1,0 @@
-ExactLiouvilleComparison.ProperComplexEmbedding : {d : Nat} → (M : FsFltz.Geometry.SmoothManifold d) → (N : Nat) → Type

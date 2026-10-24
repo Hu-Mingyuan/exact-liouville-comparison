@@ -1,1 +1,0 @@
-FsFltz.Geometry.LiouvilleStructure : {d : Nat} → (D : FsFltz.Geometry.CompactDomain d) → Type

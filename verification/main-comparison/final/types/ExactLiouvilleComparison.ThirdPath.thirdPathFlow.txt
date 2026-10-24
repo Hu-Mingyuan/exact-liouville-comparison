@@ -1,1 +1,0 @@
-ExactLiouvilleComparison.ThirdPath.thirdPathFlow : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d}, @ExactLiouvilleComparison.ThirdPath.Target d M

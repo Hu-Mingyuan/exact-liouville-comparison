@@ -1,9 +1,0 @@
-import ExactLiouvilleComparison.FirstPathFlowStatement
-#print ExactLiouvilleComparison.FirstPathFlow.IsSolution
-#print ExactLiouvilleComparison.FirstPathFlow.Evolution
-#print ExactLiouvilleComparison.FirstPathFlow.Target
-#print ExactLiouvilleComparison.FirstPathFlow.GrowthTarget
-#print axioms ExactLiouvilleComparison.FirstPathFlow.IsSolution
-#print axioms ExactLiouvilleComparison.FirstPathFlow.Evolution
-#print axioms ExactLiouvilleComparison.FirstPathFlow.Target
-#print axioms ExactLiouvilleComparison.FirstPathFlow.GrowthTarget

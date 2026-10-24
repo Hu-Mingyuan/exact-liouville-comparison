@@ -1,2 +1,0 @@
-ExactLiouvilleComparison.CompatibleStructure : {d : Nat} →
-  {M : FsFltz.Geometry.SmoothManifold d} → (reference : @ExactLiouvilleComparison.ExactSymplecticStructure d M) → Type

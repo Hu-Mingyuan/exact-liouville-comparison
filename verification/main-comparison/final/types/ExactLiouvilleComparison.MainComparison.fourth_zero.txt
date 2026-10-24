@@ -1,7 +1,0 @@
-ExactLiouvilleComparison.MainComparison.fourth_zero : ∀ {d : Nat} {M : FsFltz.Geometry.SmoothManifold d} (P : @ExactLiouvilleComparison.RadialReference d M)
-  (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M),
-  @Eq.{1} (@FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
-    (@ExactLiouvilleComparison.MainComparison.fourthPrimitive d M P T
-      (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)))
-    (@ExactLiouvilleComparison.ExactSymplecticStructure.primitive d M
-      (@ExactLiouvilleComparison.RadialReference.exactStructure d M P))

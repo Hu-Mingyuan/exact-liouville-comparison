@@ -1,3 +1,0 @@
-ExactLiouvilleComparison.ManuscriptTarget := And ExactLiouvilleComparison.MainTarget
-  (And ExactLiouvilleComparison.FiniteTypeTarget
-    (And ExactLiouvilleComparison.SteinTarget ExactLiouvilleComparison.CommonReferenceTarget))

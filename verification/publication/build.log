@@ -1,7 +1,528 @@
-✖ [4045/4046] Building ExactLiouvilleComparison
-error: target is out-of-date and needs to be rebuilt
-Some required targets logged failures:
-- ExactLiouvilleComparison
-✔ [4041/4042] Built ExactLiouvilleComparison (29s)
+✔ [2550/2567] Built FsFltz.Core (5.3s)
+✔ [2724/2766] Built FsFltz.Geometry.Smooth (6.2s)
+✔ [2758/2767] Built FsFltz.Geometry.FormCalculus (4.1s)
+✔ [2760/2768] Built FsFltz.Geometry.Liouville (5.9s)
+✔ [2763/2773] Built FsFltz.Geometry.FixedAmbient (3.7s)
+✔ [2852/2870] Built FsFltz.Geometry.ExteriorDerivative (8.0s)
+✔ [2854/2870] Built FsFltz.Toric (3.4s)
+✔ [2855/2870] Built ExactLiouvilleComparison.Geometry (8.4s)
+✔ [2858/2870] Built FsFltz.Geometry.LiouvilleFlowPrimitive (10s)
+✔ [2859/2870] Built FsFltz.Analytic (3.8s)
+✔ [2860/2873] Built ExactLiouvilleComparison.LinearAlgebra (4.5s)
+✔ [2861/2873] Built ExactLiouvilleComparison.Statement (5.9s)
+✔ [2862/2873] Built FsFltz.Geometry.FormScalarDerivative (4.8s)
+✔ [2863/2873] Built FsFltz.Differential (4.0s)
+✔ [2865/2873] Built ExactLiouvilleComparison.RadialMetricLinear (3.0s)
+✔ [2866/2874] Built ExactLiouvilleComparison.LinearAlgebraChecks (3.5s)
+✔ [2868/2885] Built ExactLiouvilleComparison.SmallCoefficient (3.9s)
+✔ [2871/2885] Built ExactLiouvilleComparison.RadialCoefficient (3.2s)
+✔ [2878/2905] Built ExactLiouvilleComparison.SmallCoefficientK (3.9s)
+✔ [2881/2906] Built ExactLiouvilleComparison.SmallCoefficientAsymptotic (4.8s)
+✔ [2884/2907] Built FsFltz.Geometry.BoundaryNondegeneracy (7.2s)
+✔ [2885/2908] Built FsFltz.Geometry.Family (2.0s)
+✔ [2886/2908] Built FsFltz.Geometry.BoundaryContactDistribution (4.6s)
+✔ [3080/3131] Built FsFltz.SmoothTorus (4.5s)
+✔ [3577/3604] Built FsFltz.QuotientGeometry (4.8s)
+✔ [3588/3626] Built FsFltz.Geometry.ToricForms (3.3s)
+✔ [3590/3626] Built FsFltz.Geometry.VectorFieldBridge (3.6s)
+✔ [3591/3626] Built FsFltz.Geometry.SmoothForms (8.7s)
+✔ [3592/3626] Built FsFltz.Geometry.QuotientFormBridge (10s)
+✔ [3593/3626] Built FsFltz.Geometry.Deformation (3.4s)
+✔ [3594/3626] Built FsFltz.CoordinateGeometry (4.8s)
+✔ [3595/3626] Built FsFltz.Geometry.ToricSmoothForms (4.8s)
+✔ [3596/3626] Built ExactLiouvilleComparison.RadialMetric (7.0s)
+✔ [3597/3626] Built FsFltz.Geometry.IntrinsicShrinkingPairScaling (4.1s)
+✔ [3598/3626] Built FsFltz.AnalyticGeometry (5.5s)
+✔ [3599/3626] Built ExactLiouvilleComparison.RadialMetricDual (3.5s)
+✔ [3600/3626] Built ExactLiouvilleComparison.RadialMetricBundle (12s)
+✔ [3601/3626] Built FsFltz.Geometry.SymplecticBridge (12s)
+✔ [3602/3628] Built FsFltz.Geometry.SmoothLiouville (11s)
+✔ [3603/3628] Built ExactLiouvilleComparison.RadialMetricConstruction (22s)
+✔ [3604/3629] Built FsFltz.Geometry.FamilyLiouville (12s)
+✔ [3605/3629] Built FsFltz.Geometry.Identification (4.1s)
+✔ [3606/3629] Built ExactLiouvilleComparison.RadialMetricNorm (4.1s)
+✔ [3607/3629] Built FsFltz.Geometry.LiouvilleNaturality (3.6s)
+✔ [3609/3629] Built FsFltz.Geometry.FamilyLiouvilleNeighborhood (9.8s)
+✔ [3610/3633] Built ExactLiouvilleComparison.RadialInterpolationCoefficient (3.8s)
+✔ [3611/3633] Built ExactLiouvilleComparison.RadialMetricChecks (3.5s)
+✔ [3613/3641] Built ExactLiouvilleComparison.RadialInterpolationGeometry (4.3s)
+✔ [3617/3644] Built ExactLiouvilleComparison.FirstPathCoefficient (3.7s)
+✔ [3620/3644] Built ExactLiouvilleComparison.FirstPathExhaustion (3.4s)
+✔ [3621/3644] Built ExactLiouvilleComparison.RadialInterpolationEstimates (4.7s)
+✔ [3624/3644] Built ExactLiouvilleComparison.RadialInterpolationChecks (4.4s)
+✔ [3627/3645] Built ExactLiouvilleComparison.FirstPathVector (6.1s)
+✔ [3630/3650] Built FsFltz.Geometry.FlowBridge (4.6s)
+✔ [3632/3656] Built ExactLiouvilleComparison.FirstPathEstimate (4.3s)
+✔ [3635/3656] Built ExactLiouvilleComparison.FirstPathChecks (3.1s)
+✔ [3637/3656] Built FsFltz.Geometry.BoundaryMapBridge (5.2s)
+✔ [3639/3656] Built ExactLiouvilleComparison.MoserRegularityStatement (3.4s)
+✔ [3641/3656] Built FsFltz.Geometry.BoundarySmooth (5.4s)
+✔ [3643/3660] Built FsFltz.Geometry.LocalInverse (4.2s)
+✔ [3644/3662] Built ExactLiouvilleComparison.MoserRegularityInverse (8.8s)
+✔ [3645/3662] Built FsFltz.Geometry.BoundaryCharts (6.7s)
+✔ [3646/3662] Built FsFltz.Geometry.CompletionGluing (5.8s)
+✔ [3648/3662] Built FsFltz.Geometry.DomainRestriction (5.4s)
+✔ [3649/3662] Built ExactLiouvilleComparison.MoserRegularityFields (6.0s)
+✔ [3650/3664] Built FsFltz.Geometry.DomainCompletionRestriction (6.1s)
+✔ [3651/3664] Built FsFltz.Geometry.CompletionCollar (7.8s)
+✔ [3652/3666] Built ExactLiouvilleComparison.MoserRegularityCompact (4.3s)
+✔ [3654/3666] Built FsFltz.Geometry.LiouvilleNeighborhood (6.2s)
+✔ [3655/3666] Built ExactLiouvilleComparison.MoserRegularityGlobal (4.2s)
+✔ [3658/3667] Built FsFltz.Geometry.CompletionCollarExtension (6.9s)
+✔ [3661/3673] Built ExactLiouvilleComparison.FirstPathFlowStatement (3.9s)
+✔ [3663/3673] Built FsFltz.Geometry.CompactCollarNormalization (6.5s)
+✔ [3664/3673] Built ExactLiouvilleComparison.ODEContinuationStatement (3.8s)
+✔ [3668/3676] Built ExactLiouvilleComparison.ODEIntervalRegularity (4.1s)
+✔ [3671/3676] Built ExactLiouvilleComparison.FirstPathFlowInputs (4.9s)
+✔ [3700/3768] Built ExactLiouvilleComparison.ODEScalarConfinement (4.0s)
+✔ [3702/3768] Built FsFltz.Geometry.CollarIsotopy (14s)
+✔ [3703/3768] Built ExactLiouvilleComparison.MoserExactnessIntegralStatement (2.6s)
+✔ [3704/3768] Built ExactLiouvilleComparison.MoserExactnessIntegralEuclideanStatement (3.6s)
+✔ [3705/3768] Built FsFltz.Geometry.CompletionFamily (8.6s)
+✔ [3706/3768] Built ExactLiouvilleComparison.RadialInterpolationFlowStatement (3.2s)
+✔ [3707/3768] Built ExactLiouvilleComparison.LargeCoefficientSeries (3.4s)
+⚠ [3708/3768] Built ExactLiouvilleComparison.LargeCoefficientNorm (5.6s)
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:33:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/LargeCoefficientNorm.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3710/3768] Built ExactLiouvilleComparison.ExactComparisonAlgebraStatement (2.7s)
+✔ [3711/3768] Built ExactLiouvilleComparison.FiniteTypeRadialStatement (3.0s)
+✔ [3712/3768] Built ExactLiouvilleComparison.MoserExactnessIntegralRegularity (5.4s)
+✔ [3713/3768] Built ExactLiouvilleComparison.ODETwoBarrierStatement (4.5s)
+✔ [3714/3768] Built FsFltz.Geometry.CollarExtension (13s)
+✔ [3716/3768] Built ExactLiouvilleComparison.LargeCoefficient (3.6s)
+✔ [3717/3768] Built ExactLiouvilleComparison.ExactComparisonAlgebraIsotopy (3.3s)
+⚠ [3718/3768] Built ExactLiouvilleComparison.MoserExactnessIntegralEuclidean (3.9s)
+warning: ExactLiouvilleComparison/MoserExactnessIntegralEuclidean.lean:30:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.MoserExactnessIntegralEuclidean.hasFDerivAt_integral`:
+  [CompleteSpace F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3719/3768] Built ExactLiouvilleComparison.ODETwoBarrierConfinement (4.9s)
+✔ [3720/3768] Built ExactLiouvilleComparison.RadialInterpolationFlowInputs (3.9s)
+✔ [3721/3768] Built ExactLiouvilleComparison.ExactComparisonAlgebra (4.8s)
+✔ [3722/3768] Built FsFltz.Geometry.CollarFlow (6.8s)
+✔ [3723/3768] Built ExactLiouvilleComparison.MoserExactnessIntegral (3.3s)
+✔ [3724/3768] Built ExactLiouvilleComparison.RadialInterpolationFlowCoefficients (3.3s)
+✔ [3725/3768] Built ExactLiouvilleComparison.ThirdPathStatement (4.5s)
+✔ [3726/3768] Built FsFltz.Geometry.CollarEvolution (6.7s)
+✔ [3727/3776] Built ExactLiouvilleComparison.ThirdPathExhaustion (3.0s)
+✔ [3728/3776] Built ExactLiouvilleComparison.ThirdPathField (4.6s)
+✔ [3729/3777] Built FsFltz.Geometry.CollarContinuousDependence (5.6s)
+✔ [3730/3777] Built FsFltz.Geometry.BoundaryAtlas (5.2s)
+✔ [3731/3778] Built ExactLiouvilleComparison.ThirdPathEstimates (3.4s)
+✔ [3732/3778] Built FsFltz.Geometry.BoundaryPresentationBridge (6.2s)
+✔ [3733/3778] Built FsFltz.Geometry.CollarSmoothDependence (11s)
+✔ [3734/3778] Built ExactLiouvilleComparison.ThirdPathEndpoints (4.0s)
+✔ [3735/3783] Built FsFltz.Geometry.BoundaryIntrinsicEquiv (7.7s)
+✔ [3736/3783] Built FsFltz.Geometry.IntrinsicBoundary (8.1s)
+✔ [3737/3787] Built FsFltz.Geometry.CollarSmoothEvolution (15s)
+✔ [3738/3787] Built FsFltz.Geometry.IntrinsicLiouvilleForms (5.7s)
+✔ [3739/3787] Built FsFltz.Geometry.CompletionFamilyEquations (7.7s)
+✔ [3740/3791] Built FsFltz.Geometry.LiouvilleLocalSide (3.1s)
+✔ [3741/3794] Built FsFltz.Geometry.LiouvilleLocalFlow (4.5s)
+✔ [3742/3794] Built FsFltz.Geometry.CompletionFamilyFields (5.1s)
+✔ [3743/3794] Built FsFltz.Geometry.IntrinsicExteriorDerivative (7.8s)
+✔ [3744/3794] Built FsFltz.Geometry.LiouvilleLocalCollar (7.6s)
+✔ [3745/3794] Built FsFltz.Geometry.FamilyLiouvilleLocalFlow (6.9s)
+✔ [3746/3795] Built FsFltz.Geometry.ScaledLiouvilleFlowTransport (3.8s)
+✔ [3747/3795] Built FsFltz.Geometry.CompletionFormExtension (6.2s)
+✔ [3748/3795] Built FsFltz.Geometry.IntrinsicExteriorNaturality (6.6s)
+✔ [3749/3795] Built FsFltz.Geometry.LiouvilleCollarSide (4.0s)
+✔ [3750/3796] Built ExactLiouvilleComparison.ODEContinuationCutoff (4.3s)
+✔ [3751/3807] Built FsFltz.Geometry.FamilyLiouvillePrimitive (5.6s)
+✔ [3752/3807] Built FsFltz.Geometry.SmoothMapExtension (4.4s)
+✔ [3753/3807] Built FsFltz.Geometry.CompactPrimitiveNaturality (5.3s)
+✔ [3754/3807] Built FsFltz.Geometry.CompletionFamilyCollar (10s)
+✔ [3755/3807] Built ExactLiouvilleComparison.ODETwoBarrierExistence (3.9s)
+✔ [3756/3807] Built FsFltz.Geometry.LiouvilleCollar (5.9s)
+✔ [3757/3807] Built ExactLiouvilleComparison.ODEContinuation (3.7s)
+✔ [3758/3807] Built FsFltz.Geometry.SmoothMapCompactCover (3.1s)
+✔ [3759/3807] Built FsFltz.Geometry.CompactMapCover (1.6s)
+✔ [3760/3807] Built ExactLiouvilleComparison.FiniteTypeRadialMetricStatement (2.5s)
+✔ [3761/3807] Built FsFltz.Geometry.CompletionLocalization (7.7s)
+✔ [3762/3807] Built FsFltz.Geometry.CompactCollarFamily (10s)
+✔ [3763/3807] Built FsFltz.Geometry.SmoothMapFiniteExtension (3.7s)
+✔ [3764/3807] Built ExactLiouvilleComparison.ODEGlobalField (5.5s)
+✔ [3765/3807] Built ExactLiouvilleComparison.FiniteTypeRadialMetric (5.3s)
+✔ [3766/3807] Built FsFltz.Geometry.FamilyLiouvilleCollar (7.7s)
+✔ [3767/3807] Built FsFltz.Geometry.SmoothMapExteriorExtension (4.3s)
+✔ [3768/3811] Built FsFltz.Geometry.CompletionCollarRecovery (5.7s)
+✔ [3769/3811] Built ExactLiouvilleComparison.ODEGlobalExistence (7.2s)
+✔ [3770/3811] Built FsFltz.Geometry.CompletionScaledPresentation (5.3s)
+✔ [3771/3811] Built FsFltz.Geometry.IntrinsicInterior (6.4s)
+✔ [3772/3811] Built ExactLiouvilleComparison.ODESmoothEvolution (4.6s)
+✔ [3773/3811] Built FsFltz.Geometry.CompletionComparison (3.6s)
+✔ [3774/3816] Built FsFltz.Geometry.IntrinsicCollarGluing (4.5s)
+✔ [3775/3817] Built ExactLiouvilleComparison.ODEClosedUniqueness (4.8s)
+✔ [3776/3817] Built FsFltz.Geometry.CompletionMapUniqueness (3.9s)
+✔ [3777/3818] Built FsFltz.Geometry.IntrinsicCylinder (4.7s)
+✔ [3778/3818] Built FsFltz.Geometry.IntrinsicCompletionGluing (5.3s)
+✔ [3779/3819] Built ExactLiouvilleComparison.ODETwoBarrierLocalization (4.8s)
+✔ [3780/3819] Built ExactLiouvilleComparison.FirstPathFlow (3.8s)
+✔ [3781/3819] Built FsFltz.Geometry.CompletionMapFamily (5.0s)
+✔ [3782/3819] Built FsFltz.Geometry.IntrinsicCylinderTime (3.8s)
+✔ [3783/3819] Built FsFltz.Geometry.IntrinsicBoundaryForm (7.2s)
+✔ [3784/3819] Built FsFltz.Geometry.IntrinsicCollarGluingSmooth (8.7s)
+✔ [3785/3819] Built FsFltz.Geometry.IntrinsicCompletionPatch (3.2s)
+✔ [3786/3819] Built ExactLiouvilleComparison.ODETwoBarrierLocalizationPatch (4.6s)
+✔ [3787/3819] Built FsFltz.Geometry.IntrinsicFormPullback (5.8s)
+✔ [3788/3819] Built ExactLiouvilleComparison.ThirdPathFlow (3.6s)
+✔ [3789/3819] Built ExactLiouvilleComparison.MoserExactnessStatement (3.0s)
+✔ [3790/3819] Built FsFltz.Geometry.CompletionIntervalMapFamily (7.4s)
+✔ [3791/3819] Built FsFltz.Geometry.IntrinsicCollarGluingInclusion (6.5s)
+✔ [3792/3819] Built ExactLiouvilleComparison.FirstPathExactnessStatement (2.0s)
+✔ [3793/3819] Built ExactLiouvilleComparison.ODETwoBarrierSmoothAssembly (4.8s)
+✔ [3794/3819] Built ExactLiouvilleComparison.MoserExactnessEndpointSteps (3.4s)
+✔ [3795/3819] Built ExactLiouvilleComparison.MoserExactnessExterior (3.9s)
+✔ [3796/3819] Built ExactLiouvilleComparison.MoserExactnessCancellation (2.9s)
+✔ [3797/3819] Built ExactLiouvilleComparison.MoserExactnessCartanRegularity (4.3s)
+✔ [3798/3819] Built ExactLiouvilleComparison.FiniteTypeRadialRadius (4.4s)
+✔ [3799/3819] Built FsFltz.Geometry.IntrinsicCollarGluingDifferential (7.0s)
+✔ [3800/3819] Built ExactLiouvilleComparison.ODETwoBarrierSmooth (5.7s)
+✔ [3801/3819] Built ExactLiouvilleComparison.FirstPathExactnessInputs (3.7s)
+⚠ [3802/3819] Built ExactLiouvilleComparison.MoserExactnessCartanCalculus (8.5s)
+warning: ExactLiouvilleComparison/MoserExactnessCartanCalculus.lean:95:68: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3803/3819] Built ExactLiouvilleComparison.MoserExactnessCartanCharts (5.8s)
+✔ [3804/3820] Built ExactLiouvilleComparison.FiniteTypeRadialGrowth (3.3s)
+✔ [3805/3822] Built ExactLiouvilleComparison.ODETwoBarrier (4.0s)
+✔ [3806/3822] Built FsFltz.Geometry.IntrinsicCompletionAtlas (11s)
+✔ [3807/3822] Built ExactLiouvilleComparison.MoserExactnessCartan (6.1s)
+✔ [3808/3822] Built ExactLiouvilleComparison.FiniteTypeRadial (3.2s)
+✔ [3809/3823] Built FsFltz.Geometry.IntrinsicCollarFlow (4.3s)
+✔ [3810/3826] Built ExactLiouvilleComparison.RadialInterpolationFlow (3.2s)
+✔ [3811/3829] Built ExactLiouvilleComparison.MoserExactnessPullback (3.2s)
+✔ [3812/3831] Built FsFltz.Geometry.IntrinsicCollarInverse (4.7s)
+✔ [3813/3831] Built ExactLiouvilleComparison.FirstPathExactnessPullback (3.3s)
+✔ [3814/3831] Built FsFltz.Geometry.IntrinsicCollarUniqueness (4.4s)
+✔ [3815/3831] Built ExactLiouvilleComparison.MoserExactness (2.0s)
+✔ [3816/3832] Built FsFltz.Geometry.IntrinsicCollarLocal (3.4s)
+✔ [3817/3832] Built ExactLiouvilleComparison.FirstPathExactness (3.6s)
+✔ [3818/3832] Built FsFltz.Geometry.IntrinsicLiouvilleCoordinates (4.1s)
+✔ [3819/3832] Built FsFltz.Geometry.IntrinsicCollarEmbedding (2.9s)
+✔ [3820/3832] Built FsFltz.Geometry.IntrinsicLiouvilleOutward (4.6s)
+✔ [3821/3838] Built ExactLiouvilleComparison.MainComparisonStatement (3.2s)
+✔ [3822/3838] Built ExactLiouvilleComparison.RemainingPathExactness (3.9s)
+✔ [3823/3842] Built FsFltz.Geometry.IntrinsicCollar (5.0s)
+✔ [3824/3842] Built ExactLiouvilleComparison.MainComparison (4.1s)
+✔ [3825/3842] Built FsFltz.Geometry.IntrinsicLiouvilleExtension (6.1s)
+✔ [3826/3842] Built FsFltz.Geometry.IntrinsicCollarGlobalUniqueness (3.8s)
+✔ [3827/3844] Built FsFltz.Geometry.IntrinsicCollarCoefficients (5.1s)
+✔ [3828/3844] Built ExactLiouvilleComparison.FiniteTypeComparisonStatement (3.0s)
+✔ [3829/3844] Built FsFltz.Geometry.IntrinsicCollarCarrier (3.8s)
+✔ [3830/3844] Built FsFltz.Geometry.IntrinsicCollarCompact (5.8s)
+✔ [3831/3844] Built FsFltz.Geometry.IntrinsicLiouvilleCoefficients (8.9s)
+✔ [3832/3845] Built ExactLiouvilleComparison.FiniteTypeComparison (3.5s)
+✔ [3833/3849] Built FsFltz.Geometry.IntrinsicCollarDefining (5.9s)
+✔ [3834/3849] Built FsFltz.Geometry.IntrinsicCollarPrimitive (8.5s)
+✔ [3835/3850] Built FsFltz.Geometry.IntrinsicLiouvilleCollar (4.4s)
+✔ [3836/3853] Built FsFltz.Geometry.IntrinsicCollarDomain (4.8s)
+✔ [3837/3853] Built FsFltz.Geometry.IntrinsicOutwardSign (7.9s)
+✔ [3838/3854] Built FsFltz.Geometry.IntrinsicNativeCollarPrimitive (11s)
+✔ [3839/3854] Built FsFltz.Geometry.CylindricalCompleteFlow (3.7s)
+✔ [3840/3854] Built FsFltz.Geometry.PrescribedCylinderRadial (6.3s)
+✔ [3841/3857] Built FsFltz.Geometry.IntrinsicBoundaryCollarPrimitive (7.7s)
+✔ [3842/3857] Built FsFltz.Geometry.IntrinsicCompletionDomain (6.7s)
+✔ [3843/3857] Built FsFltz.Geometry.PrescribedCylinderCompleteFlow (3.4s)
+✔ [3844/3859] Built FsFltz.Geometry.IntrinsicLiouvilleGluing (3.7s)
+✔ [3845/3862] Built FsFltz.Geometry.IntrinsicGluingPrimitive (5.1s)
+✔ [3846/3863] Built FsFltz.Geometry.CollarStretch (3.8s)
+✔ [3847/3863] Built FsFltz.Geometry.SmoothFormOpenGluing (10s)
+✔ [3848/3870] Built FsFltz.Geometry.IntrinsicGluedForm (13s)
+✔ [3849/3870] Built FsFltz.Geometry.SymplecticBasis (5.3s)
+✔ [3850/3870] Built FsFltz.Geometry.CylindricalPrimitive (4.7s)
+✔ [3851/3870] Built FsFltz.Geometry.CylindricalEnd (6.2s)
+✔ [3852/3870] Built FsFltz.Geometry.IntrinsicCompletionCylinder (5.9s)
+⚠ [3853/3870] Built ExactLiouvilleComparison.CylindricalCompatibilityStatement (3.7s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityStatement.lean:61:37: Variable name `C` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _C
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [3854/3870] Built FsFltz.Geometry.IntrinsicGluedFormRestriction (7.6s)
+✔ [3855/3870] Built FsFltz.Geometry.CylindricalSymplectic (3.1s)
+✔ [3856/3870] Built FsFltz.Geometry.IntrinsicPrimitiveExtension (3.6s)
+✔ [3857/3870] Built FsFltz.Geometry.CylindricalLiouville (5.3s)
+✔ [3858/3870] Built FsFltz.Geometry.IntrinsicExtensionLiouville (3.9s)
+✔ [3859/3870] Built FsFltz.Geometry.IntrinsicExtensionSymplectic (4.1s)
+✔ [3860/3880] Built FsFltz.Geometry.CylindricalEndFlow (4.0s)
+✔ [3861/3880] Built FsFltz.Geometry.IntrinsicExtensionOutward (5.9s)
+✔ [3862/3894] Built FsFltz.Geometry.IntrinsicCompletionPrimitive (7.0s)
+✔ [3863/3894] Built FsFltz.Geometry.Maslov (7.1s)
+✔ [3864/3896] Built FsFltz.Geometry.CylindricalCompletion (10s)
+✔ [3865/3896] Built FsFltz.Geometry.IntrinsicCompletionLiouville (7.8s)
+✔ [3866/3896] Built FsFltz.Geometry.IntrinsicCompletionFlow (12s)
+✔ [3867/3899] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationStatement (6.3s)
+✔ [3868/3899] Built ExactLiouvilleComparison.CylindricalCompatibilityRelativeSection (3.2s)
+✔ [3869/3899] Built FsFltz.Geometry.PrescribedGrading (2.6s)
+✔ [3871/3899] Built FsFltz.Geometry.MaslovHomotopy (5.0s)
+✔ [3872/3899] Built FsFltz.Geometry.IntrinsicCompletion (8.2s)
+✔ [3874/3899] Built ExactLiouvilleComparison.CylindricalCompatibilityRelativeMetricStatement (4.2s)
+⚠ [3875/3899] Built ExactLiouvilleComparison.CylindricalCompatibilityFormBridge (20s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityFormBridge.lean:75:2: Unused tactic linter: `change
+  evalTwo eta x ((trivializationAt (Model d) M.Tangent a).symmL ℝ x v)
+      ((trivializationAt (Model d) M.Tangent a).symmL ℝ x w) =
+    _` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [3876/3899] Built FsFltz.Geometry.PrescribedGradingBridge (13s)
+✔ [3877/3899] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleStatement (8.6s)
+✔ [3878/3899] Built ExactLiouvilleComparison.FiniteTypePresentationStatement (5.6s)
+✔ [3879/3900] Built ExactLiouvilleComparison.CylindricalCompatibilityMetricPairing (10s)
+✔ [3880/3900] Built FsFltz.Geometry.CanonicalLine (10s)
+✔ [3881/3900] Built ExactLiouvilleComparison.FiniteTypePresentation (5.1s)
+✔ [3883/3902] Built FsFltz.Geometry.CanonicalCoframe (5.8s)
+ℹ [3884/3905] Built ExactLiouvilleComparison.FiniteTypePresentationConsumers (7.4s)
+info: ExactLiouvilleComparison/FiniteTypePresentationConsumers.lean:113:0: FINITE_TYPE_PRESENTATION_CONSUMERS_COMPLETE
+✔ [3886/3906] Built FsFltz.Geometry.CanonicalBundle (15s)
+✔ [3889/3909] Built FsFltz.Geometry.CanonicalLocalSection (10s)
+⚠ [3892/3909] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleMetric (61s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:25:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Metric.nonneg`:
+  [IsTopologicalAddGroup V]
+  [ContinuousSMul ℝ V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsTopologicalAddGroup V] [ContinuousSMul ℝ V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:31:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Metric.bounded_of_lower`:
+  [IsTopologicalAddGroup V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsTopologicalAddGroup V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:84:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Metric.localMetric_apply`:
+  [∀ (y : M.Point), IsTopologicalAddGroup (E y)]
+  [∀ (y : M.Point), ContinuousSMul ℝ (E y)]
+  [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (y : M.Point),
+  IsTopologicalAddGroup
+    (E y)] [∀ (y : M.Point), ContinuousSMul ℝ (E y)] [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:142:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:160:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Metric.metric_norm_eq`:
+  [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:171:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:167:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Metric.metric_smooth_norm_inputs`:
+  [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:187:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:188:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:189:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleMetric.lean:190:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3896/3909] Built FsFltz.Geometry.CanonicalAtlas (19s)
+✔ [3898/3913] Built FsFltz.Geometry.CanonicalLineAtlas (15s)
+✔ [3899/3913] Built ExactLiouvilleComparison.CylindricalCompatibilityRelativeMetric (51s)
+✔ [3970/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationDegenerate (4.8s)
+⚠ [3971/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactAlgebra (5.9s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactAlgebra.lean:153:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactAlgebra.lean:158:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3973/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactReebStatement (4.8s)
+✔ [3975/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleAtlasLinear (6.2s)
+✔ [3976/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleFiber (4.5s)
+✔ [3977/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityBridges (4.4s)
+✔ [3978/4042] Built ExactLiouvilleComparison.SteinReferenceStatement (2.7s)
+✔ [3979/4042] Built FsFltz.Geometry.CanonicalSquareBundle (65s)
+✔ [3980/4042] Built ExactLiouvilleComparison.SteinReferenceMetricStatement (2.8s)
+✔ [3981/4042] Built ExactLiouvilleComparison.SteinRadialStatement (2.6s)
+✔ [3984/4042] Built ExactLiouvilleComparison.SteinGrowthStatement (2.5s)
+✔ [3985/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactReeb (4.9s)
+✔ [3986/4042] Built ExactLiouvilleComparison.SteinReferenceAmbient (5.7s)
+✔ [3987/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleAtlasCharts (12s)
+✔ [3988/4042] Built FsFltz.Geometry.CompatibleComplexTransport (16s)
+✔ [3990/4042] Built ExactLiouvilleComparison.SteinReferenceMetric (14s)
+✔ [3991/4042] Built ExactLiouvilleComparison.SteinRadial (4.9s)
+✔ [3992/4042] Built ExactLiouvilleComparison.SteinGrowth (3.8s)
+✔ [3993/4042] Built ExactLiouvilleComparison.SteinReferencePullback (4.7s)
+✔ [3994/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactReebSmooth (11s)
+✔ [3995/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleAtlas (13s)
+✔ [3996/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationAlgebraStatement (4.5s)
+✔ [3997/4042] Built FsFltz.Geometry.CompatibleComplexPath (14s)
+✔ [3998/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationSqrtStatement (3.2s)
+✔ [3999/4042] Built ExactLiouvilleComparison.SteinGrowthGeometry (2.9s)
+✔ [4000/4042] Built ExactLiouvilleComparison.SteinReferencePrimitive (5.2s)
+✔ [4001/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactAssembly (5.3s)
+⚠ [4002/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleTransfer (21s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleTransfer.lean:31:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Transfer.hom_comp_smooth`:
+  [∀ (x : M.Point), IsTopologicalAddGroup (E₁ x)]
+  [∀ (x : M.Point), ContinuousSMul ℝ (E₁ x)]
+  [ContMDiffVectorBundle ∞ (Model k₁) E₁ 𝓘(ℝ, Model n)]
+  [ContMDiffVectorBundle ∞ (Model k₂) E₂ 𝓘(ℝ, Model n)]
+  [ContMDiffVectorBundle ∞ (Model k₃) E₃ 𝓘(ℝ, Model n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (x : M.Point),
+  IsTopologicalAddGroup
+    (E₁
+      x)] [∀ (x : M.Point),
+  ContinuousSMul ℝ
+    (E₁
+      x)] [ContMDiffVectorBundle ∞ (Model k₁) E₁
+  𝓘(ℝ,
+    Model
+      n)] [ContMDiffVectorBundle ∞ (Model k₂) E₂
+  𝓘(ℝ, Model n)] [ContMDiffVectorBundle ∞ (Model k₃) E₃ 𝓘(ℝ, Model n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityContactBundleTransfer.lean:83:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.ContactBundle.Transfer.intoKernel_smooth`:
+  [∀ (x : D.domain.boundary.Point), IsTopologicalAddGroup (E x)]
+  [∀ (x : D.domain.boundary.Point), ContinuousSMul ℝ (E x)]
+  [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model (d - 1))]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (x : D.domain.boundary.Point),
+  IsTopologicalAddGroup
+    (E
+      x)] [∀ (x : D.domain.boundary.Point),
+  ContinuousSMul ℝ (E x)] [ContMDiffVectorBundle ∞ (Model k) E 𝓘(ℝ, Model (d - 1))] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [4003/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationAlgebra (6.1s)
+✔ [4004/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityEndAlgebra (7.4s)
+✔ [4005/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationSqrtSylvester (3.9s)
+✔ [4006/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleForm (37s)
+✔ [4007/4042] Built ExactLiouvilleComparison.SteinGrowthConsumers (2.7s)
+✔ [4008/4042] Built ExactLiouvilleComparison.SteinReference (2.9s)
+✔ [4009/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationAlgebraRecovery (3.0s)
+✔ [4010/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactSmoothBridges (5.8s)
+✔ [4011/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityEndForm (6.0s)
+✔ [4012/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationSqrt (4.5s)
+✔ [4013/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundle (3.0s)
+✔ [4014/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityProductSmooth (17s)
+✔ [4015/4042] Built ExactLiouvilleComparison.CorollaryComparisonStatement (3.1s)
+✔ [4016/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationAlgebraNaturality (4.1s)
+✔ [4017/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityEndTransport (4.5s)
+✔ [4018/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationRegularity (3.9s)
+✔ [4019/4042] Built ExactLiouvilleComparison.CommonReferenceComparison (3.2s)
+✔ [4020/4042] Built ExactLiouvilleComparison.SteinComparison (3.6s)
+⚠ [4021/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationAlgebraNative (3.7s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityNormalizationAlgebraNative.lean:64:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [4022/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityTransportSmooth (5.2s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityTransportSmooth.lean:29:0: automatically included section variable(s) unused in theorem `ExactLiouvilleComparison.CylindricalCompatibility.smooth_transportEndomorphism`:
+  [CompleteSpace F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ExactLiouvilleComparison/CylindricalCompatibilityTransportSmooth.lean:72:35: This simp argument is unused:
+  ContinuousLinearEquiv.apply_symm_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [transportEndomorphism, ContinuousLinearMap.comp_apply, ContinuousLinearEquiv.coe_coe,
+    ContinuousLinearEquiv.symm_apply_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [4023/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationCoordinates (8.0s)
+✔ [4024/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactBundleInputs (28s)
+ℹ [4025/4042] Built ExactLiouvilleComparison.CorollaryComparisonConsumers (4.1s)
+info: ExactLiouvilleComparison/CorollaryComparisonConsumers.lean:89:0: COROLLARIES_CONSUMERS_COMPLETE
+✔ [4026/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationAlgebraChecks (3.2s)
+⚠ [4027/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityBasinSmooth (6.7s)
+warning: ExactLiouvilleComparison/CylindricalCompatibilityBasinSmooth.lean:48:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+✔ [4028/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationBundleCoordinates (5.9s)
+✔ [4029/4042] Built ExactLiouvilleComparison.ManuscriptComparisonStatement (3.2s)
+✔ [4030/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationFrames (4.9s)
+✔ [4031/4042] Built ExactLiouvilleComparison.ManuscriptComparison (3.0s)
+✔ [4032/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationBundle (4.4s)
+ℹ [4033/4042] Built ExactLiouvilleComparison.ManuscriptComparisonConsumers (3.6s)
+info: ExactLiouvilleComparison/ManuscriptComparisonConsumers.lean:66:0: MANUSCRIPT_CONSUMERS_COMPLETE
+✔ [4034/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityNormalizationConsumers (4.7s)
+✔ [4035/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityExtension (7.0s)
+✔ [4036/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityContactExistence (20s)
+✔ [4037/4042] Built ExactLiouvilleComparison.CylindricalCompatibility (2.6s)
+ℹ [4038/4042] Built ExactLiouvilleComparison.CylindricalCompatibilityFinalChecks (2.3s)
+info: ExactLiouvilleComparison/CylindricalCompatibilityFinalChecks.lean:40:0: CYLINDRICAL_COMPATIBILITY_FINAL_CONSUMERS_COMPLETE
+✔ [4039/4042] Built ExactLiouvilleComparison.NativeIntegrationStatement (2.3s)
+ℹ [4040/4042] Built ExactLiouvilleComparison.NativeIntegration (2.5s)
+info: ExactLiouvilleComparison/NativeIntegration.lean:54:0: NATIVE_INTEGRATION_CONSUMERS_COMPLETE
+✔ [4041/4042] Built ExactLiouvilleComparison (2.1s)
 Build completed successfully (4042 jobs).
-{"cache": "local", "command": ["lake", "build", "ExactLiouvilleComparison"], "cwd": "/var/lib/archon-worker/scratch/publication-e994-v1", "duration_seconds": 36.756, "error": null, "failure": null, "lean_file": null, "mode": "lake", "ok": true, "probe": false, "repeated_deferred": false, "returncode": 0, "snapshot_verified": true, "source_key": "8f1a301d1c35b2a72aea564e683a3e7f923e2a71061f2312b9b995d41edf9563", "status": "passed", "targets": ["ExactLiouvilleComparison"], "timings": {"build_seconds": 32.333, "engine_seconds": 36.757819124999514, "preparation_seconds": 0.04540413499853457, "prepare_seconds": 0.0, "source_fingerprint_seconds": 0.7212005660003342, "total_seconds": 37.52472680600113, "wait_seconds": 0.0}, "toolchain": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)"}

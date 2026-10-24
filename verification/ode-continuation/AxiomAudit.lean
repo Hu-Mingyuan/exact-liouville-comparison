@@ -1,6 +1,0 @@
-import ExactLiouvilleComparison.ODEContinuation
-#print axioms ExactLiouvilleComparison.ODE.exists_bounded_smooth_compact_cutoff
-#print axioms ExactLiouvilleComparison.ODE.contMDiff_cutoff_field
-#print axioms ExactLiouvilleComparison.ODE.scalar_bound_cutoff
-#print axioms ExactLiouvilleComparison.ODE.finiteIntervalExistence
-#eval IO.println "ODE_CONTINUATION_AXIOMAUDIT_COMPLETE"

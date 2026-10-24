@@ -1,4 +1,0 @@
-ExactLiouvilleComparison.SteinRadial.reference : {d N : Nat} →
-  {M : FsFltz.Geometry.SmoothManifold d} →
-    (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N) →
-      (P : @ExactLiouvilleComparison.SteinReference d N M i) → @ExactLiouvilleComparison.RadialReference d M

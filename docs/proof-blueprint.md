@@ -9,13 +9,13 @@ The comparison proof constructs four controlled deformation paths, proves their 
 | Step | Lean implementation | Mathematical role |
 | --- | --- | --- |
 | Native geometry and quantitative hypotheses | [Geometry.lean](../ExactLiouvilleComparison/Geometry.lean), [Statement.lean](../ExactLiouvilleComparison/Statement.lean) | Actual forms and pullbacks; the reference metric and its dual/operator norms; radial and growth data |
-| Controlled interpolation and continuation | [radial-interpolation-flow.md](radial-interpolation-flow.md), [ode-two-barrier.md](ode-two-barrier.md) | Forward and reverse flow existence from radial estimates and the divergent integral |
-| Exactness and smooth integral gauge | [moser-regularity.md](moser-regularity.md), [RemainingPathExactness.lean](../ExactLiouvilleComparison/RemainingPathExactness.lean) | Derive endpoint pullback identities with actual smooth gauge functions |
+| Controlled interpolation and continuation | [RadialInterpolationFlow.lean](../ExactLiouvilleComparison/RadialInterpolationFlow.lean), [ODETwoBarrier.lean](../ExactLiouvilleComparison/ODETwoBarrier.lean) | Forward and reverse flow existence from radial estimates and the divergent integral |
+| Exactness and smooth integral gauge | [MoserRegularityGlobal.lean](../ExactLiouvilleComparison/MoserRegularityGlobal.lean), [MoserExactness.lean](../ExactLiouvilleComparison/MoserExactness.lean), [RemainingPathExactness.lean](../ExactLiouvilleComparison/RemainingPathExactness.lean) | Derive endpoint pullback identities with actual smooth gauge functions |
 | Compose and invert the four paths | [MainComparison.lean](../ExactLiouvilleComparison/MainComparison.lean) | Construct the final F, h, identity isotopy, and both primitive and two-form identities |
-| Construct application references | [finite-type-radial-metric-proof.md](finite-type-radial-metric-proof.md), [corollary-comparison-proof.md](corollary-comparison-proof.md) | Discharge radial and metric hypotheses in the finite-type and Stein cases |
+| Construct application references | [FiniteTypeRadialMetric.lean](../ExactLiouvilleComparison/FiniteTypeRadialMetric.lean), [SteinReference.lean](../ExactLiouvilleComparison/SteinReference.lean), [SteinComparison.lean](../ExactLiouvilleComparison/SteinComparison.lean) | Discharge radial and metric hypotheses in the finite-type and Stein cases |
 | Assemble comparison results | [ManuscriptComparison.lean](../ExactLiouvilleComparison/ManuscriptComparison.lean) | Prove the original quantified manuscript targets |
 
-The exact order is important. If G_i and H_i are the four forward endpoints and gauges, the proof first forms `Psi = G4^(-1) o G3^(-1) o G2 o G1`, with its gauge f obtained by the proved composition/inversion laws. It then takes `F = Psi^(-1)` and `h = -f o Psi^(-1)`. See [main-comparison-proof.md](main-comparison-proof.md) for the full formula and source-level proof map.
+The exact order is important. If G_i and H_i are the four forward endpoints and gauges, the proof first forms `Psi = G4^(-1) o G3^(-1) o G2 o G1`, with its gauge f obtained by the proved composition/inversion laws. It then takes `F = Psi^(-1)` and `h = -f o Psi^(-1)`. The definitions `psi`, `psiGauge`, `comparisonMap`, and `comparisonGauge` in [MainComparison.lean](../ExactLiouvilleComparison/MainComparison.lean) give these formulas explicitly; `comparisonWitness` proves their exact identity.
 
 ## Construct and extend cylindrical J
 
@@ -39,4 +39,4 @@ The [detailed cylindrical guide](cylindrical-compatibility-construction.md) reco
 
 ## Definitions and proof evidence
 
-The kernel checks derivations from the actual quantified Lean statements. Independent reviews additionally check that these definitions and assumptions express the intended geometry. Reproducible builds, transitive axiom audits, exact source hashes, and the document-to-code comparison are recorded separately in [verification](../verification/README.md).
+The Lean kernel checks the proof terms against their quantified statements. The [definition guide](definition-comparison.md) identifies the hypotheses and native geometric objects. Reproducible builds, transitive axiom checks, exact source hashes, and the document-to-code comparison are described in the [verification guide](../verification/README.md).

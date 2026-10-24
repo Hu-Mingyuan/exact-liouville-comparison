@@ -1,7 +1,0 @@
-ExactLiouvilleComparison.SteinReferenceConstruction.reference := fun {d N : Nat} {M : FsFltz.Geometry.SmoothManifold d} (i : @ExactLiouvilleComparison.ProperComplexEmbedding d M N) =>
-  @ExactLiouvilleComparison.SteinReference.mk d N M i
-    (@ExactLiouvilleComparison.SteinReferenceConstruction.exactStructure d N M i)
-    (@ExactLiouvilleComparison.SteinReferenceConstruction.compatible d N M i)
-    (@ExactLiouvilleComparison.SteinReferenceConstruction.reference._proof_1 d N M i)
-    (@ExactLiouvilleComparison.SteinReferenceConstruction.primitive_eq d N M i)
-    (@ExactLiouvilleComparison.SteinReferenceMetric.metric_inner d M N i)

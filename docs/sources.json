@@ -9,6 +9,5 @@
     "repository": "Hu-Mingyuan/cluster-skeleton",
     "commit": "2c239b0c03922a1549f18ee3a45a8e0ca25bb28c"
   },
-  "fsfltz_commit": "1a3d387cfacc746e25aad31e5b27b1803103e7cb",
-  "publication_policy": "Local Forgejo development; GitHub upload only as final step after Lean acceptance."
+  "fsfltz_commit": "1a3d387cfacc746e25aad31e5b27b1803103e7cb"
 }

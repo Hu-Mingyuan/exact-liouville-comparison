@@ -1,8 +1,0 @@
-import ExactLiouvilleComparison.ODETwoBarrierStatement
-set_option pp.all true in
-#check ExactLiouvilleComparison.RadialInterpolationFlow.Target
-set_option pp.all true in
-#check ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget
-#print axioms ExactLiouvilleComparison.RadialInterpolationFlow.Target
-#print axioms ExactLiouvilleComparison.ODE.TwoBarrierEvolutionTarget
-#eval IO.println "RADIAL_FLOW_STATEMENT_CHECK_COMPLETE"

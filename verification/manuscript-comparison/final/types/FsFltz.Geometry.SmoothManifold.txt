@@ -1,1 +1,0 @@
-FsFltz.Geometry.SmoothManifold : (d : Nat) → Type 1

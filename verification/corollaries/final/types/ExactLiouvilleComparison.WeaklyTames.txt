@@ -1,5 +1,0 @@
-ExactLiouvilleComparison.WeaklyTames : {d : Nat} →
-  {M : FsFltz.Geometry.SmoothManifold d} →
-    {S : @ExactLiouvilleComparison.ExactSymplecticStructure d M} →
-      (A : @ExactLiouvilleComparison.CompatibleStructure d M S) →
-        (T : @ExactLiouvilleComparison.ExactSymplecticStructure d M) → Prop

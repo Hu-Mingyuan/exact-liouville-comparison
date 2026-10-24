@@ -1,8 +1,0 @@
-ExactLiouvilleComparison.MoserExactness.Endpoint : {d : Nat} →
-  {M : FsFltz.Geometry.SmoothManifold d} →
-    (mu :
-        Real → @FsFltz.Geometry.SmoothManifold.Form d M (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
-      {Z :
-          @Set.Elem.{0} Real FsFltz.Geometry.Parameter →
-            (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x} →
-        (E : @ExactLiouvilleComparison.FirstPathFlow.Evolution d M Z) → Prop

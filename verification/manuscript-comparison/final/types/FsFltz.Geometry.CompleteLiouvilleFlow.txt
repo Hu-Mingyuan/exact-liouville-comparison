@@ -1,3 +1,0 @@
-FsFltz.Geometry.CompleteLiouvilleFlow : {d : Nat} →
-  (M : FsFltz.Geometry.SmoothManifold d) →
-    (Z : (x : @FsFltz.Geometry.SmoothManifold.Point d M) → @FsFltz.Geometry.SmoothManifold.Tangent d M x) → Type
