@@ -102,7 +102,7 @@ lake-manifest.json                Exact dependency revisions
 
 ## Reproduce the checks
 
-Use Linux or Ubuntu under WSL on Windows, with Elan (`lake` on `PATH`), Git, Python 3, and Bash 4 or newer installed. This repository is private; cloning requires an authenticated GitHub account with access:
+Use Linux or Ubuntu under WSL on Windows, with Elan (`lake` on `PATH`), Git, Python 3, and Bash 4 or newer installed. This repository is public and can be cloned without authentication:
 
 ```sh
 git clone https://github.com/Hu-Mingyuan/exact-liouville-comparison.git
