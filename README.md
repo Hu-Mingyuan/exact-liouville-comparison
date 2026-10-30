@@ -1,6 +1,6 @@
 # Exact Liouville comparison
 
-This Lean project is based on the joint paper with Vivek Shende, [*Symplectomorphism invariance of the wrapped Fukaya category*](https://arxiv.org/abs/2610.37808).
+This Lean project is based on Mingyuan Hu and Vivek Shende, "Symplectomorphism invariance of the wrapped Fukaya category", [arXiv:2610.37808](https://arxiv.org/abs/2610.37808).
 
 Lean formalization of exact symplectic comparison under weak taming. The central conclusion is a diffeomorphism, smoothly isotopic to the identity, and a smooth real function satisfying
 
