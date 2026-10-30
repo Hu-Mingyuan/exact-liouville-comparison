@@ -1,5 +1,7 @@
 # Exact Liouville comparison
 
+This Lean project is based on the joint paper with Vivek Shende, [*Symplectomorphism invariance of the wrapped Fukaya category*](https://arxiv.org/abs/2610.37808).
+
 Lean formalization of exact symplectic comparison under weak taming. The central conclusion is a diffeomorphism, smoothly isotopic to the identity, and a smooth real function satisfying
 
 $$F^*\lambda=\beta+dh.$$
@@ -121,7 +123,7 @@ The cache command uses the locked dependency revisions from public upstream repo
 
 ## Attribution and scope
 
-The mathematical source is the supplied manuscript *Exact comparison of Liouville forms under weak taming*, identified in [docs/sources.json](docs/sources.json). The exposition follows the actual formalized definitions and proofs.
+The mathematical source is [arXiv:2610.37808](https://arxiv.org/abs/2610.37808). The exposition follows the actual formalized definitions and proofs.
 
 [Bohan Fang's FsFltz](https://github.com/bohanfang/fs-fltz-minimal) is an unmodified pinned dependency, licensed upstream under Apache-2.0, using native Mathlib geometry. Build dependencies are fetched from public upstream repositories and pinned in `lake-manifest.json`.
 
